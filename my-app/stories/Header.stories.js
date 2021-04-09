@@ -15,4 +15,6 @@ export default {
 export const MyHeaderUI = () => <HeaderUI/>
 export const MyLoadingBarUI = () => <LoadingBarUI/>
 export const MyEmptyBoxUI = () => <EmptyBoxUI/>
-export const MyHomeFoodTimerUI = () => <HomeFoodTimerUI/>
+export const HomeFoodTimerSalmonUI = () => <HomeFoodTimerUI/>
+export const HomeFoodTimerMangoUI = () => (<HomeFoodTimerUI DAYS="2 DAYS" ITEM="ONION" bgcolor="#FFC32E" />);
+export const HomeFoodTimerSeaweedUI = () => (<HomeFoodTimerUI DAYS="12 DAYS" ITEM="CARROT" bgcolor="#6FC3B2"/>);

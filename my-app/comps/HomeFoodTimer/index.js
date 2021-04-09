@@ -32,24 +32,28 @@ z-index:2;
 `;
 
 const HomeFoodTimerDarkBar= styled.div`
+background-color:${props=>props.bgcolor};
 position:relative;
 height: 52px;
 width: 126px;
 margin-top: -45px;
 border-radius: 10px;
-background: #F16D6D;
 z-index:1;
 `;
 
+//props
 
-
-const HomeFoodTimerUI = () => {
+const HomeFoodTimerUI = ({
+    DAYS="1 DAYS",
+    ITEM="CHICKEN",
+    bgcolor="#F16D6D",
+}) => {
 
     return <div>
         <HomeFoodTimerBar></HomeFoodTimerBar>
-    <HomeFoodTimerItem>CHICKEN</HomeFoodTimerItem>
-    <HomeFoodTimerDarkBar></HomeFoodTimerDarkBar>
-        <HomeFoodTimerDate>1 DAYS</HomeFoodTimerDate>
+    <HomeFoodTimerItem>{ITEM}</HomeFoodTimerItem>
+    <HomeFoodTimerDarkBar bgcolor={bgcolor}></HomeFoodTimerDarkBar>
+        <HomeFoodTimerDate>{DAYS}</HomeFoodTimerDate>
     </div>
 }
 
