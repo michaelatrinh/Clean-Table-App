@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import RecipeImage from '../../public/recipes.svg';
 
 
 const NavBar = styled.div`
@@ -26,7 +27,7 @@ const NavBarUI = () => {
     return <div>
         <NavBar>
             <Img>
-            <img src="/recipes.svg" width="50.2px" height="52px" alt="recipe book icon"/>
+            <img src={RecipeImage} width="50.2px" height="52px" alt="recipe book icon"/>
             </Img>
             <Img>
             <img src="/home.svg" width="50px" height="50px" alt="home icon"/>
