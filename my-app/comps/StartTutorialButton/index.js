@@ -16,9 +16,9 @@ letter-spacing:5px;
 const StartButtonUI = () => {
 
     return <div>
-        <StartButton>
+        <StartTutorialButton>
             start tutorial
-        </StartButton>
+        </StartTutorialButton>
     </div>
 }
 

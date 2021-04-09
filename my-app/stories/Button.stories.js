@@ -1,5 +1,5 @@
 import React from 'react';
-import StartTutorialButtonUI from '../comps/StartTutorialButton';
+import StartButtonUI from '../comps/StartTutorialButton';
 import NavBarUI from '../comps/NavBar';
 
 export default {
