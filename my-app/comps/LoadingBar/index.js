@@ -1,26 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const LoadingBar = styled.div`
+const LoadingBarBack = styled.div`
 position: relative;
-width: 209px;
+background: #EFEFEF;
 height: 29px;
-Top 
-573px
-Left 
--1505px
+width: 209px;
+left: 0px;
+top: 0px;
+border-radius: 30px;
 
-background: #FFFFFF;
-border-radius
+`;
+
+const LoadingBarFront = styled.div`
+position: relative;
+height: 29px;
+width: 145px;
+left: 0px;
+top: 0px;
+border-radius: 30px;
+background: #59A091;
 `;
 
 const LoadingBarUI = () => {
 
     return <div>
-    <LoadingBar>
+    <LoadingBarBack>
+<LoadingBarFront>
 
-    </LoadingBar>
+</LoadingBarFront>
+    </LoadingBarBack>
     </div>
+
 }
 
 export default LoadingBarUI; 
