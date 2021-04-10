@@ -36,28 +36,10 @@ const NavBarUI = () => {
 
     return <div>
         <NavBar>
-            <Img>
-            <img src={RecipeImage} width="50.2px" height="52px" alt="recipe book icon"/>
-            </Img>
-            <Img>
-
-            <img src={HomeImage} width="50px" height="50px" alt="home icon"/>
-            </Img>
-            <Img>
-            <img src={ClipboardImage} width="50px" height="50px" alt="clipboard icon"/>
-            </Img>
-            <Img>
-            <img src={InfoImage} width="51px" height="45px" alt="info icon"/>
-
-            <img src={HomeIcon} width="50px" height="50px" alt="home icon"/>
-            </Img>
-            <Img>
-            <img src={ClipboardIcon} width="50px" height="50px" alt="clipboard icon"/>
-            </Img>
-            <Img>
-            <img src={ImportIcon} width="51px" height="45px" alt="info icon"/>
-
-            </Img>
+            <Img><img src={RecipeImage} width="50.2px" height="52px" alt="recipe book icon"/></Img>
+            <Img><img src={HomeImage} width="50px" height="50px" alt="home icon"/></Img>
+            <Img><img src={ClipboardImage} width="50px" height="50px" alt="clipboard icon"/></Img>
+            <Img><img src={InfoImage} width="51px" height="45px" alt="info icon"/></Img>
         </NavBar>
         </div>
 }
