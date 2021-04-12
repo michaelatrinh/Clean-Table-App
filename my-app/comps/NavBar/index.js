@@ -1,5 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import RecipeImage from '../../public/recipes.svg';
+
+import HomeImage from '../../public/home.svg';
+import ClipboardImage from '../../public/clipboard.svg';
+import InfoImage from '../../public/info.svg';
+
+
+import HomeIcon from '../../public/home.svg';
+import ClipboardIcon from '../../public/clipboard.svg';
+import ImportIcon from '../../public/info.svg';
+
+
 
 const NavBar = styled.div`
 width: 377px;
@@ -24,18 +36,10 @@ const NavBarUI = () => {
 
     return <div>
         <NavBar>
-            <Img>
-            <img src="/recipes.svg" width="50.2px" height="52px" alt="recipe book icon"/>
-            </Img>
-            <Img>
-            <img src="/home.svg" width="50px" height="50px" alt="home icon"/>
-            </Img>
-            <Img>
-            <img src="/clipboard.svg" width="50px" height="50px" alt="clipboard icon"/>
-            </Img>
-            <Img>
-            <img src="/info.svg" width="51px" height="45px" alt="info icon"/>
-            </Img>
+            <Img><img src={RecipeImage} width="50.2px" height="52px" alt="recipe book icon"/></Img>
+            <Img><img src={HomeImage} width="50px" height="50px" alt="home icon"/></Img>
+            <Img><img src={ClipboardImage} width="50px" height="50px" alt="clipboard icon"/></Img>
+            <Img><img src={InfoImage} width="51px" height="45px" alt="info icon"/></Img>
         </NavBar>
         </div>
 }
