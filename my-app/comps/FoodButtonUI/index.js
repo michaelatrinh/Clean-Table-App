@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import FoodButtonUIStyle from '../../styles/Food-Button-UI.module.css';
 
 const FoodButtonContainer = styled.div`
     display: flex;
@@ -11,6 +10,7 @@ const FoodButtonContainer = styled.div`
     height: 145px;
     background-color: #FFFFFF;
     border-radius: 20px;
+    box-shadow: 0px 4px 5px #494948;
 `;
 
 const FoodButtonPart1 = styled.div`
@@ -30,10 +30,10 @@ const FoodButtonPart2 = styled.div`
 
 const FoodButtonBottom = styled.div`
     display: flex;
-    background-color: #6FC3B2;
+    background-color: ${props=>props.bgcolour};
     width: 145px;
     min-height: 30px;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 0px 0px 15px 15px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -60,7 +60,8 @@ const FoodButtonUI = ({
     foodname = "name",
     foodimage = "/chicken_drumstick.png",
     imagewidth = "110px",
-    imageheight = "110px"
+    imageheight = "110px",
+    bgcolour = "#6FC3B2"
 }) => {
     return <FoodButtonContainer>
         <FoodButtonPart1>
@@ -68,25 +69,11 @@ const FoodButtonUI = ({
             </FoodButtonImage>
         </FoodButtonPart1>
         <FoodButtonPart2>
-            <FoodButtonBottom>
+            <FoodButtonBottom bgcolour={bgcolour}>
                 <p>{foodname}</p>
             </FoodButtonBottom>
         </FoodButtonPart2>
     </FoodButtonContainer>
 }
-
-/*const FoodButtonUI = () => {
-    return <div className={FoodButtonUIStyle.container}>
-        <div className={FoodButtonUIStyle.background}>
-            <div className={FoodButtonUIStyle.part1}>
-                <img className={FoodButtonUIStyle.image1} src='chicken_drumstick.png'></img>
-            </div>
-            <div className={FoodButtonUIStyle.part2}>
-                <p className={FoodButtonUIStyle.p1}>CHICKEN</p>
-                <div className={FoodButtonUIStyle.greenBottom}></div>
-            </div>
-        </div>
-    </div>
-}*/
 
 export default FoodButtonUI;
