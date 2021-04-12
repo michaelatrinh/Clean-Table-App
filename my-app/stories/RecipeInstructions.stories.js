@@ -1,5 +1,5 @@
 import React from 'react';
-import Recipe from '../comps/Recipe-Instructions';
+import Recipe from '../comps/RecipeInstructions';
 
 export default{
     title:"Michael's Components/Recipe Instructions",

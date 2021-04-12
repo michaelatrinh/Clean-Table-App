@@ -1,5 +1,5 @@
 import React from 'react';
-import FoodButtonUI from '../comps/Food-Button-UI';
+import FoodButtonUI from '../comps/FoodButtonUI';
 
 export default{
     title:"Michael's Components/Food Buttons",
