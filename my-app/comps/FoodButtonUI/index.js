@@ -10,14 +10,14 @@ const FoodButtonContainer = styled.div`
     width: 145px;
     height: 145px;
     background-color: #FFFFFF;
+    border-radius: 20px;
 `;
 
 const FoodButtonPart1 = styled.div`
     display: flex;
-    flex-grow: 1;
+    flex-grow: 99;
     justify-content: center;
     align-items: center;
-
 `;
 
 const FoodButtonPart2 = styled.div`
@@ -25,16 +25,18 @@ const FoodButtonPart2 = styled.div`
     flex-grow: 1;
     flex-direction: column;
     justify-content: center;
-
+    align-items: flex-end;
 `;
 
 const FoodButtonBottom = styled.div`
     display: flex;
     background-color: #6FC3B2;
     width: 145px;
-    height: 30px;
+    min-height: 30px;
     border-radius: 0px 0px 20px 20px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     &>p {
         display: flex;
         z-index: 1;
@@ -42,33 +44,32 @@ const FoodButtonBottom = styled.div`
         padding: 0;
         justify-content: center;
         align-items: center;
+        text-align: center;
         font-size: 18px;
-        font-family: Manrope;
+        font-weight: light;
+        font-family: "Manrope", sans-serif;
     }
 `;
 
-const FoodButtonImage = styled.img(props => {
-    props.foodimage;
-})`
-    img {
-        width: 110px;
-        height: 110px;
-    }
+const FoodButtonImage = styled.img`
+    width: ${props=>props.width};
+    height: ${props=>props.height};
 `;
 
 const FoodButtonUI = ({
-    foodname="name",
-    foodimage = src = "/chicken_drumstick.png"
+    foodname = "name",
+    foodimage = "/chicken_drumstick.png",
+    imagewidth = "110px",
+    imageheight = "110px"
 }) => {
     return <FoodButtonContainer>
         <FoodButtonPart1>
-            <FoodButtonImage>
-                {foodimage}
+            <FoodButtonImage src={foodimage} width={imagewidth} height={imageheight}>
             </FoodButtonImage>
         </FoodButtonPart1>
         <FoodButtonPart2>
             <FoodButtonBottom>
-                {foodname}
+                <p>{foodname}</p>
             </FoodButtonBottom>
         </FoodButtonPart2>
     </FoodButtonContainer>
