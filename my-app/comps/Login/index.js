@@ -19,6 +19,7 @@ const LoginForm = styled.input`
     font-size: 18pt;
     font-family: "Quicksand", sans-serif;
     font-weight: light;
+    text-align: center;
 `;
 
 export default Login;
