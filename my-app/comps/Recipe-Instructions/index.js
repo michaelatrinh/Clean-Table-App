@@ -9,7 +9,7 @@ const RecipeContainer = styled.div`
     width: 276px;
     background-color: #FFFFFF;
     border: 1px solid black;
-
+    border-radius: 20px;
 `;
 
 const RecipePart1 = styled.h2`
