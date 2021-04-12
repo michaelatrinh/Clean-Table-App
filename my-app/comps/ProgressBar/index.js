@@ -1,11 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ProgressBar = () => {
+const ProgressBar = ({
+    colour = "#59A091",
+    colour2 = "#B8E0D8",
+    colour3 = "#B8E0D8"
+}) => {
     return <ProgressBarContainer>
-        <ProgressBarOnDot></ProgressBarOnDot>
-        <ProgressBarOffDot></ProgressBarOffDot>
-        <ProgressBarOffDot></ProgressBarOffDot>
+        <ProgressBarDot dotcolour={colour}></ProgressBarDot>
+        <ProgressBarDot dotcolour={colour2}></ProgressBarDot>
+        <ProgressBarDot dotcolour={colour3}></ProgressBarDot>
     </ProgressBarContainer>
 }
 
@@ -19,10 +23,10 @@ const ProgressBarContainer = styled.div`
     height: 26px;
 `;
 
-const ProgressBarOnDot = styled.div`
+const ProgressBarDot = styled.div`
     width: 26px;
     height: 26px;
-    background-color: #59A091;
+    background-color: ${props=>props.dotcolour};
     border-radius: 90px;
 `;
 
