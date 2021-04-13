@@ -15,7 +15,7 @@ export default {
 export const StartButtonsUI = () => (<StartTutorialButton text="start tutorial"/>);
 export const EnterbuttonUI = () => (<EnterbuttonUI text="enter"/>)
 export const GenerateRecipeButtonUI = () => (<GenerateRecipeButtonUI text="generate recipe"/>)
-
+                                                                                                                          
 export const MyNavBar = () => <NavBarUI/>
 export const WelcomePageFooter = () => <WelcomePageFooterUI/>
 

@@ -1,7 +1,7 @@
 import styles from '../styles/exitbutton.module.css'
 
 
-function Window() {
+function ExitButton() {
   return (
     <div className={styles.circle}>
       <span className={styles.x}>X</span>
@@ -9,9 +9,6 @@ function Window() {
   )
 }
 
-export default Window;
+export default ExitButton;
 
-export{Window}
-
-
-
+export{ExitButton}

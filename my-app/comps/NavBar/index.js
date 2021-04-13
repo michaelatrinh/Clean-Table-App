@@ -6,13 +6,6 @@ import HomeImage from '../../public/home.svg';
 import ClipboardImage from '../../public/clipboard.svg';
 import InfoImage from '../../public/info.svg';
 
-
-import HomeIcon from '../../public/home.svg';
-import ClipboardIcon from '../../public/clipboard.svg';
-import ImportIcon from '../../public/info.svg';
-
-
-
 const NavBar = styled.div`
 width: 377px;
 height: 84px;
