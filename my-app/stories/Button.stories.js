@@ -5,7 +5,7 @@ import WelcomePageFooterUI from '../comps/WelcomePageFooter';
 
 export default {
     title: "Alicia's Components/Buttons",
-    component: <StartButtonsUI/>,
+    component: <StartTutorialButton/>,
     component: <NavBarUI/>,
     component: <WelcomePageFooterUI/>,
 }
