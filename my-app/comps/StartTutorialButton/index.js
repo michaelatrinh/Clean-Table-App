@@ -42,7 +42,7 @@ margin: 20px;
 
 const ButtonsUI = ({
     height="55px",
-    text="start tutorial",
+    
     width="200px",
     fontsize="18px"
 }) => {
