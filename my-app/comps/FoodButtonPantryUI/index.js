@@ -101,17 +101,17 @@ const FoodButtonPantryUI = ({
 }) => {
     return <FoodButtonBiggerContainer>
             <h1>{foodname}</h1>
-            <FoodButtonContainer>
-                <FoodButtonPart1>
-                    <FoodButtonImage src={foodimage} width={imagewidth} height={imageheight}>
-                    </FoodButtonImage>
-                </FoodButtonPart1>
-                <FoodButtonPart2>
-                    <FoodButtonBottom bgcolour={bgcolour}>
-                        <p>{days}</p>
-                    </FoodButtonBottom>
-                </FoodButtonPart2>
-            </FoodButtonContainer>
+                <FoodButtonContainer>
+                    <FoodButtonPart1>
+                        <FoodButtonImage src={foodimage} width={imagewidth} height={imageheight}>
+                        </FoodButtonImage>
+                    </FoodButtonPart1>
+                    <FoodButtonPart2>
+                        <FoodButtonBottom bgcolour={bgcolour}>
+                            <p>{days}</p>
+                        </FoodButtonBottom>
+                    </FoodButtonPart2>
+                </FoodButtonContainer>
             <p>{expirydate}</p>
         </FoodButtonBiggerContainer>
 }
