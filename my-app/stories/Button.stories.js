@@ -1,36 +1,22 @@
 import React from 'react';
-
-import { Button } from './Button';
+import StartTutorialButton from '../comps/StartTutorialButton';
+import NavBarUI from '../comps/NavBar';
+import WelcomePageFooterUI from '../comps/WelcomePageFooter';
 
 export default {
-  title: 'Example/Button',
-  component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-};
+    title: "Alicia's Components",
+    component: <StartButtonsUI/>,
+    component: <EnterbuttonUI/>,
+    component: <GenerateRecipeButtonUI/>,
+    component: <NavBarUI/>,
+    component: <WelcomePageFooterUI/>,
+}
 
-const Template = (args) => <Button {...args} />;
+export const StartButtonsUI = () => (<StartTutorialButton text="start tutorial"/>);
+export const EnterbuttonUI = () => (<EnterbuttonUI text="enter"/>)
+export const GenerateRecipeButtonUI = () => (<GenerateRecipeButtonUI text="generate recipe"/>)
+                                                                                                                          
+export const MyNavBar = () => <NavBarUI/>
+export const WelcomePageFooter = () => <WelcomePageFooterUI/>
 
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: 'Button',
-};
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
