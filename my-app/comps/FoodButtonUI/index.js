@@ -22,7 +22,7 @@ const FoodButtonPart1 = styled.div`
 
 const FoodButtonPart2 = styled.div`
     display: flex;
-    flex-grow: 1;
+    flex-grow: 0;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;

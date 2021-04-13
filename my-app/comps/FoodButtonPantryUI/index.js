@@ -28,7 +28,7 @@ const FoodButtonBiggerContainer = styled.div`
         align-items: center;
         text-align: center;
         font-size: 14px;
-        font-weight: light;
+        font-weight: 400;
         font-family: "Manrope", sans-serif;
         color: #302B40;
     }
@@ -97,7 +97,7 @@ const FoodButtonPantryUI = ({
     imageheight = "58px",
     bgcolour = "#F16D6D",
     foodname = "CHICKEN",
-    expirydate = "expires on: February, 1, 2021"
+    expirydate = "expires on: \n February, 1, 2021"
 }) => {
     return <FoodButtonBiggerContainer>
             <h1>{foodname}</h1>
