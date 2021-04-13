@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { GenerateRecipeButtonUI } from '../../stories/Button.stories';
+//import { GenerateRecipeButtonUI } from '../../stories/Button.stories';
 
 const StartTutorialButtonUI = styled.button`
 font-size: ${props=>props.fontsize};
@@ -47,14 +47,7 @@ const ButtonsUI = ({
     fontsize="18px"
 }) => {
 
-    return <div>
-        <StartTutorialButtonUI width={width} height={height} fontsize={fontsize}>{text}</StartTutorialButtonUI>
-        <GenerateRecipeButton height={height} width={width} fontsize={fontsize}>{text}</GenerateRecipeButton>
-        <EnterButtonUI height={height} width={width} fontsize={fontsize}>{text}</EnterButtonUI>
-        
-    </div>
+    return <StartTutorialButtonUI width={width} height={height} fontsize={fontsize}>{text}</StartTutorialButtonUI> 
 }
-
-
 
 export default ButtonsUI;
