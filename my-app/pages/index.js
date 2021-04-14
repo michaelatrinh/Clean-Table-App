@@ -1,17 +1,10 @@
-import styles from '../styles/exitbutton.module.css'
+import React from 'react';
+import styled from 'styled-components';
+import FoodButton from '../comps/FoodButtonUI';
+import ProgressBar from '../comps/ProgressBar';
+import Heading from '../comps/Header';
 
-
-function Window() {
-  return (
-    <div className={styles.circle}>
-      <span className={styles.x}>X</span>
-    </div>
-  )
+export default function tutorial(){
+    return <Heading></Heading>
 }
-
-export default Window;
-
-export{Window}
-
-
 
