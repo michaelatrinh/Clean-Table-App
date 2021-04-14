@@ -20,9 +20,9 @@ export default function tutorialPage({
 
 
         <FoodButtonContainer>
-            <FoodButton foodname="CHICKEN" foodimage="/chicken_drumstick.png" imageheight="100px" imagewidth="100px" bgcolour="#6FC3B2" routeTo="/tutorial-pages"></FoodButton>
-            <FoodButton foodname="BEEF" foodimage="/shaved_beef.png" imageheight="90px" imagewidth="110px" bgcolour="#6FC3B2" routeTo="/tutorial-pages"></FoodButton>
-            <FoodButton foodname="TOFU" foodimage="/tofu_squares.png" imageheight="99px" imagewidth="126px" bgcolour="#6FC3B2" routeTo="/tutorial-pages"></FoodButton>
+            <FoodButton foodname="CHICKEN" foodimage="/chicken_drumstick.png" imageheight="100px" imagewidth="100px" bgcolour="#6FC3B2"></FoodButton>
+            <FoodButton foodname="BEEF" foodimage="/shaved_beef.png" imageheight="90px" imagewidth="110px" bgcolour="#6FC3B2"></FoodButton>
+            <FoodButton foodname="TOFU" foodimage="/tofu_squares.png" imageheight="99px" imagewidth="126px" bgcolour="#6FC3B2"></FoodButton>
         </FoodButtonContainer>
 
         <ProgressBarContainer>
