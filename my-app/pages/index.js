@@ -1,3 +1,18 @@
+
+export default function Home (){
+return <div>
+  <Header/>
+HOW TO GET STARTED 
+
+People want to know the best method when it comes to managing perishability.
+With this app you can now know how long food can actually last beyond best before date.
+<StarTutorialtButton/>
+
+</div>
+
+}
+
+
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 

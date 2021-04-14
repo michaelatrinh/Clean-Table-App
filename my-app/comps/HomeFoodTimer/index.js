@@ -7,7 +7,7 @@ width: 342px;
 left: 0px;
 top: 0px;
 border-radius: 10px;
-background: #FCD8D8;
+background: ${props=>props.bgcolor};
 letter-spacing:5px;
 `;
 
@@ -28,7 +28,6 @@ position:relative;
 margin-top: -40px;
 margin-left:23px;
 z-index:2;
-
 `;
 
 const HomeFoodTimerDarkBar= styled.div`
@@ -47,10 +46,11 @@ const HomeFoodTimerUI = ({
     DAYS="1 DAYS",
     ITEM="CHICKEN",
     bgcolor="#F16D6D",
+    bgcolor1="#FCD8D8",
 }) => {
 
     return <div>
-        <HomeFoodTimerBar></HomeFoodTimerBar>
+        <HomeFoodTimerBar bgcolor={bgcolor1}></HomeFoodTimerBar>
     <HomeFoodTimerItem>{ITEM}</HomeFoodTimerItem>
     <HomeFoodTimerDarkBar bgcolor={bgcolor}></HomeFoodTimerDarkBar>
         <HomeFoodTimerDate>{DAYS}</HomeFoodTimerDate>
