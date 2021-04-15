@@ -1,13 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import FoodButton from '../comps/FoodButtonUI';
 import ProgressBar from '../comps/ProgressBar';
 import Heading from '../comps/Header';
+import {useRouter} from 'next/router';
 
 export default function tutorialPage({
     title = "PROTEINS",
     description = "Add a PROTEIN to your pantry!"
 }){
+    // const [clickState, setClickState] = useState(false);
+    // // var boxshadow1 = "0px 4px 5px #494948";
+    // // if(clickState === true){
+    // //     boxshadow = "inset 0 0 10px 5px #C4C4C4";
+    // // }
+    // const HandleClick = () => {
+    //     setClickState(true);
+    // }
+    // boxshadow={clickState ? "inset 0 0 10px 5px #C4C4C4" : "0px 4px 5px #494948"} onClick={HandleClick}
+
+    const router = useRouter();
     return <TutPageContainer>
         <HeaderContainer>
             <Heading></Heading>
@@ -18,11 +30,12 @@ export default function tutorialPage({
             <TutPageDescriptor>{description}</TutPageDescriptor>
         </TextContainer>
 
-
         <FoodButtonContainer>
-            <FoodButton foodname="CHICKEN" foodimage="/chicken_drumstick.png" imageheight="100px" imagewidth="100px" bgcolour="#6FC3B2" routeTo="/tutorial-pages"></FoodButton>
-            <FoodButton foodname="BEEF" foodimage="/shaved_beef.png" imageheight="90px" imagewidth="110px" bgcolour="#6FC3B2" routeTo="/tutorial-pages"></FoodButton>
-            <FoodButton foodname="TOFU" foodimage="/tofu_squares.png" imageheight="99px" imagewidth="126px" bgcolour="#6FC3B2" routeTo="/tutorial-pages"></FoodButton>
+            <FoodButton routeTo="/add-carbohydrate" foodname="CHICKEN" foodimage="/chicken_drumstick.png" imageheight="100px" imagewidth="100px" bgcolour="#6FC3B2"></FoodButton>
+
+            <FoodButton routeTo="/add-carbohydrate" foodname="BEEF" foodimage="/shaved_beef.png" imageheight="90px" imagewidth="110px" bgcolour="#6FC3B2"></FoodButton>
+            
+            <FoodButton routeTo="/add-carbohydrate" foodname="TOFU" foodimage="/tofu_squares.png" imageheight="99px" imagewidth="126px" bgcolour="#6FC3B2"></FoodButton>
         </FoodButtonContainer>
 
         <ProgressBarContainer>
