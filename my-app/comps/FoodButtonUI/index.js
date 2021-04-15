@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {useRouter} from 'next/router';
 
 const FoodButtonContainer = styled.div`
     display: flex;
@@ -22,7 +23,7 @@ const FoodButtonPart1 = styled.div`
 
 const FoodButtonPart2 = styled.div`
     display: flex;
-    flex-grow: 1;
+    flex-grow: 0;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
@@ -61,9 +62,11 @@ const FoodButtonUI = ({
     foodimage = "/chicken_drumstick.png",
     imagewidth = "110px",
     imageheight = "110px",
-    bgcolour = "#6FC3B2"
+    bgcolour = "#6FC3B2",
+    routeTo = "/tutorial-pages"
 }) => {
-    return <FoodButtonContainer>
+    const router = useRouter();
+    return <FoodButtonContainer onClick={()=>router.push(routeTo)}>
         <FoodButtonPart1>
             <FoodButtonImage src={foodimage} width={imagewidth} height={imageheight}>
             </FoodButtonImage>

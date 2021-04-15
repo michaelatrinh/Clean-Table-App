@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const WelcomePageFooter = styled.div `
+const WelcomeBack = styled.div`
 background-color: #59A091;
-width: 433px;
-height: 64px; 
+width: 409px;
+height: 302px;
+
 border-top-left-radius: 1000px; 
 border-top-right-radius: 1000px;
 
@@ -17,13 +18,12 @@ padding-top:20px;
 `;
 
 
-const WelcomePageFooterUI = () => {
+
+const WelcomeBackUI = () => {
 
     return <div>
-        <WelcomePageFooter>
-            created by: <br></br>Jessica, Arielle, Michael, and Alicia.
-        </WelcomePageFooter>
+        <WelcomeBack>WELCOME BACK</WelcomeBack>
     </div>
 }
 
-export default WelcomePageFooterUI; 
+export default WelcomeBackUI;
