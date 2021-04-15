@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Trophy from '../../public/image_9.png';
 
 const CongratsContainer = styled.div`
     margin: 50px;
@@ -14,6 +15,7 @@ const CongratsContainer = styled.div`
 
     border-radius: 20px;
     box-shadow: 0px 5px 10px #C0C0C0;
+    font-family: 'Manrope', sans-serif;
 `;
 
 const TopRow = styled.div`
@@ -27,9 +29,10 @@ const TopRow = styled.div`
       color: white;
       font-size: 20px;
       font-weight: 500;
+      text-shadow: 2px 2px #6FC3B2;
 
       height: 86px;
-      width: 340px;
+      width: 380px;
 
       display: flex;
       justify-content: center;
@@ -37,14 +40,30 @@ const TopRow = styled.div`
 `;
 
 const MiddleRow = styled.div`
-    width: 250px;
-    font-size: 24px;
+    width: 300px;
+    font-size: 18px;
+    font-family: 'Manrope', sans-serif;
+    text-align: center;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    margin-top: 50px;
+    margin-top: 200px;
+`;
+
+const ConfirmButton = styled.button`
+  width: 120px;
+  height: 30px;
+
+  background-color: #59A091;
+  color: white;
+  border: none;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+
+  position: absolute;
+  margin-top: 350px;
+
 `;
 
  const CongratsText = styled.p`
@@ -53,6 +72,12 @@ const MiddleRow = styled.div`
     font-size: 18px;
  `;
 
+
+ const Img = styled.img`
+  margin-top: -200px;
+  position: absolute;
+`;
+
   const Congrats = ({
     stylestext="You’ve just entered in your grocery list into “MyPantry!” Now you can keep track of the food in your household.The Home page will show you the items that are about to expire. Use our Recipe Generator feature to create delicious meals before they expire! Happy Saving!" , 
     headertext="CONGRATULATIONS", 
@@ -60,8 +85,19 @@ const MiddleRow = styled.div`
   }) =>{
 
     return <CongratsContainer>
-              <TopRow></TopRow>
-              <MiddleRow></MiddleRow>
+              <TopRow>CONGRATULATIONS</TopRow>
+              <MiddleRow>
+              <Img src={Trophy} width="110px" height="110px" alt="broccoli"></Img>
+
+              <p>
+      You’ve just entered in your grocery list into “MyPantry!” Now you can keep track of the food in your household. <br></br><br></br>
+      The “Home” page will show you the items that are about to expire. <br></br><br></br>
+      Use our “Recipe Generator” feature to create delicious meals before they expire!<br></br><br></br>
+      Happy Saving!
+      </p>
+
+      <ConfirmButton>OKAY</ConfirmButton>
+              </MiddleRow>
       </CongratsContainer>
 
   }

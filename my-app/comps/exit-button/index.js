@@ -30,7 +30,7 @@ const x = styled.span`
 const ExitButtonUI = () => {
 
   return <Circle>
-    <x></x>
+    <x>X</x>
   </Circle>
 
 }
