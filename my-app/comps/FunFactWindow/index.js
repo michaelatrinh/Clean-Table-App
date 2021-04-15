@@ -1,4 +1,4 @@
-import styles from '../styles/funfactwindow.module.css'
+import styles from '../styles/funfactwindow'
 
 
 function FunFact() {
