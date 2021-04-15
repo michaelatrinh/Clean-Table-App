@@ -11,14 +11,15 @@ background: ${props=>props.bgcolor};
 letter-spacing:5px;
 `;
 
-const HomeFoodTimerItem = styled.div`
-font-size: 24px;
-line-height: 33px;
-margin-top: -40px;
-margin-left:160px;
-width: 153px;
-left: 162px;
-top: 9px;
+
+const HomeFoodTimerDarkBar= styled.div`
+background-color:${props=>props.bgcolor};
+position:relative;
+height: 52px;
+width: ${props=>props.width};
+margin-top: -45px;
+border-radius: 10px;
+z-index:1;
 `;
 
 const HomeFoodTimerDate = styled.div`
@@ -28,17 +29,20 @@ position:relative;
 margin-top: -40px;
 margin-left:23px;
 z-index:2;
+font-family: manrope;
 `;
 
-const HomeFoodTimerDarkBar= styled.div`
-background-color:${props=>props.bgcolor};
+
+const HomeFoodTimerItem = styled.div`
+font-size: 24px;
+line-height: 33px;
 position:relative;
-height: 52px;
-width: 126px;
-margin-top: -45px;
-border-radius: 10px;
-z-index:1;
+margin-top: -40px;
+margin-left:160px;
+z-index:2;
+font-family: manrope;
 `;
+
 
 //props
 
@@ -47,12 +51,13 @@ const HomeFoodTimerUI = ({
     ITEM="CHICKEN",
     bgcolor="#F16D6D",
     bgcolor1="#FCD8D8",
+    barwidth= "126px",
 }) => {
 
     return <div>
-        <HomeFoodTimerBar bgcolor={bgcolor1}></HomeFoodTimerBar>
+        <HomeFoodTimerBar bgcolor={bgcolor1} ></HomeFoodTimerBar>
     <HomeFoodTimerItem>{ITEM}</HomeFoodTimerItem>
-    <HomeFoodTimerDarkBar bgcolor={bgcolor}></HomeFoodTimerDarkBar>
+    <HomeFoodTimerDarkBar bgcolor={bgcolor} width={barwidth}></HomeFoodTimerDarkBar>
         <HomeFoodTimerDate>{DAYS}</HomeFoodTimerDate>
     </div>
 }
