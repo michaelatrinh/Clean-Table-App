@@ -15,7 +15,7 @@ const Circle = styled.div`
 
 const x = styled.span`
   color: #696259;
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: sans-serif;
   font-size: 1em;
   text-align: center;
 
