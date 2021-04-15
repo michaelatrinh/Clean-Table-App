@@ -1,7 +1,13 @@
 import styles from '../styles/exitbutton.module.css'
+import React from 'react';
+import styled from 'styled-components';
 
 
-function ExitButton() {
+const Circle = styled.div`
+
+`;
+
+/*function ExitButton() {
   return (
     <div className={styles.circle}>
       <span className={styles.x}>X</span>
@@ -11,4 +17,4 @@ function ExitButton() {
 
 export default ExitButton;
 
-export{ExitButton}
+export{ExitButton}*/
