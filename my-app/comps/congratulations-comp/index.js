@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'style-components';
+import styled from 'styled-components';
 
 const CongratsContainer = styled.div`
     margin: 50px;
@@ -8,7 +8,7 @@ const CongratsContainer = styled.div`
     width: 336px;
 
     display: flex; 
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
     background-color: white;
 

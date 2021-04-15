@@ -11,3 +11,4 @@ export default {
 }
 
 export const myhappycomp= () => <Congrats/>
+export const mysadcomp= () => <ExitButtonUI/>
