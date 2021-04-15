@@ -10,6 +10,7 @@ border-radius:5px;
 height: ${props=>props.height};
 width: ${props=>props.width};
 border: none;
+box-shadow: 0px 4px 10px rgba(34, 29, 29, 0.5);
 letter-spacing:5px;
 `;
 
