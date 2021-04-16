@@ -14,10 +14,10 @@ import ImportIcon from '../../public/info.svg';
 
 
 const NavBar = styled.div`
-width: 377px;
+width: 375px;
 height: 84px;
 background-color: #59A091;
-padding:10px;
+// padding:10px;
 `;
 
 const Img = styled.image`
