@@ -5,6 +5,7 @@ import StartTutorialButtonUI from '../comps/StartTutorialButton';
 import styled from 'styled-components';
 
 
+
 export default function Page2({
     title ="HOW TO GET STARTED",
     description ="People want to know the best method when it comes to managing perishability.",
@@ -116,4 +117,11 @@ postion:relative;
  position:relative;
     bottom:50px;
  `;
+
+
+import FoodButton from '../comps/FoodButtonUI';
+import ProgressBar from '../comps/ProgressBar';
+import FoodButton from '../comps/FoodButtonUI';
+import ProgressBar from '../comps/ProgressBar';
+import Heading from '../comps/Header';
 
