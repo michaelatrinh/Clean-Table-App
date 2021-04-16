@@ -1,7 +1,9 @@
 import React from 'react';
+import '../styles/animation.module.css';
 import HeaderUI from '../comps/Header';
 import StartTutorialButtonUI from '../comps/StartTutorialButton';
 import styled from 'styled-components';
+
 
 export default function Page2({
     title ="HOW TO GET STARTED",
@@ -19,11 +21,29 @@ export default function Page2({
             <PageTextTwo>{descriptiontwo}</PageTextTwo>
         </TextContainer>
 
+<Animation> <div class="main">
+        <div class="shadow-wrapper">
+            <div class="shadow"></div>
+        </div>
+        <div class="food">
+            <div class="body"></div>
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="blush left"></div>
+            <div class="blush right"></div>
+            <div class="mouth"></div>
+        </div>
+        <div class="hi-wrapper">
+            <div class="hi"></div>
+            </div>
+            </div>
+ </Animation>
+
 <StartButton>
 <StartTutorialButtonUI></StartTutorialButtonUI>
 </StartButton>
     </PageContainer>
-   
+    
 } 
 
 const PageContainer = styled.div`
@@ -81,6 +101,14 @@ font-family: "Quicksand", sans-serif;
     position:relative;
     top:-120px;
 `;
+
+const Animation = styled.div`
+display: flex;
+postion:relative;
+
+z-index:5;
+ `;
+
 
  const StartButton =styled.div`
  display: flex;
