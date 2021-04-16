@@ -10,8 +10,8 @@ import FunFact from '../comps/FunFactWindow'
 import {useRouter} from 'next/router';
 
 export default function PantryAddProtein({
-    title = "PROTEINS",
-    description = "Add a PROTEIN to your pantry!"
+    title = "CARBOHYDRATES",
+    description = "Add a CARBOHYDRATE to your pantry!"
 }){
     return <PageContainer>
         <HeaderContainer>
@@ -24,11 +24,11 @@ export default function PantryAddProtein({
         </TextContainer>
 
         <FoodButtonContainer>
-            <FoodButton foodname="CHICKEN" foodimage="/chicken_drumstick.png" imageheight="100px" imagewidth="100px" bgcolour="#6FC3B2"></FoodButton>
+            <FoodButton foodname="RICE" foodimage="/rice_bowl.png" imageheight="78px" imagewidth="107px" bgcolour="#6FC3B2"></FoodButton>
 
-            <FoodButton foodname="BEEF" foodimage="/shaved_beef.png" imageheight="90px" imagewidth="110px" bgcolour="#6FC3B2"></FoodButton>
+            <FoodButton foodname="PASTA" foodimage="/pasta_dish.png" imageheight="90px" imagewidth="112px" bgcolour="#6FC3B2"></FoodButton>
 
-            <FoodButton foodname="TOFU" foodimage="/tofu_squares.png" imageheight="99px" imagewidth="126px" bgcolour="#6FC3B2"></FoodButton>
+            <FoodButton foodname="POTATOES" foodimage="/potatoes.png" imageheight="106px" imagewidth="118px" bgcolour="#6FC3B2"></FoodButton>
         </FoodButtonContainer>
 
         <AddButtonContainer>
