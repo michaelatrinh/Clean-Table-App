@@ -72,7 +72,7 @@ const FoodButtonUI = ({
     // const [clickState, setClickState] = useState(false);
 
     const router = useRouter();
-    return <FoodButtonContainer  onClick={()=>router.push(routeTo)} boxshadow={darken}>
+    return <FoodButtonContainer onClick={()=>router.push(routeTo)} boxshadow={darken}>
         <FoodButtonPart1>
             <FoodButtonImage src={foodimage} width={imagewidth} height={imageheight}>
             </FoodButtonImage>
