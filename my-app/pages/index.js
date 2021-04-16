@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/animation.module.css';
+import animationStyle from '../styles/animation.module.css';
 import HeaderUI from '../comps/Header';
 import StartTutorialButtonUI from '../comps/StartTutorialButton';
 import styled from 'styled-components';
@@ -21,20 +21,20 @@ export default function Page2({
             <PageTextTwo>{descriptiontwo}</PageTextTwo>
         </TextContainer>
 
-<Animation> <div class="main">
-        <div class="shadow-wrapper">
-            <div class="shadow"></div>
+<Animation> <div className={animationStyle.main}>
+        <div className={animationStyle.shadow-wrapper}>
+            <div className={animationStyle.shadow}></div>
         </div>
-        <div class="food">
-            <div class="body"></div>
-            <div class="eye left"></div>
-            <div class="eye right"></div>
-            <div class="blush left"></div>
-            <div class="blush right"></div>
-            <div class="mouth"></div>
+        <div className={animationStyle.food}>
+            <div className={animationStyle.body}></div>
+            <div className={animationStyle.eye.left}></div>
+            <div className={animationStyle.eye.right}></div>
+            <div className={animationStyle.blush.left}></div>
+            <div className={animationStyle.blush.right}></div>
+            <div className={animationStyle.mouth}></div>
         </div>
-        <div class="hi-wrapper">
-            <div class="hi"></div>
+        <div className={animationStyle.hi-wrapper}>
+            <div className={animationStyle.hi}></div>
             </div>
             </div>
  </Animation>
@@ -105,8 +105,6 @@ font-family: "Quicksand", sans-serif;
 const Animation = styled.div`
 display: flex;
 postion:relative;
-
-z-index:5;
  `;
 
 
