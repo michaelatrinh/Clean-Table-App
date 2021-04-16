@@ -29,7 +29,8 @@ const FunTopRow = styled.h1`
   font-weight: bold;
   font-family: "Manrope", sans-serif;
   
-  margin: 0.5rem;
+  margin-top: 0.85rem;
+  margin-bottom: 0.33rem;
 
 //   height: 86px;
 //   width: 305px;
@@ -51,17 +52,18 @@ const FunMidRow = styled.div`
   color: #696259;
 
 //   margin-top: 10px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.85rem;
 `;
 
 const FunFactUI = ({
-    text = "Most foods can be frozen to be used at a later date to keep them from spoiling & ending up in the landfill."
+    htext = "DID YOU KNOW?",
+    ptext = "Most foods can be frozen to be used at a later date to keep them from spoiling & ending up in the landfill."
 }) => {
 
   return <FunContainer>
-    <FunTopRow>DID YOU KNOW?</FunTopRow>
+    <FunTopRow>{htext}</FunTopRow>
 
-    <FunMidRow>{text}</FunMidRow>
+    <FunMidRow>{ptext}</FunMidRow>
   </FunContainer>
 
 }

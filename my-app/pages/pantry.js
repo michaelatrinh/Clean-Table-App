@@ -50,7 +50,7 @@ export default function pantry({
         </FoodIconColContainer>
 
         <TipContainer>
-            <FunFact></FunFact>
+            <FunFact htext="HERE'S A TIP!" ptext="You can save your vegetable scraps and peels to make home-made veggie stock!"></FunFact>
         </TipContainer>
 
         <NavBarContainer>
@@ -67,8 +67,8 @@ const PantryPageContainer = styled.div`
     background-color: #E7F2F0;
     width: 375px;
     max-width: 375px;
-    height: 812px;
-    max-height: 812px;
+    height: 910px;
+    max-height: 910px;
 `;
 
 const HeaderContainer = styled.div`
@@ -89,6 +89,7 @@ const PantryPageTitle = styled.h1`
     font-size: 24px;
     font-weight: 300;
     margin-top: 0;
+    text-align: center;
 `;
 
 const PantryPageDescriptor = styled.h2`
@@ -96,26 +97,30 @@ const PantryPageDescriptor = styled.h2`
     font-size: 18px;
     font-weight: 300;
     margin: 0;
+    text-align: center;
 `;
 
 const FoodIconColContainer = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     flex-grow: 3;
+    margin-top: -1.25rem;
 `;
 
 const FoodIconRowContainer = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
+    width: 375px;
 `;
 
 const TipContainer = styled.div`
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     flex-grow: 1;
 `;
@@ -124,5 +129,5 @@ const NavBarContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
+    flex-grow: 0;
 `;
