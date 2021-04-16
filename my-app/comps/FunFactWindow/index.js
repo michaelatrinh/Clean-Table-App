@@ -1,4 +1,3 @@
-
 import React from 'react';
 import styled from 'styled-components'; 
 
@@ -89,7 +88,7 @@ export default FunFact;
 
 export{FunFact}*/
 
-export{FunFact}
+// export{FunFact}
 
 
 

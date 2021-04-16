@@ -1,50 +1,61 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 342px;
+    height: 52px;
+`;
+
 const HomeFoodTimerBar = styled.div`
-height: 52px;
-width: 342px;
-left: 0px;
-top: 0px;
-border-radius: 10px;
-
-background-color: ${props=>props.bgcolorlight};
-
-letter-spacing:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52px;
+    width: 342px;
+    border-radius: 10px;
+    background-color: ${props=>props.bgcolorlight};
 `;
 
-const HomeFoodTimerItem = styled.div`
-font-size: 24px;
-line-height: 33px;
-margin-top: -40px;
-margin-left:160px;
-width: 153px;
-left: 162px;
-top: 9px;
+const SecondContainer = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
 `;
 
-const HomeFoodTimerDate = styled.div`
-font-size: 24px;
-line-height: 33px;
-position:relative;
-margin-top: -40px;
-margin-left:23px;
-z-index:2;
+const ThirdContainer = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 2;
+`;
+
+const HomeFoodTimerItem = styled.h1`
+    font-family: "Manrope", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+`;
+
+const HomeFoodTimerDate = styled.h1`
+    font-family: "Manrope", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    z-index:2;
 `;
 
 const HomeFoodTimerDarkBar= styled.div`
-background-color:${props=>props.bgcolordark};
-position:relative;
-height: 52px;
-width: 126px;
-margin-top: -45px;
-border-radius: 10px;
-z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:${props=>props.bgcolordark};
+    height: 52px;
+    width: 126px;
+    border-radius: 10px;
+    z-index: 1;
 `;
-
-
-
-//props
 
 const HomeFoodTimerUI = ({
     DAYS="1 DAYS",
@@ -54,12 +65,21 @@ const HomeFoodTimerUI = ({
     bgcolorlight="#FCD8D8",
 }) => {
 
-    return <div>
-        <HomeFoodTimerBar bgcolorlight={bgcolorlight}></HomeFoodTimerBar>
-        <HomeFoodTimerItem>{ITEM}</HomeFoodTimerItem>
-        <HomeFoodTimerDarkBar bgcolordark={bgcolordark}></HomeFoodTimerDarkBar>
+    return <Container>
+        <HomeFoodTimerBar bgcolorlight={bgcolorlight}>
+            <SecondContainer>
+                <HomeFoodTimerDarkBar bgcolordark={bgcolordark}>
+                    <HomeFoodTimerDate>{DAYS}</HomeFoodTimerDate>
+                </HomeFoodTimerDarkBar>
+            </SecondContainer>
 
-    bgcolor="#F16D6D",
+            <ThirdContainer>
+                <HomeFoodTimerItem>{ITEM}</HomeFoodTimerItem>
+            </ThirdContainer>
+        </HomeFoodTimerBar>
+    </Container>
+}
+    {/* bgcolor="#F16D6D",
     bgcolor1="#FCD8D8",
 }) => {
 
@@ -70,7 +90,7 @@ const HomeFoodTimerUI = ({
 
         <HomeFoodTimerDate>{DAYS}</HomeFoodTimerDate>
     </div>
-}
+} */}
 
 export default HomeFoodTimerUI;
 
