@@ -40,7 +40,7 @@ const FoodButtonBiggerContainer = styled.div`
         justify-content: center;
         align-items: center;
         text-align: center;
-        font-size: 9px;
+        font-size: 11px;
         font-weight: light;
         font-family: "Quicksand", sans-serif;
         color: #302B40;
