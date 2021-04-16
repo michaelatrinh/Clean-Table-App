@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 //import { GenerateRecipeButtonUI } from '../../stories/Button.stories';
+import {useRouter} from 'next/router'
+
 
 const StartTutorialButtonUI = styled.button`
 font-size: ${props=>props.fontsize};
@@ -15,7 +17,6 @@ letter-spacing:5px;
 `;
 
 
-
 const ButtonsUI = ({
     height="55px",
     text="Start Tutorial",
@@ -23,6 +24,7 @@ const ButtonsUI = ({
     fontsize="18px"
 }) => {
 
+    const router =useRouter();
     return <StartTutorialButtonUI width={width} height={height} fontsize={fontsize}>{text}</StartTutorialButtonUI> 
 }
 
