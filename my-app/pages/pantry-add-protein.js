@@ -7,13 +7,19 @@ import EmptyBox from '../comps/EmptyBox';
 import FoodIcon from '../comps/FoodButtonPantryUI';
 import NavBar from '../comps/NavBar';
 import FunFact from '../comps/FunFactWindow'
+import ConfirmWindow from '../comps/notification-component'
 import {useRouter} from 'next/router';
 
 export default function PantryAddProtein({
     title = "PROTEINS",
     description = "Add a PROTEIN to your pantry!"
 }){
+    const [confirmState, setConfirmState] = useState(false);
+
     return <PageContainer>
+        <SecondPageContainer>
+
+        </SecondPageContainer>
         <HeaderContainer>
             <Heading></Heading>
         </HeaderContainer>
@@ -54,6 +60,22 @@ const PageContainer = styled.div`
     height: 910px;
     max-height: 910px;
 `;
+
+const SecondPageContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #C2C2C2;
+    width: ${props=>props.width};
+    max-width: 375px;
+    height: ${props=>props.height};
+    max-height: 910px;
+    overflow: hidden;
+    z-index: 10;
+`;
+
+
 
 const HeaderContainer = styled.div`
     display: flex;
