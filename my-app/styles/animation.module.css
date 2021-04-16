@@ -14,7 +14,7 @@ html.body {
 }
 
 .food {
-    width: 200px;
+    width: 180px;
     height: 140px;
     transform-origin: 50% 80%;
     animation: zoomIn .5s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
@@ -24,59 +24,70 @@ html.body {
     position: absolute;
     top: -110px;
     right: 0;
-    width: 210px;
-    height: 240px;
+    width: 160px;
+    height: 160px;
     background: url(../public/food.png) no-repeat center center;
     background-size: contain;
     z-index: 10;
 }
 
 
-.food .eye {
+.food .eyeLeft {
     position: absolute;
-    top: 39px;
+    top: 0px;
     width: 11px;
     height: 11px;
+    left: 61px;
+    background: url(../public/eye_left.png) no-repeat;
+    background-size: contain;
+    z-index: 12;
+}
+
+  
+.food .eyeRight {
+    position: absolute;
+    top: 0px;
+    width: 11px;
+    height: 11px;
+    left: 125px;
+    transform-origin: 50% 50%;
+    transform: rotate(180deg);
     background: url(../public/eye.png) no-repeat;
     background-size: contain;
     z-index: 12;
 }
 
-.food .eye.left {
-    left: 49px;
-}
 
-.food .eye.right {
-    left: 118px;
-    transform-origin: 50% 50%;
-    transform: rotate(180deg);
-}
-
-.food .blush {
+.food .blushLeft {
     position: absolute;
-    top: 46px;
+    top: 7px;
+    left: 45px;
     width: 15px;
     height: 9px;
     background: url(../public/blush.png) no-repeat;
     background-size: 100% 100%;
+    z-index: 13;
+    animation: blushLeft 0.5s ease infinite alternate;
+}
+
+.food .blushRight {
+    position: absolute;
+    top: 7px;
+    width: 15px;
+    height: 9px;
+    left: 127px;
+    background: url(../public/blush.png) no-repeat;
+    background-size: 100% 100%;
     z-index: 11;
-    animation: blush .5s ease infinite alternate;
-}
-
-.food .blush.left {
-    left: 43px;
-}
-
-.food .blush.right {
-    left: 120px;
+    animation: blushRight .5s ease infinite alternate;
 }
 
 .food .mouth {
     position: absolute;
-    top: 55px;
-    left: 49px;
-    width: 78px;
-    height: 56px;
+    top: 10px;
+    left: 75px;
+    width: 40px;
+    height: 40px;
     background: url(../public/mouth.png) no-repeat;
     background-size: 100%;
     z-index: 11;
@@ -84,7 +95,7 @@ html.body {
 }
 
 
-.shadow-wrapper {
+.shadowwrapper {
     position: absolute;
     top: 110px;
     width: 100%;
@@ -93,9 +104,9 @@ html.body {
 .shadow {
     margin: 0 auto;
     position: relative;
-    width: 210px;
-    left: 0px;
-    top:-15px;
+    width: 155px;
+    left: -70px;
+    top: -95px;
     height: 50px;
     background: rgba(0, 0, 0, 0.15);
     border-radius: 50%;
@@ -103,26 +114,26 @@ html.body {
     animation: zoomIn 0.5s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
 }
 
-.hi-wrapper {
+/*.hiwrapper {
     position: absolute;
-    width: 70px;
-    top: 100px;
-    left: 88px;
+    width: 80px;
+    padding-top: -800px;
+    left: 95px;
     transform: translate(-50%, -50%);
     transform-origin: 50% 100%;
     animation: hiUp 2.1s ease-in infinite;
 }
 
 .hi {
-    padding-bottom: 135%;
+    padding-bottom: 130%;
     width: 100%;
     height: 100%;
     background: url(../public/hi.png) no-repeat;
     background-size: contain;
     animation: hi 3s ease-out;
-   /*-webkit-animation-fill-mode:forwards; */
+   -webkit-animation-fill-mode:forwards; 
 }
-
+*/
 
 
 @keyframes zoomIn {
@@ -131,7 +142,17 @@ html.body {
     }
 }
 
-@keyframes blush {
+@keyframes blushRight {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blushLeft {
     0% {
         opacity: 0;
     }
@@ -164,7 +185,7 @@ html.body {
 }
 
 
-@keyframes hiUp {
+/*@keyframes hiUp {
     0% {
         top: 70px;
     }
@@ -176,7 +197,7 @@ html.body {
     100% {
         top: -100px;
     }
-}
+}*/
 
 @keyframes hi {
     0% {

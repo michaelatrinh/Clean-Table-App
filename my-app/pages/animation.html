@@ -42,43 +42,54 @@
     }
 
     
-    .food .eye {
+    .food .eyeLeft {
         position: absolute;
         top: 39px;
         width: 11px;
         height: 11px;
+        left: 49px;
         background: url(../public/eye.png) no-repeat;
         background-size: contain;
         z-index: 12;
     }
 
-    .food .eye.left {
-        left: 49px;
-    }
-
-    .food .eye.right {
+      
+    .food .eyeRight {
+        position: absolute;
+        top: 39px;
+        width: 11px;
+        height: 11px;
         left: 118px;
         transform-origin: 50% 50%;
         transform: rotate(180deg);
+        background: url(../public/eye.png) no-repeat;
+        background-size: contain;
+        z-index: 12;
     }
 
-    .food .blush {
+   
+    .food .blushLeft {
+        position: absolute;
+        top: 46px;
+        left: 43px;
+        width: 15px;
+        height: 9px;
+        background: url(../public/blushLeft.png) no-repeat;
+        background-size: 100% 100%;
+        z-index: 11;
+        animation: blushLeft .5s ease infinite alternate;
+    }
+
+    .food .blushRight {
         position: absolute;
         top: 46px;
         width: 15px;
         height: 9px;
+        left: 120px;
         background: url(../public/blush.png) no-repeat;
         background-size: 100% 100%;
         z-index: 11;
-        animation: blush .5s ease infinite alternate;
-    }
-
-    .food .blush.left {
-        left: 43px;
-    }
-
-    .food .blush.right {
-        left: 120px;
+        animation: blushRight .5s ease infinite alternate;
     }
 
     .food .mouth {
@@ -217,10 +228,10 @@
         </div>
         <div class="food">
             <div class="body"></div>
-            <div class="eye left"></div>
-            <div class="eye right"></div>
-            <div class="blush left"></div>
-            <div class="blush right"></div>
+            <div class="eyeLeft"></div>
+            <div class="eyeRight"></div>
+            <div class="blushLeft"></div>
+            <div class="blushRight"></div>
             <div class="mouth"></div>
 
         </div>
