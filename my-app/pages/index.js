@@ -22,25 +22,25 @@ export default function Page2({
         </TextContainer>
 
 <Animation> <div className={animationStyle.main}>
-        <div className={animationStyle.shadow-wrapper}>
+        <div className={animationStyle.shadowwrapper}>
             <div className={animationStyle.shadow}></div>
         </div>
         <div className={animationStyle.food}>
             <div className={animationStyle.body}></div>
-            <div className={animationStyle.eye.left}></div>
-            <div className={animationStyle.eye.right}></div>
-            <div className={animationStyle.blush.left}></div>
-            <div className={animationStyle.blush.right}></div>
+            <div className={animationStyle.eyeLeft}></div>
+            <div className={animationStyle.eyeRight}></div>
+            <div className={animationStyle.blushLeft}></div>
+            <div className={animationStyle.blushRight}></div>
             <div className={animationStyle.mouth}></div>
         </div>
-        <div className={animationStyle.hi-wrapper}>
+        <div className={animationStyle.hiwrapper}>
             <div className={animationStyle.hi}></div>
             </div>
             </div>
  </Animation>
 
-<StartButton>
-<StartTutorialButtonUI></StartTutorialButtonUI>
+<StartButton routeTo="/tutorial-pages">
+<StartTutorialButtonUI ></StartTutorialButtonUI>
 </StartButton>
     </PageContainer>
     
@@ -77,7 +77,7 @@ const PageTitle = styled.h1`
     font-size: 24px;
     font-weight: 400;
     position:relative;
-    top:-130px;
+    top:-70px;
 `;
 
 const PageText = styled.h2`
@@ -88,7 +88,7 @@ font-family: "Quicksand", sans-serif;
     margin-left: 50px;
     text-align:center;
     position:relative;
-    top:-120px;
+    top:-60px;
 `;
 
 const PageTextTwo = styled.h2`
@@ -99,12 +99,15 @@ font-family: "Quicksand", sans-serif;
     margin-left: 50px;
     text-align:center;
     position:relative;
-    top:-120px;
+    top:-60px;
 `;
 
 const Animation = styled.div`
-display: flex;
-postion:relative;
+display: flex: display;
+position:relative;
+top:-10px;
+left:60px;
+
  `;
 
 
@@ -114,6 +117,6 @@ postion:relative;
  align-items: center;
  justify-content: center;
  position:relative;
-    bottom:50px;
+    bottom:35px;
  `;
 
