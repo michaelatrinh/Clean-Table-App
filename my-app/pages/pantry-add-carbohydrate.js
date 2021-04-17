@@ -6,44 +6,77 @@ import Heading from '../comps/Header';
 import EmptyBox from '../comps/EmptyBox';
 import FoodIcon from '../comps/FoodButtonPantryUI';
 import NavBar from '../comps/NavBar';
-import FunFact from '../comps/FunFactWindow'
+import FunFact from '../comps/FunFactWindow';
+import ConfirmWindow from '../comps/ConfirmationWindow';
 import {useRouter} from 'next/router';
 
 export default function PantryAddProtein({
     title = "CARBOHYDRATES",
     description = "Add a CARBOHYDRATE to your pantry!"
 }){
+    const [greyState, setGreyState] = useState(false);
+    var width = 0;
+    var height = 0;
+    var newWidth = 0;
+    var newHeight = 0;
+    if(greyState){
+        width = 375;
+        height = 910;
+        newWidth = 336;
+        newHeight = 262;
+    }
+
     return <PageContainer>
-        <HeaderContainer>
-            <Heading></Heading>
-        </HeaderContainer>
 
-        <TextContainer>
-            <PageTitle>{title}</PageTitle>
-            <PageDescriptor>{description}</PageDescriptor>
-        </TextContainer>
+        <PopUpBg width={width} height={height}></PopUpBg>
+        
+        <ConfirmWindow cWidth={newWidth} cHeight={newHeight} onClickX={()=>setGreyState(false)}></ConfirmWindow>
 
-        <FoodButtonContainer>
-            <FoodButton foodname="RICE" foodimage="/rice_bowl.png" imageheight="78px" imagewidth="107px" bgcolour="#6FC3B2"></FoodButton>
+        <SecondPageContainer>
+            <HeaderContainer>
+                <Heading></Heading>
+            </HeaderContainer>
 
-            <FoodButton foodname="PASTA" foodimage="/pasta_dish.png" imageheight="90px" imagewidth="112px" bgcolour="#6FC3B2"></FoodButton>
+            <TextContainer>
+                <PageTitle>{title}</PageTitle>
+                <PageDescriptor>{description}</PageDescriptor>
+            </TextContainer>
 
-            <FoodButton foodname="POTATOES" foodimage="/potatoes.png" imageheight="106px" imagewidth="118px" bgcolour="#6FC3B2"></FoodButton>
-        </FoodButtonContainer>
+            <FoodButtonContainer>
+                <FoodButton foodname="RICE" foodimage="/rice_bowl.png" imageheight="78px" imagewidth="107px" bgcolour="#6FC3B2"></FoodButton>
 
-        <AddButtonContainer>
-            <AddButton>
-                <h2>ADD TO PANTRY</h2>
-            </AddButton>
-        </AddButtonContainer>
+                <FoodButton foodname="PASTA" foodimage="/pasta_dish.png" imageheight="90px" imagewidth="112px" bgcolour="#6FC3B2"></FoodButton>
 
-        <NavBarContainer>
-            <NavBar></NavBar>
-        </NavBarContainer>
+                <FoodButton foodname="POTATOES" foodimage="/potatoes.png" imageheight="106px" imagewidth="118px" bgcolour="#6FC3B2"></FoodButton>
+            </FoodButtonContainer>
+
+            <AddButtonContainer>
+                <AddButton onClick={()=>setGreyState(true)}>
+                    <h2>ADD TO PANTRY</h2>
+                </AddButton>
+            </AddButtonContainer>
+
+            <NavBarContainer>
+                <NavBar></NavBar>
+            </NavBarContainer>
+        </SecondPageContainer>
     </PageContainer>
 }
 
 const PageContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #E7F2F0;
+    width: 375px;
+    max-width: 375px;
+    height: 910px;
+    max-height: 910px;
+`;
+
+const SecondPageContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,6 +86,26 @@ const PageContainer = styled.div`
     max-width: 375px;
     height: 910px;
     max-height: 910px;
+`;
+
+const PopUpBg = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #C2C2C2;
+    width: ${props=>props.width}px;
+    max-width: 375px;
+    height: ${props=>props.height}px;
+    max-height: 910px;
+
+    position: absolute;
+
+    // overflow: hidden;
+    opacity: 0.5;
+    z-index: 5;
+
+    transition: width 0.05s, height 0.05s;
 `;
 
 const HeaderContainer = styled.div`

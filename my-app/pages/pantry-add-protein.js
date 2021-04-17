@@ -6,50 +6,77 @@ import Heading from '../comps/Header';
 import EmptyBox from '../comps/EmptyBox';
 import FoodIcon from '../comps/FoodButtonPantryUI';
 import NavBar from '../comps/NavBar';
-import FunFact from '../comps/FunFactWindow'
-import ConfirmWindow from '../comps/notification-component'
+import FunFact from '../comps/FunFactWindow';
+import ConfirmWindow from '../comps/ConfirmationWindow';
 import {useRouter} from 'next/router';
 
 export default function PantryAddProtein({
     title = "PROTEINS",
     description = "Add a PROTEIN to your pantry!"
 }){
-    const [confirmState, setConfirmState] = useState(false);
-
+    const [greyState, setGreyState] = useState(false);
+    var width = 0;
+    var height = 0;
+    var newWidth = 0;
+    var newHeight = 0;
+    if(greyState){
+        width = 375;
+        height = 910;
+        newWidth = 336;
+        newHeight = 262;
+    }
+    
     return <PageContainer>
+
+        <PopUpBg width={width} height={height}></PopUpBg>
+        
+        <ConfirmWindow cWidth={newWidth} cHeight={newHeight} onClickX={()=>setGreyState(false)}></ConfirmWindow>
+
         <SecondPageContainer>
+            <HeaderContainer>
+                <Heading></Heading>
+            </HeaderContainer>
 
+            <TextContainer>
+                <PageTitle>{title}</PageTitle>
+                <PageDescriptor>{description}</PageDescriptor>
+            </TextContainer>
+
+            <FoodButtonContainer>
+                <FoodButton foodname="CHICKEN" foodimage="/chicken_drumstick.png" imageheight="100px" imagewidth="100px" bgcolour="#6FC3B2"></FoodButton>
+
+                <FoodButton foodname="BEEF" foodimage="/shaved_beef.png" imageheight="90px" imagewidth="110px" bgcolour="#6FC3B2"></FoodButton>
+
+                <FoodButton foodname="TOFU" foodimage="/tofu_squares.png" imageheight="99px" imagewidth="126px" bgcolour="#6FC3B2"></FoodButton>
+            </FoodButtonContainer>
+
+            <AddButtonContainer>
+                <AddButton onClick={()=>setGreyState(true)}>
+                    <h2>ADD TO PANTRY</h2>
+                </AddButton>
+            </AddButtonContainer>
+
+            <NavBarContainer>
+                <NavBar></NavBar>
+            </NavBarContainer>
         </SecondPageContainer>
-        <HeaderContainer>
-            <Heading></Heading>
-        </HeaderContainer>
-
-        <TextContainer>
-            <PageTitle>{title}</PageTitle>
-            <PageDescriptor>{description}</PageDescriptor>
-        </TextContainer>
-
-        <FoodButtonContainer>
-            <FoodButton foodname="CHICKEN" foodimage="/chicken_drumstick.png" imageheight="100px" imagewidth="100px" bgcolour="#6FC3B2"></FoodButton>
-
-            <FoodButton foodname="BEEF" foodimage="/shaved_beef.png" imageheight="90px" imagewidth="110px" bgcolour="#6FC3B2"></FoodButton>
-
-            <FoodButton foodname="TOFU" foodimage="/tofu_squares.png" imageheight="99px" imagewidth="126px" bgcolour="#6FC3B2"></FoodButton>
-        </FoodButtonContainer>
-
-        <AddButtonContainer>
-            <AddButton>
-                <h2>ADD TO PANTRY</h2>
-            </AddButton>
-        </AddButtonContainer>
-
-        <NavBarContainer>
-            <NavBar></NavBar>
-        </NavBarContainer>
     </PageContainer>
 }
 
 const PageContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #E7F2F0;
+    width: 375px;
+    // max-width: 375px;
+    height: 910px;
+    // max-height: 910px;
+`;
+
+const SecondPageContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,21 +88,25 @@ const PageContainer = styled.div`
     max-height: 910px;
 `;
 
-const SecondPageContainer = styled.div`
+const PopUpBg = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     background-color: #C2C2C2;
-    width: ${props=>props.width};
+    width: ${props=>props.width}px;
     max-width: 375px;
-    height: ${props=>props.height};
+    height: ${props=>props.height}px;
     max-height: 910px;
-    overflow: hidden;
-    z-index: 10;
+
+    position: absolute;
+
+    // overflow: hidden;
+    opacity: 0.5;
+    z-index: 5;
+
+    transition: width 0.05s, height 0.05s;
 `;
-
-
 
 const HeaderContainer = styled.div`
     display: flex;
