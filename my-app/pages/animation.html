@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Food animation</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    html {
+        height: 100%;
+    }
+
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main {
+        position: relative;
+    }
+
+    .food {
+        width: 200px;
+        height: 140px;
+        transform-origin: 50% 80%;
+        animation: zoomIn .5s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+    }
+
+    .food .body {
+        position: absolute;
+        top: -110px;
+        right: 0;
+        width: 210px;
+        height: 240px;
+        background: url(../public/food.png) no-repeat center center;
+        background-size: contain;
+        z-index: 10;
+    }
+
+    
+    .food .eyeLeft {
+        position: absolute;
+        top: 39px;
+        width: 11px;
+        height: 11px;
+        left: 49px;
+        background: url(../public/eye.png) no-repeat;
+        background-size: contain;
+        z-index: 12;
+    }
+
+      
+    .food .eyeRight {
+        position: absolute;
+        top: 39px;
+        width: 11px;
+        height: 11px;
+        left: 118px;
+        transform-origin: 50% 50%;
+        transform: rotate(180deg);
+        background: url(../public/eye.png) no-repeat;
+        background-size: contain;
+        z-index: 12;
+    }
+
+   
+    .food .blushLeft {
+        position: absolute;
+        top: 46px;
+        left: 43px;
+        width: 15px;
+        height: 9px;
+        background: url(../public/blushLeft.png) no-repeat;
+        background-size: 100% 100%;
+        z-index: 11;
+        animation: blushLeft .5s ease infinite alternate;
+    }
+
+    .food .blushRight {
+        position: absolute;
+        top: 46px;
+        width: 15px;
+        height: 9px;
+        left: 120px;
+        background: url(../public/blush.png) no-repeat;
+        background-size: 100% 100%;
+        z-index: 11;
+        animation: blushRight .5s ease infinite alternate;
+    }
+
+    .food .mouth {
+        position: absolute;
+        top: 55px;
+        left: 49px;
+        width: 78px;
+        height: 56px;
+        background: url(../public/mouth.png) no-repeat;
+        background-size: 100%;
+        z-index: 11;
+        animation: openMouth 2s ease infinite;
+    }
+
+
+    .shadow-wrapper {
+        position: absolute;
+        top: 110px;
+        width: 100%;
+    }
+
+    .shadow {
+        margin: 0 auto;
+        position: relative;
+        width: 210px;
+        left: 0px;
+        top:-15px;
+        height: 50px;
+        background: rgba(0, 0, 0, 0.15);
+        border-radius: 50%;
+        z-index: 0;
+        animation: zoomIn 0.5s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+    }
+
+    .hi-wrapper {
+        position: absolute;
+        width: 70px;
+        top: 100px;
+        left: 88px;
+        transform: translate(-50%, -50%);
+        transform-origin: 50% 100%;
+        animation: hiUp 2.1s ease-in infinite;
+    }
+
+    .hi {
+        padding-bottom: 135%;
+        width: 100%;
+        height: 100%;
+        background: url(../public/hi.png) no-repeat;
+        background-size: contain;
+        animation: hi 3s ease-out;
+       /*-webkit-animation-fill-mode:forwards; */
+    }
+
+
+
+    @keyframes zoomIn {
+        100% {
+            transform: scale(1.16, 1.16);
+        }
+    }
+
+    @keyframes blush {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes openMouth {
+        0% {
+            -webkit-clip-path: ellipse(20% 0% at 50% 0);
+                    clip-path: ellipse(20% 0% at 50% 0);
+        }
+
+        50% {
+            -webkit-clip-path: ellipse(100% 100% at 50% 0);
+                    clip-path: ellipse(100% 100% at 50% 0);
+        }
+
+        70% {
+            -webkit-clip-path: ellipse(100% 100% at 50% 0);
+                    clip-path: ellipse(100% 100% at 50% 0);
+        }
+
+        100% {
+            -webkit-clip-path: ellipse(20% 0% at 50% 0);
+                    clip-path: ellipse(20% 0% at 50% 0);
+        }
+    }
+
+
+    @keyframes hiUp {
+        0% {
+            top: 70px;
+        }
+
+        20% {
+            top: 70px;
+        }
+
+        100% {
+            top: -100px;
+        }
+    }
+
+    @keyframes hi {
+        0% {
+            transform: scale(0, 0);
+            opacity: 0.8;
+        }
+
+        20% {
+            transform: scale(0, 0);
+            opacity: 0.8;
+        }
+
+        50% {
+            opacity: 0.8;
+        }
+
+        100% {
+            transform: scale(1, 1);
+            opacity: 0;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="shadow-wrapper">
+            <div class="shadow"></div>
+        </div>
+        <div class="food">
+            <div class="body"></div>
+            <div class="eyeLeft"></div>
+            <div class="eyeRight"></div>
+            <div class="blushLeft"></div>
+            <div class="blushRight"></div>
+            <div class="mouth"></div>
+
+        </div>
+        <div class="hi-wrapper">
+            <div class="hi"></div>
+        </div>
+
+        </div>
+    </div>
+</body>
+</html>
