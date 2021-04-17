@@ -36,7 +36,7 @@ export default function tutorialPage({
         </FoodButtonContainer>
 
         <ProgressBarContainer>
-            <ProgressBar colour="#59A091" colour2="#B8E0D8" colour3="#B8E0D8"></ProgressBar>  
+            <ProgressBar colour="#B8E0D8" colour2="#59A091" colour3="#B8E0D8"></ProgressBar>  
         </ProgressBarContainer>
     </TutPageContainer>
 }
