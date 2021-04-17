@@ -13,6 +13,25 @@ export default function pantry({
     title = "MY PANTRY",
     description = "Click on the empty boxes to add more items to your pantry."
 }){
+    // Lines 16 - 34 are state changes after pressing a food button
+    const [clickState, setClickState] = useState(false);
+    var ShadowToggle = "";
+    if(clickState){
+        ShadowToggle = "inset 0 0 10px 5px #C4C4C4";
+    }
+
+    const HandleClick = () => {
+        setClickState(!clickState);
+        setTimeout(NextPage, 150);
+    }
+    
+    const router = useRouter();
+    
+    const NextPage = () => {
+        var routeTo = "/pantry-pick-category";
+        router.push(routeTo);
+    }
+
     return <PantryPageContainer>
         <HeaderContainer>
             <Heading></Heading>
@@ -37,15 +56,15 @@ export default function pantry({
                 
                 <FoodIcon days="18 DAY" foodimage="/potatoes.png" imageheight="60px" imagewidth="67px" bgcolour="#59A091" foodname="POTATOES" expirydate="expires on: February 20, 2021"></FoodIcon>
                 
-                <EmptyBox></EmptyBox>
+                <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
             </FoodIconRowContainer>
 
             <FoodIconRowContainer>
-                <EmptyBox></EmptyBox>
+                <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
 
-                <EmptyBox></EmptyBox>
-
-                <EmptyBox></EmptyBox>
+                <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
+                
+                <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
             </FoodIconRowContainer>
         </FoodIconColContainer>
 

@@ -14,7 +14,26 @@ export default function PantryCategory({
     description = "Choose a category to add more items to your pantry list!",
     routeTo = "/pantry-add-protein"
 }){
+    const [clickState, setClickState] = useState(false);
+    var ShadowToggle = "0px 4px 5px #494948";
+    if(clickState){
+        ShadowToggle = "inset 0 0 10px 5px #5C5C5C";
+    }
+
+    const HandleClick = () => {
+        setClickState(!clickState);
+        setTimeout(NextPage, 150);
+    }
+
     const router = useRouter();
+
+    const NextPage = () => {
+        var routeTo = "/pantry-add-protein";
+        // var routeToCarbs = "/pantry-add-carbohydrate";
+        // var routeToVeges = "/pantry-add-vegetable";
+        router.push(routeTo);
+    }
+
     return <PageContainer>
         <HeaderContainer>
             <Heading></Heading>
@@ -26,13 +45,13 @@ export default function PantryCategory({
         </TextContainer>
 
         <CategoryContainer>
-            <CategoryButton onClick={()=>router.push(routeTo)}>
+            <CategoryButton onClick={HandleClick} shadow={ShadowToggle}>
                 <h2>PROTEINS</h2>
             </CategoryButton>
-            <CategoryButton onClick={()=>router.push("/pantry-add-carbohydrate")}>
+            <CategoryButton onClick={HandleClick} shadow={ShadowToggle}>
                 <h2>CARBOHYDRATES</h2>
             </CategoryButton>
-            <CategoryButton onClick={()=>router.push("/pantry-add-vegetable")}>
+            <CategoryButton onClick={HandleClick} shadow={ShadowToggle}>
                 <h2>VEGETABLES</h2>
             </CategoryButton>
         </CategoryContainer>
@@ -83,6 +102,7 @@ const PageDescriptor = styled.h2`
     font-weight: 300;
     margin: 0;
     text-align: center;
+    width: 350px;
 `;
 
 const CategoryContainer = styled.div`
@@ -99,6 +119,7 @@ const CategoryButton = styled.div`
     justify-content: space-evenly;
     align-items: center;
     background-color: #59A091;
+    box-shadow: ${props=>props.shadow};
     width: 237px;
     height: 74px;
     &>h2 {
