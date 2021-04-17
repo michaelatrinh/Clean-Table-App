@@ -1,15 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
+import {useRouter} from 'next/router';
 
 const ProgressBar = ({
     colour = "#59A091",
     colour2 = "#B8E0D8",
-    colour3 = "#B8E0D8"
+    colour3 = "#B8E0D8",
+    onClick1 = ()=>{},
+    onClick2 = ()=>{},
+    onClick3 = ()=>{}
 }) => {
     return <ProgressBarContainer>
-        <ProgressBarDot dotcolour={colour}></ProgressBarDot>
-        <ProgressBarDot dotcolour={colour2}></ProgressBarDot>
-        <ProgressBarDot dotcolour={colour3}></ProgressBarDot>
+        <ProgressBarDot onClick={onClick1} dotcolour={colour}></ProgressBarDot>
+        <ProgressBarDot onClick={onClick2} dotcolour={colour2}></ProgressBarDot>
+        <ProgressBarDot onClick={onClick3} dotcolour={colour3}></ProgressBarDot>
     </ProgressBarContainer>
 }
 

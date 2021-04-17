@@ -9,14 +9,40 @@ export default function tutorialPage({
     title = "PROTEINS",
     description = "Add a PROTEIN to your pantry!"
 }){
-    // const [clickState, setClickState] = useState(false);
-    // // var boxshadow1 = "0px 4px 5px #494948";
-    // // if(clickState === true){
-    // //     boxshadow = "inset 0 0 10px 5px #C4C4C4";
-    // // }
-    // const HandleClick = () => {
-    //     setClickState(true);
-    // }
+    // Lines 13 - 29 are state changes and routing after pressing a food button
+    const [clickState, setClickState] = useState(false);
+    var newDarken = "0px 4px 5px #494948";
+    if(clickState){
+        newDarken = "inset 0 0 10px 5px #C4C4C4";
+    }
+    
+    const HandleClick = () => {
+        setClickState(!clickState);
+        setTimeout(NextPage, 150);
+    }
+    
+    const router = useRouter();
+    
+    const NextPage = () => {
+        var routeTo = "/add-vegetable";
+        router.push(routeTo);
+    }
+
+    // Lines 31 - 45 are to navigate between pages using the dots at the bottom of the screen
+    const Page1 = () => {
+        var routeToPage1 = "/add-protein";
+        router.push(routeToPage1);
+    }
+
+    const Page2 = () => {
+        var routeToPage2 = "/add-carbohydrate";
+        router.push(routeToPage2);
+    }
+
+    const Page3 = () => {
+        var routeToPage3 = "/add-vegetable";
+        router.push(routeToPage3);
+    }
 
     return <TutPageContainer>
         <HeaderContainer>
@@ -29,15 +55,15 @@ export default function tutorialPage({
         </TextContainer>
 
         <FoodButtonContainer>
-            <FoodButton foodname="BROCCOLI" foodimage="/broccoli.png" imageheight="99px" imagewidth="107px" bgcolour="#6FC3B2"></FoodButton>
+            <FoodButton onClickA={HandleClick} foodname="BROCCOLI" foodimage="/broccoli.png" imageheight="99px" imagewidth="107px" bgcolour="#6FC3B2" darken={newDarken}></FoodButton>
 
-            <FoodButton foodname="ONION" foodimage="/onion.png" imageheight="91px" imagewidth="93px" bgcolour="#6FC3B2"></FoodButton>
+            <FoodButton onClickA={HandleClick} foodname="ONION" foodimage="/onion.png" imageheight="91px" imagewidth="93px" bgcolour="#6FC3B2" darken={newDarken}></FoodButton>
             
-            <FoodButton foodname="CARROT" foodimage="/carrot.png" imageheight="89px" imagewidth="86px" bgcolour="#6FC3B2"></FoodButton>
+            <FoodButton onClickA={HandleClick} foodname="CARROT" foodimage="/carrot.png" imageheight="89px" imagewidth="86px" bgcolour="#6FC3B2" darken={newDarken}></FoodButton>
         </FoodButtonContainer>
 
         <ProgressBarContainer>
-            <ProgressBar colour="#B8E0D8" colour2="#B8E0D8" colour3="#59A091"></ProgressBar>  
+            <ProgressBar onClick1={Page1} onClick2={Page2} colour="#B8E0D8" colour2="#B8E0D8" colour3="#59A091"></ProgressBar>  
         </ProgressBarContainer>
     </TutPageContainer> 
 

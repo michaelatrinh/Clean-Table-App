@@ -10,6 +10,7 @@ const EmptyBox = styled.div`
     width: 100px;
     border-radius: 20px;
     background: #FFFFFF;
+    box-shadow: ${props=>props.shadow};
 `;
 
 const EmptyImage = styled.img`
@@ -22,10 +23,12 @@ const EmptyImage = styled.img`
 
 const EmptyBoxUI = ({
     foodimage = "/plus.png",
-    routeTo = "/pantry-pick-ingredient-category"
+    routeTo = "/pantry-pick-category",
+    onClickBox = ()=>{},
+    boxshadow = ""
 }) => {
     const router = useRouter();
-    return <EmptyBox onClick={()=>router.push(routeTo)}>
+    return <EmptyBox onClick={onClickBox} shadow={boxshadow}>
         <EmptyImage src={foodimage}></EmptyImage>
     </EmptyBox>
 }
