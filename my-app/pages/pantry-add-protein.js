@@ -14,6 +14,7 @@ export default function PantryAddProtein({
     title = "PROTEINS",
     description = "Add a PROTEIN to your pantry!"
 }){
+    // Lines 17 - 28 are state changes for the confirmation pop-up window
     const [greyState, setGreyState] = useState(false);
     var width = 0;
     var height = 0;
@@ -25,12 +26,31 @@ export default function PantryAddProtein({
         newWidth = 336;
         newHeight = 262;
     }
+
+    // Lines 30 - 47 are state changes after pressing a food button
+    const [clickState, setClickState] = useState(false);
+    var newDarken = "0px 4px 5px #494948";
+    if(clickState){
+        newDarken = "inset 0 0 10px 5px #C4C4C4";
+    }
+
+    const HandleClick = () => {
+        setClickState(!clickState);
+        // setTimeout(NextPage, 150);
+    }
+    
+    const router = useRouter();
+    
+    // const NextPage = () => {
+    //     var routeTo = "/add-carbohydrate";
+    //     router.push(routeTo);
+    // }
     
     return <PageContainer>
 
         <PopUpBg width={width} height={height}></PopUpBg>
         
-        <ConfirmWindow cWidth={newWidth} cHeight={newHeight} onClickX={()=>setGreyState(false)}></ConfirmWindow>
+        <ConfirmWindow cWidth={newWidth} cHeight={newHeight} onClickX={()=>setGreyState(false)} onClickN={()=>setGreyState(false)} onClickY={()=>router.push("/pantry")}></ConfirmWindow>
 
         <SecondPageContainer>
             <HeaderContainer>
@@ -43,11 +63,11 @@ export default function PantryAddProtein({
             </TextContainer>
 
             <FoodButtonContainer>
-                <FoodButton foodname="CHICKEN" foodimage="/chicken_drumstick.png" imageheight="100px" imagewidth="100px" bgcolour="#6FC3B2"></FoodButton>
+                <FoodButton onClickA={HandleClick} foodname="CHICKEN" foodimage="/chicken_drumstick.png" imageheight="100px" imagewidth="100px" bgcolour="#6FC3B2" darken={newDarken}></FoodButton>
 
-                <FoodButton foodname="BEEF" foodimage="/shaved_beef.png" imageheight="90px" imagewidth="110px" bgcolour="#6FC3B2"></FoodButton>
+                <FoodButton onClickA={HandleClick} foodname="BEEF" foodimage="/shaved_beef.png" imageheight="90px" imagewidth="110px" bgcolour="#6FC3B2" darken={newDarken}></FoodButton>
 
-                <FoodButton foodname="TOFU" foodimage="/tofu_squares.png" imageheight="99px" imagewidth="126px" bgcolour="#6FC3B2"></FoodButton>
+                <FoodButton onClickA={HandleClick} foodname="TOFU" foodimage="/tofu_squares.png" imageheight="99px" imagewidth="126px" bgcolour="#6FC3B2" darken={newDarken}></FoodButton>
             </FoodButtonContainer>
 
             <AddButtonContainer>

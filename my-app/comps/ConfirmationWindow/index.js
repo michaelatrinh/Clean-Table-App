@@ -8,7 +8,9 @@ const ConfirmationWindowUI = ({
     text = "Do you want to add this item to your pantry?",
     cWidth = "336",
     cHeight = "262",
-    onClickX = ()=>{}
+    onClickX = ()=>{},
+    onClickY = ()=>{},
+    onClickN = ()=>{}
 }) => {
     // const router = useRouter();
     // var cWidth = 336, cHeight = 262;
@@ -31,10 +33,10 @@ const ConfirmationWindowUI = ({
         </SecondContainer>
 
         <ThirdContainer>
-            <YesButton>
+            <YesButton onClick={onClickY}>
                 <p>Yes</p>
             </YesButton>
-            <NoButton>
+            <NoButton onClick={onClickN}>
                 <p>No</p>
             </NoButton>
         </ThirdContainer>
