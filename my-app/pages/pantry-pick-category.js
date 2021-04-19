@@ -14,7 +14,7 @@ export default function PantryCategory({
     description = "Choose a category to add more items to your pantry list!",
     routeTo = "/pantry-add-protein"
 }){
-    // === BOX SHADOW STATE CHANGE SETUP ========================
+// === BOX SHADOW STATE CHANGE SETUP ============================
     const [clickStateP, setClickStateP] = useState(false);
     const [clickStateC, setClickStateC] = useState(false);
     const [clickStateV, setClickStateV] = useState(false);
@@ -30,7 +30,7 @@ export default function PantryCategory({
         ShadowToggleV = "inset 0 0 10px 5px #5C5C5C";
     }
 
-    // === BOX SHADOW STATE CHANGE AND ROUTING ==================
+// === BOX SHADOW STATE CHANGE AND ROUTING ======================
     const HandleClickP = () => {
         setClickStateP(!clickStateP);
         setTimeout(NextPageP, 150);
@@ -65,7 +65,7 @@ export default function PantryCategory({
         router.push(routeToVeges);
     }
 
-    // === PAGE DISPLAY =========================================
+// === PAGE DISPLAY =============================================
     return <PageContainer>
         <HeaderContainer>
             <Heading></Heading>
