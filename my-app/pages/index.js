@@ -6,7 +6,6 @@ import PlaceholderUI from '../comps/icon-placeholder/Placeholder.js';
 import GenerateRecipeButton from '../comps/GenerateRecipeButton';
 import NavBarUI from '../comps/NavBar';
 
-
 export default function PickIngredientsPage({
     title = "PICK YOUR INGREDIENTS",
 }){
@@ -17,6 +16,7 @@ export default function PickIngredientsPage({
     // const HandleClick = () => {
     //     setClickState(true);
     // }
+
 
     return <PageContainer>
 <HeaderContainer>
@@ -107,3 +107,14 @@ left: 0px;
 top: 879px;
 border-radius: 0px;
 `;
+
+// import React from 'react';
+// import styled from 'styled-components';
+// import FoodButton from '../comps/FoodButtonUI';
+// import ProgressBar from '../comps/ProgressBar';
+// import FoodButton from '../comps/FoodButtonUI';
+// import ProgressBar from '../comps/ProgressBar';
+// import Heading from '../comps/Header';
+
+
+

@@ -67,13 +67,17 @@ const FoodButtonUI = ({
     bgcolour = "#6FC3B2",
     darken = "0px 4px 5px #494948",
 
+
     onClick = ()=>{},
     routeTo = "/add-protein"
+
+    onClickA = ()=>{}
+
 }) => {
     // const [clickState, setClickState] = useState(false);
+    // onClick={()=>router.push(routeTo)
 
-    const router = useRouter();
-    return <FoodButtonContainer  onClick={()=>router.push(routeTo)} boxshadow={darken}>
+    return <FoodButtonContainer onClick={onClickA} boxshadow={darken}>
         <FoodButtonPart1>
             <FoodButtonImage src={foodimage} width={imagewidth} height={imageheight}>
             </FoodButtonImage>
