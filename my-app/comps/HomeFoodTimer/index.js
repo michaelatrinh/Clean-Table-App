@@ -34,8 +34,6 @@ const ThirdContainer = styled.div`
 `;
 
 
-background-color: ${props=>props.bgcolor1};
-=======
 const HomeFoodTimerItem = styled.h1`
     font-family: "Manrope", sans-serif;
     font-size: 24px;

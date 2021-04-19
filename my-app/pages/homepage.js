@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import styled from 'styled-components';
+import {useState} from 'react';
 
 import HeaderUI from '../comps/Header';
 import HomeFoodTimerUI from '../comps/HomeFoodTimer';
@@ -9,9 +10,12 @@ import FunFactWindow from '../comps/FunFactWindow';
 import Congratulations from '../comps/congratulations-comp';
 
 const Main = styled.div`
-    background-color: "#E7F2F0";
+    background-color: #E7F2F0;
     height:876px;
     width: 375px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 `;
 
 const HeaderCont = styled.div`
@@ -63,13 +67,38 @@ const FunFact = styled.div`
 `;
 
 const MainCont = styled.div`
+max-height: 876px;
+max-width: 375px;
+
+display:flex;
 `;
 
 const Popup= styled.div`
+position: absolute;
+left: 465px;
+top:100px;
+z-index: 1;
 `;
-    
 
+    
 export default function Homepage() {
+
+    const [okayState, setOkayState] = useState(false);
+
+    var okaybutton = "336px"
+    if (okayState) {
+        var okaybutton = "0px"
+    }
+
+    /*function handleClick() {
+
+        setOkayState(!okayState) 
+
+    }*/
+
+    const HandleClick = () => {
+        setOkayState(!okayState)
+    }
     
     return <MainCont>
     <Main>
@@ -129,8 +158,8 @@ export default function Homepage() {
     </Main>
 
     <Popup>
-        <Congratulations
-        />
+        <Congratulations okay={HandleClick} width={okaybutton}
+        /> 
     </Popup>
 
     </MainCont>
