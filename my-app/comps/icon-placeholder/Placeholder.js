@@ -1,9 +1,7 @@
+
 import React from 'react';
 import styled from 'styled-components'; 
 
-import Broccoli from '../../public/broccoli.png';
-import Onion from '../../public/onion.png';
-import Carrot from '../../public/carrot.png';
 
 const PContainer = styled.div`
     margin: 50px;
@@ -89,25 +87,33 @@ const Img = styled.img`
   position: absolute;
 `;
 
-const PlaceholderUI = () => {
+const PlaceholderUI = ({
+  image1 = "/broccoli.png",
+  image2 = "/onion.png",
+  image3 = "/carrot.png",
+
+  label1 = "BROCCOLI",
+  label2 = "ONION",
+  label3 = "CARROT"
+}) => {
 
   return <PContainer>
     <PToprow>VEGETABLES</PToprow>
 
     <PMiddlerow>
         <FoodIcon>
-        <Img src={Broccoli} width="60px" height="60px" alt="broccoli"></Img>
-        <Label>BROCCOLI</Label>
+        <Img src={image1} width="60px" height="60px" alt="image1"></Img>
+        <Label>{label1}</Label>
         </FoodIcon>
 
         <FoodIcon>
-        <Img src={Onion} width="50px" height="50px" alt="broccoli"></Img>
-        <Label>ONION</Label>
+        <Img src={image2} width="50px" height="50px" alt="image2"></Img>
+        <Label>{label2}</Label>
         </FoodIcon>
 
         <FoodIcon>
-        <Img src={Carrot} width="60px" height="60px" alt="broccoli"></Img>
-        <Label>CARROT</Label>
+        <Img src={image3} width="60px" height="60px" alt="image3"></Img>
+        <Label>{label3}</Label>
         </FoodIcon>
       
     </PMiddlerow>
@@ -143,6 +149,3 @@ export default PlaceholderUI;
 export default Window;
 
 export{Window}*/
-
-
-
