@@ -5,10 +5,12 @@ Members: Alicia Yien, Arielle Castro, Jessica Wu, Michael Trinh
 Contributions: 
 
 Arielle: 
-pages folder: 
+
+Pages Folder: 
   - page1
   - recipepage1
-stories/components: 
+
+Stories / Components: 
   - FunFactWindow
   - Icon-Placeholder
   - Congratulations-Comp
@@ -16,42 +18,53 @@ stories/components:
   - Notification-Component
 
 Alicia:
-pages folder: 
+
+Pages Folder: 
   - homepage
-stories/components:
+
+Stories / Components:
   - StartTutorialButton
   - GenerateRecipeButton
   - NavBar
   - WelcomePageFooter
   - EnterButton
-extra:
+
+Extra:
   - added state changes for 'Congratulations Comp'
 
 Michael:
-pages folder: 
+
+Pages Folder: 
   - add protein/carbohydrate/vegetable page
   - pantry page
   - pantry pick category page
   - pantry add vegetable/protein/carbohydrate
-stories/components: 
-  - Food Button
-  - Food Button Pantry
+
+Stories / Components: 
+  - Food Button UI
+  - Food Button Pantry UI
   - Login Bar
   - Recipe Instructions
   - Page Progress Bar
-extra:
-  - routed nav bar and food buttons
-  - added state changes for buttons
-  - added pop-up confirmation page 
+  - Confirmation Window
+
+Extra:
+  - routed nav bar, food buttons, pantry buttons, rest of the pages together
+  - added state changes for food buttons to appear pressed, as well as pantry page(s) buttons
+  - added pop-up confirmation page on pantry add-{items} pages
+  - remade / rebuilt FoodHomeTimer comp, emptybox comp, navbar comp, funfactwindow comp, header comp
 
 Jessica:
-pages folder: 
+
+Pages Folder: 
   - page2
   - ingredient picker page
-stories/components:
+
+Stories / Components:
   - header
   - homefoodtimer
   - empty box
   - loading bar
-extra: 
+
+Extra: 
   - added animation to loading page
