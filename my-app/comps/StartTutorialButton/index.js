@@ -6,18 +6,21 @@ font-size: 18px;
 color: white;
 background-color: #59A091;
 border-radius:5px;
-height: 55px;
+height: ${props=>props.height};
 width: 228px;
 border: none;
 letter-spacing:5px;
 
 `;
 
-const StartButtonUI = () => {
+const StartButtonUI = ({
+    text = "start tutorial",
+    height = "55px"
+}) => {
 
     return <div>
-        <StartTutorialButton>
-            start tutorial
+        <StartTutorialButton height={height}>
+            {text}
         </StartTutorialButton>
     </div>
 }
