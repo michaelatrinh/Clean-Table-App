@@ -80,14 +80,15 @@ const ConfirmButton = styled.button`
 
   const Congrats = ({
     stylestext="You’ve just entered in your grocery list into “MyPantry!” Now you can keep track of the food in your household.The Home page will show you the items that are about to expire. Use our Recipe Generator feature to create delicious meals before they expire! Happy Saving!" , 
-    headertext="CONGRATULATIONS", 
+    headertext="CONGRATULATIONS",
+    image = "/image_9.png"
 
   }) =>{
 
     return <CongratsContainer>
               <TopRow>CONGRATULATIONS</TopRow>
               <MiddleRow>
-              <Img src={Trophy} width="110px" height="110px" alt="broccoli"></Img>
+              <Img src={image} width="110px" height="110px" alt="broccoli"></Img>
 
               <p>
       You’ve just entered in your grocery list into “MyPantry!” Now you can keep track of the food in your household. <br></br><br></br>

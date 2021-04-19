@@ -4,7 +4,9 @@ import styled from 'styled-components';
 
 import HeaderUI from '../comps/Header';
 import HomeFoodTimerUI from '../comps/HomeFoodTimer';
-import NavBar from '../comps/NavBar'
+import NavBar from '../comps/NavBar';
+import FunFactWindow from '../comps/FunFactWindow';
+import Congratulations from '../comps/congratulations-comp';
 
 const Main = styled.div`
     background-color: "#E7F2F0";
@@ -53,9 +55,24 @@ left: 20px;
 
 `;
 
+const FunFact = styled.div`
+  position:relative;
+  left: 35px;
+  bottom: 50px;
+
+`;
+
+const MainCont = styled.div`
+`;
+
+const Popup= styled.div`
+`;
+    
+
 export default function Homepage() {
     
-    return <Main>
+    return <MainCont>
+    <Main>
     
     <HeaderCont>
         <HeaderUI></HeaderUI>
@@ -85,27 +102,38 @@ export default function Homepage() {
     </FoodTimer>
 
     <FoodTimer>
-        <HomeFoodTimerUI DAYS="2 DAYS" ITEM="ONION" bgcolor="#FFC32E" bgcolor1="#FFE4A3" barwidth="164px"
+        <HomeFoodTimerUI DAYS="2 DAYS" ITEM="ONION" bgcolordark="#FFC32E" bgcolorlight="#FFE4A3" barwidth="164px"
         />
     </FoodTimer>
 
     <FoodTimer>
-        <HomeFoodTimerUI DAYS="12 DAYS" ITEM="CARROT" bgcolor="#6FC3B2" bgcolor1="#D4E9E5" barwidth="235px"
+        <HomeFoodTimerUI DAYS="12 DAYS" ITEM="CARROT" bgcolordark="#6FC3B2" bgcolorlight="#D4E9E5" barwidth="235px"
         />
    </FoodTimer>
 
    <FoodTimer>
-        <HomeFoodTimerUI DAYS="18 DAYS" ITEM="POTATO" bgcolor="#6FC3B2" bgcolor1="#D4E9E5" barwidth="292px"
+        <HomeFoodTimerUI DAYS="18 DAYS" ITEM="POTATO" bgcolordark="#6FC3B2" bgcolorlight="#D4E9E5" barwidth="292px"
         />
     </FoodTimer>
     </FoodCont>
+
+    <FunFact>
+        <FunFactWindow
+        />
+    </FunFact>
 
 
     <div className="navbar">
         <NavBar></NavBar>
     </div>
-
     </Main>
+
+    <Popup>
+        <Congratulations
+        />
+    </Popup>
+
+    </MainCont>
 }
 
 
