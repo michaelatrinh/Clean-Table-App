@@ -1,16 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import Trophy from '../../public/image_9.png';
+// import Trophy from '../../public/image_9.png';
 
 const CongratsContainer = styled.div`
-    margin: 50px;
-    padding: 20px;
-    height: 562px;
+    // margin: 50px;
+    // padding: 20px;
+    height: 647px;
     width: 336px;
 
     display: flex; 
     flex-direction: column; 
     align-items: center;
+    justify-content: center;
     background-color: white;
 
     border-radius: 20px;
@@ -22,8 +23,8 @@ const TopRow = styled.div`
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
 
-      position: absolute;
-      margin-top: -20px;
+    //   position: absolute;
+    //   margin-top: -20px;
 
       background-color: #59A091;
       color: white;
@@ -32,7 +33,7 @@ const TopRow = styled.div`
       text-shadow: 2px 2px #6FC3B2;
 
       height: 86px;
-      width: 380px;
+      width: 336px;
 
       display: flex;
       justify-content: center;
@@ -40,7 +41,8 @@ const TopRow = styled.div`
 `;
 
 const MiddleRow = styled.div`
-    width: 300px;
+    width: 336px;
+    height: 561px;
     font-size: 18px;
     font-family: 'Manrope', sans-serif;
     text-align: center;
@@ -48,8 +50,13 @@ const MiddleRow = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
-    margin-top: 200px;
+    // margin-top: 200px;
+
+    &>p {
+        width: 309px;
+    }
 `;
 
 const ConfirmButton = styled.button`
@@ -61,8 +68,8 @@ const ConfirmButton = styled.button`
   border: none;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 
-  position: absolute;
-  margin-top: 350px;
+//   position: absolute;
+//   margin-top: 350px;
 
 `;
 
@@ -74,16 +81,16 @@ const ConfirmButton = styled.button`
 
 
  const Img = styled.img`
-  margin-top: -200px;
-  position: absolute;
+    display: flex;
+//   margin-top: -200px;
+//   position: absolute;
 `;
 
-  const Congrats = ({
+const Congrats = ({
     stylestext="You’ve just entered in your grocery list into “MyPantry!” Now you can keep track of the food in your household.The Home page will show you the items that are about to expire. Use our Recipe Generator feature to create delicious meals before they expire! Happy Saving!" , 
-    headertext="CONGRATULATIONS",
+    headertext="CONGRATULATIONS", 
     image = "/image_9.png"
-
-  }) =>{
+  }) => {
 
     return <CongratsContainer>
               <TopRow>CONGRATULATIONS</TopRow>

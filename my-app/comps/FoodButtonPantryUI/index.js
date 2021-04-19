@@ -91,7 +91,7 @@ const FoodButtonImage = styled.img`
     height: ${props=>props.height};
 `;
 
-const FoodButtonPantryUI = ({
+const FoodButtonPantry = ({
     days = "1 DAY",
     foodimage = "/chicken_drumstick.png",
     imagewidth = "58px",
@@ -118,4 +118,4 @@ const FoodButtonPantryUI = ({
         </FoodButtonBiggerContainer>
 }
 
-export default FoodButtonPantryUI;
+export default FoodButtonPantry;
