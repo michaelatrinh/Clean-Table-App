@@ -1,13 +1,14 @@
 
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import FoodButton from '../comps/FoodButtonUI';
 import HeaderUI from '../comps/Header';
+//import PlaceholderUI from '../comps/icon-placeholder/Placeholder.js';
 import GenerateRecipeButton from '../comps/GenerateRecipeButton';
+import NavBarUI from '../comps/NavBar';
 
-export default function tutorialPage({
-    title = "PROTEINS",
-    description = "Add a PROTEIN to your pantry!"
+
+export default function PickIngredientsPage({
+    title = "PICK YOUR INGREDIENTS",
 }){
     // var boxshadow1 = "0px 4px 5px #494948";
     // if(clickState === true){
@@ -24,18 +25,17 @@ export default function tutorialPage({
 
         <TextContainer>
             <TutPageTitle>{title}</TutPageTitle>
-            <TutPageDescriptor>{description}</TutPageDescriptor>
         </TextContainer>
 
         <FoodButtonContainer>
-            <FoodButton routeTo="/add-vegetable" foodname="RICE" foodimage="/rice_bowl.png" imageheight="78px" imagewidth="107px" bgcolour="#6FC3B2"></FoodButton>
-
-            <FoodButton routeTo="/add-vegetable" foodname="PASTA" foodimage="/pasta_dish.png" imageheight="90px" imagewidth="112px" bgcolour="#6FC3B2"></FoodButton>
-            
-            <FoodButton routeTo="/add-vegetable" foodname="POTATOES" foodimage="/potatoes.png" imageheight="106px" imagewidth="118px" bgcolour="#6FC3B2"></FoodButton>
+       
         </FoodButtonContainer>
 
-        <GenerateARecipeButton> </GenerateARecipeButton>
+        <GenerateRecipeButton> </GenerateRecipeButton>
+
+        <NavBarContainer>
+        <NavBarUI></NavBarUI>
+        </NavBarContainer>
     </PageContainer>
 }
 
@@ -44,7 +44,7 @@ const PageContainer = styled.div`
     flex-direction: column;
     justify-content: center;
 
-    background-color: #E7F2F0;
+    background-color: #FFFFFF;
     width: 375px;
     max-width: 375px;
     height: 963px;
@@ -68,26 +68,38 @@ const FoodButtonContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     flex-grow: 3;
 `;
 
+
 const TutPageTitle = styled.h1`
-    font-family: "Manrope", sans-serif;
-    font-size: 24px;
-    font-weight: 300;
-    margin-top: 0;
+position: absolute;
+width: 276px;
+height: 33px;
+left: 51px;
+top: 135px;
+
+font-family: Manrope;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 33px;
 `;
 
-const TutPageDescriptor = styled.h2`
-    font-family: "Quicksand", sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    margin: 0;
+const GenerateRecipeButton1 = styled.h2`
+position:relative;
+height: 40px;
+width: 228px;
+justify-content: center;
+align-item: center;
+top: 801px;
 `;
 
-const GenerateARecipeButton = styled.h2`
-   
-    margin: 0;
+const NavBarContainer =styled.div`
+height: 84px;
+width: 377px;
+left: 0px;
+top: 879px;
+border-radius: 0px;
 `;
-

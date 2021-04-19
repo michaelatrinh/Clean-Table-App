@@ -1,71 +1,69 @@
-
 import React, {useState} from 'react';
-import styled from 'styled-components';
-import FoodButton from '../comps/FoodButtonUI';
+import animationStyle from '../styles/animation.module.css';
 import HeaderUI from '../comps/Header';
-import GenerateRecipeButton from '../comps/GenerateRecipeButton';
-import NavBar from '../comps/NavBar';
+import StartTutorialButtonUI from '../comps/StartTutorialButton';
+import styled from 'styled-components';
 
-export default function PickIngredientsPage({
-    title = "PICK YOUR INGREDIENTS",
+export default function Page2({
+    title ="HOW TO GET STARTED",
+    description ="People want to know the best method when it comes to managing perishability.",
+    descriptiontwo=" With this app you can now know how long food can actually last beyond best before date."
 }){
-    // var boxshadow1 = "0px 4px 5px #494948";
-    // if(clickState === true){
-    //     boxshadow = "inset 0 0 10px 5px #C4C4C4";
-    // }
-    // const HandleClick = () => {
-    //     setClickState(true);
-    // }
-
+ 
     return <PageContainer>
-<HeaderContainer>
-    <HeaderUI></HeaderUI>
-</HeaderContainer>
-
-        <TextContainer>
-            <TutPageTitle>{title}</TutPageTitle>
-        </TextContainer>
-
-        <BackgroundRec1>
-            <SubHeading1>PROTEIN</SubHeading1>
-        <FoodButtonContainer>
-            <FoodButton routeTo="/add-carbohydrate" foodname="CHICKEN" foodimage="/chicken_drumstick.png" imageheight="50px" imagewidth="50px" bgcolour="#6FC3B2" ></FoodButton>
-
-            <FoodButton routeTo="/add-carbohydrate" foodname="BEEF" foodimage="/shaved_beef.png" imageheight="90px" imagewidth="110px" bgcolour="#6FC3B2"></FoodButton>
-            
-            <FoodButton routeTo="/add-carbohydrate" foodname="TOFU" foodimage="/tofu_squares.png" imageheight="99px" imagewidth="126px" bgcolour="#6FC3B2"></FoodButton>
-        </FoodButtonContainer>
-        </BackgroundRec1>
-
-    <BackgroundRec2></BackgroundRec2>
-    <SubHeading2>CARBOHYDRATES</SubHeading2>
-
-    <BackgroundRec3></BackgroundRec3>
-    <SubHeading3>VEGTABLE</SubHeading3>
-
-        <GenerateRecipeButton1> </GenerateRecipeButton1>
-        <NavBar1></NavBar1>
-    </PageContainer>
-}
-
+    <HeaderContainer>
+        <HeaderUI></HeaderUI>
+    </HeaderContainer>
+    
+    <TextContainer>
+                <PageTitle>{title}</PageTitle>
+                <PageText>{description}</PageText>
+                <PageTextTwo>{descriptiontwo}</PageTextTwo>
+            </TextContainer>
+    
+    <Animation> <div className={animationStyle.main}>
+            <div className={animationStyle.shadowwrapper}>
+                <div className={animationStyle.shadow}></div>
+            </div>
+            <div className={animationStyle.food}>
+                <div className={animationStyle.body}></div>
+                <div className={animationStyle.eyeLeft}></div>
+                <div className={animationStyle.eyeRight}></div>
+                <div className={animationStyle.blushLeft}></div>
+                <div className={animationStyle.blushRight}></div>
+                <div className={animationStyle.mouth}></div>
+            </div>
+            <div className={animationStyle.hiwrapper}>
+                <div className={animationStyle.hi}></div>
+                </div>
+                </div>
+     </Animation>
+    
+    <StartButton>
+    <StartTutorialButtonUI routeTo = "/add-protein"></StartTutorialButtonUI>
+    </StartButton>
+        </PageContainer>
+        
+   }
 const PageContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    background-color: #FFFFFF;
+    background-color: #E7F2F0;
     width: 375px;
     max-width: 375px;
-    height: 963px;
-    max-height: 963px;
+    height: 812px;
+    max-height: 812px;
 `;
 
-const HeaderContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-`;
+const HeaderContainer =styled.div`
+display: flex;
+flex-direction: column;
 
-const TextContainer = styled.div`
+ `;
+
+ const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,129 +71,51 @@ const TextContainer = styled.div`
     flex-grow: 1;
 `;
 
-const FoodButtonContainer = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    flex-grow: 3;
+const PageTitle = styled.h1`
+    font-family: "Manrope", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position:relative;
+    top:-70px;
 `;
 
-
-const TutPageTitle = styled.h1`
-position: absolute;
-width: 276px;
-height: 33px;
-left: 51px;
-top: 135px;
-
-font-family: Manrope;
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 33px;
+const PageText = styled.h2`
+font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-right: 50px;
+    margin-left: 50px;
+    text-align:center;
+    position:relative;
+    top:-60px;
 `;
 
-const SubHeading1 =styled.div`
-position: absolute;
-width: 72px;
-height: 25px;
-left: 151px;
-top: 201px;
-
-font-family: Manrope;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 25px;
-/* identical to box height */
-
-
-color: #737978;
+const PageTextTwo = styled.h2`
+font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-right: 50px;
+    margin-left: 50px;
+    text-align:center;
+    position:relative;
+    top:-60px;
 `;
 
-const SubHeading2 =styled.div`
-position: absolute;
-width: 145px;
-height: 25px;
-left: 114px;
-top: 412px;
+const Animation = styled.div`
+display: flex: display;
+position:relative;
+top:-10px;
+left:70px;
 
-font-family: Manrope;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 25px;
-/* identical to box height */
+ `;
 
 
-color: #696259;
-`;
+ const StartButton =styled.div`
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ position:relative;
+    bottom:35px;
+ `;
 
-const SubHeading3 =styled.div`
-position: absolute;
-width: 105px;
-height: 25px;
-left: 136px;
-top: 619px;
-
-font-family: Manrope;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 25px;
-/* identical to box height */
-
-
-color: #737978;
-`;
-
-const BackgroundRec1 =styled.div`
-position: absolute;
-height: 181.55543518066406px;
-width: 332px;
-left: 20px;
-top: 185.5361328125px;
-border-radius: 20px;
-background: #E7F2F0;
-
-`;
-const BackgroundRec2 =styled.div`
-position: absolute;
-height: 181.5555419921875px;
-width: 332px;
-left: 23px;
-top: 393px;
-border-radius: 20px;
-background: #E7F2F0;
-
-
-`;
-
-const BackgroundRec3 =styled.div`
-position: absolute;
-height: 165px;
-width: 332px;
-left: 23px;
-top: 604px;
-border-radius: 20px;
-background: #E7F2F0;
-`;
-
-const GenerateRecipeButton1 = styled.h2`
-height: 40px;
-width: 228px;
-left: 76px;
-top: 801px;
-border-radius: 0px;
-
-`;
-
-const NavBar1 =styled.div`
-height: 84px;
-width: 377px;
-left: 0px;
-top: 879px;
-border-radius: 0px;
-
-`;
