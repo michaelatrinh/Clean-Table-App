@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+//import { GenerateRecipeButtonUI } from '../../stories/Button.stories';
 
-const StartTutorialButton = styled.button`
-font-size: 18px;
+const StartTutorialButtonUI = styled.button`
+font-size: ${props=>props.fontsize};
 color: white;
 background-color: #59A091;
 border-radius:5px;
@@ -10,7 +11,6 @@ height: ${props=>props.height};
 width: 228px;
 border: none;
 letter-spacing:5px;
-
 `;
 
 const StartButtonUI = ({
@@ -25,4 +25,4 @@ const StartButtonUI = ({
     </div>
 }
 
-export default StartButtonUI;
+export default ButtonsUI;

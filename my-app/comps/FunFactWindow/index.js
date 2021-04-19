@@ -1,3 +1,4 @@
+
 import React from 'react';
 import styled from 'styled-components'; 
 
@@ -66,6 +67,12 @@ export default FunFactUI;
 
 
 /*function FunFact() {
+
+import styles from '../styles/funfactwindow'
+
+
+function FunFact() {
+
   return (
     <div className={styles.container}>
     <div className={styles.toprow}>VEGETABLES</div>
@@ -79,7 +86,11 @@ export default FunFactUI;
 
 export default FunFact;
 
+
 export{FunFact}*/
+
+export{FunFact}
+
 
 
 
