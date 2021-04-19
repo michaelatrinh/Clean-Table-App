@@ -66,7 +66,13 @@ const FoodButtonUI = ({
     imageheight = "110px",
     bgcolour = "#6FC3B2",
     darken = "0px 4px 5px #494948",
+
+
+    onClick = ()=>{},
+    routeTo = "/add-protein"
+
     onClickA = ()=>{}
+
 }) => {
     // const [clickState, setClickState] = useState(false);
     // onClick={()=>router.push(routeTo)
