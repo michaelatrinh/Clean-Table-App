@@ -1,52 +1,50 @@
-import React from 'react';
+import React, {useState} from 'react';
 import animationStyle from '../styles/animation.module.css';
 import HeaderUI from '../comps/Header';
 import StartTutorialButtonUI from '../comps/StartTutorialButton';
 import styled from 'styled-components';
-
-
 
 export default function Page2({
     title ="HOW TO GET STARTED",
     description ="People want to know the best method when it comes to managing perishability.",
     descriptiontwo=" With this app you can now know how long food can actually last beyond best before date."
 }){
+ 
     return <PageContainer>
-<HeaderContainer>
-    <HeaderUI></HeaderUI>
-</HeaderContainer>
-
-<TextContainer>
-            <PageTitle>{title}</PageTitle>
-            <PageText>{description}</PageText>
-            <PageTextTwo>{descriptiontwo}</PageTextTwo>
-        </TextContainer>
-
-<Animation> <div className={animationStyle.main}>
-        <div className={animationStyle.shadowwrapper}>
-            <div className={animationStyle.shadow}></div>
-        </div>
-        <div className={animationStyle.food}>
-            <div className={animationStyle.body}></div>
-            <div className={animationStyle.eyeLeft}></div>
-            <div className={animationStyle.eyeRight}></div>
-            <div className={animationStyle.blushLeft}></div>
-            <div className={animationStyle.blushRight}></div>
-            <div className={animationStyle.mouth}></div>
-        </div>
-        <div className={animationStyle.hiwrapper}>
-            <div className={animationStyle.hi}></div>
-            </div>
-            </div>
- </Animation>
-
-<StartButton routeTo="/tutorial-pages">
-<StartTutorialButtonUI ></StartTutorialButtonUI>
-</StartButton>
-    </PageContainer>
+    <HeaderContainer>
+        <HeaderUI></HeaderUI>
+    </HeaderContainer>
     
-} 
-
+    <TextContainer>
+                <PageTitle>{title}</PageTitle>
+                <PageText>{description}</PageText>
+                <PageTextTwo>{descriptiontwo}</PageTextTwo>
+            </TextContainer>
+    
+    <Animation> <div className={animationStyle.main}>
+            <div className={animationStyle.shadowwrapper}>
+                <div className={animationStyle.shadow}></div>
+            </div>
+            <div className={animationStyle.food}>
+                <div className={animationStyle.body}></div>
+                <div className={animationStyle.eyeLeft}></div>
+                <div className={animationStyle.eyeRight}></div>
+                <div className={animationStyle.blushLeft}></div>
+                <div className={animationStyle.blushRight}></div>
+                <div className={animationStyle.mouth}></div>
+            </div>
+            <div className={animationStyle.hiwrapper}>
+                <div className={animationStyle.hi}></div>
+                </div>
+                </div>
+     </Animation>
+    
+    <StartButton>
+    <StartTutorialButtonUI routeTo = "/add-protein"></StartTutorialButtonUI>
+    </StartButton>
+        </PageContainer>
+        
+   }
 const PageContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -107,7 +105,7 @@ const Animation = styled.div`
 display: flex: display;
 position:relative;
 top:-10px;
-left:60px;
+left:70px;
 
  `;
 
@@ -120,5 +118,4 @@ left:60px;
  position:relative;
     bottom:35px;
  `;
-
 
