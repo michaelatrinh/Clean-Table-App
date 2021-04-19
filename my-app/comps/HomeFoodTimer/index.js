@@ -8,7 +8,7 @@ left: 0px;
 top: 0px;
 border-radius: 10px;
 
-background-color: ${props=>props.bgcolorlight};
+background-color: ${props=>props.bgcolor1};
 
 letter-spacing:5px;
 `;

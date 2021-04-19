@@ -7,8 +7,8 @@ const FoodButtonContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 145px;
-    height: 145px;
+    width: ${props=>props.boxwidth};
+    height: ${props=>props.boxheight};
     background-color: #FFFFFF;
     border-radius: 20px;
     box-shadow: ${props=>props.boxshadow};
@@ -66,13 +66,16 @@ const FoodButtonUI = ({
     imageheight = "110px",
     bgcolour = "#6FC3B2",
     darken = "0px 4px 5px #494948",
+    boxwidth ="145px",
+    boxheight ="145px",
+
     onClick = ()=>{},
     routeTo = "/add-protein"
 }) => {
     // const [clickState, setClickState] = useState(false);
 
     const router = useRouter();
-    return <FoodButtonContainer  onClick={()=>router.push(routeTo)} boxshadow={darken}>
+    return <FoodButtonContainer  onClick={()=>router.push(routeTo)} boxshadow={darken} width={boxwidth} height={boxheight}>
         <FoodButtonPart1>
             <FoodButtonImage src={foodimage} width={imagewidth} height={imageheight}>
             </FoodButtonImage>
