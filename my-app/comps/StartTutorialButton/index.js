@@ -22,25 +22,6 @@ const StartButtonUI = ({
         <StartTutorialButton height={height}>
             {text}
         </StartTutorialButton>
-
-height: 55px;
-width: 228px;
-border: none;
-letter-spacing:5px;
-
-`;
-
-const StartButton = styled.button`
-`;
-
-const StartButtonUI =({
-routeTo="/tutorial-pages"
-}) =>{
-    return <div>
-        <StartButton onClick={()=>router.push(routeTo)}>
-        <StartTutorialButton>start tutorial</StartTutorialButton>
-        </StartButton>
-
     </div>
 }
 

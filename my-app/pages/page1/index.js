@@ -29,7 +29,7 @@ const FirstPageContainer = styled.div`
 
     }
 `;
-
+ 
 const Img = styled.img`
     margin-top: 200px;
     width: 200px;
