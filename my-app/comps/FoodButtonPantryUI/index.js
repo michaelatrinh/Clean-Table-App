@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
+import {useRouter} from 'next/router'
 
 const FoodButtonContainer = styled.div`
     display: flex;
@@ -40,7 +41,7 @@ const FoodButtonBiggerContainer = styled.div`
         justify-content: center;
         align-items: center;
         text-align: center;
-        font-size: 9px;
+        font-size: 11px;
         font-weight: light;
         font-family: "Quicksand", sans-serif;
         color: #302B40;
@@ -97,7 +98,8 @@ const FoodButtonPantryUI = ({
     imageheight = "58px",
     bgcolour = "#F16D6D",
     foodname = "CHICKEN",
-    expirydate = "expires on: \n February, 1, 2021"
+    expirydate = "expires on: \n February, 1, 2021",
+    routeTo = "/pantry"
 }) => {
     return <FoodButtonBiggerContainer>
             <h1>{foodname}</h1>

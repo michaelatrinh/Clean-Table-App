@@ -1,35 +1,36 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
-import EmptyBoxImg from '../../public/plus.png';
+import {useRouter} from 'next/router';
 
 const EmptyBox = styled.div`
-position: absolute;
-height: 100px;
-width: 100px;
-left: 0px;
-top: 0px;
-border-radius: 20px;
-background: #EFEFEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    box-shadow: ${props=>props.shadow};
 `;
 
-const Img = styled.image`
-position: absolute;
-height: 45px;
-width: 50px;
-left: 25px;
-top: 25px;
-border-radius: 0px;
+const EmptyImage = styled.img`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
+    width: 60px;
 `;
 
-const EmptyBoxUI = () => {
-
-    return <div>
-    <EmptyBox>
-        <Img>
- <img src={EmptyBoxImg} width="50px" height="45px" alt="header logo"/>
-    </Img>
- </EmptyBox>
-    </div>
+const EmptyBoxUI = ({
+    foodimage = "/plus.png",
+    routeTo = "/pantry-pick-category",
+    onClickBox = ()=>{},
+    boxshadow = ""
+}) => {
+    const router = useRouter();
+    return <EmptyBox onClick={onClickBox} shadow={boxshadow}>
+        <EmptyImage src={foodimage}></EmptyImage>
+    </EmptyBox>
 }
 
 export default EmptyBoxUI;
