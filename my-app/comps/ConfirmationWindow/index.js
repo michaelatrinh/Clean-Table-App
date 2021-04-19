@@ -8,6 +8,8 @@ const ConfirmationWindowUI = ({
     text = "Do you want to add this item to your pantry?",
     cWidth = "336",
     cHeight = "262",
+    Yshadow = "",
+    Nshadow = "",
     onClickX = ()=>{},
     onClickY = ()=>{},
     onClickN = ()=>{}
@@ -33,10 +35,10 @@ const ConfirmationWindowUI = ({
         </SecondContainer>
 
         <ThirdContainer>
-            <YesButton onClick={onClickY}>
+            <YesButton onClick={onClickY} Yboxshadow={Yshadow}>
                 <p>Yes</p>
             </YesButton>
-            <NoButton onClick={onClickN}>
+            <NoButton onClick={onClickN} Nboxshadow={Nshadow}>
                 <p>No</p>
             </NoButton>
         </ThirdContainer>
@@ -142,6 +144,7 @@ const YesButton = styled.div`
     width: 89px;
     height: 32px;
     background-color: #59A091;
+    box-shadow: ${props=>props.Yboxshadow};
     &>p {
         font-family: "Manrope", sans-serif;
         color: #FFFFFF;
@@ -156,6 +159,7 @@ const NoButton = styled.div`
     width: 89px;
     height: 32px;
     background-color: #6FC3B2;
+    box-shadow: ${props=>props.Nboxshadow};
     &>p {
         font-family: "Manrope", sans-serif;
         color: #FFFFFF;
