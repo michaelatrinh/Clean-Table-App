@@ -71,8 +71,6 @@ const FoodButtonUI = ({
     onClick = ()=>{},
     routeTo = "/add-protein"
 
-    onClickA = ()=>{}
-
 }) => {
     // const [clickState, setClickState] = useState(false);
     // onClick={()=>router.push(routeTo)
