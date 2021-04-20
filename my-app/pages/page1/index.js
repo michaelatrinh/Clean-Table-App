@@ -59,7 +59,7 @@ const Circle = styled.div`
     }
 `;
 
-export default function Home({
+export default function FirstPage({
     logoimage = "/logo.png",
     text = "enter"
 
