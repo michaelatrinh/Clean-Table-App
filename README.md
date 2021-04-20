@@ -61,10 +61,12 @@ Pages Folder:
   - ingredient picker page
 
 Stories / Components:
-  - header
-  - homefoodtimer
-  - empty box
-  - loading bar
+  - Header
+  - HomeFoodTimer
+  - Empty Box
+  - Loading Bar
 
 Extra: 
+  - added animmation to page 2
   - added animation to loading page
+  - routed page 2 to page 3
