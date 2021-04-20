@@ -67,6 +67,6 @@ Stories / Components:
   - Loading Bar
 
 Extra: 
-  - added animmation to page 2
+  - added animation to page 2
   - added animation to loading page
   - routed page 2 to page 3
