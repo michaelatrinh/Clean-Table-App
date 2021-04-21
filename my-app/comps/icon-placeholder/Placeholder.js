@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const PContainer = styled.div`
     // margin: 50px;
     // padding: 20px;
-    height: 180px;
+    height: ${props=>props.height};
     width: 335px;
 
     display: flex; 
@@ -138,11 +138,13 @@ const PlaceholderUI = ({
   widthB = "50px",
   widthC = "50px",
 
+  height = "180px",
+
   onClickA = ()=>{}
 
 }) => {
 
-  return <PContainer>
+  return <PContainer height={height}>
     <PToprow> {subtitle}</PToprow>
 
     <PMiddlerow>
