@@ -85,7 +85,9 @@ export default function RecipePage({
     subtitle = "Main Ingredients:",
     
 }) {
+const HandleClick =() => {
 
+}
       return <RecipeContainer>
         <Header></Header>
 
@@ -101,7 +103,7 @@ export default function RecipePage({
             <Placeholder image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} subtitle={"Optional:"}></Placeholder>
         </Mid2>
         <Mid3>
-
+        
 
         </Mid3>
 
