@@ -6,11 +6,12 @@ import Header from '../comps/Header/index.js';
 import Menu from '../comps/NavBar/index.js';
 import Placeholder from '../comps/icon-placeholder/Placeholder.js';
 import FunFactWindow from '../comps/FunFactWindow/index.js';
-import Instructions from '../comps/RecipeInstructions/index.js';
+import RecipeButton from '../comps/Recipe-Button/index.js';
+
 
 const RecipeContainer = styled.div`
     width: 375px;
-    height: 1480px;
+    height: 1070px;
     background-color: #E7F2F0;
     margin: 100px;
     
@@ -28,6 +29,8 @@ const TopSection = styled.div`
 
     h3{
         font-size: 22px;
+        text-align: center;
+        margin:10px;
     }
 
     img{
@@ -39,7 +42,7 @@ const TopSection = styled.div`
 `;
 
 const Mid1 = styled.div`
-    margin-top: 160px;
+    margin-top: 170px;
 `;
 
 const Mid2 = styled.div`
@@ -47,24 +50,24 @@ const Mid2 = styled.div`
 `;
 
 const Mid3 = styled.div`
-    margin-top: -30px;
+    margin-top:-25px;
 `;
 
 const EndSection = styled.div`
     position: absolute;
-    margin-top: 1350px;
+    margin-top: 830px;
 `;
 
 const MenuContainer = styled.div`
-    margin-top: 1480px;
-    height: 1500px;
+    margin-top: 990px;
+    height: 1200px;
     position: absolute;
     overflow: hidden;
 `;
 
 
 export default function RecipePage({
-    recipeimage = "/dishimage.png",
+    recipeimage = "/teriyaki-tofu.jpeg",
     recipetitle = "Teriyaki Peanut Tofu with Stir Fried Veggies & Brown Rice",
 
     image1 = "/tofu_squares.png",
@@ -85,7 +88,7 @@ export default function RecipePage({
     subtitle = "Main Ingredients:",
     
 }) {
-const HandleClick =() => {
+const HandleClick =() => { 
 
 }
       return <RecipeContainer>
@@ -104,7 +107,7 @@ const HandleClick =() => {
         </Mid2>
         <Mid3>
         
-
+        <RecipeButton onClick="https://www.ilovevegan.com/teriyaki-peanut-tofu-with-stir-fried-veggies-brown-rice/"></RecipeButton>
         </Mid3>
 
         <EndSection>
