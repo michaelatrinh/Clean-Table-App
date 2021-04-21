@@ -4,6 +4,7 @@ import Congrats from '../comps/congratulations-comp';
 import FunFactUI from '../comps/FunFactWindow'
 import PlaceholderUI from '../comps/icon-placeholder/Placeholder';
 import NotifUI from '../comps/notification-component';
+import RecipeUI from '../comps/Recipe-Button';
 
 
 export default {
@@ -12,8 +13,8 @@ export default {
     component: <Congrats/>,
     component: <PlaceholderUI/>,
     component: <FunFactUI/>,
-    component: <NotifUI/>
-
+    component: <NotifUI/>,
+    component: <RecipeUI/>
 }
 
 export const myhappycomp= () => <Congrats/>
@@ -21,3 +22,4 @@ export const mysadcomp= () => <ExitButtonUI/>
 export const myokaycomp = () => <PlaceholderUI/>
 export const myalrightcomp = () => <FunFactUI/>
 export const myprettycomp = () => <NotifUI/>
+export const myrecipebutton = () => <RecipeUI/>

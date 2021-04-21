@@ -6,11 +6,19 @@ import Header from '../comps/Header/index.js';
 import Menu from '../comps/NavBar/index.js';
 import Placeholder from '../comps/icon-placeholder/Placeholder.js';
 import FunFactWindow from '../comps/FunFactWindow/index.js';
+
 import Instructions from '../comps/RecipeInstructions/index.js';
 
 const RecipeContainer = styled.div`
     width: 375px;
     height: 1480px;
+
+import RecipeButton from '../comps/Recipe-Button/index.js';
+
+const RecipeContainer = styled.div`
+    width: 375px;
+    height: 1000px;
+
     background-color: #E7F2F0;
     margin: 100px;
     
@@ -25,6 +33,12 @@ const TopSection = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+
+    h3{
+        font-size: 22px;
+    }
+
 
     h3{
         font-size: 22px;
@@ -52,12 +66,21 @@ const Mid3 = styled.div`
 
 const EndSection = styled.div`
     position: absolute;
+
     margin-top: 1350px;
 `;
 
 const MenuContainer = styled.div`
     margin-top: 1480px;
     height: 1500px;
+
+    margin-top: 800px;
+`;
+
+const MenuContainer = styled.div`
+    margin-top: 950px;
+    height: 900px;
+
     position: absolute;
     overflow: hidden;
 `;
@@ -71,16 +94,32 @@ export default function RecipePage({
     image2 = "/rice_bowl.png",
     image3 = "/broccoli.png",
 
+export default function RecipePage({
+    recipeimage = "/dishimage.png",
+    recipetitle = "Chicken, Onion pasta bake",
+
+    image1 = "/chicken_drumstick.png",
+    image2 = "/pasta_dish.png",
+    image3 = "/onion.png",
+
+
     image4 ="/saltnpepper.png",
     image5 ="/cheese.png",
     image6 ="/parsley.png",
 
+
     label1 = "TOFU",
     label2 = "RICE",
     label3 = "BROCCOLI",
+
+    label1 = "CHICKEN",
+    label2 = "pasta",
+    label3 = "ONION",
+
     label4 = "SALT N PEPPER",
     label5 = "CHEESE",
     label6 = "PARSLEY",
+
 
     subtitle = "Main Ingredients:",
     
@@ -88,6 +127,16 @@ export default function RecipePage({
 const HandleClick =() => {
 
 }
+
+    title = "Main Ingredients",
+    title2 = "Optional",
+    
+}) {
+
+    const HandleClick = () => {
+        
+    };
+
       return <RecipeContainer>
         <Header></Header>
 
@@ -97,6 +146,7 @@ const HandleClick =() => {
         </TopSection>
 
         <Mid1>
+
             <Placeholder image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients:"}></Placeholder>
         </Mid1>
         <Mid2>
@@ -104,6 +154,14 @@ const HandleClick =() => {
         </Mid2>
         <Mid3>
 
+
+            <Placeholder image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title={title}></Placeholder>
+        </Mid1>
+        <Mid2>
+            <Placeholder image1={image4} image2={image5} image3={image6} title={title2} label1={label4} label2={label5} label3={label6}></Placeholder>
+        </Mid2>
+        <Mid3>
+            <RecipeButton href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
 
         </Mid3>
 
