@@ -72,7 +72,9 @@ flex-direction: column;
   background-color: white;
   border-radius: 15px; 
 
-  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: ${props=>props.shadow};
+//   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+
 //   margin-top: 5px;
 `;
 
@@ -126,14 +128,18 @@ const PlaceholderUI = ({
   label2 = "ONION",
   label3 = "CARROT",
 
-  title = "VEGETABLES"
+  title = "VEGETABLES",
+
+  boxshadow = "0px 4px 5px rgba(0, 0, 0, 0.3)",
+
+  onClickA = ()=>{}
 }) => {
 
   return <PContainer>
     <PToprow>{title}</PToprow>
 
     <PMiddlerow>
-        <FoodIcon>
+        <FoodIcon onClick={onClickA} shadow={boxshadow}>
             <ImageDiv>
                 <Img src={image1} width="60px" height="60px" alt="image1"></Img>                
             </ImageDiv>

@@ -4,7 +4,77 @@ import Header from '../comps/Header/index.js';
 import Menu from '../comps/NavBar/index.js';
 import Placeholder from '../comps/icon-placeholder/Placeholder.js';
 import GenerateRecipeButton from '../comps/GenerateRecipeButton/index.js';
+import React, {useState} from 'react';
+import {useRouter} from 'next/router';
 
+export default function IngredientPickerPage({
+    title = "PICK YOUR PROTEINS",
+
+    image1 = "/chicken_drumstick.png",
+    image2 = "/shaved_beef.png",
+    image3 = "/onion.png",
+
+    image4 ="/rice_bowl.png",
+    image5 ="/pasta_dish.png",
+    image6 ="/potatoes.png",
+
+    label1 = "CHICKEN",
+    label2 = "BEEF",
+    label3 = "ONION",
+    label4 = "RICE",
+    label5 = "PASTA",
+    label6 = "POTATOES",
+    recipebutton= "generate recipe",
+
+}) {
+    const [clickStateA, setClickStateA] = useState(false);
+    const [clickStateB, setClickStateB] = useState(false);
+    const [clickStateC, setClickStateC] = useState(false);
+    var newBoxShadowA = "0px 4px 5px rgba(0, 0, 0, 0.3)";
+    var newBoxShadowB = "0px 4px 5px rgba(0, 0, 0, 0.3)";
+    var newBoxShadowC = "0px 4px 5px rgba(0, 0, 0, 0.3)";
+    if(clickStateA){
+        newBoxShadowA = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
+    }    
+    if(clickStateB){
+        newBoxShadowB = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
+    }    
+    if(clickStateC){
+        newBoxShadowC = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
+    }
+
+      return <RecipeContainer>
+          <HeaderContainer>
+            <Header></Header>
+          </HeaderContainer>
+
+        <TextContainer>
+            <TutPageTitle>{title}</TutPageTitle>
+        </TextContainer>
+        
+        <FoodButtonContainer>
+            <Placeholder onClickA={()=>setClickStateA(!clickStateA)} image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title="PROTEINS" boxshadow={newBoxShadowA}></Placeholder>
+
+            <Placeholder onClickA={()=>setClickStateB(!clickStateB)} image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} title="CARBOHYDRATES" boxshadow={newBoxShadowB}></Placeholder>
+
+            <Placeholder onClickA={()=>setClickStateC(!clickStateC)} boxshadow={newBoxShadowC}></Placeholder>
+        </FoodButtonContainer>
+
+        {/*<PlaceHolderContainer>
+        <Placeholder></Placeholder>
+        <Placeholder></Placeholder>
+        <Placeholder></Placeholder>
+        </PlaceHolderContainer>*/}
+
+        <GenerateContainer>
+            <GenerateRecipeButton text={recipebutton}></GenerateRecipeButton>
+        </GenerateContainer>
+
+        <NavBarContainer>
+            <Menu></Menu>
+        </NavBarContainer>
+    </RecipeContainer>  
+}
 
 const RecipeContainer = styled.div`
 // position: relative;
@@ -104,56 +174,3 @@ const NavBarContainer = styled.div`
 //display:flex;
 //`;
 
-export default function IngredientPickerPage({
-    title = "PICK YOUR PROTEINS",
-
-    image1 = "/chicken_drumstick.png",
-    image2 = "/shaved_beef.png",
-    image3 = "/onion.png",
-
-    image4 ="/rice_bowl.png",
-    image5 ="/pasta_dish.png",
-    image6 ="/potatoes.png",
-
-    label1 = "CHICKEN",
-    label2 = "BEEF",
-    label3 = "ONION",
-    label4 = "RICE",
-    label5 = "PASTA",
-    label6 = "POTATOES",
-    recipebutton= "generate recipe",
-
-}) {
-      return <RecipeContainer>
-          <HeaderContainer>
-            <Header></Header>
-          </HeaderContainer>
-
-        <TextContainer>
-            <TutPageTitle>{title}</TutPageTitle>
-        </TextContainer>
-        
-        <FoodButtonContainer>
-            <Placeholder image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} ></Placeholder>
-
-            <Placeholder image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6}></Placeholder>
-
-            <Placeholder></Placeholder>
-        </FoodButtonContainer>
-
-        {/*<PlaceHolderContainer>
-        <Placeholder></Placeholder>
-        <Placeholder></Placeholder>
-        <Placeholder></Placeholder>
-        </PlaceHolderContainer>*/}
-
-        <GenerateContainer>
-            <GenerateRecipeButton text={recipebutton}></GenerateRecipeButton>
-        </GenerateContainer>
-
-
-        <NavBarContainer>
-            <Menu></Menu>
-        </NavBarContainer>
-    </RecipeContainer>  
-}
