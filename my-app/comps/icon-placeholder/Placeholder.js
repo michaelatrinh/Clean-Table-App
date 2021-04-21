@@ -96,11 +96,11 @@ const PlaceholderUI = ({
   label2 = "ONION",
   label3 = "CARROT",
 
-  title = "VEGETABLES"
+  subtitle = "VEGETABLES"
 }) => {
 
   return <PContainer>
-    <PToprow>{title}</PToprow>
+    <PToprow> {subtitle}</PToprow>
 
     <PMiddlerow>
         <FoodIcon>
@@ -126,7 +126,7 @@ const PlaceholderUI = ({
 
 export default PlaceholderUI;
 
-/*function Window() {
+/*</PContainer>*function Window() {
   return (
     <div className={styles.container}>
     <div className={styles.toprow}>VEGETABLES</div>

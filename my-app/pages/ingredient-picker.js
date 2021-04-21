@@ -88,8 +88,12 @@ export default function IngredientPickerPage({
     label5 = "PASTA",
     label6 = "POTATOES",
     recipebutton= "generate recipe",
+    subtitle ="VEGETABLES"
+
+   
 
 }) {
+
       return <RecipeContainer>
         <Header></Header>
 
@@ -98,11 +102,11 @@ export default function IngredientPickerPage({
         </TextContainer>
         
         <Mid1>
-        <Placeholder image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} ></Placeholder>
+        <Placeholder subtitle={"PROTEIN"} image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} ></Placeholder>
         </Mid1>
 
         <Mid2>
-        <Placeholder image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6}></Placeholder>
+        <Placeholder  subtitle={"CARBOHYDRATES"}image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6}></Placeholder>
         </Mid2>
 
         <Mid3>
