@@ -75,8 +75,7 @@ display:flex;
 
 const Popup= styled.div`
 position: absolute;
-left: 465px;
-top:100px;
+justify-content: center;
 z-index: 1;
 `;
 
