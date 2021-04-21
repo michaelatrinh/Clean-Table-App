@@ -23,7 +23,7 @@ const EnterButtonUI = (
 ) => {
     const router = useRouter();
 
-    return <EnterButtonCSS onClick={()=>router.push("/Page2.js")} fontsize={fontsize} height={height} width={width}>{text}</EnterButtonCSS>
+    return <EnterButtonCSS onClick={()=>router.push("/Page2")} fontsize={fontsize} height={height} width={width}>{text}</EnterButtonCSS>
 }
 
 export default EnterButtonUI;

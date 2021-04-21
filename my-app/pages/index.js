@@ -1,14 +1,16 @@
+
 import Head from 'next/head'; 
 import styled from 'styled-components';
-import Button from '../comps/EnterButton';
-import Login from '../comps/Login';
-import Footer from '../comps/WelcomePageFooter';
+import Header from '../comps/Header/index.js';
+import Menu from '../comps/NavBar/index.js';
+import Placeholder from '../comps/icon-placeholder/Placeholder.js';
+import FunFactWindow from '../comps/FunFactWindow/index.js';
+import RecipeButton from '../comps/Recipe-Button/index.js';
 
-
-const FirstPageContainer = styled.div`
+const RecipeContainer = styled.div`
     width: 375px;
-    height: 812px;
-    background-color: white;
+    height: 1000px;
+    background-color: #E7F2F0;
     margin: 100px;
     
     display: flex;
@@ -16,70 +18,94 @@ const FirstPageContainer = styled.div`
     align-items: center;
 
     box-shadow: 5px 1px 30px 5px rgba(0, 0, 0, 0.5);
-
-    .headertext{
-        font-size: 36px;
-        font-weight: bold;
-        color: #302B40;
-    }
 `;
- 
-const Img = styled.img`
-    margin-top: 200px;
-    width: 200px;
 
+const TopSection = styled.div`
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    h3{
+        font-size: 22px;
+    }
+    img{
+        position: absolute;
 
-`;
-
-const ButtonContainer = styled.div`
-    margin-top: 10px;
-    position: relative;
-`;
-
-const Circle = styled.div`
-    background-color: #59A091;
-    height: 160px;
-    width: 375px;
-
-    border-top-right-radius: 50%;
-    border-top-left-radius: 50%;
-
-    position: relative;
-    margin-top: 80px;
-    overflow: hidden;
-
-    color: white;
-    text-align: center;
-
-    p{
-        margin-top: 60px;
+        border: 4px solid #59A091;
+        margin-top: 80px;
     }
 `;
 
-export default function FirstPage({
-    logoimage = "/logo.png",
-    text = "enter"
+const Mid1 = styled.div`
+    margin-top: 160px;
+`;
 
+const Mid2 = styled.div`
+    margin-top: -70px;
+`;
+
+const Mid3 = styled.div`
+    margin-top: -30px;
+`;
+
+const EndSection = styled.div`
+    position: absolute;
+    margin-top: 800px;
+`;
+
+const MenuContainer = styled.div`
+    margin-top: 950px;
+    height: 900px;
+    position: absolute;
+    overflow: hidden;
+`;
+
+export default function RecipePage({
+    recipeimage = "/dishimage.png",
+    recipetitle = "Chicken, Onion pasta bake",
+
+    image1 = "/chicken_drumstick.png",
+    image2 = "/pasta_dish.png",
+    image3 = "/onion.png",
+
+    image4 ="/saltnpepper.png",
+    image5 ="/cheese.png",
+    image6 ="/parsley.png",
+
+    label1 = "CHICKEN",
+    label2 = "pasta",
+    label3 = "ONION",
+    label4 = "SALT N PEPPER",
+    label5 = "CHEESE",
+    label6 = "PARSLEY",
+
+    title = "Main Ingredients",
+    title2 = "Optional",
+    
 }) {
+      return <RecipeContainer>
+        <Header></Header>
 
-/*const HomepageUI = ({
-    logoimage = "/logo.png",
+        <TopSection>
+            <h3>{recipetitle}</h3>
+            <img src={recipeimage}></img>
+        </TopSection>
 
-}) => {*/
-      return <FirstPageContainer>
-        <Img src={logoimage}></Img>
-        <p className="headertext">W E L C O M E </p>
-        <Login></Login>
-        <ButtonContainer>
-            <Button text={text} height="34px"></Button>
-        </ButtonContainer>
-        
-        <Circle>
-            <p>created by: <br></br>
-Jessica, Arielle, Michael, & Alicia</p>
-        </Circle>
-    </FirstPageContainer>  
+        <Mid1>
+            <Placeholder image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title={title}></Placeholder>
+        </Mid1>
+        <Mid2>
+            <Placeholder image1={image4} image2={image5} image3={image6} title={title2} label1={label4} label2={label5} label3={label6}></Placeholder>
+        </Mid2>
+        <Mid3>
+            <RecipeButton></RecipeButton>
+        </Mid3>
+
+        <EndSection>
+            <FunFactWindow></FunFactWindow>
+        </EndSection>
+
+        <MenuContainer>
+            <Menu></Menu>
+        </MenuContainer>
+    </RecipeContainer>  
 }
