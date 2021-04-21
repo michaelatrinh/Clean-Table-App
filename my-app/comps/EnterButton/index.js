@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {useRouter} from 'next/router';
 
 const EnterButtonCSS = styled.button`
 font-size: ${props=>props.fontsize};
@@ -20,7 +21,9 @@ const EnterButtonUI = (
     width = "178px",
     text = "enter"
 ) => {
-    return <EnterButtonCSS fontsize={fontsize} height={height} width={width}>{text}</EnterButtonCSS>
+    const router = useRouter();
+
+    return <EnterButtonCSS onClick={()=>router.push("/Page2.js")} fontsize={fontsize} height={height} width={width}>{text}</EnterButtonCSS>
 }
 
 export default EnterButtonUI;

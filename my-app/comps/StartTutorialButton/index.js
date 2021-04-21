@@ -29,8 +29,8 @@ width: 228px;
 border: none;
 letter-spacing:5px;
 box-shadow: 0px 4px 10px 0px #221D1D80;
-
-`;
+</div>
+/*`;
 
 const StartButton = styled.button`
 `;
@@ -49,6 +49,6 @@ const StartButtonUI =({
         </StartButton>
 
     </div>
-}
+}*/
 
 export default StartButtonUI; 
