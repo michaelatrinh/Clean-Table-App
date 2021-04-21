@@ -4,87 +4,117 @@ import styled from 'styled-components';
 
 
 const PContainer = styled.div`
-    margin: 50px;
-    padding: 20px;
-    height: 105px;
-    width: 305px;
+    // margin: 50px;
+    // padding: 20px;
+    height: 180px;
+    width: 335px;
 
     display: flex; 
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: #B8E0D8;
 
     border-radius: 20px;
     box-shadow: 0px 5px 10px #C0C0C0;
+
+    // overflow: hidden;
 `;
 
 const PToprow = styled.div`
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 3;
+
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 
-  position: absolute;
-  margin-top: -45px;
+//   position: absolute;
+//   margin-top: -45px;
 
   color: #696259;
   font-size: 16px;
   font-weight: 500;
-  font-family: sans-serif;
+  font-family: "Manrope", sans-serif;
 
-  height: 86px;
-  width: 340px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+//   height: 86px;
+//   width: 340px;
 `;
 
-const Image = styled.image`
-  padding: 10px;
+const Image = styled.img`
+//   padding: 10px;
 `;
 
 const PMiddlerow = styled.div`
+    display: flex;
+  justify-content: space-evenly;
+//   align-items: center;
+  flex-grow: 3;
+  
   width: 300px;
   font-size: 16px;
 
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
+//   text-align: center;
   color: #696259;
 
-  margin-top: 10px;
+//   margin-top: 10px;
 `;
 
 const FoodIcon = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
   width: 90px;
   height: 88px;
   background-color: white;
   border-radius: 15px; 
 
   box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.3);
-  margin-top: 5px;
+//   margin-top: 5px;
 `;
 
 const Label = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+
   width: 90px;
-  height: 20px;
+  min-height: 20px;
   background-color: #6FC3B2;
   color: #000000;
-  font-family: sans-serif;
-  padding:1px;
+  font-family: "Manrope",sans-serif;
+//   padding:1px;
   font-size: 12px;
   text-align: center;
   
-  margin-top: 70px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+//   margin-top: 70px;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+`;
+
+const ImageDiv = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 99;
+`;
+
+const BottomDiv = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
 `;
 
 const Img = styled.img`
-  margin-top: 10px;
-  margin-left: -25px;
-  position: absolute;
+    width: ${props=>props.width};
+    height: auto;
+//   margin-top: 10px;
+//   margin-left: -25px;
+//   position: absolute;
 `;
 
 const PlaceholderUI = ({
@@ -104,24 +134,38 @@ const PlaceholderUI = ({
 
     <PMiddlerow>
         <FoodIcon>
-        <Img src={image1} width="60px" height="60px" alt="image1"></Img>
-        <Label>{label1}</Label>
+            <ImageDiv>
+                <Img src={image1} width="60px" height="60px" alt="image1"></Img>                
+            </ImageDiv>
+            
+            <BottomDiv>
+                <Label>{label1}</Label>                
+            </BottomDiv>
+
         </FoodIcon>
 
         <FoodIcon>
-        <Img src={image2} width="50px" height="50px" alt="image2"></Img>
-        <Label>{label2}</Label>
+            <ImageDiv>
+                <Img src={image2} width="50px" height="50px" alt="image2"></Img>                
+            </ImageDiv>
+
+            <BottomDiv>
+                <Label>{label2}</Label>                
+            </BottomDiv>
         </FoodIcon>
 
         <FoodIcon>
-        <Img src={image3} width="60px" height="60px" alt="image3"></Img>
-        <Label>{label3}</Label>
+            <ImageDiv>
+                <Img src={image3} width="60px" height="60px" alt="image3"></Img>                
+            </ImageDiv>
+
+            <BottomDiv>
+                <Label>{label3}</Label>                
+            </BottomDiv>
         </FoodIcon>
-      
     </PMiddlerow>
 
   </PContainer>
-
 }
 
 export default PlaceholderUI;
