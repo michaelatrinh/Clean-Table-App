@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LoadingBar</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    html {
+        height: 100%;
+    }
+
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main {
+        position: relative;
+
+        height: 910px;
+        width:375px;
+        background-color: #E7F2F0;
+    }
+
+    .bar {
+        width:100px;
+        height: 21px;
+    }
+    
+    .progress {
+        margin-top: 30px;
+        width: 100%;
+
+        position:relative;
+        left: 112px;
+    }
+
+    .progress .outer {
+        width: 150%;
+        height: 14px;
+        border-radius: 7px;
+        background: rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .progress .inner {
+        width: 0;
+        height: 100%;
+        background: #59A091;
+        animation: loading 4s linear infinite;
+    }
+
+    @keyframes loading {
+        100% {
+            width: 100%;
+        }
+    }
+
+    .animation {
+        position: relative;
+        top:330px;
+
+    }
+
+    .donut {
+        width:100px;
+        height:100px;
+        align-items: center;
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+
+        animation: rotation 8s infinite linear;
+        }
+
+        @keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+
+        
+
+ 
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="animation">
+        <img class="donut" src="/my-app/public/donut.png">
+        <div class="bar">
+        
+
+        <div class="progress">
+            <div class="outer">
+                <div class="inner"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
