@@ -54,7 +54,6 @@ const MiddleContainer = styled.div`
 
 const Mid1 = styled.div`
     // margin-top: 160px;
-    
 `;
 
 const Mid2 = styled.div`
