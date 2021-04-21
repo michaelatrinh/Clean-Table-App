@@ -1,4 +1,3 @@
-
 import React from 'react';
 import styled from 'styled-components'; 
 
@@ -132,7 +131,9 @@ const PlaceholderUI = ({
 
   boxshadow = "0px 4px 5px rgba(0, 0, 0, 0.3)",
 
-  width = "50px",
+  widthA = "50px",
+  widthB = "50px",
+  widthC = "50px",
 
   onClickA = ()=>{}
 }) => {
@@ -143,7 +144,7 @@ const PlaceholderUI = ({
     <PMiddlerow>
         <FoodIcon onClick={onClickA} shadow={boxshadow}>
             <ImageDiv>
-                <Img src={image1} width={width} alt="image1"></Img>                
+                <Img src={image1} width={widthA} alt="image1"></Img>                
             </ImageDiv>
             
             <BottomDiv>
@@ -152,9 +153,9 @@ const PlaceholderUI = ({
 
         </FoodIcon>
 
-        <FoodIcon>
+        <FoodIcon shadow={boxshadow}>
             <ImageDiv>
-                <Img src={image2} width={width} alt="image2"></Img>                
+                <Img src={image2} width={widthB} alt="image2"></Img>                
             </ImageDiv>
 
             <BottomDiv>
@@ -162,9 +163,9 @@ const PlaceholderUI = ({
             </BottomDiv>
         </FoodIcon>
 
-        <FoodIcon>
+        <FoodIcon shadow={boxshadow}>
             <ImageDiv>
-                <Img src={image3} width="60px" height="60px" alt="image3"></Img>                
+                <Img src={image3} width={widthC} height="60px" alt="image3"></Img>                
             </ImageDiv>
 
             <BottomDiv>

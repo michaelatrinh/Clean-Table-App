@@ -53,18 +53,12 @@ export default function IngredientPickerPage({
         </TextContainer>
         
         <FoodButtonContainer>
-            <Placeholder onClickA={()=>setClickStateA(!clickStateA)} image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title="PROTEINS" boxshadow={newBoxShadowA} width="60px"></Placeholder>
+            <Placeholder onClickA={()=>setClickStateA(!clickStateA)} image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title="PROTEINS" boxshadow={newBoxShadowA} widthA="65px" widthB="65px" widthC="79px"></Placeholder>
 
-            <Placeholder onClickA={()=>setClickStateB(!clickStateB)} image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} title="CARBOHYDRATES" boxshadow={newBoxShadowB} width="65px"></Placeholder>
+            <Placeholder onClickA={()=>setClickStateB(!clickStateB)} image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} title="CARBOHYDRATES" boxshadow={newBoxShadowB} widthA="65px" widthB="66px" widthC="67px"></Placeholder>
 
-            <Placeholder onClickA={()=>setClickStateC(!clickStateC)} boxshadow={newBoxShadowC}></Placeholder>
+            <Placeholder onClickA={()=>setClickStateC(!clickStateC)} boxshadow={newBoxShadowC} widthA="68px" widthB="55px" widthC="56px"></Placeholder>
         </FoodButtonContainer>
-
-        {/*<PlaceHolderContainer>
-        <Placeholder></Placeholder>
-        <Placeholder></Placeholder>
-        <Placeholder></Placeholder>
-        </PlaceHolderContainer>*/}
 
         <GenerateContainer>
             <GenerateRecipeButton text={recipebutton}></GenerateRecipeButton>
