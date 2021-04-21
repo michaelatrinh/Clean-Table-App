@@ -14,6 +14,20 @@ border: none;
 letter-spacing:5px;
 `;
 
+
+/*const StartButtonUI = ({
+    text = "start tutorial",
+    height = "55px"
+}) => {
+
+    return <div>
+        <StartTutorialButton height={height}>
+            {text}
+        </StartTutorialButton>
+*/
+;
+
+
 // const StartButtonUI = ({
 //     text = "start tutorial",
 //     height = "55px"
@@ -32,7 +46,9 @@ letter-spacing:5px;
 
 // `;
 
+
 const StartButton = styled.button`
+
 `;
 
 

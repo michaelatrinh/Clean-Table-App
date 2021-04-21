@@ -127,6 +127,9 @@ const PlaceholderUI = ({
   label2 = "ONION",
   label3 = "CARROT",
 
+
+  subtitle = "VEGETABLES",
+
   title = "VEGETABLES",
 
   boxshadow = "0px 4px 5px rgba(0, 0, 0, 0.3)",
@@ -136,10 +139,11 @@ const PlaceholderUI = ({
   widthC = "50px",
 
   onClickA = ()=>{}
+
 }) => {
 
   return <PContainer>
-    <PToprow>{title}</PToprow>
+    <PToprow> {title}</PToprow>
 
     <PMiddlerow>
         <FoodIcon onClick={onClickA} shadow={boxshadow}>
@@ -179,7 +183,7 @@ const PlaceholderUI = ({
 
 export default PlaceholderUI;
 
-/*function Window() {
+/*</PContainer>*function Window() {
   return (
     <div className={styles.container}>
     <div className={styles.toprow}>VEGETABLES</div>
