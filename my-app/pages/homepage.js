@@ -77,6 +77,7 @@ align-items: center;
 
 const Popup= styled.div`
 position: absolute;
+justify-content: center;
 // left: 465px;
 // top:100px;
 z-index: 1;
