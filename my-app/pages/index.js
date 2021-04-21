@@ -82,6 +82,11 @@ export default function RecipePage({
     title2 = "Optional",
     
 }) {
+
+    const HandleClick = () => {
+        
+    };
+
       return <RecipeContainer>
         <Header></Header>
 
@@ -97,7 +102,7 @@ export default function RecipePage({
             <Placeholder image1={image4} image2={image5} image3={image6} title={title2} label1={label4} label2={label5} label3={label6}></Placeholder>
         </Mid2>
         <Mid3>
-            <RecipeButton></RecipeButton>
+            <RecipeButton href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
         </Mid3>
 
         <EndSection>
