@@ -102,14 +102,6 @@ const PlaceholderUI = ({
   return <PContainer>
     <PToprow> {subtitle}</PToprow>
 
-
-  title = "VEGETABLES"
-}) => {
-
-  return <PContainer>
-    <PToprow>{title}</PToprow>
-
-
     <PMiddlerow>
         <FoodIcon>
         <Img src={image1} width="60px" height="60px" alt="image1"></Img>
@@ -134,7 +126,7 @@ const PlaceholderUI = ({
 
 export default PlaceholderUI;
 
-/*function Window() {
+/*</PContainer>*function Window() {
   return (
     <div className={styles.container}>
     <div className={styles.toprow}>VEGETABLES</div>
