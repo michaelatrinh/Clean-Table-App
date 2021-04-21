@@ -6,7 +6,8 @@ const CongratsContainer = styled.div`
     // margin: 50px;
     // padding: 20px;
     height: 647px;
-    width: 336px;
+    width: ${props=>props.width};
+    overflow:hidden;
 
     display: flex; 
     flex-direction: column; 
@@ -89,13 +90,15 @@ const ConfirmButton = styled.button`
 const Congrats = ({
     stylestext="You’ve just entered in your grocery list into “MyPantry!” Now you can keep track of the food in your household.The Home page will show you the items that are about to expire. Use our Recipe Generator feature to create delicious meals before they expire! Happy Saving!" , 
     headertext="CONGRATULATIONS", 
-    image = "/image_9.png"
+    image = "/image_9.png",
+    okay = ()=>{},
+    width = "336px",
   }) => {
 
-    return <CongratsContainer>
+    return <CongratsContainer width={width}>
               <TopRow>CONGRATULATIONS</TopRow>
               <MiddleRow>
-              <Img src={image} width="110px" height="110px" alt="broccoli"></Img>
+              <Img src={image} width="120px" height="110px" alt="broccoli"></Img>
 
               <p>
       You’ve just entered in your grocery list into “MyPantry!” Now you can keep track of the food in your household. <br></br><br></br>
@@ -104,7 +107,7 @@ const Congrats = ({
       Happy Saving!
       </p>
 
-      <ConfirmButton>OKAY</ConfirmButton>
+      <ConfirmButton onClick={okay}>OKAY</ConfirmButton>
               </MiddleRow>
       </CongratsContainer>
 

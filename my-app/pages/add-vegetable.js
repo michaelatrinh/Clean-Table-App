@@ -24,7 +24,7 @@ export default function tutorialPage({
     const router = useRouter();
     
     const NextPage = () => {
-        var routeTo = "/add-vegetable";
+        var routeTo = "/homepage";
         router.push(routeTo);
     }
 
