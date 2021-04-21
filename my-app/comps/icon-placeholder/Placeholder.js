@@ -94,11 +94,12 @@ const PlaceholderUI = ({
 
   label1 = "BROCCOLI",
   label2 = "ONION",
-  label3 = "CARROT"
+  label3 = "CARROT",
+  subtitle = "VEGETABLES"
 }) => {
 
   return <PContainer>
-    <PToprow>VEGETABLES</PToprow>
+    <PToprow> {subtitle}</PToprow>
 
     <PMiddlerow>
         <FoodIcon>
