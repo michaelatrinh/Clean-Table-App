@@ -85,7 +85,9 @@ export default function RecipePage({
     subtitle = "Main Ingredients:",
     
 }) {
-
+const HandleClick =() => {
+    
+}
       return <RecipeContainer>
         <Header></Header>
 
