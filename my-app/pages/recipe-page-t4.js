@@ -30,7 +30,7 @@ const TopSection = styled.div`
     h3{
         font-size: 22px;
         text-align: center;
-        margin:5px;
+        margin:15px;
     }
 
     img{
@@ -66,20 +66,20 @@ const MenuContainer = styled.div`
 `;
 
 export default function RecipePage({
-    recipeimage = "/Tofu with Rice and Miso-Maple.jpg",
-    recipetitle = "Tofu with Rice and Miso-Maple Dressing",
+    recipeimage = "/Vegetable Macaroni.jpg",
+    recipetitle = "Veggie Macaroni ",
 
     image1 = "/tofu_squares.png",
-    image2 = "/rice_bowl.png",
-    image3 = "/carrot.png",
+    image2 = "/pasta_dish.png",
+    image3 = "/broccoli.png",
 
     image4 ="/saltnpepper.png",
     image5 ="/cheese.png",
     image6 ="/parsley.png",
 
     label1 = "TOFU",
-    label2 = "RICE",
-    label3 = "CARROT",
+    label2 = "PASTA",
+    label3 = "BROCCOLI",
     label4 = "SALT N PEPPER",
     label5 = "CHEESE",
     label6 = "PARSLEY",
@@ -106,7 +106,7 @@ const HandleClick =() => {
         </Mid2>
         <Mid3>
         
-        <RecipeButton onClick="https://www.bonappetit.com/recipe/tofu-with-rice-and-miso-maple-dressing/"></RecipeButton>
+        <RecipeButton onClick="https://lovetobeinthekitchen.com/2017/10/25/skillet-cheesy-beef-veggie-macaroni/"></RecipeButton>
         </Mid3>
 
         <EndSection>
