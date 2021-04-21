@@ -36,14 +36,17 @@ const TopSection = styled.div`
 `;
 
 const Mid1 = styled.div`
+    display: flex;
     margin-top: 160px;
 `;
 
 const Mid2 = styled.div`
+    display: flex;
     margin-top: -70px;
 `;
 
 const Mid3 = styled.div`
+    display: flex;
     margin-top: -30px;
 `;
 
