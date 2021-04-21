@@ -5,11 +5,11 @@ import Header from '../comps/Header/index.js';
 import Menu from '../comps/NavBar/index.js';
 import Placeholder from '../comps/icon-placeholder/Placeholder.js';
 import FunFactWindow from '../comps/FunFactWindow/index.js';
-import Instructions from '../comps/RecipeInstructions/index.js';
+import RecipeButton from '../comps/Recipe-Button/index.js';
 
 const RecipeContainer = styled.div`
     width: 375px;
-    height: 1480px;
+    height: 1000px;
     background-color: #E7F2F0;
     margin: 100px;
     
@@ -18,18 +18,15 @@ const RecipeContainer = styled.div`
     align-items: center;
 
     box-shadow: 5px 1px 30px 5px rgba(0, 0, 0, 0.5);
-
 `;
 
 const TopSection = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
     h3{
         font-size: 22px;
     }
-
     img{
         position: absolute;
 
@@ -52,16 +49,15 @@ const Mid3 = styled.div`
 
 const EndSection = styled.div`
     position: absolute;
-    margin-top: 1350px;
+    margin-top: 800px;
 `;
 
 const MenuContainer = styled.div`
-    margin-top: 1480px;
-    height: 1500px;
+    margin-top: 950px;
+    height: 900px;
     position: absolute;
     overflow: hidden;
 `;
-
 
 export default function RecipePage({
     recipeimage = "/dishimage.png",
@@ -87,6 +83,7 @@ export default function RecipePage({
     
 }) {
 
+
       return <RecipeContainer>
         <Header></Header>
 
@@ -102,7 +99,7 @@ export default function RecipePage({
             <Placeholder image1={image4} image2={image5} image3={image6} title={title2} label1={label4} label2={label5} label3={label6}></Placeholder>
         </Mid2>
         <Mid3>
-            <Instructions></Instructions>
+            <RecipeButton Link href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
         </Mid3>
 
         <EndSection>
