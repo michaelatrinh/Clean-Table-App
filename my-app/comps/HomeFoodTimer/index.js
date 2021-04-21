@@ -61,7 +61,7 @@ const HomeFoodTimerUI = ({
     DAYS="1 DAYS",
     ITEM="CHICKEN",
 
-    bgcolordark="red",
+    bgcolordark="#F16D6D",
     bgcolorlight="#FCD8D8",
 }) => {
 
