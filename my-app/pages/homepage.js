@@ -71,11 +71,15 @@ max-height: 876px;
 max-width: 375px;
 
 display:flex;
+justify-content: center;
+align-items: center;
 `;
 
 const Popup= styled.div`
 position: absolute;
 justify-content: center;
+// left: 465px;
+// top:100px;
 z-index: 1;
 `;
 

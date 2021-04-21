@@ -48,7 +48,7 @@ const NavBarUI = ({
     const router = useRouter();
 
     return <NavBar>
-        <Image src={image1} onClick={()=>router.push()}></Image>
+        <Image src={image1} onClick={()=>router.push("/ingredient-picker")}></Image>
         <Image src={image2} onClick={()=>router.push("/homepage")}></Image>
         <Image src={image3} onClick={()=>router.push("/pantry")}></Image>
         <Image src={image4} onClick={()=>router.push()}></Image>

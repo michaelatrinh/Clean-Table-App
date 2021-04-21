@@ -33,7 +33,6 @@ const ThirdContainer = styled.div`
     flex-grow: 2;
 `;
 
-
 const HomeFoodTimerItem = styled.h1`
     font-family: "Manrope", sans-serif;
     font-size: 24px;

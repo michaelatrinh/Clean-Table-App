@@ -1,6 +1,8 @@
 import Head from 'next/head'; 
 import styled from 'styled-components';
-import Button from '../comps/StartTutorialButton';
+import Button from '../comps/EnterButton';
+import Login from '../comps/Login';
+import Footer from '../comps/WelcomePageFooter';
 
 
 const FirstPageContainer = styled.div`
@@ -20,16 +22,8 @@ const FirstPageContainer = styled.div`
         font-weight: bold;
         color: #302B40;
     }
-
-    input{
-        text-align: center;
-        width: 195px;
-        height: 36px;
-        margin-top: -20px;
-
-    }
 `;
-
+ 
 const Img = styled.img`
     margin-top: 200px;
     width: 200px;
@@ -54,19 +48,18 @@ const Circle = styled.div`
     border-top-left-radius: 50%;
 
     position: relative;
-    margin-top: 120px;
+    margin-top: 80px;
     overflow: hidden;
 
     color: white;
     text-align: center;
 
     p{
-        margin-top: 80px;
+        margin-top: 60px;
     }
-
 `;
 
-export default function Home({
+export default function FirstPage({
     logoimage = "/logo.png",
     text = "enter"
 
@@ -79,7 +72,7 @@ export default function Home({
       return <FirstPageContainer>
         <Img src={logoimage}></Img>
         <p className="headertext">W E L C O M E </p>
-        <input placeholder="name"></input>
+        <Login></Login>
         <ButtonContainer>
             <Button text={text} height="34px"></Button>
         </ButtonContainer>

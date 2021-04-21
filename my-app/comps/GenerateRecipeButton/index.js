@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {useRouter} from 'next/router';
 
 const GenerateRecipeButton1 = styled.button`
 font-size: ${props=>props.fontsize};
@@ -20,8 +21,9 @@ const GenerateRecipeButton = ({
     width="228px",
     fontsize="18px"
 }) => {
+    const router = useRouter();
 
-    return <GenerateRecipeButton1 height={height} width={width} fontsize={fontsize}>{text}</GenerateRecipeButton1> 
+    return <GenerateRecipeButton1 onClick={()=>router.push("/recipe-page1")} height={height} width={width} fontsize={fontsize}>{text}</GenerateRecipeButton1> 
 }
 
 export default GenerateRecipeButton;
