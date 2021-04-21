@@ -10,6 +10,8 @@ left: 0px;
 top: 0px;
 border-radius: 30px;
 
+box-shadow: 0px 5px 2px rgb(0,0,0, 0.2);
+
 `;
 
 const LoadingBarFront = styled.div`

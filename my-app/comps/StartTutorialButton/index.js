@@ -14,6 +14,7 @@ border: none;
 letter-spacing:5px;
 `;
 
+
 /*const StartButtonUI = ({
     text = "start tutorial",
     height = "55px"
@@ -25,6 +26,25 @@ letter-spacing:5px;
         </StartTutorialButton>
 */
 ;
+
+
+// const StartButtonUI = ({
+//     text = "start tutorial",
+//     height = "55px"
+// }) => {
+
+//     return <div>
+//         <StartTutorialButton height={height}>
+//             {text}
+//         </StartTutorialButton>
+
+// height: 55px;
+// width: 228px;
+// border: none;
+// letter-spacing:5px;
+// box-shadow: 0px 4px 10px 0px #221D1D80;
+
+// `;
 
 
 const StartButton = styled.button`
@@ -40,7 +60,7 @@ const StartButtonUI =({
 
     const router = useRouter();
     return <div>
-        <StartButton  onClick={()=>router.push(routeTo)}>
+        <StartButton onClick={()=>router.push(routeTo)}>
         <StartTutorialButton>start tutorial</StartTutorialButton>
         </StartButton>
 

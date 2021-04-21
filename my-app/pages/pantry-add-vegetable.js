@@ -14,7 +14,7 @@ export default function PantryAddProtein({
     title = "CARBOHYDRATES",
     description = "Add a CARBOHYDRATE to your pantry!"
 }){
-    // Lines 17 - 28 are state changes for the confirmation pop-up window
+// === POP UP CONFIRMATION WINDOW STATE CHANGE ==================
     const [greyState, setGreyState] = useState(false);
     var width = 0;
     var height = 0;
@@ -27,7 +27,41 @@ export default function PantryAddProtein({
         newHeight = 262;
     }
 
-    // Lines 30 - 47 are state changes after pressing a food button
+// === YES AND NO BUTTONS STATE CHANGE AND YES BUTTON ROUTE =====
+    const [yesState, setYesState] = useState(false);
+    const [noState, setNoState] = useState(false);
+    var newYesShadow = "";
+    var newNoShadow = "";
+    if(yesState){
+        var newYesShadow = "inset 0 0 10px 0px #494948";
+    }
+    if(noState){
+        var newNoShadow = "inset 0 0 10px 0px #494948";
+    }
+
+    const router = useRouter();
+    
+    const NextPage = () => {
+        var routeTo = "/pantry";
+        router.push(routeTo);
+    }
+
+    const HandleNo = () => {
+        setNoState(true);
+        setTimeout(HandleNo2, 150);
+    }
+    const HandleNo2 = () => {
+        setGreyState(!greyState);
+        setClickState(false);
+        setNoState(false);
+    }
+
+    const HandleYes = () => {
+        setYesState(true);
+        setTimeout(NextPage, 150);
+    }
+
+// === FOOD BUTTON STATE CHANGE WHEN CLICKED ====================
     const [clickState, setClickState] = useState(false);
     var newDarken = "0px 4px 5px #494948";
     if(clickState){
@@ -36,21 +70,14 @@ export default function PantryAddProtein({
 
     const HandleClick = () => {
         setClickState(!clickState);
-        // setTimeout(NextPage, 150);
     }
-    
-    const router = useRouter();
-    
-    // const NextPage = () => {
-    //     var routeTo = "/add-carbohydrate";
-    //     router.push(routeTo);
-    // }
 
+// === PAGE RETURN ==============================================
     return <PageContainer>
 
         <PopUpBg width={width} height={height}></PopUpBg>
         
-        <ConfirmWindow cWidth={newWidth} cHeight={newHeight} onClickX={()=>setGreyState(false)} onClickN={()=>setGreyState(false)} onClickY={()=>router.push("/pantry")}></ConfirmWindow>
+        <ConfirmWindow cWidth={newWidth} cHeight={newHeight} onClickX={()=>setGreyState(false)} onClickN={HandleNo} onClickY={HandleYes} Yshadow={newYesShadow} Nshadow={newNoShadow}></ConfirmWindow>
 
         <SecondPageContainer>
             <HeaderContainer>

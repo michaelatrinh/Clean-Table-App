@@ -1,15 +1,21 @@
 import Head from 'next/head';
 import React from 'react';
 import styled from 'styled-components';
+import {useState} from 'react';
 
 import HeaderUI from '../comps/Header';
 import HomeFoodTimerUI from '../comps/HomeFoodTimer';
-import NavBar from '../comps/NavBar'
+import NavBar from '../comps/NavBar';
+import FunFactWindow from '../comps/FunFactWindow';
+import Congratulations from '../comps/congratulations-comp';
 
 const Main = styled.div`
-    background-color: "#E7F2F0";
+    background-color: #E7F2F0;
     height:876px;
     width: 375px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 `;
 
 const HeaderCont = styled.div`
@@ -53,9 +59,51 @@ left: 20px;
 
 `;
 
-export default function Homepage() {
+const FunFact = styled.div`
+  position:relative;
+  left: 35px;
+  bottom: 50px;
+
+`;
+
+const MainCont = styled.div`
+max-height: 876px;
+max-width: 375px;
+
+display:flex;
+justify-content: center;
+align-items: center;
+`;
+
+const Popup= styled.div`
+position: absolute;
+// left: 465px;
+// top:100px;
+z-index: 1;
+`;
+
     
-    return <Main>
+export default function Homepage() {
+
+    const [okayState, setOkayState] = useState(false);
+
+    var okaybutton = "336px"
+    if (okayState) {
+        var okaybutton = "0px"
+    }
+
+    /*function handleClick() {
+
+        setOkayState(!okayState) 
+
+    }*/
+
+    const HandleClick = () => {
+        setOkayState(!okayState)
+    }
+    
+    return <MainCont>
+    <Main>
     
     <HeaderCont>
         <HeaderUI></HeaderUI>
@@ -85,27 +133,38 @@ export default function Homepage() {
     </FoodTimer>
 
     <FoodTimer>
-        <HomeFoodTimerUI DAYS="2 DAYS" ITEM="ONION" bgcolor="#FFC32E" bgcolor1="#FFE4A3" barwidth="164px"
+        <HomeFoodTimerUI DAYS="2 DAYS" ITEM="ONION" bgcolordark="#FFC32E" bgcolorlight="#FFE4A3" barwidth="164px"
         />
     </FoodTimer>
 
     <FoodTimer>
-        <HomeFoodTimerUI DAYS="12 DAYS" ITEM="CARROT" bgcolor="#6FC3B2" bgcolor1="#D4E9E5" barwidth="235px"
+        <HomeFoodTimerUI DAYS="12 DAYS" ITEM="CARROT" bgcolordark="#6FC3B2" bgcolorlight="#D4E9E5" barwidth="235px"
         />
    </FoodTimer>
 
    <FoodTimer>
-        <HomeFoodTimerUI DAYS="18 DAYS" ITEM="POTATO" bgcolor="#6FC3B2" bgcolor1="#D4E9E5" barwidth="292px"
+        <HomeFoodTimerUI DAYS="18 DAYS" ITEM="POTATO" bgcolordark="#6FC3B2" bgcolorlight="#D4E9E5" barwidth="292px"
         />
     </FoodTimer>
     </FoodCont>
+
+    <FunFact>
+        <FunFactWindow
+        />
+    </FunFact>
 
 
     <div className="navbar">
         <NavBar></NavBar>
     </div>
-
     </Main>
+
+    <Popup>
+        <Congratulations okay={HandleClick} width={okaybutton}
+        /> 
+    </Popup>
+
+    </MainCont>
 }
 
 
