@@ -216,7 +216,7 @@ export default function IngredientPickerPage({
         <Placeholder></Placeholder>
         <Placeholder></Placeholder>
         <Placeholder></Placeholder>
-        </PlaceHolderContainer>*/}
+        </PlaceHolderContainer>}
 
         <GenerateRecipeButton text={recipebutton}></GenerateRecipeButton>
 

@@ -23,7 +23,7 @@ const GenerateRecipeButton = ({
 }) => {
     const router = useRouter();
 
-    return <GenerateRecipeButton1 onClick={()=>router.push("/recipe-page1")} height={height} width={width} fontsize={fontsize}>{text}</GenerateRecipeButton1> 
+    return <GenerateRecipeButton1 onClick={()=>router.push("/recipe-page-t1")} height={height} width={width} fontsize={fontsize}>{text}</GenerateRecipeButton1> 
 }
 
 export default GenerateRecipeButton;
