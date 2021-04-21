@@ -66,12 +66,12 @@ const MenuContainer = styled.div`
 `;
 
 export default function RecipePage({
-    recipeimage = "/cheddar baked potato.jpg",
-    recipetitle = "Roasted Potatoes and Onions",
+    recipeimage = "/Roasted_Carrots.jpg",
+    recipetitle = "Roasted Potatoes and Carrots",
 
     image1 = "/shaved_beef.png",
     image2 = "/potatoes.png",
-    image3 = "/broccoli.png",
+    image3 = "/carrot.png",
 
     image4 ="/saltnpepper.png",
     image5 ="/cheese.png",
@@ -79,7 +79,7 @@ export default function RecipePage({
 
     label1 = "BEEF",
     label2 = "POTATO",
-    label3 = "BROCCOLI",
+    label3 = "CARROT",
     label4 = "SALT N PEPPER",
     label5 = "CHEESE",
     label6 = "PARSLEY",
@@ -106,7 +106,7 @@ const HandleClick =() => {
         </Mid2>
         <Mid3>
         
-        <RecipeButton onClick="https://tasty.co/recipe/broccoli-cheddar-baked-potato"></RecipeButton>
+        <RecipeButton onClick="https://www.spendwithpennies.com/roasted-potatoes-and-carrots/"></RecipeButton>
         </Mid3>
 
         <EndSection>

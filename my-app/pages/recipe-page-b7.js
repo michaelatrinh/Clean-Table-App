@@ -66,12 +66,12 @@ const MenuContainer = styled.div`
 `;
 
 export default function RecipePage({
-    recipeimage = "/cheddar baked potato.jpg",
-    recipetitle = "Roasted Potatoes and Onions",
+    recipeimage = "/potatoes-and-onion.jpg",
+    recipetitle = "Broccoli Cheddar Baked Potato ",
 
     image1 = "/shaved_beef.png",
     image2 = "/potatoes.png",
-    image3 = "/broccoli.png",
+    image3 = "/onion.png",
 
     image4 ="/saltnpepper.png",
     image5 ="/cheese.png",
@@ -79,7 +79,7 @@ export default function RecipePage({
 
     label1 = "BEEF",
     label2 = "POTATO",
-    label3 = "BROCCOLI",
+    label3 = "ONION",
     label4 = "SALT N PEPPER",
     label5 = "CHEESE",
     label6 = "PARSLEY",
@@ -106,7 +106,7 @@ const HandleClick =() => {
         </Mid2>
         <Mid3>
         
-        <RecipeButton onClick="https://tasty.co/recipe/broccoli-cheddar-baked-potato"></RecipeButton>
+        <RecipeButton onClick="https://healthyrecipesblogs.com/roasted-potatoes-and-onions/"></RecipeButton>
         </Mid3>
 
         <EndSection>
