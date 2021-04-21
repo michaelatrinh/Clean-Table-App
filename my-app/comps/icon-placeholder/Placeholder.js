@@ -143,7 +143,7 @@ const PlaceholderUI = ({
 }) => {
 
   return <PContainer>
-    <PToprow> {title}</PToprow>
+    <PToprow> {subtitle}</PToprow>
 
     <PMiddlerow>
         <FoodIcon onClick={onClickA} shadow={boxshadow}>
