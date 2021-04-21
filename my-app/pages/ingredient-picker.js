@@ -12,7 +12,7 @@ export default function IngredientPickerPage({
 
     image1 = "/chicken_drumstick.png",
     image2 = "/shaved_beef.png",
-    image3 = "/onion.png",
+    image3 = "/tofu_squares.png",
 
     image4 ="/rice_bowl.png",
     image5 ="/pasta_dish.png",
@@ -53,9 +53,9 @@ export default function IngredientPickerPage({
         </TextContainer>
         
         <FoodButtonContainer>
-            <Placeholder onClickA={()=>setClickStateA(!clickStateA)} image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title="PROTEINS" boxshadow={newBoxShadowA}></Placeholder>
+            <Placeholder onClickA={()=>setClickStateA(!clickStateA)} image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title="PROTEINS" boxshadow={newBoxShadowA} width="60px"></Placeholder>
 
-            <Placeholder onClickA={()=>setClickStateB(!clickStateB)} image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} title="CARBOHYDRATES" boxshadow={newBoxShadowB}></Placeholder>
+            <Placeholder onClickA={()=>setClickStateB(!clickStateB)} image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} title="CARBOHYDRATES" boxshadow={newBoxShadowB} width="65px"></Placeholder>
 
             <Placeholder onClickA={()=>setClickStateC(!clickStateC)} boxshadow={newBoxShadowC}></Placeholder>
         </FoodButtonContainer>

@@ -132,6 +132,8 @@ const PlaceholderUI = ({
 
   boxshadow = "0px 4px 5px rgba(0, 0, 0, 0.3)",
 
+  width = "50px",
+
   onClickA = ()=>{}
 }) => {
 
@@ -141,7 +143,7 @@ const PlaceholderUI = ({
     <PMiddlerow>
         <FoodIcon onClick={onClickA} shadow={boxshadow}>
             <ImageDiv>
-                <Img src={image1} width="60px" height="60px" alt="image1"></Img>                
+                <Img src={image1} width={width} alt="image1"></Img>                
             </ImageDiv>
             
             <BottomDiv>
@@ -152,7 +154,7 @@ const PlaceholderUI = ({
 
         <FoodIcon>
             <ImageDiv>
-                <Img src={image2} width="50px" height="50px" alt="image2"></Img>                
+                <Img src={image2} width={width} alt="image2"></Img>                
             </ImageDiv>
 
             <BottomDiv>
