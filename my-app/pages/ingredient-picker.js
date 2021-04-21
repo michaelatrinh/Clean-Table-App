@@ -7,16 +7,22 @@ import GenerateRecipeButton from '../comps/GenerateRecipeButton/index.js';
 
 
 const RecipeContainer = styled.div`
-position: relative;
+// position: relative;
 width: 375px;
 height: 963px;
     background-color: #E7F2F0;
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     
     box-shadow: 5px 1px 30px 5px rgba(0, 0, 0, 0.5);
+`;
+
+const HeaderContainer = styled.div`
+    display: flex;
+    flex-direction: column;
 `;
 
 const TextContainer = styled.div`
@@ -28,20 +34,33 @@ const TextContainer = styled.div`
 `;
 
 const TutPageTitle = styled.h1`
-position: absolute;
-width: 276px;
-height: 33px;
-left: 70px;
-top: 135px;
+    font-family: "Manrope", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    // margin-top: 0;
 
-font-family: Manrope;
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 33px;
-/* identical to box height */
+// position: absolute;
+// width: 276px;
+// height: 33px;
+// left: 70px;
+// top: 135px;
 
-color: #696259;
+// font-family: Manrope;
+// font-style: normal;
+// font-weight: 500;
+// font-size: 24px;
+// line-height: 33px;
+// /* identical to box height */
+
+// color: #696259;
+`;
+
+const FoodButtonContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 4;
 `;
 
 const Mid1 = styled.div`
@@ -64,6 +83,21 @@ justify-content: center;
 position:relative;
 margin:-30px;
 flex-grow: 1;
+`;
+
+const GenerateContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+`;
+
+const NavBarContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
 `;
 
 //const PlaceHolderContainer =styled.div`
@@ -91,23 +125,21 @@ export default function IngredientPickerPage({
 
 }) {
       return <RecipeContainer>
-        <Header></Header>
+          <HeaderContainer>
+            <Header></Header>
+          </HeaderContainer>
 
         <TextContainer>
             <TutPageTitle>{title}</TutPageTitle>
         </TextContainer>
         
-        <Mid1>
-        <Placeholder image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} ></Placeholder>
-        </Mid1>
+        <FoodButtonContainer>
+            <Placeholder image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} ></Placeholder>
 
-        <Mid2>
-        <Placeholder image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6}></Placeholder>
-        </Mid2>
+            <Placeholder image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6}></Placeholder>
 
-        <Mid3>
-        <Placeholder ></Placeholder>
-        </Mid3>
+            <Placeholder></Placeholder>
+        </FoodButtonContainer>
 
         {/*<PlaceHolderContainer>
         <Placeholder></Placeholder>
@@ -115,10 +147,13 @@ export default function IngredientPickerPage({
         <Placeholder></Placeholder>
         </PlaceHolderContainer>*/}
 
-        <GenerateRecipeButton text={recipebutton}></GenerateRecipeButton>
+        <GenerateContainer>
+            <GenerateRecipeButton text={recipebutton}></GenerateRecipeButton>
+        </GenerateContainer>
 
-        <MenuContainer>
+
+        <NavBarContainer>
             <Menu></Menu>
-        </MenuContainer>
+        </NavBarContainer>
     </RecipeContainer>  
 }
