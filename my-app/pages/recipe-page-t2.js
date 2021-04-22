@@ -80,7 +80,7 @@ export default function RecipePage({
 
     label1 = "TOFU",
     label2 = "RICE",
-    label3 = "BROCCOLI",
+    label3 = "ONION",
     label4 = "SALT N PEPPER",
     label5 = "CHEESE",
     label6 = "PARSLEY",

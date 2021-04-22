@@ -30,7 +30,7 @@ const TopSection = styled.div`
     h3{
         font-size: 22px;
         text-align: center;
-        margin:5px;
+        margin:15px;
     }
 
     img{
@@ -66,11 +66,11 @@ const MenuContainer = styled.div`
 `;
 
 export default function RecipePage({
-    recipeimage = "/Tofu with Rice and Miso-Maple.jpg",
-    recipetitle = "Tofu with Rice and Miso-Maple Dressing",
+    recipeimage = "/shiraae.jpg",
+    recipetitle = "Japanese Shiraae",
 
     image1 = "/tofu_squares.png",
-    image2 = "/rice_bowl.png",
+    image2 = "/pasta_dish.png",
     image3 = "/carrot.png",
 
     image4 ="/saltnpepper.png",
@@ -78,7 +78,7 @@ export default function RecipePage({
     image6 ="/parsley.png",
 
     label1 = "TOFU",
-    label2 = "RICE",
+    label2 = "PASTA",
     label3 = "CARROT",
     label4 = "SALT N PEPPER",
     label5 = "CHEESE",
@@ -106,7 +106,7 @@ const HandleClick =() => {
         </Mid2>
         <Mid3>
         
-        <RecipeButton onClick="https://www.bonappetit.com/recipe/tofu-with-rice-and-miso-maple-dressing/"></RecipeButton>
+        <RecipeButton onClick="https://www.alldayieat.com/recipe/japanese-tofu-recipe-carrot-spinach-and-shirataki-noodles-shiraae-%F0%9F%A5%97/ /"></RecipeButton>
         </Mid3>
 
         <EndSection>

@@ -30,7 +30,7 @@ const TopSection = styled.div`
     h3{
         font-size: 22px;
         text-align: center;
-        margin:5px;
+        margin:15px;
     }
 
     img{
@@ -66,19 +66,19 @@ const MenuContainer = styled.div`
 `;
 
 export default function RecipePage({
-    recipeimage = "/Tofu with Rice and Miso-Maple.jpg",
-    recipetitle = "Tofu with Rice and Miso-Maple Dressing",
+    recipeimage = "/Roasted_Carrots.jpg",
+    recipetitle = "Roasted Potatoes and Carrots",
 
-    image1 = "/tofu_squares.png",
-    image2 = "/rice_bowl.png",
+    image1 = "/shaved_beef.png",
+    image2 = "/potatoes.png",
     image3 = "/carrot.png",
 
     image4 ="/saltnpepper.png",
     image5 ="/cheese.png",
     image6 ="/parsley.png",
 
-    label1 = "TOFU",
-    label2 = "RICE",
+    label1 = "BEEF",
+    label2 = "POTATO",
     label3 = "CARROT",
     label4 = "SALT N PEPPER",
     label5 = "CHEESE",
@@ -106,7 +106,7 @@ const HandleClick =() => {
         </Mid2>
         <Mid3>
         
-        <RecipeButton onClick="https://www.bonappetit.com/recipe/tofu-with-rice-and-miso-maple-dressing/"></RecipeButton>
+        <RecipeButton onClick="https://www.spendwithpennies.com/roasted-potatoes-and-carrots/"></RecipeButton>
         </Mid3>
 
         <EndSection>
