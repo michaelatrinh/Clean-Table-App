@@ -1,5 +1,3 @@
-
-
 import Head from 'next/head'; 
 import styled from 'styled-components';
 import Header from '../comps/Header/index.js';
@@ -18,7 +16,6 @@ const RecipeContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
     box-shadow: 5px 1px 30px 5px rgba(0, 0, 0, 0.5);
 `;
 
@@ -26,23 +23,22 @@ const TopSection = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
     h3{
         font-size: 22px;
         text-align: center;
-        margin:15px;
+        margin:30px;
     }
-
     img{
+        height:164px;
+        width:281px;
         position: absolute;
         border: 4px solid #59A091;
-        margin-top: 70px;
-        height:180px;
+        margin-top: 100px;
     }
 `;
 
 const Mid1 = styled.div`
-    margin-top: 170px;
+    margin-top: 160px;
 `;
 
 const Mid2 = styled.div`
@@ -50,12 +46,12 @@ const Mid2 = styled.div`
 `;
 
 const Mid3 = styled.div`
-    margin-top:-25px;
+    margin-top:-10px;
 `;
 
 const EndSection = styled.div`
     position: absolute;
-    margin-top: 830px;
+    margin-top: 860px;
 `;
 
 const MenuContainer = styled.div`
@@ -65,8 +61,9 @@ const MenuContainer = styled.div`
     overflow: hidden;
 `;
 
+
 export default function RecipePage({
-    recipeimage = "/Vegan sheet pan.jpg",
+    recipeimage = "/Potato-Tofu.jpg",
     recipetitle = "Vegan Sheet Pan Potatoes and Tofu ",
 
     image1 = "/tofu_squares.png",
@@ -85,7 +82,7 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients:",
-    
+
 }) {
 const HandleClick =() => { 
 
@@ -105,7 +102,7 @@ const HandleClick =() => {
             <Placeholder image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} subtitle={"Optional:"}></Placeholder>
         </Mid2>
         <Mid3>
-        
+
         <RecipeButton onClick="https://earthofmaria.com/vegan-sheet-pan-potatoes-tofu/"></RecipeButton>
         </Mid3>
 
@@ -117,4 +114,4 @@ const HandleClick =() => {
             <Menu></Menu>
         </MenuContainer>
     </RecipeContainer>  
-}
+} 
