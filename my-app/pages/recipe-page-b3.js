@@ -1,15 +1,15 @@
-
 import Head from 'next/head'; 
 import styled from 'styled-components';
 import Header from '../comps/Header/index.js';
 import Menu from '../comps/NavBar/index.js';
 import Placeholder from '../comps/icon-placeholder/Placeholder.js';
 import FunFactWindow from '../comps/FunFactWindow/index.js';
-import Instructions from '../comps/RecipeInstructions/index.js';
+import RecipeButton from '../comps/Recipe-Button/index.js';
+
 
 const RecipeContainer = styled.div`
     width: 375px;
-    height: 1480px;
+    height: 1070px;
     background-color: #E7F2F0;
     margin: 100px;
     
@@ -18,7 +18,6 @@ const RecipeContainer = styled.div`
     align-items: center;
 
     box-shadow: 5px 1px 30px 5px rgba(0, 0, 0, 0.5);
-
 `;
 
 const TopSection = styled.div`
@@ -28,18 +27,22 @@ const TopSection = styled.div`
 
     h3{
         font-size: 22px;
+        text-align: center;
+        margin:30px;
     }
 
     img{
+        height:164px;
+        width:281px;
         position: absolute;
 
         border: 4px solid #59A091;
-        margin-top: 80px;
+        margin-top: 100px;
     }
 `;
 
 const Mid1 = styled.div`
-    margin-top: 160px;
+    margin-top: 210px;
 `;
 
 const Mid2 = styled.div`
@@ -47,46 +50,47 @@ const Mid2 = styled.div`
 `;
 
 const Mid3 = styled.div`
-    margin-top: -30px;
+    margin-top:75px;
 `;
 
 const EndSection = styled.div`
     position: absolute;
-    margin-top: 1350px;
+    margin-top: 830px;
 `;
 
 const MenuContainer = styled.div`
-    margin-top: 1480px;
-    height: 1500px;
+    margin-top: 990px;
+    height: 1200px;
     position: absolute;
     overflow: hidden;
 `;
 
 
 export default function RecipePage({
-    recipeimage = "/dishimage.png",
-    recipetitle = "Chicken, Onion pasta bake",
+    recipeimage = "/beefrocecarrot.png",
+    recipetitle = "Beef Carrot Curry over Rice",
 
-    image1 = "/chicken_drumstick.png",
-    image2 = "/pasta_dish.png",
-    image3 = "/onion.png",
+    image1 = "/shaved_beef.png",
+    image2 = "/rice_bowl.png",
+    image3 = "/carrot.png",
 
     image4 ="/saltnpepper.png",
     image5 ="/cheese.png",
     image6 ="/parsley.png",
 
-    label1 = "CHICKEN",
-    label2 = "pasta",
-    label3 = "ONION",
+    label1 = "BEEF",
+    label2 = "RICE",
+    label3 = "CARROT",
     label4 = "SALT N PEPPER",
     label5 = "CHEESE",
     label6 = "PARSLEY",
 
-    title = "Main Ingredients",
-    title2 = "Optional",
+    subtitle = "Main Ingredients:",
     
 }) {
+const HandleClick =() => { 
 
+}
       return <RecipeContainer>
         <Header></Header>
 
@@ -96,13 +100,14 @@ export default function RecipePage({
         </TopSection>
 
         <Mid1>
-            <Placeholder image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title={title}></Placeholder>
+            <Placeholder image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients:"}></Placeholder>
         </Mid1>
         <Mid2>
-            <Placeholder image1={image4} image2={image5} image3={image6} title={title2} label1={label4} label2={label5} label3={label6}></Placeholder>
+            <Placeholder image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} subtitle={"Optional:"}></Placeholder>
         </Mid2>
         <Mid3>
-            <Instructions></Instructions>
+        
+        <RecipeButton onClick="https://www.bonappetit.com/recipe/rintaros-beef-curry"></RecipeButton>
         </Mid3>
 
         <EndSection>
