@@ -37,7 +37,8 @@ const TopSection = styled.div`
         position: absolute;
         border: 4px solid #59A091;
         margin-top: 70px;
-        height:180px;
+        width:281px;
+        height:165px;
     }
 `;
 

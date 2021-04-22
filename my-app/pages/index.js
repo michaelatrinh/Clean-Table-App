@@ -37,7 +37,8 @@ const TopSection = styled.div`
         position: absolute;
         border: 4px solid #59A091;
         margin-top: 70px;
-        height:180px;
+        width:281px;
+        height:165px;
     }
 `;
 
@@ -66,7 +67,7 @@ const MenuContainer = styled.div`
 `;
 
 export default function RecipePage({
-    recipeimage = "/cheddar baked potato.jpg",
+    recipeimage = "/broccoli-cheddar-baked.jpg",
     recipetitle = "Roasted Potatoes and Onions",
 
     image1 = "/shaved_beef.png",
