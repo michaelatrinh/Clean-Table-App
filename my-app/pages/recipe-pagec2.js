@@ -11,7 +11,7 @@ const RecipeContainer = styled.div`
     width: 375px;
     height: 1000px;
     background-color: #E7F2F0;
-    margin: 100px;
+    //margin: 100px;
     
     display: flex;
     flex-direction: column;
@@ -20,22 +20,27 @@ const RecipeContainer = styled.div`
     box-shadow: 5px 1px 30px 5px rgba(0, 0, 0, 0.5);
 `;
 
+const HeaderContainer = styled.div`
+    display: flex;
+
+`;
+
 const TopSection = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-grow: 1;
+
     h3{
         font-size: 22px;
-        text-align:center;
     }
     img{
-        position: absolute;
-        width: 300px;
-    
-        border: 4px solid #59A091;
-        margin-top: 80px;
-    }
+        // position: absolute;
 
+        border: 4px solid #59A091;
+        // margin-top: 80px;
+    }
 `;
 
 const MiddleContainer = styled.div`
@@ -47,15 +52,15 @@ const MiddleContainer = styled.div`
 `;
 
 const Mid1 = styled.div`
-    margin-top: 140px;
+   // margin-top: 140px;
 `;
 
 const Mid2 = styled.div`
-    margin-top: -70px;
+   // margin-top: -70px;
 `;
 
 const Mid3 = styled.div`
-    margin-top: -30px;
+   // margin-top: -30px;
 `;
 
 const EndSection = styled.div`
@@ -113,7 +118,9 @@ export default function RecipePage({
 
 
       return <RecipeContainer>
-        <Header></Header>
+        <HeaderContainer>
+            <Header></Header>
+        </HeaderContainer>
 
         <TopSection>
             <h3>{recipetitle}</h3>
