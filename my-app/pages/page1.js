@@ -8,7 +8,6 @@ import Footer from '../comps/WelcomePageFooter';
 const FirstPageContainer = styled.div`
     width: 375px;
     height: 812px;
-    background-color: white;
     margin: 100px;
     
     display: flex;
@@ -16,6 +15,22 @@ const FirstPageContainer = styled.div`
     align-items: center;
 
     box-shadow: 5px 1px 30px 5px rgba(0, 0, 0, 0.5);
+
+    background: linear-gradient(-45deg, #59a091, #d4f6f4, #ffffff);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
 
     .headertext{
         font-size: 36px;

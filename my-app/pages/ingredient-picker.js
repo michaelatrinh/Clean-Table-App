@@ -1,7 +1,7 @@
 import Head from 'next/head'; 
 import styled from 'styled-components';
 import Header from '../comps/Header/index.js';
-import Menu from '../comps/NavBar/index.js';
+import Menu from '../comps/NavBar/index2.js';
 import Placeholder from '../comps/icon-placeholder/Placeholder.js';
 import GenerateRecipeButton from '../comps/GenerateRecipeButton/index.js';
 import React, {useState} from 'react';
@@ -48,23 +48,20 @@ export default function IngredientPickerPage({
             <Header></Header>
           </HeaderContainer>
 
-        <TextContainer>
+        {/*<TextContainer>
             <TutPageTitle>{title}</TutPageTitle>
-        </TextContainer>
+        </TextContainer>*/}
         
         <FoodButtonContainer>
-            <Placeholder onClickA={()=>setClickStateA(!clickStateA)} image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title="PROTEINS" boxshadow={newBoxShadowA} width="60px"></Placeholder>
+             <h2>PICK YOUR PROTEIN</h2>
+            <Placeholder onClickA={()=>setClickStateA(!clickStateA)} image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title="PROTEINS" boxshadow={newBoxShadowA} widthA="65px" widthB="65px" widthC="79px"></Placeholder>
 
-            <Placeholder onClickA={()=>setClickStateB(!clickStateB)} image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} title="CARBOHYDRATES" boxshadow={newBoxShadowB} width="65px"></Placeholder>
+            <h2>PICK YOUR CARBOHYDRATES</h2>
+            <Placeholder onClickA={()=>setClickStateB(!clickStateB)} image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} title="CARBOHYDRATES" boxshadow={newBoxShadowB} widthA="65px" widthB="66px" widthC="67px"></Placeholder>
 
-            <Placeholder onClickA={()=>setClickStateC(!clickStateC)} boxshadow={newBoxShadowC}></Placeholder>
+            <h2>PICK YOUR VEGETABLES</h2>
+            <Placeholder onClickA={()=>setClickStateC(!clickStateC)} boxshadow={newBoxShadowC} widthA="68px" widthB="55px" widthC="56px"></Placeholder>
         </FoodButtonContainer>
-
-        {/*<PlaceHolderContainer>
-        <Placeholder></Placeholder>
-        <Placeholder></Placeholder>
-        <Placeholder></Placeholder>
-        </PlaceHolderContainer>*/}
 
         <GenerateContainer>
             <GenerateRecipeButton text={recipebutton}></GenerateRecipeButton>
@@ -78,6 +75,7 @@ export default function IngredientPickerPage({
 
 const RecipeContainer = styled.div`
 // position: relative;
+margin-top: 10px;
 width: 375px;
 height: 963px;
     background-color: #E7F2F0;
@@ -131,6 +129,7 @@ const FoodButtonContainer = styled.div`
     align-items: center;
     flex-direction: column;
     flex-grow: 4;
+    color: #484848;
 `;
 
 const Mid1 = styled.div`
@@ -222,7 +221,11 @@ export default function IngredientPickerPage({
         <Placeholder></Placeholder>
         <Placeholder></Placeholder>
         <Placeholder></Placeholder>
+
         </PlaceHolderContainer>*/
+
+        </PlaceHolderContainer>}
+
 
         /*<GenerateRecipeButton text={recipebutton}></GenerateRecipeButton>
 

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import styled from 'styled-components'; 
 
@@ -6,7 +5,7 @@ import styled from 'styled-components';
 const PContainer = styled.div`
     // margin: 50px;
     // padding: 20px;
-    height: 180px;
+    height: ${props=>props.height};
     width: 335px;
 
     display: flex; 
@@ -135,19 +134,23 @@ const PlaceholderUI = ({
 
   boxshadow = "0px 4px 5px rgba(0, 0, 0, 0.3)",
 
-  width = "50px",
+  widthA = "50px",
+  widthB = "50px",
+  widthC = "50px",
+
+  height = "180px",
 
   onClickA = ()=>{}
 
 }) => {
 
-  return <PContainer>
+  return <PContainer height={height}>
     <PToprow> {subtitle}</PToprow>
 
     <PMiddlerow>
         <FoodIcon onClick={onClickA} shadow={boxshadow}>
             <ImageDiv>
-                <Img src={image1} width={width} alt="image1"></Img>                
+                <Img src={image1} width={widthA} alt="image1"></Img>                
             </ImageDiv>
             
             <BottomDiv>
@@ -156,9 +159,9 @@ const PlaceholderUI = ({
 
         </FoodIcon>
 
-        <FoodIcon>
+        <FoodIcon shadow={boxshadow}>
             <ImageDiv>
-                <Img src={image2} width={width} alt="image2"></Img>                
+                <Img src={image2} width={widthB} alt="image2"></Img>                
             </ImageDiv>
 
             <BottomDiv>
@@ -166,9 +169,9 @@ const PlaceholderUI = ({
             </BottomDiv>
         </FoodIcon>
 
-        <FoodIcon>
+        <FoodIcon shadow={boxshadow}>
             <ImageDiv>
-                <Img src={image3} width="60px" height="60px" alt="image3"></Img>                
+                <Img src={image3} width={widthC} height="60px" alt="image3"></Img>                
             </ImageDiv>
 
             <BottomDiv>
