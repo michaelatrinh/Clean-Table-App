@@ -3,6 +3,28 @@ import styled from 'styled-components';
 import Header from '../comps/Header/index.js';
 import LoadingBar from '../comps/LoadingBar/index.js';
 
+export default function LoadingUI({
+    logoimage = "/logo.png",
+    text = "enter"
+
+}) {
+
+    windows.onload
+
+/*const HomepageUI = ({
+    logoimage = "/logo.png",
+
+}) => {*/
+      return <LoadingContainer>
+          <Header></Header>
+          
+          <LMidSection>
+              <LoadingBar></LoadingBar>
+          </LMidSection>
+          
+    </LoadingContainer>  
+}
+
 const LoadingContainer = styled.div`
     width: 375px;
     height: 812px;
@@ -29,22 +51,3 @@ const LMidSection = styled.div`
     margin-top: 300px;
 `;
 
-export default function LoadingUI({
-    logoimage = "/logo.png",
-    text = "enter"
-
-}) {
-
-/*const HomepageUI = ({
-    logoimage = "/logo.png",
-
-}) => {*/
-      return <LoadingContainer>
-          <Header></Header>
-          
-          <LMidSection>
-              <LoadingBar></LoadingBar>
-          </LMidSection>
-          
-    </LoadingContainer>  
-}
