@@ -1,11 +1,11 @@
 
 import Head from 'next/head'; 
 import styled from 'styled-components';
-import Header from '../comps/Header/index.js';
-import Menu from '../comps/NavBar/index.js';
-import Placeholder from '../comps/icon-placeholder/Placeholder.js';
-import FunFactWindow from '../comps/FunFactWindow/index.js';
-import Instructions from '../comps/RecipeInstructions/index.js';
+import Header from '../../comps/Header';
+import Menu from '../../comps/NavBar';
+import Placeholder from '../../comps/icon-placeholder/Placeholder.js';
+import FunFactWindow from '../../comps/FunFactWindow/index.js';
+import Instructions from '../../comps/RecipeInstructions/index.js';
 
 const RecipeContainer = styled.div`
     width: 375px;
