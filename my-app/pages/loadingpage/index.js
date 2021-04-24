@@ -1,7 +1,7 @@
 import Head from 'next/head'; 
 import styled from 'styled-components';
 import Header from '../../comps/Header';
-import LoadingBar from '../comps/LoadingBar/index.js';
+import LoadingBar from '../../comps/LoadingBar/index.js';
 
 const LoadingContainer = styled.div`
     width: 375px;
