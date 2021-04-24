@@ -83,7 +83,6 @@ justify-content: center;
 z-index: 1;
 `;
 
-    
 export default function Homepage() {
 
     const [okayState, setOkayState] = useState(false);
