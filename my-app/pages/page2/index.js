@@ -66,7 +66,7 @@ const Page2 =styled.div`
 
 
 
-export default function Page2(){
+export default function secondPage(){
     return <div className="MainPage2">
 
         <div className="HeaderPage2"><HeaderUI></HeaderUI></div>
