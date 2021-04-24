@@ -1,6 +1,6 @@
 import Head from 'next/head'; 
 import styled from 'styled-components';
-import Header from '../comps/Header/index.js';
+import Header from '../../comps/Header';
 import LoadingBar from '../comps/LoadingBar/index.js';
 
 const LoadingContainer = styled.div`
