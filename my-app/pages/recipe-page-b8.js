@@ -46,7 +46,7 @@ const Mid2 = styled.div`
 `;
 
 const Mid3 = styled.div`
-    margin-top:-1px;
+    margin-top:-10px;
 `;
 
 const EndSection = styled.div`
@@ -63,19 +63,19 @@ const MenuContainer = styled.div`
 
 
 export default function RecipePage({
-    recipeimage = "/tofu-rice.jpg",
-    recipetitle = "Vegan Fried Rice",
+    recipeimage = "/potatoes-and-onion.jpg",
+    recipetitle = "Roasted Potatoes and Onions",
 
-    image1 = "/tofu_squares.png",
-    image2 = "/rice_bowl.png",
+    image1 = "/shaved_beef.png",
+    image2 = "/potatoes.png",
     image3 = "/onion.png",
 
     image4 ="/saltnpepper.png",
     image5 ="/cheese.png",
     image6 ="/parsley.png",
 
-    label1 = "TOFU",
-    label2 = "RICE",
+    label1 = "BEEF",
+    label2 = "POTATO",
     label3 = "ONION",
     label4 = "SALT N PEPPER",
     label5 = "CHEESE",
@@ -103,7 +103,7 @@ const HandleClick =() => {
         </Mid2>
         <Mid3>
 
-        <RecipeButton onClick="https://choosingchia.com/vegan-fried-rice/"></RecipeButton>
+        <RecipeButton onClick="https://healthyrecipesblogs.com/roasted-potatoes-and-onions/"></RecipeButton>
         </Mid3>
 
         <EndSection>
