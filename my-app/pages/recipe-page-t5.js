@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head'; 
 import styled from 'styled-components';
 import Header from '../comps/Header/index.js';
@@ -6,6 +7,59 @@ import Placeholder from '../comps/icon-placeholder/Placeholder.js';
 import FunFactWindow from '../comps/FunFactWindow/index.js';
 import RecipeButton from '../comps/Recipe-Button/index.js';
 
+export default function RecipePage({
+    recipeimage = "/Creamy Cashew.jpg",
+    recipetitle = "Tofu Garlic Mushroom Pasta",
+
+    image1 = "/tofu_squares.png",
+    image2 = "/pasta_dish.png",
+    image3 = "/onion.png",
+
+    image4 ="/saltnpepper.png",
+    image5 ="/cheese.png",
+    image6 ="/parsley.png",
+
+    label1 = "TOFU",
+    label2 = "PASTA",
+    label3 = "ONION",
+    label4 = "SALT N PEPPER",
+    label5 = "CHEESE",
+    label6 = "PARSLEY",
+
+    subtitle = "Main Ingredients:",
+
+}) {
+const HandleClick =() => { 
+
+}
+      return <RecipeContainer>
+        <Header></Header>
+
+        <TopSection>
+            <h3>{recipetitle}</h3>
+            <img src={recipeimage}></img>
+        </TopSection>
+
+        <Mid1>
+            <Placeholder image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients:"}></Placeholder>
+        </Mid1>
+        <Mid2>
+            <Placeholder image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} subtitle={"Optional:"}></Placeholder>
+        </Mid2>
+        <Mid3>
+
+        <RecipeButton onClick="https://wellvegan.com/dinner/creamy-tofu-garlic-mushroom-pasta/"></RecipeButton>
+        </Mid3>
+
+        <EndSection>
+            <FunFactWindow></FunFactWindow>
+        </EndSection>
+
+        <MenuContainer>
+            <Menu></Menu>
+        </MenuContainer>
+    </RecipeContainer>  
+} 
 
 const RecipeContainer = styled.div`
     width: 375px;
@@ -62,56 +116,3 @@ const MenuContainer = styled.div`
 `;
 
 
-export default function RecipePage({
-    recipeimage = "/Creamy Cashew.jpg",
-    recipetitle = "Tofu Garlic Mushroom Pasta",
-
-    image1 = "/tofu_squares.png",
-    image2 = "/pasta_dish.png",
-    image3 = "/onion.png",
-
-    image4 ="/saltnpepper.png",
-    image5 ="/cheese.png",
-    image6 ="/parsley.png",
-
-    label1 = "TOFU",
-    label2 = "PASTA",
-    label3 = "ONION",
-    label4 = "SALT N PEPPER",
-    label5 = "CHEESE",
-    label6 = "PARSLEY",
-
-    subtitle = "Main Ingredients:",
-
-}) {
-const HandleClick =() => { 
-
-}
-      return <RecipeContainer>
-        <Header></Header>
-
-        <TopSection>
-            <h3>{recipetitle}</h3>
-            <img src={recipeimage}></img>
-        </TopSection>
-
-        <Mid1>
-            <Placeholder image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients:"}></Placeholder>
-        </Mid1>
-        <Mid2>
-            <Placeholder image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} subtitle={"Optional:"}></Placeholder>
-        </Mid2>
-        <Mid3>
-
-        <RecipeButton onClick="https://wellvegan.com/dinner/creamy-tofu-garlic-mushroom-pasta/"></RecipeButton>
-        </Mid3>
-
-        <EndSection>
-            <FunFactWindow></FunFactWindow>
-        </EndSection>
-
-        <MenuContainer>
-            <Menu></Menu>
-        </MenuContainer>
-    </RecipeContainer>  
-} 

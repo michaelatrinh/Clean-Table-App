@@ -3,6 +3,27 @@ import HeaderUI from '../../comps/Header';
 import StartTutorialButtonUI from '../../comps/StartTutorialButton';
 import styled from 'styled-components';
 
+export default function secondPage(){
+    return <div className="MainPage2">
+
+        <div className="HeaderPage2"><HeaderUI></HeaderUI></div>
+
+    <div className="Title"> 
+    HOW TO GET STARTED 
+    </div>
+
+
+    <div className="Texts">
+    People want to know the best method when it comes to managing perishability.
+
+With this app you can now know how long food can actually last beyond best before date 
+    </div>
+
+
+    <div className="StartButton"><StartTutorialButtonUI></StartTutorialButtonUI></div>
+</div>
+} 
+
 const Page2Cont =styled.div`
 
 .MainPage2 {
@@ -64,26 +85,3 @@ const Page2Cont =styled.div`
     top: 716px;
 }
  `;
-
-
-
-export default function secondPage(){
-    return <div className="MainPage2">
-
-        <div className="HeaderPage2"><HeaderUI></HeaderUI></div>
-
-    <div className="Title"> 
-    HOW TO GET STARTED 
-    </div>
-
-
-    <div className="Texts">
-    People want to know the best method when it comes to managing perishability.
-
-With this app you can now know how long food can actually last beyond best before date 
-    </div>
-
-
-    <div className="StartButton"><StartTutorialButtonUI></StartTutorialButtonUI></div>
-</div>
-} 
