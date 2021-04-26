@@ -49,9 +49,3 @@ export default function fourthPage() {
     
   </div>
 }
-
-
-
-
-
-
