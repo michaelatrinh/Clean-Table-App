@@ -146,8 +146,6 @@ export default function RecipePage({
             </ButtonContainer>
 
         <EndSection>                
-
-
             <FunFactWindow></FunFactWindow>
         </EndSection>
 

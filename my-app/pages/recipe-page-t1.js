@@ -69,7 +69,6 @@ const RecipeContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
     box-shadow: 5px 1px 30px 5px rgba(0, 0, 0, 0.5);
 `;
 
@@ -77,23 +76,22 @@ const TopSection = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
     h3{
         font-size: 22px;
         text-align: center;
-        margin:10px;
+        margin:30px;
     }
-
     img{
+        height:164px;
+        width:281px;
         position: absolute;
-
         border: 4px solid #59A091;
-        margin-top: 80px;
+        margin-top: 100px;
     }
 `;
 
 const Mid1 = styled.div`
-    margin-top: 170px;
+    margin-top: 160px;
 `;
 
 const Mid2 = styled.div`
@@ -101,12 +99,12 @@ const Mid2 = styled.div`
 `;
 
 const Mid3 = styled.div`
-    margin-top:-25px;
+    margin-top:-15px;
 `;
 
 const EndSection = styled.div`
     position: absolute;
-    margin-top: 830px;
+    margin-top: 860px;
 `;
 
 const MenuContainer = styled.div`
@@ -116,4 +114,59 @@ const MenuContainer = styled.div`
     overflow: hidden;
 `;
 
+
+
+export default function RecipePage({
+    recipeimage = "/teriyaki-tofu.jpeg",
+    recipetitle = "Teriyaki Peanut Tofu with Stir Fried Veggies & Brown Rice",
+
+    image1 = "/tofu_squares.png",
+    image2 = "/rice_bowl.png",
+    image3 = "/broccoli.png",
+
+    image4 ="/saltnpepper.png",
+    image5 ="/cheese.png",
+    image6 ="/parsley.png",
+
+    label1 = "TOFU",
+    label2 = "RICE",
+    label3 = "BROCCOLI",
+    label4 = "SALT N PEPPER",
+    label5 = "CHEESE",
+    label6 = "PARSLEY",
+
+    subtitle = "Main Ingredients:",
+
+}) {
+const HandleClick =() => { 
+
+}
+      return <RecipeContainer>
+        <Header></Header>
+
+        <TopSection>
+            <h3>{recipetitle}</h3>
+            <img src={recipeimage}></img>
+        </TopSection>
+
+        <Mid1>
+            <Placeholder image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients:"}></Placeholder>
+        </Mid1>
+        <Mid2>
+            <Placeholder image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} subtitle={"Optional:"}></Placeholder>
+        </Mid2>
+        <Mid3>
+
+        <RecipeButton onClick="https://www.ilovevegan.com/teriyaki-peanut-tofu-with-stir-fried-veggies-brown-rice/"></RecipeButton>
+        </Mid3>
+
+        <EndSection>
+            <FunFactWindow></FunFactWindow>
+        </EndSection>
+
+        <MenuContainer>
+            <Menu></Menu>
+        </MenuContainer>
+    </RecipeContainer>  
+} 
 
