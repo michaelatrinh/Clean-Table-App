@@ -10,7 +10,7 @@ export default function LoadingUI({
 
 }) {
 
-    windows.onload
+    // window.onload
 
 /*const HomepageUI = ({
     logoimage = "/logo.png",
