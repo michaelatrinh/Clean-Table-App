@@ -25,7 +25,7 @@ const Page4 = styled.div`
  }
 `;
 
-export default function Page4() {
+export default function fourthPage() {
   return <div className="MainPage4">
 
     <div className="HeaderPage4">
