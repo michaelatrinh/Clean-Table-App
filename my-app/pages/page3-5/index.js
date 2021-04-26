@@ -2,10 +2,10 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import React, {useState} from 'react';
 
-import HeaderUI from '../comps/Header';
-import FoodButtonUI from '../comps/FoodButtonUI';
-import NavBar from '../comps/NavBar'
-import ProgressBar from '../comps/ProgressBar';
+import HeaderUI from '../../comps/Header';
+import FoodButtonUI from '../../comps/FoodButtonUI';
+import NavBar from '../../comps/NavBar'
+import ProgressBar from '../../comps/ProgressBar';
 
 
 
@@ -25,7 +25,7 @@ const Page4 = styled.div`
  }
 `;
 
-export default function Page4() {
+export default function fourthPage() {
   return <div className="MainPage4">
 
     <div className="HeaderPage4">
