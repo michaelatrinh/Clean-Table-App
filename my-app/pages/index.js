@@ -1,26 +1,19 @@
 import React from 'react';
-import Head from 'next/head'; 
+// import Head from 'next/head'; 
 import styled from 'styled-components';
 import Button from '../comps/EnterButton';
 import Login from '../comps/Login';
 import Footer from '../comps/WelcomePageFooter';
-import Header from '../comps/Header/index.js';
-import LoadingBar from '../comps/LoadingBar/index.js';
+
 
 const FirstPageContainer = styled.div`
     width: 375px;
     height: 812px;
-
-const LoadingContainer = styled.div`
-    width: 375px;
-    height: 812px;
-    background-color: #E7F2F0;
     margin: 100px;
     
     display: flex;
     flex-direction: column;
     align-items: center;
-
 
     box-shadow: 5px 1px 30px 5px rgba(0, 0, 0, 0.5);
 
@@ -39,7 +32,6 @@ const LoadingContainer = styled.div`
             background-position: 0% 50%;
         }
     }
-    box-shadow: 5px 1px 30px 5px rgba(0, 0, 0, 0.4);
 
     .headertext{
         font-size: 36px;
@@ -48,7 +40,6 @@ const LoadingContainer = styled.div`
     }
 `;
  
-
 const Img = styled.img`
     margin-top: 200px;
     width: 200px;
@@ -84,45 +75,27 @@ const Circle = styled.div`
     }
 `;
 
-// export default function FirstPage({
-
-const LMidSection = styled.div`
-    display: flex;
-    justify-content: center;
-
-    margin-top: 300px;
-`;
-
-export default function LoadingUI({
+export default function FirstPage({
     logoimage = "/logo.png",
     text = "enter"
+
 }) {
 
 /*const HomepageUI = ({
     logoimage = "/logo.png",
 
 }) => {*/
-
-//       return <FirstPageContainer>
-//         <Img src={logoimage}></Img>
-//         <p className="headertext">W E L C O M E </p>
-//         <Login></Login>
-//         <ButtonContainer>
-//             <Button text={text} height="34px"></Button>
-//         </ButtonContainer>
+      return <FirstPageContainer>
+        <Img src={logoimage}></Img>
+        <p className="headertext">W E L C O M E </p>
+        <Login></Login>
+        <ButtonContainer>
+            <Button text={text} height="34px"></Button>
+        </ButtonContainer>
         
-//         <Circle>
-//             <p>created by: <br></br>
-// Jessica, Arielle, Michael, & Alicia</p>
-//         </Circle>
-//     </FirstPageContainer>  
-
-      return <LoadingContainer>
-          <Header></Header>
-          
-          <LMidSection>
-              <LoadingBar></LoadingBar>
-          </LMidSection>
-          
-    </LoadingContainer>  
+        <Circle>
+            <p>created by: <br></br>
+Jessica, Arielle, Michael, & Alicia</p>
+        </Circle>
+    </FirstPageContainer>  
 }
