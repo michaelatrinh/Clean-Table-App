@@ -1,5 +1,6 @@
-import HeaderUI from '../comps/Header';
-import StartTutorialButtonUI from '../comps/StartTutorialButton';
+import React from 'react';
+import HeaderUI from '../../comps/Header';
+import StartTutorialButtonUI from '../../comps/StartTutorialButton';
 import styled from 'styled-components';
 
 const Page2Cont =styled.div`
