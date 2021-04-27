@@ -6,8 +6,8 @@ import Heading from '../comps/Header';
 import {useRouter} from 'next/router';
 
 export default function tutorialPage({
-    title = "PROTEINS",
-    description = "Add a PROTEIN to your pantry!"
+    title = "CARBOHYDRATES",
+    description = "Add a CARBOHYRDATE to your pantry!"
 }){
     // Lines 13 - 29 are state changes and routing after pressing a food button
     const [clickState, setClickState] = useState(false);

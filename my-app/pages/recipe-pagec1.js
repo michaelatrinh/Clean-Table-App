@@ -44,7 +44,7 @@ export default function RecipePage({
 
         <MiddleContainer>
             <Mid1>
-            <Placeholder height="150px" image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title={title} widthA="60px" widthB="65px" widthC="50px"></Placeholder>
+                <Placeholder height="150px" image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title={title} widthA="60px" widthB="65px" widthC="50px"></Placeholder>
             </Mid1>
             <Mid2>
                 <Placeholder height="150px" image1={image4} image2={image5} image3={image6} title={title2} label1={label4} label2={label5} label3={label6}></Placeholder>
