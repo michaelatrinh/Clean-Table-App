@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head'; 
 import styled from 'styled-components';
 import Header from '../comps/Header/index.js';
@@ -115,7 +116,7 @@ const MenuContainer = styled.div`
 `;
 
 
-
+/*
 export default function RecipePage({
     recipeimage = "/teriyaki-tofu.jpeg",
     recipetitle = "Teriyaki Peanut Tofu with Stir Fried Veggies & Brown Rice",
@@ -169,4 +170,4 @@ const HandleClick =() => {
         </MenuContainer>
     </RecipeContainer>  
 } 
-
+*/

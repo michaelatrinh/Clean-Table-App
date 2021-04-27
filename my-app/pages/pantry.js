@@ -5,7 +5,7 @@ import ProgressBar from '../comps/ProgressBar';
 import Heading from '../comps/Header';
 import EmptyBox from '../comps/EmptyBox';
 import FoodIcon from '../comps/FoodButtonPantryUI';
-import NavBar from '../comps/NavBar';
+import NavBar from '../comps/NavBar/index2.js';
 import FunFact from '../comps/FunFactWindow'
 import {useRouter} from 'next/router';
 

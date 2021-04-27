@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LoadingBar</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    html {
+        height: 100%;
+    }
+
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main {
+        position: relative;
+    }
+
+    .bar {
+        width: 145px;
+        height: 29px;
+    }
+    .progress {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .progress .outer {
+        width: 100%;
+        height: 14px;
+        border-radius: 7px;
+        background: rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .progress .inner {
+        width: 0;
+        height: 100%;
+        background: #59A091;
+        animation: loading 4s linear infinite;
+    }
+
+    @keyframes loading {
+        100% {
+            width: 100%;
+        }
+    }
+
+ 
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="bar">
+           
+        <div class="progress">
+            <div class="outer">
+                <div class="inner"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
