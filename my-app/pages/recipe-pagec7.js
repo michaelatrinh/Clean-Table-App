@@ -26,29 +26,29 @@ export default function RecipePage({
     label5 = "CHEESE",
     label6 = "PARSLEY",
 
-    title = "Main Ingredients",
-    title2 = "Optional",
+    subtitle = "Main Ingredients",
+
     
 }) {
 
 
-    return <RecipeContainer>
-    <HeaderContainer>
-      <Header></Header>
-    </HeaderContainer>
+      return <RecipeContainer>
+          <HeaderContainer>
+            <Header></Header>
+          </HeaderContainer>
 
-  <TopSection>
-      <h3>{recipetitle}</h3>
-      <img src={recipeimage}></img>
-  </TopSection>
+        <TopSection>
+            <h3>{recipetitle}</h3>
+            <img src={recipeimage}></img>
+        </TopSection>
 
-  <MiddleContainer>
-      <Mid1>
-      <Placeholder image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title={title}></Placeholder>
-      </Mid1>
-      <Mid2>
-          <Placeholder image1={image4} image2={image5} image3={image6} title={title2} label1={label4} label2={label5} label3={label6}></Placeholder>
-      </Mid2>
+        <MiddleContainer>
+            <Mid1>
+            <Placeholder height="150px" image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients"} widthA="60px" widthB="65px" widthC="50px"></Placeholder>
+            </Mid1>
+            <Mid2>
+                <Placeholder height="150px" image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
+            </Mid2>
       {/* <Mid3>
           <RecipeButton Link href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
       </Mid3> */}
