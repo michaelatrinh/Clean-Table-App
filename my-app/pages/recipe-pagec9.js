@@ -31,7 +31,6 @@ export default function RecipePage({
     
 }) {
 
-
       return <RecipeContainer>
           <HeaderContainer>
             <Header></Header>
