@@ -31,74 +31,74 @@ export default function Homepage() {
     return <MainCont>
     <Main>
     
-    <HeaderCont>
-        <HeaderUI></HeaderUI>
-    </HeaderCont>
+        <HeaderCont>
+            <HeaderUI></HeaderUI>
+        </HeaderCont>
 
-    <SemiCircle>
-        <Txt>
-        WELCOME BACK! <br></br> HEY! JUST A REMINDER THAT<br></br> YOUR GROCERIES WILL EXPIRE IN:
-        </Txt>
-    </SemiCircle>
+        <SemiCircle>
+            <Txt>
+            WELCOME BACK! <br></br> HEY! JUST A REMINDER THAT<br></br> YOUR GROCERIES WILL EXPIRE IN:
+            </Txt>
+        </SemiCircle>
 
-    <headerWelcome></headerWelcome>
-
-
-    <FoodCont>
-    <FoodTimer>
-        <HomeFoodTimerUI 
-        DAYS="1 DAYS"
-        ITEM="CHICKEN"
-        bgcolor="#F16D6D"
-        bgcolor1="#FCD8D8"/>
-    </FoodTimer>
-
-    <FoodTimer>
-        <HomeFoodTimerUI DAYS="1 DAYS" ITEM="PASTA" 
-        />
-    </FoodTimer>
-
-    <FoodTimer>
-        <HomeFoodTimerUI DAYS="2 DAYS" ITEM="ONION" bgcolordark="#FFC32E" bgcolorlight="#FFE4A3" barwidth="164px"
-        />
-    </FoodTimer>
-
-    <FoodTimer>
-        <HomeFoodTimerUI DAYS="12 DAYS" ITEM="CARROT" bgcolordark="#6FC3B2" bgcolorlight="#D4E9E5" barwidth="235px"
-        />
-   </FoodTimer>
-
-   <FoodTimer>
-        <HomeFoodTimerUI DAYS="18 DAYS" ITEM="POTATO" bgcolordark="#6FC3B2" bgcolorlight="#D4E9E5" barwidth="292px"
-        />
-    </FoodTimer>
-    </FoodCont>
-
-    <FunFact>
-        <FunFactWindow
-        />
-    </FunFact>
+        <headerWelcome></headerWelcome>
 
 
-    <div className="navbar">
+        <FoodCont>
+        <FoodTimer>
+            <HomeFoodTimerUI 
+            DAYS="1 DAYS"
+            ITEM="CHICKEN"
+            bgcolor="#F16D6D"
+            bgcolor1="#FCD8D8"/>
+        </FoodTimer>
+
+        <FoodTimer>
+            <HomeFoodTimerUI DAYS="1 DAYS" ITEM="PASTA" 
+            />
+        </FoodTimer>
+
+        <FoodTimer>
+            <HomeFoodTimerUI DAYS="2 DAYS" ITEM="ONION" bgcolordark="#FFC32E" bgcolorlight="#FFE4A3" barwidth="164px"
+            />
+        </FoodTimer>
+
+        <FoodTimer>
+            <HomeFoodTimerUI DAYS="12 DAYS" ITEM="CARROT" bgcolordark="#6FC3B2" bgcolorlight="#D4E9E5" barwidth="235px"
+            />
+        </FoodTimer>
+
+        <FoodTimer>
+            <HomeFoodTimerUI DAYS="18 DAYS" ITEM="POTATO" bgcolordark="#6FC3B2" bgcolorlight="#D4E9E5" barwidth="292px"
+            />
+        </FoodTimer>
+        </FoodCont>
+
+        <FunFact>
+            <FunFactWindow
+            />
+        </FunFact>
+
+
         <NavBar></NavBar>
-    </div>
+
     </Main>
 
-    <Popup>
-        <Congratulations okay={HandleClick} width={okaybutton}
-        /> 
-    </Popup>
+        <Popup>
+            <Congratulations okay={HandleClick} width={okaybutton}
+            /> 
+        </Popup>
 
     </MainCont>
 }
 
 const Main = styled.div`
     background-color: #E7F2F0;
-    height:876px;
-    width: 375px;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 `;
 
@@ -135,24 +135,34 @@ const headerWelcome = styled.div`
 `;
 
 const FoodCont = styled.div`
-margin-top: 40px;
-margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+// justify-content: space-evenly;
+    align-items: center;
+    flex: 2;
+    margin-top: 75px;
+// margin-bottom: 100px;
 
-position: relative;
-left: 20px;
+// position: relative;
+// left: 20px;
 
 `;
 
 const FunFact = styled.div`
-  position:relative;
-  left: 35px;
-  bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+//   position:relative;
+//   left: 35px;
+//   bottom: 50px;
 
 `;
 
 const MainCont = styled.div`
-max-height: 876px;
-max-width: 375px;
+height: 100vh;
+width: 100vw;
 
 display:flex;
 justify-content: center;

@@ -9,8 +9,8 @@ import RecipeButton from '../comps/Recipe-Button/index.js';
 
 
 const RecipeContainer = styled.div`
-    width: 375px;
-    height: 1070px;
+width: 100vw;
+height: 1100px;
     background-color: #E7F2F0;
     margin: 100px;
     

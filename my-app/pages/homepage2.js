@@ -11,10 +11,11 @@ import Congratulations from '../comps/congratulations-comp';
 
 const Main = styled.div`
     background-color: #E7F2F0;
-    height:876px;
-    width: 375px;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 `;
 
@@ -51,24 +52,34 @@ const headerWelcome = styled.div`
 `;
 
 const FoodCont = styled.div`
-margin-top: 40px;
-margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+// justify-content: space-evenly;
+    align-items: center;
+    flex: 2;
+    margin-top: 75px;
+// margin-bottom: 100px;
 
-position: relative;
-left: 20px;
+// position: relative;
+// left: 20px;
 
 `;
 
 const FunFact = styled.div`
-  position:relative;
-  left: 35px;
-  bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+//   position:relative;
+//   left: 35px;
+//   bottom: 50px;
 
 `;
 
 const MainCont = styled.div`
-max-height: 876px;
-max-width: 375px;
+height: 100vh;
+width: 100vw;
 
 display:flex;
 justify-content: center;

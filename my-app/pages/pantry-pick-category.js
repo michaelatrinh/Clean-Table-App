@@ -102,14 +102,15 @@ const PageContainer = styled.div`
     justify-content: center;
 
     background-color: #E7F2F0;
-    width: 375px;
-    max-width: 375px;
-    height: 910px;
-    max-height: 910px;
+    width: 100vw;
+    // max-width: 375px;
+    height: 100vh;
+    // max-height: 910px;
 `;
 
 const HeaderContainer = styled.div`
     display: flex;
+    align-items: center;
     flex-direction: column;
 `;
 

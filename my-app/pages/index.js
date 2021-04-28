@@ -7,9 +7,9 @@ import Footer from '../comps/WelcomePageFooter';
 
 
 const FirstPageContainer = styled.div`
-    width: 375px;
-    height: 812px;
-    margin: 100px;
+    width: 100vw;
+    height: 100vh;
+    // margin: 100px;
     
     display: flex;
     flex-direction: column;

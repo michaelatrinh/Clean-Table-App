@@ -21,8 +21,8 @@ export default function PantryAddProtein({
     var newWidth = 0;
     var newHeight = 0;
     if(greyState){
-        width = 375;
-        height = 910;
+        width = 100;
+        height = 100;
         newWidth = 336;
         newHeight = 262;
     }
@@ -117,10 +117,10 @@ const PageContainer = styled.div`
     align-items: center;
 
     background-color: #E7F2F0;
-    width: 375px;
-    max-width: 375px;
-    height: 910px;
-    max-height: 910px;
+    width: 100vw;
+    // max-width: 375px;
+    height: 100vh;
+    // max-height: 910px;
 `;
 
 const SecondPageContainer = styled.div`
@@ -129,10 +129,10 @@ const SecondPageContainer = styled.div`
     justify-content: center;
 
     background-color: #E7F2F0;
-    width: 375px;
-    max-width: 375px;
-    height: 910px;
-    max-height: 910px;
+    width: 100vw;
+    // max-width: 375px;
+    height: 100vh;
+    // max-height: 910px;
 `;
 
 const PopUpBg = styled.div`
@@ -141,10 +141,10 @@ const PopUpBg = styled.div`
     justify-content: center;
 
     background-color: #C2C2C2;
-    width: ${props=>props.width}px;
-    max-width: 375px;
-    height: ${props=>props.height}px;
-    max-height: 910px;
+    width: ${props=>props.width}vw;
+    // max-width: 375px;
+    height: ${props=>props.height}vh;
+    // max-height: 910px;
 
     position: absolute;
 
@@ -157,6 +157,7 @@ const PopUpBg = styled.div`
 
 const HeaderContainer = styled.div`
     display: flex;
+    align-items: center;
     flex-direction: column;
 `;
 
