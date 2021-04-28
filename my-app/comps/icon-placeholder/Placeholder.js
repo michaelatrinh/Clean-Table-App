@@ -1,6 +1,72 @@
 import React from 'react';
 import styled from 'styled-components'; 
 
+const PlaceholderUI = ({
+  image1 = "/broccoli.png",
+  image2 = "/onion.png",
+  image3 = "/carrot.png",
+
+  label1 = "BROCCOLI",
+  label2 = "ONION",
+  label3 = "CARROT",
+
+
+  subtitle = "VEGETABLES",
+
+  title = "VEGETABLES",
+
+  boxshadow = "0px 4px 5px rgba(0, 0, 0, 0.3)",
+
+  widthA = "50px",
+  widthB = "50px",
+  widthC = "50px",
+
+  height = "180px",
+
+  onClickA = ()=>{}
+
+}) => {
+
+  return <PContainer height={height}>
+    <PToprow> {subtitle}</PToprow>
+
+    <PMiddlerow>
+        <FoodIcon onClick={onClickA} shadow={boxshadow}>
+            <ImageDiv>
+                <Img src={image1} width={widthA} alt="image1"></Img>                
+            </ImageDiv>
+            
+            <BottomDiv>
+                <Label>{label1}</Label>                
+            </BottomDiv>
+
+        </FoodIcon>
+
+        <FoodIcon shadow={boxshadow}>
+            <ImageDiv>
+                <Img src={image2} width={widthB} alt="image2"></Img>                
+            </ImageDiv>
+
+            <BottomDiv>
+                <Label>{label2}</Label>                
+            </BottomDiv>
+        </FoodIcon>
+
+        <FoodIcon shadow={boxshadow}>
+            <ImageDiv>
+                <Img src={image3} width={widthC} height="60px" alt="image3"></Img>                
+            </ImageDiv>
+
+            <BottomDiv>
+                <Label>{label3}</Label>                
+            </BottomDiv>
+        </FoodIcon>
+    </PMiddlerow>
+
+  </PContainer>
+}
+
+export default PlaceholderUI;
 
 const PContainer = styled.div`
     // margin: 50px;
@@ -117,73 +183,6 @@ const Img = styled.img`
 //   margin-left: -25px;
 //   position: absolute;
 `;
-
-const PlaceholderUI = ({
-  image1 = "/broccoli.png",
-  image2 = "/onion.png",
-  image3 = "/carrot.png",
-
-  label1 = "BROCCOLI",
-  label2 = "ONION",
-  label3 = "CARROT",
-
-
-  subtitle = "VEGETABLES",
-
-  title = "VEGETABLES",
-
-  boxshadow = "0px 4px 5px rgba(0, 0, 0, 0.3)",
-
-  widthA = "50px",
-  widthB = "50px",
-  widthC = "50px",
-
-  height = "180px",
-
-  onClickA = ()=>{}
-
-}) => {
-
-  return <PContainer height={height}>
-    <PToprow> {subtitle}</PToprow>
-
-    <PMiddlerow>
-        <FoodIcon onClick={onClickA} shadow={boxshadow}>
-            <ImageDiv>
-                <Img src={image1} width={widthA} alt="image1"></Img>                
-            </ImageDiv>
-            
-            <BottomDiv>
-                <Label>{label1}</Label>                
-            </BottomDiv>
-
-        </FoodIcon>
-
-        <FoodIcon shadow={boxshadow}>
-            <ImageDiv>
-                <Img src={image2} width={widthB} alt="image2"></Img>                
-            </ImageDiv>
-
-            <BottomDiv>
-                <Label>{label2}</Label>                
-            </BottomDiv>
-        </FoodIcon>
-
-        <FoodIcon shadow={boxshadow}>
-            <ImageDiv>
-                <Img src={image3} width={widthC} height="60px" alt="image3"></Img>                
-            </ImageDiv>
-
-            <BottomDiv>
-                <Label>{label3}</Label>                
-            </BottomDiv>
-        </FoodIcon>
-    </PMiddlerow>
-
-  </PContainer>
-}
-
-export default PlaceholderUI;
 
 /*</PContainer>*function Window() {
   return (

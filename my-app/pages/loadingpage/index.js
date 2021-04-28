@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head'; 
 import styled from 'styled-components';
 import Header from '../../comps/Header';
@@ -9,7 +10,7 @@ export default function LoadingUI({
 
 }) {
 
-    windows.onload
+    // window.onload
 
 /*const HomepageUI = ({
     logoimage = "/logo.png",

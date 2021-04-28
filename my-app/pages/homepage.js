@@ -9,80 +9,6 @@ import NavBar from '../comps/NavBar';
 import FunFactWindow from '../comps/FunFactWindow';
 import Congratulations from '../comps/congratulations-comp';
 
-const Main = styled.div`
-    background-color: #E7F2F0;
-    height:876px;
-    width: 375px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-`;
-
-const HeaderCont = styled.div`
-
-`;
-
-const SemiCircle = styled.div`
-    width: 375px;
-    height: 100px;
-    background-color: #59A091;
-    border-top-left-radius: 500px; 
-    border-top-right-radius: 500px; 
-    border-bottom: 0;
-    transform: rotate(180deg);
-`;
-
-const Txt = styled.div`
-    transform: rotate(180deg);
-    text-align:center;
-    font-size: 18px;
-    color: white;
-
-    position: relative;
-    top: 40px;
-`;
-
-const FoodTimer = styled.div`
-margin-bottom: 15px;
-align-items:center;
-`;
-
-const headerWelcome = styled.div`
-`;
-
-const FoodCont = styled.div`
-margin-top: 40px;
-margin-bottom: 100px;
-
-position: relative;
-left: 20px;
-
-`;
-
-const FunFact = styled.div`
-  position:relative;
-  left: 35px;
-  bottom: 50px;
-
-`;
-
-const MainCont = styled.div`
-max-height: 876px;
-max-width: 375px;
-
-display:flex;
-justify-content: center;
-align-items: center;
-`;
-
-const Popup= styled.div`
-position: absolute;
-justify-content: center;
-// left: 465px;
-// top:100px;
-z-index: 1;
-`;
-
 export default function Homepage() {
 
     const [okayState, setOkayState] = useState(false);
@@ -166,6 +92,83 @@ export default function Homepage() {
 
     </MainCont>
 }
+
+const Main = styled.div`
+    background-color: #E7F2F0;
+    height:876px;
+    width: 375px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+`;
+
+const HeaderCont = styled.div`
+
+`;
+
+const SemiCircle = styled.div`
+    width: 375px;
+    height: 100px;
+    background-color: #59A091;
+    border-top-left-radius: 500px; 
+    border-top-right-radius: 500px; 
+    border-bottom: 0;
+    transform: rotate(180deg);
+`;
+
+const Txt = styled.div`
+    transform: rotate(180deg);
+    text-align:center;
+    font-size: 18px;
+    color: white;
+
+    position: relative;
+    top: 40px;
+`;
+
+const FoodTimer = styled.div`
+margin-bottom: 15px;
+align-items:center;
+`;
+
+const headerWelcome = styled.div`
+`;
+
+const FoodCont = styled.div`
+margin-top: 40px;
+margin-bottom: 100px;
+
+position: relative;
+left: 20px;
+
+`;
+
+const FunFact = styled.div`
+  position:relative;
+  left: 35px;
+  bottom: 50px;
+
+`;
+
+const MainCont = styled.div`
+max-height: 876px;
+max-width: 375px;
+
+display:flex;
+justify-content: center;
+align-items: center;
+`;
+
+const Popup= styled.div`
+position: absolute;
+justify-content: center;
+// left: 465px;
+// top:100px;
+z-index: 1;
+`;
+
+
+
 
 
 
