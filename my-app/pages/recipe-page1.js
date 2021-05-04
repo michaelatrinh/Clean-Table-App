@@ -47,7 +47,7 @@ export default function RecipePage({
         <Mid3>
             <Instructions></Instructions>
         </Mid3>
-
+ 
         <EndSection>
             <FunFactWindow></FunFactWindow>
         </EndSection>
