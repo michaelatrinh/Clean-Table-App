@@ -97,25 +97,25 @@ const MenuContainer = styled.div`
 
 
 export default function RecipePage({
-    recipeimage = "/teriyaki-tofu.jpeg",
-    recipetitle = "Teriyaki Peanut Tofu with Stir Fried Veggies & Brown Rice",
+    recipeimage = "/shiraae.jpg",
+    recipetitle = "Japanese Shiraae",
 
     image1 = "/tofu_squares.png",
-    image2 = "/rice_bowl.png",
-    image3 = "/broccoli.png",
+    image2 = "/pasta_dish.png",
+    image3 = "/carrot.png",
 
     image4 ="/saltnpepper.png",
     image5 ="/cheese.png",
     image6 ="/parsley.png",
 
     label1 = "TOFU",
-    label2 = "RICE",
-    label3 = "BROCCOLI",
+    label2 = "PASTA",
+    label3 = "CARROT",
     label4 = "SALT N PEPPER",
     label5 = "CHEESE",
     label6 = "PARSLEY",
 
-    subtitle = "Main Ingredients",
+    subtitle = "Main Ingredients:",
 
     
 }) {
@@ -144,7 +144,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://www.ilovevegan.com/teriyaki-peanut-tofu-with-stir-fried-veggies-brown-rice/"></RecipeButton>
+                <RecipeButton Link href="https://www.alldayieat.com/recipe/japanese-tofu-recipe-carrot-spinach-and-shirataki-noodles-shiraae-%F0%9F%A5%97/ "></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                

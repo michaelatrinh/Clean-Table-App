@@ -97,19 +97,19 @@ const MenuContainer = styled.div`
 
 
 export default function RecipePage({
-    recipeimage = "/teriyaki-tofu.jpeg",
-    recipetitle = "Teriyaki Peanut Tofu with Stir Fried Veggies & Brown Rice",
+    recipeimage = "/broccoli-cheddar-baked.jpg",
+    recipetitle = "Broccoli Cheddar Baked Potato ",
 
-    image1 = "/tofu_squares.png",
-    image2 = "/rice_bowl.png",
+    image1 = "/shaved_beef.png",
+    image2 = "/potatoes.png",
     image3 = "/broccoli.png",
 
     image4 ="/saltnpepper.png",
     image5 ="/cheese.png",
     image6 ="/parsley.png",
 
-    label1 = "TOFU",
-    label2 = "RICE",
+    label1 = "BEEF",
+    label2 = "POTATO",
     label3 = "BROCCOLI",
     label4 = "SALT N PEPPER",
     label5 = "CHEESE",
@@ -144,7 +144,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://www.ilovevegan.com/teriyaki-peanut-tofu-with-stir-fried-veggies-brown-rice/"></RecipeButton>
+                <RecipeButton Link href="https://tasty.co/recipe/broccoli-cheddar-baked-potato"></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                

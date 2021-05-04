@@ -8,19 +8,19 @@ import FunFactWindow from '../comps/FunFactWindow/index.js';
 import RecipeButton from '../comps/Recipe-Button/index.js';
 
 export default function RecipePage({
-    recipeimage = "/dishimage.png",
-    recipetitle = "Chicken, Onion pasta bake",
+    recipeimage = "/beefonionrice.png",
+    recipetitle = "Beef Rice Onion Stir- Fry",
 
-    image1 = "/chicken_drumstick.png",
-    image2 = "/pasta_dish.png",
+    image1 = "/shaved_beef.png",
+    image2 = "/rice_bowl.png",
     image3 = "/onion.png",
 
     image4 ="/saltnpepper.png",
     image5 ="/cheese.png",
     image6 ="/parsley.png",
 
-    label1 = "CHICKEN",
-    label2 = "pasta",
+    label1 = "BEEF",
+    label2 = "RICE",
     label3 = "ONION",
     label4 = "SALT N PEPPER",
     label5 = "CHEESE",
@@ -55,10 +55,12 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
+                <RecipeButton Link href="https://www.justataste.com/easy-beef-and-broccoli-recipe/"></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                
+
+
             <FunFactWindow></FunFactWindow>
         </EndSection>
 
@@ -98,7 +100,8 @@ const TopSection = styled.div`
         font-size: 22px;
     }
     img{
-        // position: absolute;
+        width: 281px;
+        height:165px;
 
         border: 4px solid #59A091;
         // margin-top: 80px;

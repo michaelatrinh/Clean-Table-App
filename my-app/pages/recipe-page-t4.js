@@ -97,11 +97,11 @@ const MenuContainer = styled.div`
 
 
 export default function RecipePage({
-    recipeimage = "/teriyaki-tofu.jpeg",
-    recipetitle = "Teriyaki Peanut Tofu with Stir Fried Veggies & Brown Rice",
+    recipeimage = "/Vegetable Macaroni.jpg",
+    recipetitle = "Veggie Macaroni ",
 
     image1 = "/tofu_squares.png",
-    image2 = "/rice_bowl.png",
+    image2 = "/pasta_dish.png",
     image3 = "/broccoli.png",
 
     image4 ="/saltnpepper.png",
@@ -109,13 +109,13 @@ export default function RecipePage({
     image6 ="/parsley.png",
 
     label1 = "TOFU",
-    label2 = "RICE",
+    label2 = "PASTA",
     label3 = "BROCCOLI",
     label4 = "SALT N PEPPER",
     label5 = "CHEESE",
     label6 = "PARSLEY",
 
-    subtitle = "Main Ingredients",
+    subtitle = "Main Ingredients:",
 
     
 }) {
@@ -144,7 +144,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://www.ilovevegan.com/teriyaki-peanut-tofu-with-stir-fried-veggies-brown-rice/"></RecipeButton>
+                <RecipeButton Link href="https://lovetobeinthekitchen.com/2017/10/25/skillet-cheesy-beef-veggie-macaroni/"></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                
