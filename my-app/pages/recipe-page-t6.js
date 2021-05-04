@@ -144,7 +144,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://www.alldayieat.com/recipe/japanese-tofu-recipe-carrot-spinach-and-shirataki-noodles-shiraae-%F0%9F%A5%97/ "></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://www.alldayieat.com/recipe/japanese-tofu-recipe-carrot-spinach-and-shirataki-noodles-shiraae-%F0%9F%A5%97/")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                

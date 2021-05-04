@@ -159,4 +159,3 @@ export default function RecipePage({
     </RecipeContainer>  
 }
 
-//onClick={()=>window.open("https://www.ilovevegan.com/teriyaki-peanut-tofu-with-stir-fried-veggies-brown-rice/")}

@@ -25,7 +25,7 @@ const RecipeButtonUI =({
     onClick = ()=>{},
     
 }) => {
-    return <RecipeContainer>
+    return <RecipeContainer onClick={onClick}>
         <p>Get the Recipe!</p>
     </RecipeContainer>
 
