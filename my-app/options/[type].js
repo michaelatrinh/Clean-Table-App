@@ -3,19 +3,19 @@ import styled from 'styled-components';
 import React, {useEffect, useState} from 'react';
 
 //Comps
-import Button from '../../comps/GenerateRecipeButton';
-import FoodButtonUI from '';
+import Button from 'my-app/comps/GenerateRecipeButton/index.js';
+import FoodButtonUI from 'my-app/comps/FoodButtonUI/index.js';
 
 var options = {
-    protiens:null,
-    carbohydrates:null,
-    vegetables:null,
+    protiens: null,
+    carbohydrates: null,
+    vegetables: null,
 };
 
 var buttonimages = {
-    option1:"",
-    option2:"",
-    option3:"",
+    option1:<FoodButtonUI/>, //?
+    option2:<FoodButtonUI/>,
+    option3:<FoodButtonUI/>,
 }
 
 const Cont = styled.div`
@@ -77,7 +77,7 @@ const HandleClick = (text) =>{
     }
 
     if(buttonimages.option3 === text){
-        setChosen(3                            );
+        setChosen(3);
     }
 
     if(type === "protiens"){       
@@ -99,29 +99,11 @@ const HandleClick = (text) =>{
     ) {
         setEnd(true);
     }
-
 }
 
 const HandleEnd = () => {
     console.log(options);
-  
+
     sessionStorage.setItem("options", JSON.stringify(options));
-
-
 }
-    //return <Cont>
-    //    <div>
-    //        <Button bgcolor="#FAD" text="go to fruits" onClick={()=>router.push("/options/fruits")} />
-    //       <Button bgcolor="#DAD" text="go to coins" onClick={()=>router.push("/options/coins")} />
-    //        <Button bgcolor="#ADD" text="go to colors" onClick={()=>router.push("/options/colors")} />
-    //    </div>
-    //    <div>
-    //        <Button bgcolor={chosen === 1 ? "aqua" : "teal"} text={buttontexts.option1} onClick={()=>HandleClick(buttontexts.option1)} />
-    //       <Button bgcolor={chosen === 2 ? "aqua" : "teal"} text={buttontexts.option2} onClick={()=>HandleClick(buttontexts.option2)}/>
-    //        <Button bgcolor={chosen === 3 ? "aqua" : "teal"} text={buttontexts.option3} onClick={()=>HandleClick(buttontexts.option3)}/>
-    //    </div>
-    //   <div>
-    //       {end === true && <Button bgcolor="blue" text="End" onClick={HandleEnd}/>}
-    //    </div>
-    //</Cont>
 }
