@@ -53,7 +53,7 @@ const HomeFoodTimerDarkBar= styled.div`
     background-color:${props=>props.bgcolordark};
     height: 52px;
     width: 126px;
-    border-radius: 10px;
+    border-radius: 10px 0px 0px 10px;
     z-index: 1;
 `;
 

@@ -21,13 +21,16 @@ const HamburgCont = styled.div`
     width: 150px;
     backround-color: #59A091;
 
-    margin-top: -50px;
+    margin-top: 20px;
+    margin-left: -120px;
     position: relative;
 
 `;
 
 const NImage = styled.img`
-    wi
+    width: 50px;
+    height: 40px;
+    z-index: 10;
 `;
 
 const NavBarUI = ({
@@ -37,11 +40,11 @@ const NavBarUI = ({
     const router = useRouter();
 
     return <NavBarCont>
-        
-        <NavBar>
             <HamburgCont>
                 <NImage src={image1}></NImage>
             </HamburgCont>
+            
+        <NavBar>
         </NavBar>
     </NavBarCont>
 }
