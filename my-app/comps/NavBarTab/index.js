@@ -5,6 +5,7 @@ import {useRouter} from 'next/router';
 
 const NavBarCont = styled.div`
     display: flex;
+    flex-direction: column;
 
 `;
 
@@ -21,10 +22,16 @@ const HamburgCont = styled.div`
     width: 150px;
     backround-color: #59A091;
 
-    margin-top: 20px;
-    margin-left: -120px;
-    position: relative;
+`;
 
+const MenuItems = styled.div`
+    height: 600px;
+    width: 375px;
+    background-color: #59A091;
+    border-radius: 50px 50px 0px 0px; 
+    max-width: ${props=>props.width}px;
+    max-height: ${props=>props.height}px;
+    overflow: hidden;
 `;
 
 const NImage = styled.img`
@@ -37,12 +44,23 @@ const NavBarUI = ({
     image1 = "/burger1.png",
 
 }) => {
+    const [open, setOpen] = useState(false);
     const router = useRouter();
+
+    var width = 0, height = 0;
+
+    if(open){
+        width=100;
+        height=100;
+    }
 
     return <NavBarCont>
             <HamburgCont>
                 <NImage src={image1}></NImage>
             </HamburgCont>
+
+            <MenuItems>
+            </MenuItems>
             
         <NavBar>
         </NavBar>
