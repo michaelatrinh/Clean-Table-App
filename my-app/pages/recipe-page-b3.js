@@ -143,7 +143,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://www.tasteofhome.com/recipes/hearty-skillet-supper/ "></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://www.tasteofhome.com/recipes/hearty-skillet-supper/")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                

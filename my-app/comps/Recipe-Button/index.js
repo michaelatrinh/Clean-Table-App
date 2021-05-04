@@ -21,9 +21,11 @@ const RecipeContainer = styled.div`
     }
 `;
 
-const RecipeButtonUI = () => {
-
-    return <RecipeContainer>
+const RecipeButtonUI =({
+    onClick = ()=>{},
+    
+}) => {
+    return <RecipeContainer onClick={onClick}>
         <p>Get the Recipe!</p>
     </RecipeContainer>
 

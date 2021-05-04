@@ -143,7 +143,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://www.cookinwithmima.com/cheesy-ground-beef-pasta/ "></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://www.cookinwithmima.com/cheesy-ground-beef-pasta/")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                

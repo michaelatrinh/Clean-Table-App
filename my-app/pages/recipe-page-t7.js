@@ -144,7 +144,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://runningonrealfood.com/vegan-sweet-potato-tofu-bowls/"></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://runningonrealfood.com/vegan-sweet-potato-tofu-bowls/")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                

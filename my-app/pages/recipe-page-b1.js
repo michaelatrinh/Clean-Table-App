@@ -143,7 +143,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://www.dinneratthezoo.com/beef-and-broccoli-stir-fry/"></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://www.dinneratthezoo.com/beef-and-broccoli-stir-fry/")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                

@@ -144,7 +144,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://www.ilovevegan.com/teriyaki-peanut-tofu-with-stir-fried-veggies-brown-rice/"></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://www.ilovevegan.com/teriyaki-peanut-tofu-with-stir-fried-veggies-brown-rice/")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                
@@ -158,3 +158,4 @@ export default function RecipePage({
         </MenuContainer>
     </RecipeContainer>  
 }
+
