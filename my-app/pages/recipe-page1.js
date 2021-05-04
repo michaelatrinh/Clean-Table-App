@@ -26,8 +26,7 @@ export default function RecipePage({
     label5 = "CHEESE",
     label6 = "PARSLEY",
 
-    title = "Main Ingredients",
-    title2 = "Optional",
+    subtitle = "Main Ingredients:",
     
 }) {
 
@@ -40,10 +39,10 @@ export default function RecipePage({
         </TopSection>
 
         <Mid1>
-            <Placeholder image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title={title}></Placeholder>
+            <Placeholder image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients"}></Placeholder>
         </Mid1>
         <Mid2>
-            <Placeholder image1={image4} image2={image5} image3={image6} title={title2} label1={label4} label2={label5} label3={label6}></Placeholder>
+            <Placeholder image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
         </Mid2>
         <Mid3>
             <Instructions></Instructions>
