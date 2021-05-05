@@ -145,7 +145,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://lovetobeinthekitchen.com/2017/10/25/skillet-cheesy-beef-veggie-macaroni/"></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://lovetobeinthekitchen.com/2017/10/25/skillet-cheesy-beef-veggie-macaroni/")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                

@@ -145,7 +145,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://healthyrecipesblogs.com/roasted-potatoes-and-onions/"></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://healthyrecipesblogs.com/roasted-potatoes-and-onions/")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                

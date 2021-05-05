@@ -143,7 +143,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://www.budgetbytes.com/spaghetti-with-vegetable-meat-sauce/ "></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://www.budgetbytes.com/spaghetti-with-vegetable-meat-sauce/")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                

@@ -55,7 +55,7 @@ export default function RecipePage({
   </MiddleContainer>
   
       <ButtonContainer>
-          <RecipeButton Link href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
+          <RecipeButton onClick={()=>window.open("https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake")}></RecipeButton>
       </ButtonContainer>
 
     <EndSection>                
