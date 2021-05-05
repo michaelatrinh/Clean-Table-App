@@ -74,10 +74,10 @@ export default function IngredientPickerPage({
 }
 
 const RecipeContainer = styled.div`
-// position: relative;
-// margin-top: 10px;
-width: 100vw;
-height: 100vh;
+    // position: relative;
+    // margin-top: 10px;
+    width: 100vw;
+    height: 100vh;
     background-color: #E7F2F0;
 
     display: flex;
