@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import FoodButton from '../comps/FoodButtonUI';
 import ProgressBar from '../comps/ProgressBar';
+import VegeColumn from '../comps/FoodButtonVege';
 import Heading from '../comps/Header';
 import {useRouter} from 'next/router';
 
@@ -9,15 +10,34 @@ export default function tutorialPage({
     title = "VEGETABLES",
     description = "Add a VEGETABLE to your pantry!"
 }){
-    // Lines 13 - 29 are state changes and routing after pressing a food button
-    const [clickState, setClickState] = useState(false);
-    var newDarken = "0px 4px 5px #494948";
-    if(clickState){
-        newDarken = "inset 0 0 10px 5px #C4C4C4";
+    // Lines 13 - 49 are state changes and routing after pressing a food button
+    const [clickState1, setClickState1] = useState(false);
+    const [clickState2, setClickState2] = useState(false);
+    const [clickState3, setClickState3] = useState(false);
+    var newDarken1 = "0px 4px 5px #494948";
+    var newDarken2 = "0px 4px 5px #494948";
+    var newDarken3 = "0px 4px 5px #494948";
+
+    if(clickState1){
+        newDarken1 = "inset 0 0 10px 5px #C4C4C4";
+    } else if(clickState2){
+        newDarken2 = "inset 0 0 10px 5px #C4C4C4";
+    } else if(clickState3){
+        newDarken3 = "inset 0 0 10px 5px #C4C4C4";
+    }
+
+    const HandleClick1 = () => {
+        setClickState1(!clickState1);
+        setTimeout(NextPage, 150);
+    }    
+    
+    const HandleClick2 = () => {
+        setClickState2(!clickState2);
+        setTimeout(NextPage, 150);
     }
     
-    const HandleClick = () => {
-        setClickState(!clickState);
+    const HandleClick3 = () => {
+        setClickState3(!clickState3);
         setTimeout(NextPage, 150);
     }
     
@@ -28,7 +48,7 @@ export default function tutorialPage({
         router.push(routeTo);
     }
 
-    // Lines 31 - 45 are to navigate between pages using the dots at the bottom of the screen
+    // Lines 51 - 65 are to navigate between pages using the dots at the bottom of the screen
     const Page1 = () => {
         var routeToPage1 = "/add-protein";
         router.push(routeToPage1);
@@ -55,11 +75,13 @@ export default function tutorialPage({
         </TextContainer>
 
         <FoodButtonContainer>
-            <FoodButton onClickA={HandleClick} foodname="BROCCOLI" foodimage="/broccoli.png" imageheight="99px" imagewidth="107px" bgcolour="#6FC3B2" darken={newDarken}></FoodButton>
+            <VegeColumn onClickA={HandleClick1} onClickB={HandleClick2} onClickC={HandleClick3} darken1={newDarken1} darken2={newDarken2} darken3={newDarken3}></VegeColumn>
+
+            {/* <FoodButton onClickA={HandleClick} foodname="BROCCOLI" foodimage="/broccoli.png" imageheight="99px" imagewidth="107px" bgcolour="#6FC3B2" darken={newDarken}></FoodButton>
 
             <FoodButton onClickA={HandleClick} foodname="ONION" foodimage="/onion.png" imageheight="91px" imagewidth="93px" bgcolour="#6FC3B2" darken={newDarken}></FoodButton>
             
-            <FoodButton onClickA={HandleClick} foodname="CARROT" foodimage="/carrot.png" imageheight="89px" imagewidth="86px" bgcolour="#6FC3B2" darken={newDarken}></FoodButton>
+            <FoodButton onClickA={HandleClick} foodname="CARROT" foodimage="/carrot.png" imageheight="89px" imagewidth="86px" bgcolour="#6FC3B2" darken={newDarken}></FoodButton> */}
         </FoodButtonContainer>
 
         <ProgressBarContainer>

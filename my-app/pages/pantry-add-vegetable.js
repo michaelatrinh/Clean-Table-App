@@ -8,6 +8,7 @@ import FoodIcon from '../comps/FoodButtonPantryUI';
 import NavBar from '../comps/NavBar/index2.js';
 import FunFact from '../comps/FunFactWindow';
 import ConfirmWindow from '../comps/ConfirmationWindow';
+import VegeCol from '../comps/FoodButtonVege';
 import {useRouter} from 'next/router';
 
 export default function PantryAddProtein({
@@ -27,6 +28,46 @@ export default function PantryAddProtein({
         newHeight = 262;
     }
 
+// === FOOD BUTTON STATE CHANGE WHEN CLICKED ====================
+    const [clickState1, setClickState1] = useState(false);
+    const [clickState2, setClickState2] = useState(false);
+    const [clickState3, setClickState3] = useState(false);
+    var newDarken1 = "0px 4px 5px #494948";
+    var newDarken2 = "0px 4px 5px #494948";
+    var newDarken3 = "0px 4px 5px #494948";
+
+    if(clickState1){
+        newDarken1 = "inset 0 0 10px 5px #C4C4C4";
+    } else if(clickState2){
+        newDarken2 = "inset 0 0 10px 5px #C4C4C4";
+    } else if(clickState3){
+        newDarken3 = "inset 0 0 10px 5px #C4C4C4";
+    }
+
+    const HandleClick1 = () => {
+        setClickState1(!clickState1);
+        setTimeout(NextStep, 150);
+    }    
+    
+    const HandleClick2 = () => {
+        setClickState2(!clickState2);
+        setTimeout(NextStep, 150);
+    }
+    
+    const HandleClick3 = () => {
+        setClickState3(!clickState3);
+        setTimeout(NextStep, 10);
+    }
+    
+    const router = useRouter();
+    
+    const NextStep = () => {
+        setGreyState(true);
+        // var routeTo = "/add-carbohydrate";
+        // router.push(routeTo);
+    }
+
+
 // === YES AND NO BUTTONS STATE CHANGE AND YES BUTTON ROUTE =====
     const [yesState, setYesState] = useState(false);
     const [noState, setNoState] = useState(false);
@@ -39,7 +80,7 @@ export default function PantryAddProtein({
         var newNoShadow = "inset 0 0 10px 0px #494948";
     }
 
-    const router = useRouter();
+    // const router = useRouter();
     
     const NextPage = () => {
         var routeTo = "/pantry";
@@ -52,7 +93,9 @@ export default function PantryAddProtein({
     }
     const HandleNo2 = () => {
         setGreyState(!greyState);
-        setClickState(false);
+        setClickState1(false);
+        setClickState2(false);
+        setClickState3(false);
         setNoState(false);
     }
 
@@ -62,22 +105,22 @@ export default function PantryAddProtein({
     }
 
 // === FOOD BUTTON STATE CHANGE WHEN CLICKED ====================
-    const [clickState, setClickState] = useState(false);
-    var newDarken = "0px 4px 5px #494948";
-    if(clickState){
-        newDarken = "inset 0 0 10px 5px #C4C4C4";
-    }
+    // const [clickState, setClickState] = useState(false);
+    // var newDarken = "0px 4px 5px #494948";
+    // if(clickState){
+    //     newDarken = "inset 0 0 10px 5px #C4C4C4";
+    // }
 
-    const HandleClick = () => {
-        setClickState(!clickState);
-    }
+    // const HandleClick = () => {
+    //     setClickState(!clickState);
+    // }
 
 // === PAGE RETURN ==============================================
     return <PageContainer>
 
         <PopUpBg width={width} height={height}></PopUpBg>
         
-        <ConfirmWindow cWidth={newWidth} cHeight={newHeight} onClickX={()=>setGreyState(false)} onClickN={HandleNo} onClickY={HandleYes} Yshadow={newYesShadow} Nshadow={newNoShadow}></ConfirmWindow>
+        <ConfirmWindow cWidth={newWidth} cHeight={newHeight} onClickX={HandleNo2} onClickN={HandleNo} onClickY={HandleYes} Yshadow={newYesShadow} Nshadow={newNoShadow}></ConfirmWindow>
 
         <SecondPageContainer>
             <HeaderContainer>
@@ -90,18 +133,20 @@ export default function PantryAddProtein({
             </TextContainer>
 
             <FoodButtonContainer>
-                <FoodButton onClickA={HandleClick} foodname="BROCCOLI" foodimage="/broccoli.png" imageheight="99px" imagewidth="107px" bgcolour="#6FC3B2" darken={newDarken}></FoodButton>
+                <VegeCol onClickA={HandleClick1} onClickB={HandleClick2} onClickC={HandleClick3} darken1={newDarken1} darken2={newDarken2} darken3={newDarken3}></VegeCol>
+
+                {/* <FoodButton onClickA={HandleClick} foodname="BROCCOLI" foodimage="/broccoli.png" imageheight="99px" imagewidth="107px" bgcolour="#6FC3B2" darken={newDarken}></FoodButton>
 
                 <FoodButton onClickA={HandleClick} foodname="ONION" foodimage="/onion.png" imageheight="91px" imagewidth="93px" bgcolour="#6FC3B2" darken={newDarken}></FoodButton>
 
-                <FoodButton onClickA={HandleClick} foodname="CARROT" foodimage="/carrot.png" imageheight="89px" imagewidth="86px" bgcolour="#6FC3B2" darken={newDarken}></FoodButton>
+                <FoodButton onClickA={HandleClick} foodname="CARROT" foodimage="/carrot.png" imageheight="89px" imagewidth="86px" bgcolour="#6FC3B2" darken={newDarken}></FoodButton> */}
             </FoodButtonContainer>
 
-            <AddButtonContainer>
+            {/* <AddButtonContainer>
                 <AddButton onClick={()=>setGreyState(true)}>
                     <h2>ADD TO PANTRY</h2>
                 </AddButton>
-            </AddButtonContainer>
+            </AddButtonContainer> */}
 
             <NavBarContainer>
                 <NavBar></NavBar>
@@ -167,7 +212,7 @@ const TextContainer = styled.div`
     align-items: center;
     justify-content: center;
     flex-grow: 2;
-    // margin-top: -2.5rem;
+    margin-top: -2rem;
 `;
 
 const PageTitle = styled.h1`
@@ -201,6 +246,7 @@ const FoodButtonContainer = styled.div`
     align-items: center;
     flex-direction: column;
     flex-grow: 3;
+    margin-top: -4rem;
 `;
 
 const AddButtonContainer = styled.div`

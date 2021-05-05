@@ -59,13 +59,13 @@ export default function pantry({
                 <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
             </FoodIconRowContainer>
 
-            <FoodIconRowContainer>
+            {/* <FoodIconRowContainer>
                 <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
 
                 <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
                 
                 <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
-            </FoodIconRowContainer>
+            </FoodIconRowContainer> */}
         </FoodIconColContainer>
 
         <TipContainer>
