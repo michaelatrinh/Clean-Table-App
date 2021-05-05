@@ -69,7 +69,7 @@ export default function RecipePage({
 }
 
 const RecipeContainer = styled.div`
-    width: 375px;
+    width: 100vw;
     height: 1100px;
     background-color: #E7F2F0;
     // margin: 100px;

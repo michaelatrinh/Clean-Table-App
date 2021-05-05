@@ -79,15 +79,24 @@ export default function pantry({
 }
 
 const PantryPageContainer = styled.div`
+    // position: relative;
+    // margin-top: 10px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #E7F2F0;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
-    background-color: #E7F2F0;
-    width: 375px;
-    max-width: 375px;
-    height: 910px;
-    max-height: 910px;
+    box-shadow: 5px 1px 30px 5px rgba(0, 0, 0, 0.5);
+
+//     background-color: #E7F2F0;
+//     width: 375px;
+//     max-width: 375px;
+//     height: 910px;
+//     max-height: 910px;
 `;
 
 
