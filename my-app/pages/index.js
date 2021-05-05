@@ -99,16 +99,6 @@ const TopSection = styled.div`
         color: #302B40;
     }
 `;
- 
-const Img = styled.img`
-    margin-top: 200px;
-    width: 200px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-`;
 
 const ButtonContainer = styled.div`
     margin-top: 10px;
