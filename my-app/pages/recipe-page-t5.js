@@ -145,7 +145,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://wellvegan.com/dinner/creamy-tofu-garlic-mushroom-pasta/"></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://wellvegan.com/dinner/creamy-tofu-garlic-mushroom-pasta/")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                

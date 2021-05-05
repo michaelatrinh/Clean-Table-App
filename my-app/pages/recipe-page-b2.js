@@ -55,7 +55,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://www.justataste.com/easy-beef-and-broccoli-recipe/"></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://www.justataste.com/easy-beef-and-broccoli-recipe/")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                

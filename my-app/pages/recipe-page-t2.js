@@ -145,7 +145,8 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://www.bonappetit.com/recipe/tofu-with-rice-and-miso-maple-dressing/"></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://www.bonappetit.com/recipe/tofu-with-rice-and-miso-maple-dressing/")}></RecipeButton>
+
             </ButtonContainer>
 
         <EndSection>                

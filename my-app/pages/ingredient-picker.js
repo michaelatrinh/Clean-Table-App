@@ -1,92 +1,104 @@
-import Head from 'next/head'; 
-import styled from 'styled-components';
-import Header from '../comps/Header/index.js';
-import Menu from '../comps/NavBar/index2.js';
-import Placeholder from '../comps/icon-placeholder/Placeholder.js';
-import GenerateRecipeButton from '../comps/GenerateRecipeButton/index.js';
 import React, {useState} from 'react';
+import styled from 'styled-components';
+import FoodButton from '../comps/FoodButtonUI';
+import ProgressBar from '../comps/ProgressBar';
+import Heading from '../comps/Header';
+import EmptyBox from '../comps/EmptyBox';
+import FoodIcon from '../comps/FoodButtonPantryUI';
+import NavBar from '../comps/NavBar/index2.js';
+import FunFact from '../comps/FunFactWindow'
 import {useRouter} from 'next/router';
 
-export default function IngredientPickerPage({
-    title = "PICK YOUR PROTEINS",
-
-    image1 = "/chicken_drumstick.png",
-    image2 = "/shaved_beef.png",
-    image3 = "/tofu_squares.png",
-
-    image4 ="/rice_bowl.png",
-    image5 ="/pasta_dish.png",
-    image6 ="/potatoes.png",
-
-    label1 = "CHICKEN",
-    label2 = "BEEF",
-    label3 = "ONION",
-    label4 = "RICE",
-    label5 = "PASTA",
-    label6 = "POTATOES",
-    recipebutton= "generate recipe",
-
-}) {
-    const [clickStateA, setClickStateA] = useState(false);
-    const [clickStateB, setClickStateB] = useState(false);
-    const [clickStateC, setClickStateC] = useState(false);
-    var newBoxShadowA = "0px 4px 5px rgba(0, 0, 0, 0.3)";
-    var newBoxShadowB = "0px 4px 5px rgba(0, 0, 0, 0.3)";
-    var newBoxShadowC = "0px 4px 5px rgba(0, 0, 0, 0.3)";
-    if(clickStateA){
-        newBoxShadowA = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
-    }    
-    if(clickStateB){
-        newBoxShadowB = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
-    }    
-    if(clickStateC){
-        newBoxShadowC = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
+export default function pantry({
+    title = "MY PANTRY",
+    description = "Click on the empty boxes to add more items to your pantry."
+}){
+    // Lines 16 - 34 are state changes after pressing a food button
+    const [clickState, setClickState] = useState(false);
+    var ShadowToggle = "";
+    if(clickState){
+        ShadowToggle = "inset 0 0 10px 5px #C4C4C4";
     }
 
-      return <RecipeContainer>
-          <HeaderContainer>
-            <Header></Header>
-          </HeaderContainer>
+    const HandleClick = () => {
+        setClickState(!clickState);
+        setTimeout(NextPage, 150);
+    }
+    
+    const router = useRouter();
+    
+    const NextPage = () => {
+        var routeTo = "/pantry-pick-category";
+        router.push(routeTo);
+    }
 
-        {/*<TextContainer>
-            <TutPageTitle>{title}</TutPageTitle>
-        </TextContainer>*/}
-        
-        <FoodButtonContainer>
-             <h2>PICK YOUR PROTEIN</h2>
-            <Placeholder onClickA={()=>setClickStateA(!clickStateA)} image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title="PROTEINS" boxshadow={newBoxShadowA} widthA="65px" widthB="65px" widthC="79px" height="150px"></Placeholder>
+    return <PantryPageContainer>
+        <HeaderContainer>
+            <Heading></Heading>
+        </HeaderContainer>
 
-            <h2>PICK YOUR CARBOHYDRATES</h2>
-            <Placeholder onClickA={()=>setClickStateB(!clickStateB)} image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} title="CARBOHYDRATES" boxshadow={newBoxShadowB} widthA="65px" widthB="66px" widthC="67px" height="150px"></Placeholder>
+        <TextContainer>
+            <PantryPageTitle>{title}</PantryPageTitle>
+            <PantryPageDescriptor>{description}</PantryPageDescriptor>
+        </TextContainer>
 
-            <h2>PICK YOUR VEGETABLES</h2>
-            <Placeholder onClickA={()=>setClickStateC(!clickStateC)} boxshadow={newBoxShadowC} widthA="68px" widthB="55px" widthC="56px" height="150px"></Placeholder>
-        </FoodButtonContainer>
+        <FoodIconColContainer>
+            <FoodIconRowContainer>
+                <FoodIcon days="1 DAY" foodimage="/chicken_drumstick.png" imageheight="58px" imagewidth="58px" bgcolour="#F16D6D" foodname="CHICKEN" expirydate="expires on: February 1, 2021"></FoodIcon>
+                
+                <FoodIcon days="1 DAY" foodimage="/pasta_dish.png" imageheight="53px" imagewidth="66px" bgcolour="#F16D6D" foodname="PASTA" expirydate="expires on: February 1, 2021"></FoodIcon>
+                
+                <FoodIcon days="2 DAYS" foodimage="/onion.png" imageheight="54px" imagewidth="55px" bgcolour="#FFC32E" foodname="ONION" expirydate="expires on: February 2, 2021"></FoodIcon>
+            </FoodIconRowContainer>        
+            
+            <FoodIconRowContainer>
+                <FoodIcon days="12 DAYS" foodimage="/carrot.png" imageheight="55px" imagewidth="56px" bgcolour="#59A091" foodname="CARROT" expirydate="expires on: February 14, 2021"></FoodIcon>
+                
+                <FoodIcon days="18 DAY" foodimage="/potatoes.png" imageheight="60px" imagewidth="67px" bgcolour="#59A091" foodname="POTATOES" expirydate="expires on: February 20, 2021"></FoodIcon>
+                
+                <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
+            </FoodIconRowContainer>
 
-        <GenerateContainer>
-            <GenerateRecipeButton text={recipebutton}></GenerateRecipeButton>
-        </GenerateContainer>
+            <FoodIconRowContainer>
+                <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
+
+                <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
+                
+                <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
+            </FoodIconRowContainer>
+        </FoodIconColContainer>
+
+        <TipContainer>
+            <FunFact htext="HERE'S A TIP!" ptext="You can save your vegetable scraps and peels to make home-made veggie stock!"></FunFact>
+        </TipContainer>
 
         <NavBarContainer>
-            <Menu></Menu>
+            <NavBar></NavBar>
         </NavBarContainer>
-    </RecipeContainer>  
+    </PantryPageContainer>
 }
 
-const RecipeContainer = styled.div`
-// position: relative;
-// margin-top: 10px;
-width: 100vw;
-height: 100vh;
+const PantryPageContainer = styled.div`
+    // position: relative;
+    // margin-top: 10px;
+    width: 100vw;
+    height: 100vh;
     background-color: #E7F2F0;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     box-shadow: 5px 1px 30px 5px rgba(0, 0, 0, 0.5);
+
+//     background-color: #E7F2F0;
+//     width: 375px;
+//     max-width: 375px;
+//     height: 910px;
+//     max-height: 910px;
 `;
+
 
 const HeaderContainer = styled.div`
     display: flex;
@@ -101,63 +113,43 @@ const TextContainer = styled.div`
     flex-grow: 1;
 `;
 
-const TutPageTitle = styled.h1`
+const PantryPageTitle = styled.h1`
     font-family: "Manrope", sans-serif;
     font-size: 24px;
-    font-weight: 400;
-    // margin-top: 0;
-
-// position: absolute;
-// width: 276px;
-// height: 33px;
-// left: 70px;
-// top: 135px;
-
-// font-family: Manrope;
-// font-style: normal;
-// font-weight: 500;
-// font-size: 24px;
-// line-height: 33px;
-// /* identical to box height */
-
-// color: #696259;
+    font-weight: 500;
+    margin-top: 0;
+    text-align: center;
 `;
 
-const FoodButtonContainer = styled.div`
+const PantryPageDescriptor = styled.h2`
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0;
+    text-align: center;
+`;
+
+const FoodIconColContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    flex-grow: 4;
-    color: #484848;
+    flex-grow: 3;
+    margin-top: -1.25rem;
 `;
 
-const Mid1 = styled.div`
-margin-top: 0px;
-`; 
-
-const Mid2 = styled.div`
-margin-top: -50px;
-`; 
-
-const Mid3 = styled.div`
-margin-top: -50px;
-`; 
-
-const MenuContainer = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-position:relative;
-margin:-30px;
-flex-grow: 1;
+const FoodIconRowContainer = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    width: 375px;
 `;
 
-const GenerateContainer = styled.div`
+const TipContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-grow: 1;
 `;
@@ -168,69 +160,3 @@ const NavBarContainer = styled.div`
     align-items: center;
     flex-grow: 0;
 `;
-
-//const PlaceHolderContainer =styled.div`
-//display:flex;
-//`;
-
-/*
-export default function IngredientPickerPage({
-    title = "PICK YOUR PROTEINS",
-
-    image1 = "/chicken_drumstick.png",
-    image2 = "/shaved_beef.png",
-    image3 = "/onion.png",
-
-    image4 ="/rice_bowl.png",
-    image5 ="/pasta_dish.png",
-    image6 ="/potatoes.png",
-
-    label1 = "CHICKEN",
-    label2 = "BEEF",
-    label3 = "ONION",
-    label4 = "RICE",
-    label5 = "PASTA",
-    label6 = "POTATOES",
-    recipebutton= "generate recipe",
-    subtitle ="VEGETABLES"
-
-   
-
-}) {
-
-      return <RecipeContainer>
-        <Header></Header>
-
-        <TextContainer>
-            <TutPageTitle>{title}</TutPageTitle>
-        </TextContainer>
-        
-        <Mid1>
-        <Placeholder subtitle={"PROTEIN"} image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} ></Placeholder>
-        </Mid1>
-
-        <Mid2>
-        <Placeholder  subtitle={"CARBOHYDRATES"}image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6}></Placeholder>
-        </Mid2>
-
-        <Mid3>
-        <Placeholder ></Placeholder>
-        </Mid3>
-
-        {/*<PlaceHolderContainer>
-        <Placeholder></Placeholder>
-        <Placeholder></Placeholder>
-        <Placeholder></Placeholder>
-
-        </PlaceHolderContainer>
-
-        </PlaceHolderContainer>}*/
-
-
-        /*<GenerateRecipeButton text={recipebutton}></GenerateRecipeButton>
-
-        <MenuContainer>
-            <Menu></Menu>
-        </MenuContainer>*/
-   /* </RecipeContainer>  
-}*/

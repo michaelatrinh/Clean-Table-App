@@ -144,7 +144,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://earthofmaria.com/vegan-sheet-pan-potatoes-tofu/"></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://earthofmaria.com/vegan-sheet-pan-potatoes-tofu/")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                

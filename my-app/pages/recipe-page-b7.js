@@ -145,7 +145,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://tasty.co/recipe/broccoli-cheddar-baked-potato"></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://tasty.co/recipe/broccoli-cheddar-baked-potato")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                

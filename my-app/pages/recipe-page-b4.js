@@ -143,7 +143,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://therecipecritic.com/20-minute-garlic-beef-and-broccoli-lo-mein/"></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://therecipecritic.com/20-minute-garlic-beef-and-broccoli-lo-mein/")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                

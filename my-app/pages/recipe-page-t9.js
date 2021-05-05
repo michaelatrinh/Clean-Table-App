@@ -144,7 +144,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://www.ilovevegan.com/spicy-tofu-potato-coconut-curry-soup/"></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://www.ilovevegan.com/spicy-tofu-potato-coconut-curry-soup/")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                
