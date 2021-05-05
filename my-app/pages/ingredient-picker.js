@@ -1,104 +1,92 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import FoodButton from '../comps/FoodButtonUI';
-import ProgressBar from '../comps/ProgressBar';
-import Heading from '../comps/Header';
-import EmptyBox from '../comps/EmptyBox';
-import FoodIcon from '../comps/FoodButtonPantryUI';
-import NavBar from '../comps/NavBar/index2.js';
-import FunFact from '../comps/FunFactWindow'
+import Header from '../comps/Header/index.js';
+import Menu from '../comps/NavBar/index2.js';
+import Placeholder from '../comps/icon-placeholder/Placeholder.js';
+import GenerateRecipeButton from '../comps/GenerateRecipeButton/index.js';
 import {useRouter} from 'next/router';
 
-export default function pantry({
-    title = "MY PANTRY",
-    description = "Click on the empty boxes to add more items to your pantry."
-}){
-    // Lines 16 - 34 are state changes after pressing a food button
-    const [clickState, setClickState] = useState(false);
-    var ShadowToggle = "";
-    if(clickState){
-        ShadowToggle = "inset 0 0 10px 5px #C4C4C4";
+export default function IngredientPickerPage({
+    title = "PICK YOUR PROTEINS",
+
+    image1 = "/chicken_drumstick.png",
+    image2 = "/shaved_beef.png",
+    image3 = "/tofu_squares.png",
+
+    image4 ="/rice_bowl.png",
+    image5 ="/pasta_dish.png",
+    image6 ="/potatoes.png",
+
+    label1 = "CHICKEN",
+    label2 = "BEEF",
+    label3 = "ONION",
+    label4 = "RICE",
+    label5 = "PASTA",
+    label6 = "POTATOES",
+    recipebutton= "generate recipe",
+
+}) {
+    const [clickStateA, setClickStateA] = useState(false);
+    const [clickStateB, setClickStateB] = useState(false);
+    const [clickStateC, setClickStateC] = useState(false);
+    var newBoxShadowA = "0px 4px 5px rgba(0, 0, 0, 0.3)";
+    var newBoxShadowB = "0px 4px 5px rgba(0, 0, 0, 0.3)";
+    var newBoxShadowC = "0px 4px 5px rgba(0, 0, 0, 0.3)";
+    if(clickStateA){
+        newBoxShadowA = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
+    }    
+    if(clickStateB){
+        newBoxShadowB = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
+    }    
+    if(clickStateC){
+        newBoxShadowC = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
     }
 
-    const HandleClick = () => {
-        setClickState(!clickState);
-        setTimeout(NextPage, 150);
-    }
-    
-    const router = useRouter();
-    
-    const NextPage = () => {
-        var routeTo = "/pantry-pick-category";
-        router.push(routeTo);
-    }
-
-    return <PantryPageContainer>
+    return <RecipeContainer>
         <HeaderContainer>
-            <Heading></Heading>
+            <Header></Header>
         </HeaderContainer>
 
-        <TextContainer>
-            <PantryPageTitle>{title}</PantryPageTitle>
-            <PantryPageDescriptor>{description}</PantryPageDescriptor>
-        </TextContainer>
+        {/*<TextContainer>
+        <TutPageTitle>{title}</TutPageTitle>
+        </TextContainer>*/}
 
-        <FoodIconColContainer>
-            <FoodIconRowContainer>
-                <FoodIcon days="1 DAY" foodimage="/chicken_drumstick.png" imageheight="58px" imagewidth="58px" bgcolour="#F16D6D" foodname="CHICKEN" expirydate="expires on: February 1, 2021"></FoodIcon>
-                
-                <FoodIcon days="1 DAY" foodimage="/pasta_dish.png" imageheight="53px" imagewidth="66px" bgcolour="#F16D6D" foodname="PASTA" expirydate="expires on: February 1, 2021"></FoodIcon>
-                
-                <FoodIcon days="2 DAYS" foodimage="/onion.png" imageheight="54px" imagewidth="55px" bgcolour="#FFC32E" foodname="ONION" expirydate="expires on: February 2, 2021"></FoodIcon>
-            </FoodIconRowContainer>        
-            
-            <FoodIconRowContainer>
-                <FoodIcon days="12 DAYS" foodimage="/carrot.png" imageheight="55px" imagewidth="56px" bgcolour="#59A091" foodname="CARROT" expirydate="expires on: February 14, 2021"></FoodIcon>
-                
-                <FoodIcon days="18 DAY" foodimage="/potatoes.png" imageheight="60px" imagewidth="67px" bgcolour="#59A091" foodname="POTATOES" expirydate="expires on: February 20, 2021"></FoodIcon>
-                
-                <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
-            </FoodIconRowContainer>
+        <FoodButtonContainer>
+            <h2>PICK YOUR PROTEIN</h2>
 
-            <FoodIconRowContainer>
-                <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
+            <Placeholder onClickA={()=>setClickStateA(!clickStateA)} image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title="PROTEINS" boxshadow={newBoxShadowA} widthA="65px" widthB="65px" widthC="79px" height="150px"></Placeholder>
 
-                <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
-                
-                <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
-            </FoodIconRowContainer>
-        </FoodIconColContainer>
+            <h2>PICK YOUR CARBOHYDRATES</h2>
 
-        <TipContainer>
-            <FunFact htext="HERE'S A TIP!" ptext="You can save your vegetable scraps and peels to make home-made veggie stock!"></FunFact>
-        </TipContainer>
+            <Placeholder onClickA={()=>setClickStateB(!clickStateB)} image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} title="CARBOHYDRATES" boxshadow={newBoxShadowB} widthA="65px" widthB="66px" widthC="67px" height="150px"></Placeholder>
+
+            <h2>PICK YOUR VEGETABLES</h2>
+
+            <Placeholder onClickA={()=>setClickStateC(!clickStateC)} boxshadow={newBoxShadowC} widthA="68px" widthB="55px" widthC="56px" height="150px"></Placeholder>
+        </FoodButtonContainer>
+
+        <GenerateContainer>
+            <GenerateRecipeButton text={recipebutton}></GenerateRecipeButton>
+        </GenerateContainer>
 
         <NavBarContainer>
-            <NavBar></NavBar>
+            <Menu></Menu>
         </NavBarContainer>
-    </PantryPageContainer>
+    </RecipeContainer>
 }
 
-const PantryPageContainer = styled.div`
+const RecipeContainer = styled.div`
     // position: relative;
     // margin-top: 10px;
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
     background-color: #E7F2F0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-
+    
     box-shadow: 5px 1px 30px 5px rgba(0, 0, 0, 0.5);
-
-//     background-color: #E7F2F0;
-//     width: 375px;
-//     max-width: 375px;
-//     height: 910px;
-//     max-height: 910px;
 `;
-
 
 const HeaderContainer = styled.div`
     display: flex;
@@ -113,43 +101,48 @@ const TextContainer = styled.div`
     flex-grow: 1;
 `;
 
-const PantryPageTitle = styled.h1`
+const TutPageTitle = styled.h1`
     font-family: "Manrope", sans-serif;
     font-size: 24px;
-    font-weight: 500;
-    margin-top: 0;
-    text-align: center;
+    font-weight: 400;
+// margin-top: 0;
+// position: absolute;
+// width: 276px;
+// height: 33px;
+// left: 70px;
+// top: 135px;
+// font-family: Manrope;
+// font-style: normal;
+// font-weight: 500;
+// font-size: 24px;
+// line-height: 33px;
+// /* identical to box height */
+// color: #696259;
 `;
 
-const PantryPageDescriptor = styled.h2`
-    font-family: "Quicksand", sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    margin: 0;
-    text-align: center;
-`;
-
-const FoodIconColContainer = styled.div`
+const FoodButtonContainer = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    flex-grow: 3;
-    margin-top: -1.25rem;
+    flex-grow: 4;
+    color: #484848;
 `;
 
-const FoodIconRowContainer = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    width: 375px;
-`;
-
-const TipContainer = styled.div`
+const MenuContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    margin:-30px;
+    flex-grow: 1;
+`;
+
+const GenerateContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     flex-grow: 1;
 `;
