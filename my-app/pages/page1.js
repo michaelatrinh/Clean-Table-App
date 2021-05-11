@@ -6,16 +6,12 @@ import Login from '../comps/Login';
 import Footer from '../comps/WelcomePageFooter';
 
 
-const FirstPageContainer = styled.div`
-    width: 375px;
-    height: 812px;
-    margin: 100px;
-    
+const FirstPageContainer = styled.div`    
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    box-shadow: 5px 1px 30px 5px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
 
     background: linear-gradient(-45deg, #59a091, #d4f6f4, #ffffff);
     background-size: 400% 400%;
@@ -88,7 +84,6 @@ export default function FirstPage({
       return <FirstPageContainer>
         <Img src={logoimage}></Img>
         <p className="headertext">W E L C O M E </p>
-        <Login></Login>
         <ButtonContainer>
             <Button text={text} height="34px"></Button>
         </ButtonContainer>

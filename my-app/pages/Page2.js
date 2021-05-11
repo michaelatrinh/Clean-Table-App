@@ -49,12 +49,13 @@ const PageContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     background-color: #E7F2F0;
-    width: 375px;
-    max-width: 375px;
-    height: 812px;
-    max-height: 812px;
+    //width: 375px;
+    //max-width: 375px;
+    //height: 812px;
+    //max-height: 812px;
 `;
 
 const HeaderContainer =styled.div`
