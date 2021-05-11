@@ -89,7 +89,7 @@ export default function FirstPage({
         <Img src={logoimage}></Img>
         <p className="headertext">W E L C O M E </p>
         <ButtonContainer>
-            <Button text={text} height="34px"></Button>
+            <Button text={text}></Button>
         </ButtonContainer>
         
         <Circle>
