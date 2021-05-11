@@ -107,7 +107,6 @@ const HandleEnd = () => {
   
     sessionStorage.setItem("options", JSON.stringify(options));
 
-
 }
     //return <Cont>
     //    <div>
