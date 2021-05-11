@@ -107,7 +107,7 @@ const HeaderCont = styled.div`
 `;
 
 const SemiCircle = styled.div`
-    width: 375px;
+    width: 100vw;
     height: 100px;
     background-color: #59A091;
     border-top-left-radius: 500px; 

@@ -10,7 +10,7 @@ const FirstPageContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     width: 100%;
 
     background: linear-gradient(-45deg, #59a091, #d4f6f4, #ffffff);
@@ -34,10 +34,14 @@ const FirstPageContainer = styled.div`
         font-weight: bold;
         color: #302B40;
     }
+
+    p{
+        color: #302B40;
+    }
 `;
  
 const Img = styled.img`
-    margin-top: 200px;
+    margin-top: 350px;
     width: 200px;
 
     display: flex;
@@ -52,7 +56,7 @@ const ButtonContainer = styled.div`
 `;
 
 const Circle = styled.div`
-    background-color: #59A091;
+
     height: 160px;
     width: 375px;
 
@@ -60,10 +64,10 @@ const Circle = styled.div`
     border-top-left-radius: 50%;
 
     position: relative;
-    margin-top: 80px;
+    margin-top: 400px;
     overflow: hidden;
 
-    color: white;
+    color: #302B40;
     text-align: center;
 
     p{

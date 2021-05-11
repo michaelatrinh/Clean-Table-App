@@ -15,15 +15,30 @@ letter-spacing:5px;
 margin: 20px;
 `;
 
+const EnterButtonCont = styled.div`
+    div:hover {
+    transform: scale(0.8);
+    transition-duration: 0.5s;
+    }
+
+`;
+
 const EnterButtonUI = (
     fontsize = "18px",
-    height = "34px",
+    height = "50px",
     width = "178px",
     text = "enter"
 ) => {
     const router = useRouter();
 
-    return <EnterButtonCSS onClick={()=>router.push("/page2")} fontsize={fontsize} height={height} width={width}>{text}</EnterButtonCSS>
+    return <EnterButtonCont>
+
+        <div>
+        <EnterButtonCSS onClick={()=>router.push("/page2")} fontsize={fontsize} height={height} width={width}>{text}</EnterButtonCSS>
+        </div>
+    </EnterButtonCont>
+    
+   
 }
 
 export default EnterButtonUI;

@@ -21,6 +21,10 @@ export default function Page2({
                 <PageTextTwo>{descriptiontwo}</PageTextTwo>
             </TextContainer>
     
+    <StartButton>
+    <StartTutorialButtonUI routeTo = "/add-protein"></StartTutorialButtonUI>
+    </StartButton>
+
     <Animation> <div className={animationStyle.main}>
             <div className={animationStyle.shadowwrapper}>
                 <div className={animationStyle.shadow}></div>
@@ -39,9 +43,7 @@ export default function Page2({
                 </div>
      </Animation>
     
-    <StartButton>
-    <StartTutorialButtonUI routeTo = "/add-protein"></StartTutorialButtonUI>
-    </StartButton>
+
         </PageContainer>
         
    }
@@ -105,10 +107,10 @@ font-family: "Quicksand", sans-serif;
 `;
 
 const Animation = styled.div`
-display: flex: display;
+display: flex;
 position:relative;
 top:-10px;
-left:70px;
+
 
  `;
 
@@ -119,6 +121,6 @@ left:70px;
  align-items: center;
  justify-content: center;
  position:relative;
-    bottom:35px;
+ bottom:200px;
  `;
 
