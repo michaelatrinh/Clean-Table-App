@@ -217,7 +217,7 @@ const TextContainer = styled.div`
 
 const PageTitle = styled.h1`
     font-family: "Manrope", sans-serif;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 300;
     margin-top: 0;
     text-align: center;
@@ -225,7 +225,7 @@ const PageTitle = styled.h1`
 
 const PageDescriptor = styled.h2`
     font-family: "Quicksand", sans-serif;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 300;
     margin: 0;
     text-align: center;
