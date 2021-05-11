@@ -54,7 +54,7 @@ export default function RecipePage({
   </MiddleContainer>
   
       <ButtonContainer>
-          <RecipeButton Link href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
+          <RecipeButton onClick={()=>window.open("https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake")}></RecipeButton>
       </ButtonContainer>
 
   <EndSection>                
@@ -68,8 +68,8 @@ export default function RecipePage({
 }
 
 const RecipeContainer = styled.div`
-    width: 375px;
-    height: 1100px;
+width: 100vw;
+height: 1100px;
     background-color: #E7F2F0;
     // margin: 100px;
     

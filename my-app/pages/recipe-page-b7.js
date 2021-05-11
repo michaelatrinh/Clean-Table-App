@@ -8,8 +8,9 @@ import FunFactWindow from '../comps/FunFactWindow/index.js';
 import RecipeButton from '../comps/Recipe-Button/index.js';
 
 const RecipeContainer = styled.div`
-    width: 375px;
-    height: 1100px;
+width: 100vw;
+height: 1100px;
+
     background-color: #E7F2F0;
     // margin: 100px;
     
@@ -144,7 +145,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://tasty.co/recipe/broccoli-cheddar-baked-potato"></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://tasty.co/recipe/broccoli-cheddar-baked-potato")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                

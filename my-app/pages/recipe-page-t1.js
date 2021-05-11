@@ -8,8 +8,9 @@ import FunFactWindow from '../comps/FunFactWindow/index.js';
 import RecipeButton from '../comps/Recipe-Button/index.js';
 
 const RecipeContainer = styled.div`
-    width: 375px;
-    height: 1100px;
+width: 100vw;
+height: 1100px;
+
     background-color: #E7F2F0;
     // margin: 100px;
     
@@ -144,7 +145,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton Link href="https://www.ilovevegan.com/teriyaki-peanut-tofu-with-stir-fried-veggies-brown-rice/"></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://www.ilovevegan.com/teriyaki-peanut-tofu-with-stir-fried-veggies-brown-rice/")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                
@@ -158,3 +159,4 @@ export default function RecipePage({
         </MenuContainer>
     </RecipeContainer>  
 }
+
