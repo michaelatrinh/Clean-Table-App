@@ -28,9 +28,44 @@ const HeaderContainer = styled.div`
 const TopSection = styled.div`
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+=======
+    align-items: center;
+`;
+
+const TopSection = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
+    background: linear-gradient(-45deg, #59a091, #d4f6f4, #ffffff);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .headertext{
+        font-size: 36px;
+        font-weight: bold;
+        color: #302B40;
+    }
+`;
+>>>>>>> 0fe0225c5f1cdc481a2d2606f58ec451d552b164
 
     h3{
         font-size: 22px;
@@ -92,6 +127,7 @@ const MenuContainer = styled.div`
     align-items: center;
     flex-grow: 0;
 `;
+<<<<<<< HEAD
 
 
 export default function RecipePage({
@@ -157,3 +193,5 @@ export default function RecipePage({
         </MenuContainer>
     </RecipeContainer>  
 }
+=======
+>>>>>>> 0fe0225c5f1cdc481a2d2606f58ec451d552b164
