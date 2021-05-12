@@ -114,7 +114,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
-
+    htext = "DID YOU KNOW?",
+    ptext = "Preserve produce. Produce doesn’t have to be tossed just because it’s reaching the end of its peak. Soft fruit can be used in smoothies; wilting vegetables can be used in soups, etc."
     
 }) {
 
@@ -148,7 +149,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow ptext={"Preserve produce. Produce doesn’t have to be tossed just because it’s reaching the end of its peak. Soft fruit can be used in smoothies; wilting vegetables can be used in soups, etc."}> </FunFactWindow>
         </EndSection>
 
         <MenuContainer>

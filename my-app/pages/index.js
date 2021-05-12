@@ -1,153 +1,159 @@
-import React, {useState} from 'react';
+import React from 'react';
+import Head from 'next/head'; 
 import styled from 'styled-components';
-import FoodButton from '../comps/FoodButtonUI';
-import ProgressBar from '../comps/ProgressBar';
-import Heading from '../comps/Header';
-import EmptyBox from '../comps/EmptyBox';
-import FoodIcon from '../comps/FoodButtonPantryUI';
-import NavBar from '../comps/NavBar/index2.js';
-import FunFact from '../comps/FunFactWindow'
-import {useRouter} from 'next/router';
+import Header from '../comps/Header/index.js';
+import Menu from '../comps/NavBar/index.js';
+import Placeholder from '../comps/icon-placeholder/Placeholder.js';
+import FunFactWindow from '../comps/FunFactWindow/index.js';
+import RecipeButton from '../comps/Recipe-Button/index.js';
 
-export default function pantry({
-    title = "MY PANTRY",
-    description = "Click on the empty boxes to add more items to your pantry."
-}){
-    // Lines 16 - 34 are state changes after pressing a food button
-    const [clickState, setClickState] = useState(false);
-    var ShadowToggle = "";
-    if(clickState){
-        ShadowToggle = "inset 0 0 10px 5px #C4C4C4";
-    }
+const RecipeContainer = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
-    const HandleClick = () => {
-        setClickState(!clickState);
-        setTimeout(NextPage, 150);
-    }
-    
-    const router = useRouter();
-    
-    const NextPage = () => {
-        var routeTo = "/pantry-pick-category";
-        router.push(routeTo);
-    }
-
-    return <PantryPageContainer>
-        <HeaderContainer>
-            <Heading></Heading>
-        </HeaderContainer>
-
-        <TextContainer>
-            <PantryPageTitle>{title}</PantryPageTitle>
-            <PantryPageDescriptor>{description}</PantryPageDescriptor>
-        </TextContainer>
-
-        <FoodIconColContainer>
-            <FoodIconRowContainer>
-                <FoodIcon days="1 DAY" foodimage="/chicken_drumstick.png" imageheight="58px" imagewidth="58px" bgcolour="#F16D6D" foodname="CHICKEN" expirydate="expires on: February 1, 2021"></FoodIcon>
-                
-                <FoodIcon days="1 DAY" foodimage="/pasta_dish.png" imageheight="53px" imagewidth="66px" bgcolour="#F16D6D" foodname="PASTA" expirydate="expires on: February 1, 2021"></FoodIcon>
-                
-                <FoodIcon days="2 DAYS" foodimage="/onion.png" imageheight="54px" imagewidth="55px" bgcolour="#FFC32E" foodname="ONION" expirydate="expires on: February 2, 2021"></FoodIcon>
-            </FoodIconRowContainer>        
-            
-            <FoodIconRowContainer>
-                <FoodIcon days="12 DAYS" foodimage="/carrot.png" imageheight="55px" imagewidth="56px" bgcolour="#59A091" foodname="CARROT" expirydate="expires on: February 14, 2021"></FoodIcon>
-                
-                <FoodIcon days="18 DAY" foodimage="/potatoes.png" imageheight="60px" imagewidth="67px" bgcolour="#59A091" foodname="POTATOES" expirydate="expires on: February 20, 2021"></FoodIcon>
-                
-                <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
-            </FoodIconRowContainer>
-
-            <FoodIconRowContainer>
-                <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
-
-                <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
-                
-                <EmptyBox onClickBox={HandleClick} boxshadow={ShadowToggle}></EmptyBox>
-            </FoodIconRowContainer>
-        </FoodIconColContainer>
-
-        <TipContainer>
-            <FunFact htext="HERE'S A TIP!" ptext="You can save your vegetable scraps and peels to make home-made veggie stock!"></FunFact>
-        </TipContainer>
-
-        <NavBarContainer>
-            <NavBar></NavBar>
-        </NavBarContainer>
-    </PantryPageContainer>
-}
-
-const PantryPageContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    background-color: #E7F2F0;
-    width: 375px;
-    max-width: 375px;
-    height: 910px;
-    max-height: 910px;
+background-color: #E7F2F0;
+width: 100vw;
+max-width: 100vw;
+height: 100vh;
+max-height: 100vh;
 `;
-
 
 const HeaderContainer = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-grow: 0;
 `;
 
-const TextContainer = styled.div`
+const TopSection = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-grow: 1;
+
+    h3{
+        font-size: 22px;
+    }
+    img{
+        width: 281px;
+        height:165px;
+
+        border: 4px solid #59A091;
+        // margin-top: 80px;
+    }
 `;
 
-const PantryPageTitle = styled.h1`
-    font-family: "Manrope", sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-    margin-top: 0;
-    text-align: center;
-`;
-
-const PantryPageDescriptor = styled.h2`
-    font-family: "Quicksand", sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    margin: 0;
-    text-align: center;
-`;
-
-const FoodIconColContainer = styled.div`
+const MiddleContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     flex-grow: 3;
-    margin-top: -1.25rem;
 `;
 
-const FoodIconRowContainer = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    width: 375px;
+const Mid1 = styled.div`
+    // margin-top: 160px;
 `;
 
-const TipContainer = styled.div`
+const Mid2 = styled.div`
+    // margin-top: -70px;
+`;
+
+const Mid3 = styled.div`
+    // margin-top: -30px;
+`;
+
+const EndSection = styled.div`
+    // position: absolute;
+    // margin-top: 800px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 2;
+`;
+
+const ButtonContainer = styled.div`
+    display: flex;
+    justify-content: center;
     align-items: center;
     flex-grow: 1;
 `;
 
-const NavBarContainer = styled.div`
+const MenuContainer = styled.div`
+    // margin-top: 950px;
+    // height: 900px;
+    // position: absolute;
+    // overflow: hidden;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 0;
 `;
+
+
+export default function RecipePage({
+    recipeimage = "/beefbrocrice.jpg",
+    recipetitle = "Beef Rice Casserole",
+
+    image1 = "/shaved_beef.png",
+    image2 = "/rice_bowl.png",
+    image3 = "/broccoli.png",
+
+    image4 ="/saltnpepper.png",
+    image5 ="/cheese.png",
+    image6 ="/parsley.png",
+
+    label1 = "BEEF",
+    label2 = "RICE",
+    label3 = "BROCCOLI",
+    label4 = "SALT N PEPPER",
+    label5 = "CHEESE",
+    label6 = "PARSLEY",
+
+    subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "Preserve produce. Produce doesn’t have to be tossed just because it’s reaching the end of its peak. Soft fruit can be used in smoothies; wilting vegetables can be used in soups, etc."
+    
+}) {
+
+
+      return <RecipeContainer>
+          <HeaderContainer>
+            <Header></Header>
+          </HeaderContainer>
+
+        <TopSection>
+            <h3>{recipetitle}</h3>
+            <img src={recipeimage}></img>
+        </TopSection>
+
+        <MiddleContainer>
+            <Mid1>
+            <Placeholder height="150px" image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients"} widthA="60px" widthB="65px" widthC="50px"></Placeholder>
+            </Mid1>
+            <Mid2>
+                <Placeholder height="150px" image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
+            </Mid2>
+            {/* <Mid3>
+                <RecipeButton Link href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
+            </Mid3> */}
+        </MiddleContainer>
+        
+            <ButtonContainer>
+                <RecipeButton onClick={()=>window.open("https://www.dinneratthezoo.com/beef-and-broccoli-stir-fry/")}></RecipeButton>
+            </ButtonContainer>
+
+        <EndSection>                
+
+
+            <FunFactWindow ptext={"Preserve produce. Produce doesn’t have to be tossed just because it’s reaching the end of its peak. Soft fruit can be used in smoothies; wilting vegetables can be used in soups, etc."}> </FunFactWindow>
+        </EndSection>
+
+        <MenuContainer>
+            <Menu></Menu>
+        </MenuContainer>
+    </RecipeContainer>  
+}

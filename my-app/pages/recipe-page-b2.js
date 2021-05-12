@@ -27,7 +27,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
-
+    htext = "DID YOU KNOW?",
+    ptext = "By buying local produce, you support family farmers and small businesses in your community. You also help fight pollution by reducing delivery distances for trucks and other vehicles."
     
 }) {
 
@@ -61,7 +62,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow ptext = {"By buying local produce, you support family farmers and small businesses in your community. You also help fight pollution by reducing delivery distances for trucks and other vehicles."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

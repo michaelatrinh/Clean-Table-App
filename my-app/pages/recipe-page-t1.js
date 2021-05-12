@@ -94,7 +94,6 @@ const MenuContainer = styled.div`
     flex-grow: 0;
 `;
 
-
 export default function RecipePage({
     recipeimage = "/teriyaki-tofu.jpeg",
     recipetitle = "Teriyaki Peanut Tofu with Stir Fried Veggies & Brown Rice",
@@ -116,9 +115,7 @@ export default function RecipePage({
 
     subtitle = "Main Ingredients",
 
-    
 }) {
-
 
       return <RecipeContainer>
           <HeaderContainer>

@@ -114,7 +114,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
-
+    htext = "DID YOU KNOW?",
+    ptext = "Many farmers happily accept food scraps for feeding pigs or adding to a compost heap."
     
 }) {
 
@@ -148,7 +149,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow  ptext = {"Many farmers happily accept food scraps for feeding pigs or adding to a compost heap."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

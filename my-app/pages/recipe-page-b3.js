@@ -114,6 +114,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "Donate what you won’t use. Never going to eat that can of beans? Donate it to a food kitchen before it expires so it can be consumed by someone who needs it."
 
     
 }) {
@@ -148,7 +150,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow  ptext = {"Donate what you won’t use. Never going to eat that can of beans? Donate it to a food kitchen before it expires so it can be consumed by someone who needs it."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>
