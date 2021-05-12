@@ -7,7 +7,7 @@ const PlaceholderUI = ({
   image3 = "/carrot.png",
 
   label1 = "BROCCOLI",
-  label2 = "ONION",
+  label2 = "CARROT",
   label3 = "CARROT",
 
 
@@ -15,7 +15,9 @@ const PlaceholderUI = ({
 
   title = "VEGETABLES",
 
-  boxshadow = "0px 4px 5px rgba(0, 0, 0, 0.3)",
+  boxshadow1 = "0px 4px 5px rgba(0, 0, 0, 0.3)",
+  boxshadow2 = "0px 4px 5px rgba(0, 0, 0, 0.3)",
+  boxshadow3 = "0px 4px 5px rgba(0, 0, 0, 0.3)",
 
   widthA = "50px",
   widthB = "50px",
@@ -23,7 +25,9 @@ const PlaceholderUI = ({
 
   height = "180px",
 
-  onClickA = ()=>{}
+  onClickA = ()=>{},
+  onClickB = ()=>{},
+  onClickC = ()=>{}
 
 }) => {
 
@@ -31,18 +35,18 @@ const PlaceholderUI = ({
     <PToprow> {subtitle}</PToprow>
 
     <PMiddlerow>
-        <FoodIcon onClick={onClickA} shadow={boxshadow}>
+        <FoodIcon onClick={onClickA} shadow={boxshadow1}>
             <ImageDiv>
                 <Img src={image1} width={widthA} alt="image1"></Img>                
             </ImageDiv>
             
             <BottomDiv>
-                <Label>{label1}</Label>                
+                <Label>{label1} </Label>                
             </BottomDiv>
 
         </FoodIcon>
 
-        <FoodIcon shadow={boxshadow}>
+        <FoodIcon onClick={onClickB} shadow={boxshadow2}>
             <ImageDiv>
                 <Img src={image2} width={widthB} alt="image2"></Img>                
             </ImageDiv>
@@ -52,13 +56,13 @@ const PlaceholderUI = ({
             </BottomDiv>
         </FoodIcon>
 
-        <FoodIcon shadow={boxshadow}>
+        <FoodIcon onClick={onClickC} shadow={boxshadow3}>
             <ImageDiv>
                 <Img src={image3} width={widthC} height="60px" alt="image3"></Img>                
             </ImageDiv>
 
             <BottomDiv>
-                <Label>{label3}</Label>                
+                <Label>{label3} bgcolor={bgcolor}</Label>                
             </BottomDiv>
         </FoodIcon>
     </PMiddlerow>
@@ -150,7 +154,7 @@ align-items: center;
 
   width: 90px;
   min-height: 20px;
-  background-color: #6FC3B2;
+  background-color: ${props=>props.bgcolor};
   color: #000000;
   font-family: "Manrope",sans-serif;
 //   padding:1px;

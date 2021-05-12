@@ -111,6 +111,7 @@ max-height: 100vh;
 
 const HeaderContainer = styled.div`
     display: flex;
+    align-items: center;
     flex-direction: column;
 `;
 
