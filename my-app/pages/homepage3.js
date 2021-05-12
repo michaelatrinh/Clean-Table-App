@@ -6,16 +6,17 @@ import {useState} from 'react';
 import HeaderUI from '../comps/Header';
 import HomeFoodTimerUI from '../comps/HomeFoodTimer';
 import NavBar from '../comps/NavBar/index2';
+import NavBarTab from '../comps/NavBarTab/index.js';
+import NewNavBar from '../comps/NewNavBar/index.js';
 import FunFactWindow from '../comps/FunFactWindow';
 import Congratulations from '../comps/congratulations-comp';
 
 const Main = styled.div`
     background-color: #E7F2F0;
-    height: 100vh;
-    width: 100vw;
+    height:876px;
+    width: 375px;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
 `;
 
@@ -24,7 +25,7 @@ const HeaderCont = styled.div`
 `;
 
 const SemiCircle = styled.div`
-    width: 100vw;
+    width: 375px;
     height: 100px;
     background-color: #59A091;
     border-top-left-radius: 500px; 
@@ -48,38 +49,30 @@ margin-bottom: 15px;
 align-items:center;
 `;
 
-const headerWelcome = styled.div`
+const NBar = styled.div`
+    z-index: 10;
+    margin-left: 110px;
 `;
 
 const FoodCont = styled.div`
-    display: flex;
-    flex-direction: column;
-// justify-content: space-evenly;
-    align-items: center;
-    flex: 2;
-    margin-top: 75px;
-// margin-bottom: 100px;
+margin-top: 40px;
+margin-bottom: 100px;
 
-// position: relative;
-// left: 20px;
+position: relative;
+left: 20px;
 
 `;
 
 const FunFact = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-
-//   position:relative;
-//   left: 35px;
-//   bottom: 50px;
+  position:relative;
+  left: 35px;
+  bottom: 50px;
 
 `;
 
 const MainCont = styled.div`
-height: 100vh;
-width: 100vw;
+max-height: 876px;
+max-width: 375px;
 
 display:flex;
 justify-content: center;
@@ -157,9 +150,9 @@ export default function Homepage() {
     </FunFact>
 
 
-    <div className="navbar">
-        <NavBar></NavBar>
-    </div>
+    <NBar>
+        <NavBarTab></NavBarTab>
+    </NBar>
     </Main>
     </MainCont>
 }

@@ -7,7 +7,7 @@ const PlaceholderUI = ({
   image3 = "/carrot.png",
 
   label1 = "BROCCOLI",
-  label2 = "ONION",
+  label2 = "CARROT",
   label3 = "CARROT",
 
 
@@ -41,7 +41,7 @@ const PlaceholderUI = ({
             </ImageDiv>
             
             <BottomDiv>
-                <Label>{label1}</Label>                
+                <Label>{label1} </Label>                
             </BottomDiv>
 
         </FoodIcon>
@@ -62,7 +62,7 @@ const PlaceholderUI = ({
             </ImageDiv>
 
             <BottomDiv>
-                <Label>{label3}</Label>                
+                <Label>{label3} bgcolor={bgcolor}</Label>                
             </BottomDiv>
         </FoodIcon>
     </PMiddlerow>
@@ -154,7 +154,7 @@ align-items: center;
 
   width: 90px;
   min-height: 20px;
-  background-color: #6FC3B2;
+  background-color: ${props=>props.bgcolor};
   color: #000000;
   font-family: "Manrope",sans-serif;
 //   padding:1px;
