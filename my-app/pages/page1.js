@@ -34,7 +34,7 @@ const FirstPageContainer = styled.div`
         font-weight: bold;
         color: #302B40;
     }
-
+  
     p{
         color: #302B40;
     }
