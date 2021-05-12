@@ -156,16 +156,16 @@ export default function PantryAddProtein({
 }
 
 const PageContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
-    background-color: #E7F2F0;
-    width: 100vw;
-    // max-width: 100vw;
-    height: 100vh;
-    // max-height: 100vh;
+background-color: #E7F2F0;
+width: 100vw;
+max-width: 100vw;
+height: 100vh;
+max-height: 100vh;
 `;
 
 const SecondPageContainer = styled.div`

@@ -69,16 +69,16 @@ export default function RecipePage({
 }
 
 const RecipeContainer = styled.div`
-width: 100vw;
-height: 100vh;
-    background-color: #E7F2F0;
-    margin: 100px;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
-    box-shadow: 5px 1px 30px 5px rgba(0, 0, 0, 0.5);
+background-color: #E7F2F0;
+width: 100vw;
+max-width: 100vw;
+height: 100vh;
+max-height: 100vh;
 `;
 
 const HeaderContainer = styled.div`
