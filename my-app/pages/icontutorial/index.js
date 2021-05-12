@@ -26,30 +26,30 @@ text-align: center;
 
 const HeaderCont = styled.div `
 position: relative;
-top: -85px;
+top: -155px;
 `;
 
 const Downarrow1 = styled.div`
 position:relative;
-left: 70px;
+left: 85px;
 bottom: 30px;
 `;
 
 const Downarrow2 = styled.div`
 position:relative;
-left: 205px;
+left: 270px;
 bottom: 73px;
 `;
 
 const Texttop1 = styled.div`
 position:relative;
-left: 60px;
-bottom: 20px;
+left: 70px;
+bottom: 15px;
 
 {
-   -webkit-animation: PULSE 2s infinite; 
+   -webkit-animation: PULSE 2.5s infinite; 
    
-   -ms-animation: PULSE 2s infinite;
+   -ms-animation: PULSE 2.5s infinite;
    
    animation: PULSE 2.25s infinite; 
  }
@@ -75,15 +75,17 @@ bottom: 20px;
 
 const Texttop2 = styled.div`
 position:relative;
-left: 180px;
+left: 99px;
 bottom: 40px;
 
+text-align:center;
+
 {
-    -webkit-animation: PULSE 2s infinite; 
+    -webkit-animation: PULSE 2.25s infinite; 
     
-    -ms-animation: PULSE 2s infinite;
+    -ms-animation: PULSE 2.25s infinite;
     
-    animation: PULSE 2.25s infinite; 
+    animation: PULSE 2.5s infinite; 
   }
   
 
@@ -105,7 +107,7 @@ bottom: 40px;
 
 const UpArrow1 = styled.div`
 position:relative;
-left:135px;
+left:174px;
 bottom: 45px;
 
 `;
@@ -118,15 +120,15 @@ bottom: 88px;
 
 const Textbot1 = styled.div`
 position:relative;
-left:-36px;
-bottom: 80px;
+left:-1px;
+bottom: 30px;
 
 text-align:center;
 
 {
-    -webkit-animation: PULSE 2s infinite; 
+    -webkit-animation: PULSE 2.5s infinite; 
     
-    -ms-animation: PULSE 2s infinite;
+    -ms-animation: PULSE 2.5s infinite;
     
     animation: PULSE 2.25s infinite; 
   }
@@ -156,11 +158,11 @@ bottom: 122px;
 text-align:center;
 
 {
-    -webkit-animation: PULSE 2s infinite; 
+    -webkit-animation: PULSE 1.2s infinite; 
     
-    -ms-animation: PULSE 2s infinite;
+    -ms-animation: PULSE 1.2s infinite;
     
-    animation: PULSE 2.25s infinite; 
+    animation: PULSE 1.25s infinite; 
   }
   
 
@@ -187,18 +189,33 @@ top:10px;
 
 const MoreInfo = styled.div`
 position: relative;
-top:-30px;
+top:20px;
 
 margin-left: 40px;
 margin-right:40px
 
 `;
 
-const Start = styled.div`
+const Start = styled.button`
 position:relative;
-left: 130px;
+left: 95px;
+top:70px;
 
+font-size:18px;
+color:white;
+background-color:#59A091;
+border:none;
+border-radius:2px;
 
+padding-left: 30px;
+padding-right: 30px;
+padding-top: 15px;
+padding-bottom: 15px;
+`;
+
+const AllContent = styled.div`
+position:relative;
+top:-60px;
 `;
 
 export default function NavBarTutPage({
@@ -211,6 +228,8 @@ export default function NavBarTutPage({
     <HeaderCont>
         <HeaderUI></HeaderUI>
     </HeaderCont>
+
+    <AllContent>
     
     <TextContain>
         <PageTitle>{title}</PageTitle>
@@ -223,7 +242,7 @@ export default function NavBarTutPage({
     </Texttop1>
 
     <Texttop2>
-        <div>3. MY PANTRY</div>
+        <div>3. MORE <br></br> INFO</div>
     </Texttop2>
 
     <Downarrow1>
@@ -235,30 +254,25 @@ export default function NavBarTutPage({
     </Downarrow2>
 
     <NavBarContainer>
-     <img width="290px" height="65px" src="/Screen Shot 2021-05-10 at 10.09.28 PM.png"></img>
+     <img width="290px" height="65px" src="/NEWnavBar.png"></img>
    </NavBarContainer>
 
    <UpArrow1>
     <img width="30px" height="40px" src="/uparrow.png"></img>
     </UpArrow1>
 
-    <UpArrow2>
-    <img width="30px" height="40px" src="/uparrow.png"></img>
-    </UpArrow2>
+    
 
     <Textbot1>
         <div>2. RECIPE <br></br> GENERATOR</div>
     </Textbot1>
 
-    <Textbot2>
-        <div>4. MORE<br></br>INFO</div>
-    </Textbot2>
 
     </TextandNav>
 
     <MoreInfo>
         <div>
-            1. HOME: Click on this icon to bring you to the Homepage where you can see which items need to be used based on thier expiration date.
+            1. HOME: Click on this icon to bring you to the Homepage where you can see which items need to be used based on thier expiration date. This is where you can add items to your pantry too!
             
         </div>
         <br></br>
@@ -267,17 +281,15 @@ export default function NavBarTutPage({
         </div>
         <br></br>
         <div>
-            3. MY PANTRY: Click on this icon to see what you have in your pantry or add new items to your pantry! Remember to only purchase new produce when you've used up all the old produce!
-        </div>
-        <br></br>
-        <div>
-            4. MORE INFO: Want to learn more about food waste? Click on this icon to be navigated to a fun and interactive infographic all about food waste in Canada!
+            3. MORE INFO: Want to learn more about food waste? Click on this icon to be navigated to a fun and interactive infographic all about food waste in Canada!
         </div>
     </MoreInfo>
 
     <Start>
-        <button>Let's Get Started</button>
+        <div>Let's Get Started</div>
     </Start>
+
+    </AllContent>
 
         </PageContainer>
 

@@ -99,6 +99,7 @@ export default function Results(){
     }, []);
 
     return <div>
+        {text}
         <Button text="Generate Recipe" onClick={()=>router.push("/options/all")} />
     </div>
 }

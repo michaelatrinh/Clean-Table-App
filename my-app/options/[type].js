@@ -105,5 +105,19 @@ const HandleEnd = () => {
     console.log(options);
 
     sessionStorage.setItem("options", JSON.stringify(options));
+    router.push ('/result')
 }
+
+return <Cont>
+    <div>
+        <Button text="Generate Recipe" onClick={()=>router.push("/options/Protiens")}/>
+        <Button text="Generate Recipe" onClick={()=>router.push("/options/Carbohydrates")}/>
+        <Button text="Generate Recipe" onClick={()=>router.push("/options/Vegetables")}/>
+    </div>
+
+    <div>
+        {end === true && <Button onClick={HandleEnd}/>}
+    </div>
+</Cont>
+
 }

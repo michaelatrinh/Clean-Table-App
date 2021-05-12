@@ -116,6 +116,6 @@ left:70px;
  align-items: center;
  justify-content: center;
  position:relative;
-    bottom:35px;
+ bottom:35px;
  `;
 
