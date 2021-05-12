@@ -26,20 +26,53 @@ export default function IngredientPickerPage({
     recipebutton= "generate recipe",
 
 }) {
-    const [clickStateA, setClickStateA] = useState(false);
-    const [clickStateB, setClickStateB] = useState(false);
-    const [clickStateC, setClickStateC] = useState(false);
-    var newBoxShadowA = "0px 4px 5px rgba(0, 0, 0, 0.3)";
-    var newBoxShadowB = "0px 4px 5px rgba(0, 0, 0, 0.3)";
-    var newBoxShadowC = "0px 4px 5px rgba(0, 0, 0, 0.3)";
-    if(clickStateA){
-        newBoxShadowA = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
+    const [clickStateA1, setClickStateA1] = useState(false);
+    const [clickStateA2, setClickStateA2] = useState(false);
+    const [clickStateA3, setClickStateA3] = useState(false);
+
+    const [clickStateB1, setClickStateB1] = useState(false);
+    const [clickStateB2, setClickStateB2] = useState(false);
+    const [clickStateB3, setClickStateB3] = useState(false);
+
+    const [clickStateC1, setClickStateC1] = useState(false);
+    const [clickStateC2, setClickStateC2] = useState(false);
+    const [clickStateC3, setClickStateC3] = useState(false);
+
+    var newBoxShadowA1 = "0px 4px 5px rgba(0, 0, 0, 0.3)";
+    var newBoxShadowA2 = "0px 4px 5px rgba(0, 0, 0, 0.3)";
+    var newBoxShadowA3 = "0px 4px 5px rgba(0, 0, 0, 0.3)";
+
+    var newBoxShadowB1 = "0px 4px 5px rgba(0, 0, 0, 0.3)";
+    var newBoxShadowB2 = "0px 4px 5px rgba(0, 0, 0, 0.3)";
+    var newBoxShadowB3 = "0px 4px 5px rgba(0, 0, 0, 0.3)";
+
+    var newBoxShadowC1 = "0px 4px 5px rgba(0, 0, 0, 0.3)";
+    var newBoxShadowC2 = "0px 4px 5px rgba(0, 0, 0, 0.3)";
+    var newBoxShadowC3 = "0px 4px 5px rgba(0, 0, 0, 0.3)";
+
+    if(clickStateA1){
+        newBoxShadowA1 = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)";
+        newBoxShadowB1 = "0px 4px 5px rgba(0, 0, 0, 0.3)";
+    } else if(clickStateA2){
+        newBoxShadowA2 = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
+    } else if(clickStateA3){
+        newBoxShadowA3 = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
     }    
-    if(clickStateB){
-        newBoxShadowB = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
+
+    if(clickStateB1){
+        newBoxShadowB1 = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
+    } else if(clickStateB2){
+        newBoxShadowB2 = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
+    } else if(clickStateB3){
+        newBoxShadowB3 = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
     }    
-    if(clickStateC){
-        newBoxShadowC = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
+
+    if(clickStateC1){
+        newBoxShadowC1 = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
+    } else if(clickStateC2){
+        newBoxShadowC2 = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
+    } else if(clickStateC3){
+        newBoxShadowC3 = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
     }
 
     return <RecipeContainer>
@@ -54,15 +87,15 @@ export default function IngredientPickerPage({
         <FoodButtonContainer>
             <h2>PICK YOUR PROTEIN</h2>
 
-            <Placeholder onClickA={()=>setClickStateA(!clickStateA)} image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title="PROTEINS" boxshadow={newBoxShadowA} widthA="65px" widthB="65px" widthC="79px" height="150px"></Placeholder>
+            <Placeholder onClickA={()=>setClickStateA1(!clickStateA1)} onClickB={()=>setClickStateB1(!clickStateB1)} onClickC={()=>setClickStateC1(!clickStateC1)} image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title="PROTEINS" boxshadow1={newBoxShadowA1} boxshadow2={newBoxShadowB1} boxshadow3={newBoxShadowC1} widthA="65px" widthB="65px" widthC="79px" height="150px"></Placeholder>
 
             <h2>PICK YOUR CARBOHYDRATES</h2>
 
-            <Placeholder onClickA={()=>setClickStateB(!clickStateB)} image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} title="CARBOHYDRATES" boxshadow={newBoxShadowB} widthA="65px" widthB="66px" widthC="67px" height="150px"></Placeholder>
+            <Placeholder onClickA={()=>setClickStateA2(!clickStateA2)} onClickB={()=>setClickStateB2(!clickStateB2)} onClickC={()=>setClickStateC2(!clickStateC2)} image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} title="CARBOHYDRATES" boxshadow1={newBoxShadowA2} boxshadow2={newBoxShadowB2} boxshadow3={newBoxShadowC2} widthA="65px" widthB="66px" widthC="67px" height="150px"></Placeholder>
 
             <h2>PICK YOUR VEGETABLES</h2>
 
-            <Placeholder onClickA={()=>setClickStateC(!clickStateC)} boxshadow={newBoxShadowC} widthA="68px" widthB="55px" widthC="56px" height="150px"></Placeholder>
+            <Placeholder onClickA={()=>setClickStateA3(!clickStateA3)} onClickB={()=>setClickStateB3(!clickStateB3)} onClickC={()=>setClickStateC3(!clickStateC3)} boxshadow1={newBoxShadowA3} boxshadow2={newBoxShadowB3} boxshadow3={newBoxShadowC3} widthA="68px" widthB="55px" widthC="56px" height="150px"></Placeholder>
         </FoodButtonContainer>
 
         <GenerateContainer>

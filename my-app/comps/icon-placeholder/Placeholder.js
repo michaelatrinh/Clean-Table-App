@@ -15,7 +15,9 @@ const PlaceholderUI = ({
 
   title = "VEGETABLES",
 
-  boxshadow = "0px 4px 5px rgba(0, 0, 0, 0.3)",
+  boxshadow1 = "0px 4px 5px rgba(0, 0, 0, 0.3)",
+  boxshadow2 = "0px 4px 5px rgba(0, 0, 0, 0.3)",
+  boxshadow3 = "0px 4px 5px rgba(0, 0, 0, 0.3)",
 
   widthA = "50px",
   widthB = "50px",
@@ -23,8 +25,9 @@ const PlaceholderUI = ({
 
   height = "180px",
 
-  bgcolor = "#6FC3B2",
-  onClickA = ()=>{}
+  onClickA = ()=>{},
+  onClickB = ()=>{},
+  onClickC = ()=>{}
 
 }) => {
 
@@ -32,7 +35,7 @@ const PlaceholderUI = ({
     <PToprow> {subtitle}</PToprow>
 
     <PMiddlerow>
-        <FoodIcon onClick={onClickA} shadow={boxshadow}>
+        <FoodIcon onClick={onClickA} shadow={boxshadow1}>
             <ImageDiv>
                 <Img src={image1} width={widthA} alt="image1"></Img>                
             </ImageDiv>
@@ -43,7 +46,7 @@ const PlaceholderUI = ({
 
         </FoodIcon>
 
-        <FoodIcon shadow={boxshadow}>
+        <FoodIcon onClick={onClickB} shadow={boxshadow2}>
             <ImageDiv>
                 <Img src={image2} width={widthB} alt="image2"></Img>                
             </ImageDiv>
@@ -53,7 +56,7 @@ const PlaceholderUI = ({
             </BottomDiv>
         </FoodIcon>
 
-        <FoodIcon shadow={boxshadow}>
+        <FoodIcon onClick={onClickC} shadow={boxshadow3}>
             <ImageDiv>
                 <Img src={image3} width={widthC} height="60px" alt="image3"></Img>                
             </ImageDiv>
