@@ -5,12 +5,14 @@ import {useState} from 'react';
 
 import HeaderUI from '../comps/Header';
 import HomeFoodTimerUI from '../comps/HomeFoodTimer';
+import AddItem from '../comps/HomeFoodTimerAdd';
 import NavBar from '../comps/NavBar';
 import FunFactWindow from '../comps/FunFactWindow';
 import Congratulations from '../comps/congratulations-comp';
+import {useRouter} from 'next/router';
 
 export default function Homepage() {
-
+// --- STATE CHANGE FOR THE CONGRATULATIONS WINDOW --------------
     const [okayState, setOkayState] = useState(false);
 
     var okaybutton = "336px"
@@ -18,16 +20,30 @@ export default function Homepage() {
         var okaybutton = "0px"
     }
 
-    /*function handleClick() {
-
-        setOkayState(!okayState) 
-
-    }*/
-
     const HandleClick = () => {
         setOkayState(!okayState)
     }
     
+// --- STATE CHANGE FOR THE ADD NEW ITEM BUTTON -----------------
+    const [addNew, setAddNew] = useState(false);
+
+    var newBoxShadow = "0px 4px 5px -2px";
+    if(addNew){
+        var newBoxShadow = "inset 0px 0px 5px -1px"
+    }
+
+    const HandleAddNewClick = () => {
+        setAddNew(!addNew);
+        setTimeout(NextPage, 150)
+    }
+
+    const router = useRouter();
+    const NextPage = () => {
+        const routeTo = "/pantry-pick-category";
+        router.push(routeTo);
+    }
+
+// --- PAGE -----------------------------------------------------
     return <MainCont>
     <Main>
     
@@ -59,18 +75,22 @@ export default function Homepage() {
         </FoodTimer>
 
         <FoodTimer>
-            <HomeFoodTimerUI DAYS="2 DAYS" ITEM="ONION" bgcolordark="#FFC32E" bgcolorlight="#FFE4A3" barwidth="164px"
+            <HomeFoodTimerUI DAYS="2 DAYS" ITEM="ONION" bgcolordark="#FFC32E" bgcolorlight="#FFE4A3" barwidth="164px" darkWidth="164px"
             />
         </FoodTimer>
 
         <FoodTimer>
-            <HomeFoodTimerUI DAYS="12 DAYS" ITEM="CARROT" bgcolordark="#6FC3B2" bgcolorlight="#D4E9E5" barwidth="235px"
+            <HomeFoodTimerUI DAYS="12 DAYS" ITEM="CARROT" bgcolordark="#6FC3B2" bgcolorlight="#D4E9E5" barwidth="235px" darkWidth="235px"
             />
         </FoodTimer>
 
         <FoodTimer>
-            <HomeFoodTimerUI DAYS="18 DAYS" ITEM="POTATO" bgcolordark="#6FC3B2" bgcolorlight="#D4E9E5" barwidth="292px"
+            <HomeFoodTimerUI DAYS="18 DAYS" ITEM="POTATO" bgcolordark="#6FC3B2" bgcolorlight="#D4E9E5" barwidth="292px" darkWidth="292px"
             />
+        </FoodTimer>
+
+        <FoodTimer>
+            <AddItem onClickA={HandleAddNewClick} boxShadow={newBoxShadow}></AddItem>
         </FoodTimer>
         </FoodCont>
 

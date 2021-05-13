@@ -7,7 +7,7 @@ const PlaceholderUI = ({
   image3 = "/carrot.png",
 
   label1 = "BROCCOLI",
-  label2 = "CARROT",
+  label2 = "ONION",
   label3 = "CARROT",
 
 
@@ -18,6 +18,10 @@ const PlaceholderUI = ({
   boxshadow1 = "0px 4px 5px rgba(0, 0, 0, 0.3)",
   boxshadow2 = "0px 4px 5px rgba(0, 0, 0, 0.3)",
   boxshadow3 = "0px 4px 5px rgba(0, 0, 0, 0.3)",
+
+  bgcolor1 = "#F16D6D",
+  bgcolor2 = "#FFC32E",
+  bgcolor3 = "#59A091",
 
   widthA = "50px",
   widthB = "50px",
@@ -40,7 +44,7 @@ const PlaceholderUI = ({
                 <Img src={image1} width={widthA} alt="image1"></Img>                
             </ImageDiv>
             
-            <BottomDiv>
+            <BottomDiv bgcolor={bgcolor1}>
                 <Label>{label1} </Label>                
             </BottomDiv>
 
@@ -51,7 +55,7 @@ const PlaceholderUI = ({
                 <Img src={image2} width={widthB} alt="image2"></Img>                
             </ImageDiv>
 
-            <BottomDiv>
+            <BottomDiv bgcolor={bgcolor2}>
                 <Label>{label2}</Label>                
             </BottomDiv>
         </FoodIcon>
@@ -61,8 +65,8 @@ const PlaceholderUI = ({
                 <Img src={image3} width={widthC} height="60px" alt="image3"></Img>                
             </ImageDiv>
 
-            <BottomDiv>
-                <Label>{label3} bgcolor={bgcolor}</Label>                
+            <BottomDiv bgcolor={bgcolor3}>
+                <Label>{label3}</Label>                
             </BottomDiv>
         </FoodIcon>
     </PMiddlerow>
@@ -154,7 +158,7 @@ align-items: center;
 
   width: 90px;
   min-height: 20px;
-  background-color: ${props=>props.bgcolor};
+//   background-color: ${props=>props.bgcolor};
   color: #000000;
   font-family: "Manrope",sans-serif;
 //   padding:1px;
@@ -178,6 +182,9 @@ const BottomDiv = styled.div`
     justify-content: center;
     align-items: center;
     flex-grow: 0;
+    background-color: ${props=>props.bgcolor};
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
 `;
 
 const Img = styled.img`
