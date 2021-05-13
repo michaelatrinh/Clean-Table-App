@@ -83,7 +83,7 @@ export default function PantryAddProtein({
     // const router = useRouter();
     
     const NextPage = () => {
-        var routeTo = "/pantry";
+        var routeTo = "/homepage";
         router.push(routeTo);
     }
 
