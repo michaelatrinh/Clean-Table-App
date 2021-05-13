@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {useRouter} from 'next/router';
 
 import AddItem from '../comps/HomeFoodTimerAdd';
@@ -10,7 +10,18 @@ import NavBar from '../comps/NavBar/index2';
 import FunFactWindow from '../comps/FunFactWindow';
 import Congratulations from '../comps/congratulations-comp';
 
+
 export default function Homepage() {
+
+    const [food, setFood] = useState(null);
+
+    useEffect(()=>{
+        if(process.browser){
+            var item = sessionStorage.getItem("Item");
+            setFood(item);
+        }
+    }, []);
+
 // --- STATE CHANGE FOR THE ADD NEW ITEM BUTTON -----------------
     const [addNew, setAddNew] = useState(false);
 
@@ -48,6 +59,10 @@ export default function Homepage() {
 
 
     <FoodCont>
+        <div>
+            {food}
+        </div>
+
         <FoodTimer>
             <HomeFoodTimerUI 
             DAYS="1 DAYS"

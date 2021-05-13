@@ -1,20 +1,126 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import FoodButton from '../comps/FoodButtonUI';
-import ProgressBar from '../comps/ProgressBar';
-import Heading from '../comps/Header';
-import EmptyBox from '../comps/EmptyBox';
-import FoodIcon from '../comps/FoodButtonPantryUI';
-import NavBar from '../comps/NavBar/index2.js';
-import FunFact from '../comps/FunFactWindow';
-import ConfirmWindow from '../comps/ConfirmationWindow';
-import ProteinCol from '../comps/FoodButtonProtein';
+import FoodButton from '../../comps/FoodButtonUI';
+import ProgressBar from '../../comps/ProgressBar';
+import Heading from '../../comps/Header';
+import EmptyBox from '../../comps/EmptyBox';
+import FoodIcon from '../../comps/FoodButtonPantryUI';
+import NavBar from '../../comps/NavBar/index2.js';
+import FunFact from '../../comps/FunFactWindow';
+import ConfirmWindow from '../../comps/ConfirmationWindow';
+import ProteinCol from '../../comps/FoodButtonProtein';
+import CarbCol from '../../comps/FoodButtonCarbs';
+import VegeCol from '../../comps/FoodButtonVege';
+import BlankCol from '../../comps/FoodButtonColBlank';
 import {useRouter} from 'next/router';
+
+// --- FOOD BUTTON PROP DYNAMIC OPTION ROUTING ------------------
+var item = null;
+var options = {
+    protein:null,
+    carbohydrate:null,
+    vegetable:null
+};
+var col = {
+    option1:"",
+    option2:"",
+    option3:""
+};
+var pageTitle = {
+    option1:""
+};
+var pageDesc = {
+    option1:""
+};
+var foodName = {
+    option1:"",
+    option2:"",
+    option3:""
+};
+var foodImage = {
+    option1:"",
+    option2:"",
+    option3:""
+}
+var imgWidth = {
+    option1:"",
+    option2:"",
+    option3:""
+}
+var imgHeight = {
+    option1:"",
+    option2:"",
+    option3:""
+}
 
 export default function PantryAddProtein({
     title = "PROTEINS",
     description = "Add a PROTEIN to your pantry!"
 }){
+// --- DYNAMIC ROUTING OPTIONS ----------------------------------
+    const router = useRouter();
+    const {type} = router.query;
+
+    if(type === "protein"){
+        pageTitle.option1 = "PROTEINS";
+        pageDesc.option1 = "Add a PROTEIN to your pantry!";
+        foodImage.option1 = "/chicken_drumstick.png";
+        foodImage.option2 = "/shaved_beef.png";
+        foodImage.option3 = "/tofu_squares.png";
+        foodName.option1 = "CHICKEN";
+        foodName.option2 = "BEEF";
+        foodName.option3 = "TOFU";
+        imgWidth.option1 = "100px";
+        imgWidth.option2 = "110px";
+        imgWidth.option3 = "126px";
+        imgHeight.option1 = "100px";
+        imgHeight.option2 = "90px";
+        imgHeight.option3 = "99px";
+        col.option1 = "Chicken";
+        col.option2 = "Beef";
+        col.option3 = "Tofu";
+    }    
+    
+    if(type === "carbohydrate"){
+        pageTitle.option1 = "CARBOHYDRATES";
+        pageDesc.option1 = "Add a CARBOHYDRATE to your pantry!";
+        foodImage.option1 = "/rice_bowl.png";
+        foodImage.option2 = "/pasta_dish.png";
+        foodImage.option3 = "/potatoes.png";
+        foodName.option1 = "RICE";
+        foodName.option2 = "PASTA";
+        foodName.option3 = "POTATOES";
+        imgWidth.option1 = "107px";
+        imgWidth.option2 = "112px";
+        imgWidth.option3 = "118px";
+        imgHeight.option1 = "78px";
+        imgHeight.option2 = "90px";
+        imgHeight.option3 = "106px";
+        col.option1 = "Rice";
+        col.option2 = "Pasta";
+        col.option3 = "Potatoes";
+    }    
+    
+    if(type === "vegetable"){
+        pageTitle.option1 = "VEGETABLES";
+        pageDesc.option1 = "Add a VEGETABLE to your pantry!";
+        foodImage.option1 = "/broccoli.png";
+        foodImage.option2 = "/onion.png";
+        foodImage.option3 = "/carrot.png";
+        foodName.option1 = "BROCCOLI";
+        foodName.option2 = "ONION";
+        foodName.option3 = "CARROT";
+        imgWidth.option1 = "107px";
+        imgWidth.option2 = "93px";
+        imgWidth.option3 = "86px";
+        imgHeight.option1 = "99px";
+        imgHeight.option2 = "91px";
+        imgHeight.option3 = "89px";
+        col.option1 = "Broccoli";
+        col.option2 = "Onion";
+        col.option3 = "Carrot";
+    }
+
 // === POP UP CONFIRMATION WINDOW STATE CHANGE ==================
     const [greyState, setGreyState] = useState(false);
     var width = 0;
@@ -44,22 +150,28 @@ export default function PantryAddProtein({
         newDarken3 = "inset 0 0 10px 5px #C4C4C4";
     }
 
-    const HandleClick1 = () => {
+    const HandleClick1 = (option) => {
         setClickState1(!clickState1);
         setTimeout(NextStep, 150);
+        item = option;
+        sessionStorage.setItem("Item", item);
     }    
     
-    const HandleClick2 = () => {
+    const HandleClick2 = (option) => {
         setClickState2(!clickState2);
         setTimeout(NextStep, 150);
+        item = option;
+        sessionStorage.setItem("Item", item);
     }
     
-    const HandleClick3 = () => {
+    const HandleClick3 = (option) => {
         setClickState3(!clickState3);
         setTimeout(NextStep, 10);
+        item = option;
+        sessionStorage.setItem("Item", item);
     }
     
-    const router = useRouter();
+    
     
     const NextStep = () => {
         setGreyState(true);
@@ -128,12 +240,14 @@ export default function PantryAddProtein({
             </HeaderContainer>
 
             <TextContainer>
-                <PageTitle>{title}</PageTitle>
-                <PageDescriptor>{description}</PageDescriptor>
+                <PageTitle>{pageTitle.option1}</PageTitle>
+                <PageDescriptor>{pageDesc.option1}</PageDescriptor>
             </TextContainer>
 
             <FoodButtonContainer>
-                <ProteinCol onClickA={HandleClick1} onClickB={HandleClick2} onClickC={HandleClick3} darken1={newDarken1} darken2={newDarken2} darken3={newDarken3}></ProteinCol>
+                <BlankCol onClickA={()=>HandleClick1(col.option1)} onClickB={()=>HandleClick2(col.option2)} onClickC={()=>HandleClick3(col.option3)} darken1={newDarken1} darken2={newDarken2} darken3={newDarken3} foodimage1={foodImage.option1} foodimage2={foodImage.option2} foodimage3={foodImage.option3} foodname1={foodName.option1} foodname2={foodName.option2} foodname3={foodName.option3} imagewidth1={imgWidth.option1} imagewidth2={imgWidth.option2} imagewidth3={imgWidth.option3} imageheight1={imgHeight.option1} imageheight2={imgHeight.option2} imageheight3={imgHeight.option3}></BlankCol>
+
+                {/* <ProteinCol onClickA={()=>HandleClick1(col.option1)} onClickB={()=>HandleClick2(col.option2)} onClickC={()=>HandleClick3(col.option3)} darken1={newDarken1} darken2={newDarken2} darken3={newDarken3}></ProteinCol> */}
 
                 {/* <FoodButton onClickA={HandleClick} foodname="CHICKEN" foodimage="/chicken_drumstick.png" imageheight="100px" imagewidth="100px" bgcolour="#6FC3B2" darken={newDarken}></FoodButton>
 
