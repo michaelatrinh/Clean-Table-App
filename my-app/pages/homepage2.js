@@ -10,6 +10,7 @@ import NavBar from '../comps/NavBar/index2';
 import FunFactWindow from '../comps/FunFactWindow';
 import Congratulations from '../comps/congratulations-comp';
 
+// --- NEW FOOD ITEM PROPS --------------------------------------
 var foodName = {
     option1:""
 };
@@ -28,6 +29,7 @@ var newDarkWidth = {
 
 export default function Homepage() {
 
+// --- DYNAMICALLY ADD A NEW FOOD ITEM SCENARIOS ----------------
     const [food, setFood] = useState(null);
 
     useEffect(()=>{
@@ -165,7 +167,7 @@ export default function Homepage() {
         <FoodTimer>
             <AddItem onClickA={HandleAddNewClick} boxShadow={newBoxShadow}></AddItem>
         </FoodTimer>
-        </FoodCont>
+    </FoodCont>
 
     <FunFact>
         <FunFactWindow
