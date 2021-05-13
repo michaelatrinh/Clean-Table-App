@@ -27,6 +27,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "If you want to save money while avoiding potentially harmful chemicals found in some skincare products, try preparing a scrub or mask at home using avocado, honey and more."
 
     
 }) {
@@ -59,7 +61,7 @@ export default function RecipePage({
       </ButtonContainer>
 
   <EndSection>                
-      <FunFactWindow></FunFactWindow>
+      <FunFactWindow     ptext = {"If you want to save money while avoiding potentially harmful chemicals found in some skincare products, try preparing a scrub or mask at home using avocado, honey and more."}></FunFactWindow>
   </EndSection>
 
   <MenuContainer>

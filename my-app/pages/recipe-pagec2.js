@@ -27,6 +27,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "Freezing food is one of the easiest ways to preserve it, and the types of food that take well to freezing are endless."
 
     
 }) {
@@ -56,7 +58,7 @@ export default function RecipePage({
         </ButtonContainer>
 
         <EndSection>
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow   ptext = {"Freezing food is one of the easiest ways to preserve it, and the types of food that take well to freezing are endless."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

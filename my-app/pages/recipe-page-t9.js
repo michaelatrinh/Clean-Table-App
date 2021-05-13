@@ -114,6 +114,8 @@ export default function RecipePage({
     label5 = "CHEESE",
     label6 = "PARSLEY",
     subtitle = "Main Ingredients:",
+    htext = "DID YOU KNOW?",
+    ptext = "While you may not think twice about scraping the leftover food on your plate into the trash, remember that food waste has a major impact on the environment."
 
     
 }) {
@@ -148,7 +150,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow  ptext = {"While you may not think twice about scraping the leftover food on your plate into the trash, remember that food waste has a major impact on the environment."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

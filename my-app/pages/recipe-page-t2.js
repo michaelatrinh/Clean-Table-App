@@ -115,6 +115,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "Making large pots of soup, stew, or chili can take a lot of the guesswork out during a busy week. Pick a recipe that’s hearty and flavorful."
 
     
 }) {
@@ -150,7 +152,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow  ptext = {"Making large pots of soup, stew, or chili can take a lot of the guesswork out during a busy week. Pick a recipe that’s hearty and flavorful."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

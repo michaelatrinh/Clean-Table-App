@@ -27,6 +27,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "Make your shopping list based on how many meals you’ll eat at home. Will you eat out this week? How often? Can reduce food waste."
 
     
 }) {
@@ -59,7 +61,7 @@ export default function RecipePage({
       </ButtonContainer>
 
   <EndSection>                
-      <FunFactWindow></FunFactWindow>
+      <FunFactWindow     ptext = {"Make your shopping list based on how many meals you’ll eat at home. Will you eat out this week? How often? Can reduce food waste."}></FunFactWindow>
   </EndSection>
 
   <MenuContainer>

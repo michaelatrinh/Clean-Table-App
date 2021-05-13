@@ -149,7 +149,6 @@ export default function RecipePage({
 
         <EndSection>                
 
-
             <FunFactWindow  ptext = {"Donate what you won’t use. Never going to eat that can of beans? Donate it to a food kitchen before it expires so it can be consumed by someone who needs it."}></FunFactWindow>
         </EndSection>
 

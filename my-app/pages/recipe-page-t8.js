@@ -114,6 +114,8 @@ export default function RecipePage({
     label5 = "CHEESE",
     label6 = "PARSLEY",
     subtitle = "Main Ingredients:",
+    htext = "DID YOU KNOW?",
+    ptext = "Out of the 1.3 billion pounds of pumpkins produced in the United States every year, most end up getting thrown away."
 
     
 }) {
@@ -148,7 +150,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow  ptext = {"Out of the 1.3 billion pounds of pumpkins produced in the United States every year, most end up getting thrown away."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

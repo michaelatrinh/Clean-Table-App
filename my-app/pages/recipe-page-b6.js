@@ -114,6 +114,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "Take stock of what you have in your fridge, and arrange it by its sell-by date. This way when you grab a yogurt, you’ll be sure to eat the oldest one first."
 
     
 }) {
@@ -148,7 +150,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow ptext = {"Take stock of what you have in your fridge, and arrange it by its sell-by date. This way when you grab a yogurt, you’ll be sure to eat the oldest one first."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

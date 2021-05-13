@@ -115,6 +115,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients:",
+    htext = "DID YOU KNOW?",
+    ptext = "If you are leaving town but still have good food in your kitchen, check with your neighbors."
 
     
 }) {
@@ -149,7 +151,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow     ptext = {"If you are leaving town but still have good food in your kitchen, check with your neighbors."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

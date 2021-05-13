@@ -24,6 +24,8 @@ const PlaceholderUI = ({
   widthC = "50px",
 
   height = "180px",
+ 
+  bgcolor = "#6FC3B2",
 
   onClickA = ()=>{},
   onClickB = ()=>{},
@@ -62,7 +64,8 @@ const PlaceholderUI = ({
             </ImageDiv>
 
             <BottomDiv>
-                <Label>{label3} bgcolor={bgcolor}</Label>                
+                <Label>{label3}</Label>  
+      
             </BottomDiv>
         </FoodIcon>
     </PMiddlerow>

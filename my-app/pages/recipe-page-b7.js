@@ -115,6 +115,9 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "Having a variety of beans, jarred vegetables like artichokes, sauces, and grains will make it easier to put left-over ingredients to use at the end of the week."
+
 
     
 }) {
@@ -149,7 +152,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow  ptext = {"Having a variety of beans, jarred vegetables like artichokes, sauces, and grains will make it easier to put left-over ingredients to use at the end of the week."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

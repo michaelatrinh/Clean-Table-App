@@ -115,6 +115,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients:",
+    htext = "DID YOU KNOW?",
+    ptext = "Did you know that rummaging through a bin of apples until you find the most perfect-looking one contributes to food waste?"
 
     
 }) {
@@ -149,7 +151,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow     ptext = {"Did you know that rummaging through a bin of apples until you find the most perfect-looking one contributes to food waste?"}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

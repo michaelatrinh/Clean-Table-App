@@ -27,6 +27,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "When eating out, a person can avoid food waste by asking for a meal that does not contain ingredients they do not enjoy."
 
     
 }) {
@@ -59,7 +61,7 @@ export default function RecipePage({
       </ButtonContainer>
 
     <EndSection>                
-        <FunFactWindow></FunFactWindow>
+        <FunFactWindow ptext= {"When eating out, a person can avoid food waste by asking for a meal that does not contain ingredients they do not enjoy."}></FunFactWindow>
     </EndSection>
 
     <MenuContainer>

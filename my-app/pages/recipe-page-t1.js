@@ -114,6 +114,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "Knowing the basic techniques in the kitchen, how to prepare certain things, and what flavors go well together will go a long way with making the most of your grocery shopping."
 
 }) {
 
@@ -146,7 +148,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow ptext = {"Knowing the basic techniques in the kitchen, how to prepare certain things, and what flavors go well together will go a long way with making the most of your grocery shopping."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

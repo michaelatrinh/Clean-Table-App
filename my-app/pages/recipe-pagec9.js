@@ -27,6 +27,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "If 25% of the food currently being lost or wasted globally were saved, it would be enough to feed 870 million people around the world."
 
     
 }) {
@@ -58,7 +60,7 @@ export default function RecipePage({
       </ButtonContainer>
 
   <EndSection>                
-      <FunFactWindow></FunFactWindow>
+      <FunFactWindow   ptext = {"If 25% of the food currently being lost or wasted globally were saved, it would be enough to feed 870 million people around the world."}></FunFactWindow>
   </EndSection>
 
   <MenuContainer>

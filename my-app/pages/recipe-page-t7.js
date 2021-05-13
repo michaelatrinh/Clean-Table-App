@@ -115,6 +115,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients:",
+    htext = "DID YOU KNOW?",
+    ptext = "Many nutrients are located in the outer layer of produce and in poultry skin, such as apple. Not only is eating the skin delicious, it’s economical and reduces your food waste impact."
 
     
 }) {
@@ -149,7 +151,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow  ptext = {"Many nutrients are located in the outer layer of produce and in poultry skin, such as apple. Not only is eating the skin delicious, it’s economical and reduces your food waste impact."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

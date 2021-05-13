@@ -115,6 +115,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "Set your fridge to the right temperature for the food that’s inside it. A too-cold fridge can cause some foods, like milk, greens, and cooked meat, to go bad more quickly."
 
     
 }) {
@@ -149,7 +151,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow  ptext = {"Set your fridge to the right temperature for the food that’s inside it. A too-cold fridge can cause some foods, like milk, greens, and cooked meat, to go bad more quickly."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

@@ -27,6 +27,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "If wasted food was a country, it would be the third largest producer of carbon dioxide in the world, after the United States and China."
 
     
 }) {
@@ -59,7 +61,7 @@ export default function RecipePage({
       </ButtonContainer>
 
   <EndSection>                
-      <FunFactWindow></FunFactWindow>
+      <FunFactWindow  ptext = {"If wasted food was a country, it would be the third largest producer of carbon dioxide in the world, after the United States and China."}></FunFactWindow>
   </EndSection>
 
   <MenuContainer>

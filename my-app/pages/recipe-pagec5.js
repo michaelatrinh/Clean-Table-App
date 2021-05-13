@@ -27,6 +27,9 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = " Excess food, scraps, and even some bones or other animal drippings are great ingredients for various stocks or broths."
+
 
     
 }) {
@@ -59,7 +62,7 @@ export default function RecipePage({
        </ButtonContainer>
 
         <EndSection>                
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow   ptext = {"Excess food, scraps, and even some bones or other animal drippings are great ingredients for various stocks or broths."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

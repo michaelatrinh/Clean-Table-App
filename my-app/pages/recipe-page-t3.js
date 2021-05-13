@@ -115,6 +115,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "If you did buy too much food for the week and you think it will go bad before you can enjoy it all, invite some friends over for dinner!"
 
     
 }) {
@@ -149,7 +151,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow     ptext = {"If you did buy too much food for the week and you think it will go bad before you can enjoy it all, invite some friends over for dinner!"}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

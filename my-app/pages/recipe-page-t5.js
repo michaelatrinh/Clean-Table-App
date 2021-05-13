@@ -115,6 +115,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients:",
+    htext = "DID YOU KNOW?",
+    ptext = "You can pickle, can, smoke, salt, vacuum-pack, or dry out lots of fresh fruit, vegetables, and meats. Home-pickled vegetables and homemade fruit jams make wonderful gifts, too."
 
     
 }) {
@@ -149,7 +151,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow     ptext = {"You can pickle, can, smoke, salt, vacuum-pack, or dry out lots of fresh fruit, vegetables, and meats. Home-pickled vegetables and homemade fruit jams make wonderful gifts, too."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

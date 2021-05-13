@@ -114,7 +114,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
-
+    htext = "DID YOU KNOW?",
+    ptext = "Shopping while hungry can lead to impulse buying, which ends up leaving you with more food than you need." 
     
 }) {
 
@@ -148,7 +149,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow ptext = {"Shopping while hungry can lead to impulse buying, which ends up leaving you with more food than you need."} ></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

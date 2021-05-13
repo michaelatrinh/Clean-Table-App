@@ -115,6 +115,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "Getting into the habit of taking your lunch to school or work will help you make the most of your leftovers. You’ll save money by not buying lunch every day."
 
     
 }) {
@@ -149,7 +151,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow ptext = {"Getting into the habit of taking your lunch to school or work will help you make the most of your leftovers. You’ll save money by not buying lunch every day."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

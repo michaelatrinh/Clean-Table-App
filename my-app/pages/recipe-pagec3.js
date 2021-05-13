@@ -27,6 +27,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "Composting leftover food is a beneficial way to reuse food scraps, turning food waste into energy for plants."
 
     
 }) {
@@ -59,7 +61,7 @@ export default function RecipePage({
         </ButtonContainer>
 
         <EndSection>
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow ptext = {"Composting leftover food is a beneficial way to reuse food scraps, turning food waste into energy for plants."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>

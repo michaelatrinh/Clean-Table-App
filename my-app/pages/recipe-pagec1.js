@@ -27,6 +27,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "Being more mindful of how hungry you actually are and practicing portion control are great ways to reduce food waste."
 
     
 }) {
@@ -59,7 +61,7 @@ export default function RecipePage({
             </ButtonContainer>
 
         <EndSection>                
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow     ptext = {"Being more mindful of how hungry you actually are and practicing portion control are great ways to reduce food waste."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>
