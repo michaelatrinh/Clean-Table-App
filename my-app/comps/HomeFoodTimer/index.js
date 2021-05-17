@@ -1,6 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const HomeFoodTimerUI = ({
+    DAYS="1 DAYS",
+    ITEM="CHICKEN",
+
+    bgcolordark="#F16D6D",
+    bgcolorlight="#FCD8D8",
+
+    darkWidth = "126px"
+}) => {
+
+    return <Container>
+        <HomeFoodTimerBar bgcolorlight={bgcolorlight}>
+            <SecondContainer>
+                <HomeFoodTimerDarkBar bgcolordark={bgcolordark} darkWidth={darkWidth}>
+                    <HomeFoodTimerDate>{DAYS}</HomeFoodTimerDate>
+                </HomeFoodTimerDarkBar>
+            </SecondContainer>
+
+            {/* <ThirdContainer>
+                <HomeFoodTimerItem>{ITEM}</HomeFoodTimerItem>
+            </ThirdContainer> */}
+        </HomeFoodTimerBar>
+
+        <ThirdContainer>
+            <HomeFoodTimerItem>{ITEM}</HomeFoodTimerItem>
+        </ThirdContainer>
+    </Container>
+}
+
 const Container = styled.div`
     display: flex;
     justify-content: center;
@@ -66,34 +95,7 @@ const HomeFoodTimerDarkBar= styled.div`
     z-index: 1;
 `;
 
-const HomeFoodTimerUI = ({
-    DAYS="1 DAYS",
-    ITEM="CHICKEN",
 
-    bgcolordark="#F16D6D",
-    bgcolorlight="#FCD8D8",
-
-    darkWidth = "126px"
-}) => {
-
-    return <Container>
-        <HomeFoodTimerBar bgcolorlight={bgcolorlight}>
-            <SecondContainer>
-                <HomeFoodTimerDarkBar bgcolordark={bgcolordark} darkWidth={darkWidth}>
-                    <HomeFoodTimerDate>{DAYS}</HomeFoodTimerDate>
-                </HomeFoodTimerDarkBar>
-            </SecondContainer>
-
-            {/* <ThirdContainer>
-                <HomeFoodTimerItem>{ITEM}</HomeFoodTimerItem>
-            </ThirdContainer> */}
-        </HomeFoodTimerBar>
-
-        <ThirdContainer>
-            <HomeFoodTimerItem>{ITEM}</HomeFoodTimerItem>
-        </ThirdContainer>
-    </Container>
-}
     {/* bgcolor="#F16D6D",
 
 
