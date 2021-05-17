@@ -49,8 +49,8 @@ const NavBarUI = ({
 
     return <NavBar>
         <Image src={image2} onClick={()=>router.push("/homepage2")}></Image>
-        <Image src={image1} onClick={()=>router.push("/ingredient-picker")}></Image>
-        <Image src={image3} onClick={()=>router.push("/pantry")}></Image>
+        <Image src={image1} onClick={()=>router.push("/generate/ingredient-picker")}></Image>
+        {/* <Image src={image3} onClick={()=>router.push("/pantry")}></Image> */}
         <Image src={image4} onClick={()=>router.push()}></Image>
     </NavBar>
 }

@@ -75,8 +75,9 @@ const TopSection = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
-
+    height: 100vh;
+    width: 100%;
+ 
     background: linear-gradient(-45deg, #59a091, #d4f6f4, #ffffff);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -92,14 +93,17 @@ const TopSection = styled.div`
             background-position: 0% 50%;
         }
     }
-
+ 
     .headertext{
         font-size: 36px;
         font-weight: bold;
         color: #302B40;
     }
+  
+    p{
+        color: #302B40;
+    }
 `;
-
 const ButtonContainer = styled.div`
     margin-top: 10px;
     position: relative;
