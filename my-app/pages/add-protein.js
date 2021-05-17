@@ -97,14 +97,15 @@ const TutPageContainer = styled.div`
     justify-content: center;
 
     background-color: #E7F2F0;
-    width: 375px;
-    max-width: 375px;
-    height: 812px;
-    max-height: 812px;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
 `;
 
 const HeaderContainer = styled.div`
     display: flex;
+    align-items: center;
     flex-direction: column;
 `;
 
@@ -122,18 +123,20 @@ const FoodButtonContainer = styled.div`
     align-items: center;
     flex-direction: column;
     flex-grow: 3;
+
+    margin-top: -15px;
 `;
 
 const TutPageTitle = styled.h1`
     font-family: "Manrope", sans-serif;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 300;
     margin-top: 0;
 `;
 
 const TutPageDescriptor = styled.h2`
     font-family: "Quicksand", sans-serif;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 300;
     margin: 0;
 `;

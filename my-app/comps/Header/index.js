@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Router, useRouter} from 'next/router';
 //import HeaderImg from '../../public/HeaderPic.png';
 
 const HeaderContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 375px;
+    width: 100vw;
     height: 103px;
     background-color: #59A091;
 `;
@@ -23,11 +24,16 @@ const HeaderImage = styled.img`
     z-index: 1;
 `;
 
+
+
 const HeaderUI = ({
-    foodimage = "/HeaderPic.png"
+    foodimage = "/HeaderPic.png",
+    onClickA = ""
 }) => {
+    const router = useRouter();
+    
     return <HeaderContainer>
-        <HeaderImage src={foodimage}></HeaderImage>
+        <HeaderImage onClick={onClickA} src={foodimage}></HeaderImage>
     </HeaderContainer>
 }
 

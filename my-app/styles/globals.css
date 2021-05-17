@@ -2,9 +2,15 @@
 html,
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
   padding: 0;
   margin: 0;
   font-family: 'Manrope', sans-serif;
   font-family: 'Quicksand', sans-serif;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
+

@@ -26,8 +26,7 @@ export default function RecipePage({
     label5 = "CHEESE",
     label6 = "PARSLEY",
 
-    title = "Main Ingredients",
-    title2 = "Optional",
+    subtitle = "Main Ingredients:",
     
 }) {
 
@@ -40,15 +39,15 @@ export default function RecipePage({
         </TopSection>
 
         <Mid1>
-            <Placeholder image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title={title}></Placeholder>
+            <Placeholder image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients"}></Placeholder>
         </Mid1>
         <Mid2>
-            <Placeholder image1={image4} image2={image5} image3={image6} title={title2} label1={label4} label2={label5} label3={label6}></Placeholder>
+            <Placeholder image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
         </Mid2>
         <Mid3>
             <Instructions></Instructions>
         </Mid3>
-
+ 
         <EndSection>
             <FunFactWindow></FunFactWindow>
         </EndSection>
@@ -60,16 +59,16 @@ export default function RecipePage({
 }
 
 const RecipeContainer = styled.div`
-    width: 375px;
-    height: 1480px;
-    background-color: #E7F2F0;
-    margin: 100px;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
-    box-shadow: 5px 1px 30px 5px rgba(0, 0, 0, 0.5);
+background-color: #E7F2F0;
+width: 100vw;
+max-width: 100vw;
+height: 100vh;
+max-height: 100vh;
 
 `;
 

@@ -1,6 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const HomeFoodTimerUI = ({
+    DAYS="1 DAYS",
+    ITEM="CHICKEN",
+
+    bgcolordark="#F16D6D",
+    bgcolorlight="#FCD8D8",
+
+    darkWidth = "126px"
+}) => {
+
+    return <Container>
+        <HomeFoodTimerBar bgcolorlight={bgcolorlight}>
+            <SecondContainer>
+                <HomeFoodTimerDarkBar bgcolordark={bgcolordark} darkWidth={darkWidth}>
+                    <HomeFoodTimerDate>{DAYS}</HomeFoodTimerDate>
+                </HomeFoodTimerDarkBar>
+            </SecondContainer>
+
+            {/* <ThirdContainer>
+                <HomeFoodTimerItem>{ITEM}</HomeFoodTimerItem>
+            </ThirdContainer> */}
+        </HomeFoodTimerBar>
+
+        <ThirdContainer>
+            <HomeFoodTimerItem>{ITEM}</HomeFoodTimerItem>
+        </ThirdContainer>
+    </Container>
+}
+
 const Container = styled.div`
     display: flex;
     justify-content: center;
@@ -30,13 +59,18 @@ const ThirdContainer = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-grow: 2;
+    // flex-grow: 1;
+    width: 342px;
+    position: absolute;
 `;
 
 const HomeFoodTimerItem = styled.h1`
     font-family: "Manrope", sans-serif;
     font-size: 24px;
     font-weight: 300;
+    position: absolute;
+    left: 10.5rem;
+    z-index: 1;
 `;
 
 const HomeFoodTimerDate = styled.h1`
@@ -44,41 +78,24 @@ const HomeFoodTimerDate = styled.h1`
     font-size: 24px;
     font-weight: 300;
     z-index:2;
+    position: relative;
+    left: 1.66rem;
+
 `;
 
 const HomeFoodTimerDarkBar= styled.div`
     display: flex;
-    justify-content: center;
+    // justify-content: flex-start;
     align-items: center;
+    
     background-color:${props=>props.bgcolordark};
     height: 52px;
-    width: 126px;
-    border-radius: 10px;
+    width: ${props=>props.darkWidth};
+    border-radius: 10px 10px 10px 10px;
     z-index: 1;
 `;
 
-const HomeFoodTimerUI = ({
-    DAYS="1 DAYS",
-    ITEM="CHICKEN",
 
-    bgcolordark="#F16D6D",
-    bgcolorlight="#FCD8D8",
-}) => {
-
-    return <Container>
-        <HomeFoodTimerBar bgcolorlight={bgcolorlight}>
-            <SecondContainer>
-                <HomeFoodTimerDarkBar bgcolordark={bgcolordark}>
-                    <HomeFoodTimerDate>{DAYS}</HomeFoodTimerDate>
-                </HomeFoodTimerDarkBar>
-            </SecondContainer>
-
-            <ThirdContainer>
-                <HomeFoodTimerItem>{ITEM}</HomeFoodTimerItem>
-            </ThirdContainer>
-        </HomeFoodTimerBar>
-    </Container>
-}
     {/* bgcolor="#F16D6D",
 
 

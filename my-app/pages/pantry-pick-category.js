@@ -47,28 +47,28 @@ export default function PantryCategory({
     const router = useRouter();
 
     const NextPageP = () => {
-        var routeToProteins = "/pantry-add-protein";
+        var routeToProteins = "/add-item/protein";
         // var routeToCarbs = "/pantry-add-carbohydrate";
         // var routeToVeges = "/pantry-add-vegetable";
         router.push(routeToProteins);
     }    
     const NextPageC = () => {
         // var routeTo = "/pantry-add-protein";
-        var routeToCarbs = "/pantry-add-carbohydrate";
+        var routeToCarbs = "/add-item/carbohydrate";
         // var routeToVeges = "/pantry-add-vegetable";
         router.push(routeToCarbs);
     }    
     const NextPageV = () => {
         // var routeTo = "/pantry-add-protein";
         // var routeToCarbs = "/pantry-add-carbohydrate";
-        var routeToVeges = "/pantry-add-vegetable";
+        var routeToVeges = "/add-item/vegetable";
         router.push(routeToVeges);
     }
 
 // === PAGE DISPLAY =============================================
     return <PageContainer>
         <HeaderContainer>
-            <Heading></Heading>
+            <Heading onClickA={()=>router.push("/homepage2")}></Heading>
         </HeaderContainer>
 
         <TextContainer>
@@ -97,19 +97,21 @@ export default function PantryCategory({
 }
 
 const PageContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
-    background-color: #E7F2F0;
-    width: 375px;
-    max-width: 375px;
-    height: 910px;
-    max-height: 910px;
+background-color: #E7F2F0;
+width: 100vw;
+max-width: 100vw;
+height: 100vh;
+max-height: 100vh;
 `;
 
 const HeaderContainer = styled.div`
     display: flex;
+    align-items: center;
     flex-direction: column;
 `;
 
