@@ -119,7 +119,7 @@ export default function Homepage() {
     <Main>
     
     <HeaderCont>
-        <HeaderUI></HeaderUI>
+        <HeaderUI onClickA={()=>router.push("/homepage2")}></HeaderUI>
     </HeaderCont>
 
     <SemiCircle>

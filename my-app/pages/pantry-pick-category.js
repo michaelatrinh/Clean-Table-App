@@ -68,7 +68,7 @@ export default function PantryCategory({
 // === PAGE DISPLAY =============================================
     return <PageContainer>
         <HeaderContainer>
-            <Heading></Heading>
+            <Heading onClickA={()=>router.push("/homepage2")}></Heading>
         </HeaderContainer>
 
         <TextContainer>

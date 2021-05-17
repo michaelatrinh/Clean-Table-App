@@ -236,7 +236,7 @@ export default function PantryAddProtein({
 
         <SecondPageContainer>
             <HeaderContainer>
-                <Heading></Heading>
+                <Heading onClickA={()=>router.push("/homepage2")}></Heading>
             </HeaderContainer>
 
             <TextContainer>

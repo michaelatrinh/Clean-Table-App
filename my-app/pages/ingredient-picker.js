@@ -79,9 +79,11 @@ export default function IngredientPickerPage({
         newBoxShadowC3 = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
     }
 
+    const router = useRouter();
+
     return <RecipeContainer>
         <HeaderContainer>
-            <Header></Header>
+            <Header onClickA={()=>router.push("/homepage2")}></Header>
         </HeaderContainer>
 
         {/*<TextContainer>
