@@ -1,57 +1,99 @@
-import React, {useState} from 'react';
-import animationStyle from '../styles/loading.module.css';
-import HeaderUI from '../comps/Header';
+import React from 'react';
+import Head from 'next/head'; 
 import styled from 'styled-components';
-
-export default function LoadingPage({    image ="/my-app/public/donut.png",
-}){
-
-    return <PageContainer>
-        <HeaderContainer>
-        <HeaderUI></HeaderUI>
-    </HeaderContainer>
-
-    <Animation>  <div className={animationStyle.main}>
-        <div className={animationStyle.animation}>
-        <div className={animationStyle.donut}>
-        <div className={animationStyle.bar}>
-
-        <div className={animationStyle.progress}>
-            <div className={animationStyle.outer}>
-                <div className={animationStyle.inner}></div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-
-    </Animation>
-    </PageContainer>
-}
-
-const PageContainer = styled.div`
+import Button from '../comps/EnterButton';
+import Login from '../comps/Login';
+import Footer from '../comps/WelcomePageFooter';
+ 
+const FirstPageContainer = styled.div`    
     display: flex;
     flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+ 
+    background: linear-gradient(-45deg, #59a091, #d4f6f4, #ffffff);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+ 
+    .headertext{
+        font-size: 36px;
+        font-weight: bold;
+        color: #302B40;
+    }
+  
+    p{
+        color: #302B40;
+    }
+`;
+ 
+const Img = styled.img`
+    margin-top: 350px;
+    width: 200px;
+ 
+    display: flex;
     justify-content: center;
     align-items: center;
  
-    background-color: #E7F2F0;
-    width: 100vw;
-    max-width: 100vw;
-    height: 100vh;
-    max-height: 100vh;
 `;
  
-const HeaderContainer =styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+const ButtonContainer = styled.div`
+    margin-top: 10px;
+    position: relative;
+`;
  
- `;
-
- const Animation =styled.div`
- display:flex;
-
- `;
+const Circle = styled.div`
+ 
+    height: 160px;
+    width: 375px;
+ 
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+ 
+    position: relative;
+    margin-top: 400px;
+    overflow: hidden;
+ 
+    color: #302B40;
+    text-align: center;
+ 
+    p{
+        margin-top: 60px;
+    }
+`;
+ 
+export default function FirstPage({
+    logoimage = "/logo.png",
+    text = "enter"
+ 
+}) {
+ 
+/*const HomepageUI = ({
+    logoimage = "/logo.png",
+ 
+}) => {*/
+      return <FirstPageContainer>
+        <Img src={logoimage}></Img>
+        <p className="headertext">W E L C O M E </p>
+        <ButtonContainer>
+            <Button text={text}></Button>
+        </ButtonContainer>
+        
+        <Circle>
+            <p>created by: <br></br>
+Jessica, Arielle, Michael, & Alicia</p>
+        </Circle>
+    </FirstPageContainer>  
+}
