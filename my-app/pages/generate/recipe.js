@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
+// --- IMPORT OF PREMADE RECIPE PAGES AS COMPONENTS -------------
 import ChickenRiceBroccoli from '../recipe/recipe-pagec2';
 import ChickenRiceOnion from '../recipe/recipe-pagec1';
 import ChickenRiceCarrot from '../recipe/recipe-pagec3';
@@ -63,7 +64,6 @@ const data = {
     TofuPotatoesBroccoli: <TofuPotatoBroccoli/>, 
     TofuPotatoesOnion: <TofuPotatoOnion/>,
     TofuPotatoesCarrot: <TofuPotatoCarrot/>,
-
 }
 
 export default function RecipePage() {
