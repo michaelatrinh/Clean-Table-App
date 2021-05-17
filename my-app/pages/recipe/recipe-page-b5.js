@@ -1,18 +1,18 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Head from 'next/head'; 
 import styled from 'styled-components';
-import Header from '../comps/Header/index.js';
-import Menu from '../comps/NavBar/index.js';
-import Placeholder from '../comps/icon-placeholder/Placeholder.js';
-import FunFactWindow from '../comps/FunFactWindow/index.js';
-import RecipeButton from '../comps/Recipe-Button/index.js';
+import Header from '../../comps/Header/index.js';
+import Menu from '../../comps/NavBar/index.js';
+import Placeholder from '../../comps/icon-placeholder/Placeholder.js';
+import FunFactWindow from '../../comps/FunFactWindow/index.js';
+import RecipeButton from '../../comps/Recipe-Button/index.js';
 
 export default function RecipePage({
-    recipeimage = "/beefonionrice.png",
-    recipetitle = "Beef Rice Onion Stir- Fry",
+    recipeimage = "/beefpastaonion.png",
+    recipetitle = "Beef and Onion Pasta",
 
     image1 = "/shaved_beef.png",
-    image2 = "/rice_bowl.png",
+    image2 = "/pasta_dish.png",
     image3 = "/onion.png",
 
     image4 ="/saltnpepper.png",
@@ -20,7 +20,7 @@ export default function RecipePage({
     image6 ="/parsley.png",
 
     label1 = "BEEF",
-    label2 = "RICE",
+    label2 = "PASTA",
     label3 = "ONION",
     label4 = "SALT N PEPPER",
     label5 = "CHEESE",
@@ -55,7 +55,7 @@ export default function RecipePage({
         </MiddleContainer>
         
             <ButtonContainer>
-                <RecipeButton onClick={()=>window.open("https://www.justataste.com/easy-beef-and-broccoli-recipe/")}></RecipeButton>
+                <RecipeButton onClick={()=>window.open("https://www.cookinwithmima.com/cheesy-ground-beef-pasta/")}></RecipeButton>
             </ButtonContainer>
 
         <EndSection>                

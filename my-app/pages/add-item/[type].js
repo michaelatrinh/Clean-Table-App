@@ -16,11 +16,11 @@ import {useRouter} from 'next/router';
 
 // --- FOOD BUTTON PROP DYNAMIC OPTION ROUTING ------------------
 var item = null;
-var options = {
-    protein:null,
-    carbohydrate:null,
-    vegetable:null
-};
+// var options = {
+//     protein:null,
+//     carbohydrate:null,
+//     vegetable:null
+// };
 var col = {
     option1:"",
     option2:"",

@@ -1,18 +1,18 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Head from 'next/head'; 
 import styled from 'styled-components';
-import Header from '../comps/Header/index.js';
-import Menu from '../comps/NavBar/index.js';
-import Placeholder from '../comps/icon-placeholder/Placeholder.js';
-import FunFactWindow from '../comps/FunFactWindow/index.js';
-import RecipeButton from '../comps/Recipe-Button/index.js';
+import Header from '../../comps/Header/index.js';
+import Menu from '../../comps/NavBar/index.js';
+import Placeholder from '../../comps/icon-placeholder/Placeholder.js';
+import FunFactWindow from '../../comps/FunFactWindow/index.js';
+import RecipeButton from '../../comps/Recipe-Button/index.js';
 
 export default function RecipePage({
-    recipeimage = "/chicalfredo.png",
-    recipetitle = "Chicken Fettuccine Alfredo",
+    recipeimage = "/onionchicbake.png",
+    recipetitle = "Baked Chicken And Potatoes",
 
     image1 = "/chicken_drumstick.png",
-    image2 = "/pasta_dish.png",
+    image2 = "/potatoes.png",
     image3 = "/onion.png",
 
     image4 ="/saltnpepper.png",
@@ -49,23 +49,23 @@ export default function RecipePage({
             <Mid2>
                 <Placeholder height="150px" image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
             </Mid2>
-        {/* <Mid3>
-            <RecipeButton Link href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
-        </Mid3> */}
-    </MiddleContainer>
-        
-        <ButtonContainer>
-            <RecipeButton onClick={()=>window.open("https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake")}></RecipeButton>
-       </ButtonContainer>
+      {/* <Mid3>
+          <RecipeButton Link href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
+      </Mid3> */}
+  </MiddleContainer>
+  
+      <ButtonContainer>
+          <RecipeButton onClick={()=>window.open("https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake")}></RecipeButton>
+      </ButtonContainer>
 
-        <EndSection>                
-            <FunFactWindow></FunFactWindow>
-        </EndSection>
+  <EndSection>                
+      <FunFactWindow></FunFactWindow>
+  </EndSection>
 
-        <MenuContainer>
-            <Menu></Menu>
-        </MenuContainer>
-    </RecipeContainer>   
+  <MenuContainer>
+      <Menu></Menu>
+  </MenuContainer>
+</RecipeContainer>   
 }
 
 const RecipeContainer = styled.div`
@@ -153,5 +153,4 @@ const MenuContainer = styled.div`
     align-items: center;
     flex-grow: 0;
 `;
-
 

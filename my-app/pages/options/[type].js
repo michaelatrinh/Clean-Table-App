@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import React, {useEffect, useState} from 'react';
 
 //Comps
-import Button from '../../comps/GenerateRecipeButton';
-import FoodButtonUI from '';
+// import Button from '../../comps/GenerateRecipeButton';
+// import FoodButtonUI from '';
 
 var options = {
     protiens:null,
