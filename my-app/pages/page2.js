@@ -108,8 +108,6 @@ const Animation = styled.div`
 display: flex;
 position:relative;
 top:-10px;
- 
- 
  `;
  
  
