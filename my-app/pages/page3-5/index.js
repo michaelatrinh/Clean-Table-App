@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import HeaderUI from '../../comps/Header';
 import FoodButtonUI from '../../comps/FoodButtonUI';
-import NavBar from '../../comps/NavBar'
+import NavBar from '../../comps/NavBarCongrats'
 import ProgressBar from '../../comps/ProgressBar';
 
 

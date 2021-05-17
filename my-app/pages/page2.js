@@ -121,5 +121,5 @@ top:-10px;
  align-items: center;
  justify-content: center;
  position:relative;
- bottom:200px;
+ bottom:35px;
  `;
