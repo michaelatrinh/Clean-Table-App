@@ -1,32 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
+import {CgMathPlus} from 'react-icons/cg';
+import { IconContext } from 'react-icons/lib';
 
 const HomeFoodTimerUI = ({
     DAYS="1 DAYS",
     ITEM="CHICKEN",
 
     bgcolordark="#F16D6D",
-    bgcolorlight="#FCD8D8",
+    bgcolorlight="#CCCCCC",
 
-    darkWidth = "126px"
+    boxShadow = "0px 4px 5px -2px",
+
+    onClickA = ""
 }) => {
 
-    return <Container>
-        <HomeFoodTimerBar bgcolorlight={bgcolorlight}>
-            <SecondContainer>
-                <HomeFoodTimerDarkBar bgcolordark={bgcolordark} darkWidth={darkWidth}>
+    return <Container onClick={onClickA}>
+        <HomeFoodTimerBar bgcolorlight={bgcolorlight} boxShadow={boxShadow}>
+            <IconContext.Provider value={{color: "#8B8B8B", size: "2rem"}}>
+                <CgMathPlus></CgMathPlus>
+            </IconContext.Provider>
+
+            <h1>Add new item</h1>
+
+            {/* <SecondContainer>
+                <HomeFoodTimerDarkBar bgcolordark={bgcolordark}>
                     <HomeFoodTimerDate>{DAYS}</HomeFoodTimerDate>
                 </HomeFoodTimerDarkBar>
             </SecondContainer>
 
-            {/* <ThirdContainer>
+            <ThirdContainer>
                 <HomeFoodTimerItem>{ITEM}</HomeFoodTimerItem>
             </ThirdContainer> */}
         </HomeFoodTimerBar>
-
-        <ThirdContainer>
-            <HomeFoodTimerItem>{ITEM}</HomeFoodTimerItem>
-        </ThirdContainer>
     </Container>
 }
 
@@ -46,6 +52,16 @@ const HomeFoodTimerBar = styled.div`
     width: 342px;
     border-radius: 10px;
     background-color: ${props=>props.bgcolorlight};
+    box-shadow: ${props=>props.boxShadow};
+    // box-shadow: 0px 4px 5px -2px;
+    &>h1
+    {
+        font-family: 'Manrope', sans-serif;
+        font-weight: 300;
+        font-size: 18pt;
+        color: #8A8A8A;
+        margin-left: 1rem;
+    }
 `;
 
 const SecondContainer = styled.div`
@@ -59,18 +75,13 @@ const ThirdContainer = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    // flex-grow: 1;
-    width: 342px;
-    position: absolute;
+    flex-grow: 2;
 `;
 
 const HomeFoodTimerItem = styled.h1`
     font-family: "Manrope", sans-serif;
     font-size: 24px;
     font-weight: 300;
-    position: absolute;
-    left: 10.5rem;
-    z-index: 1;
 `;
 
 const HomeFoodTimerDate = styled.h1`
@@ -78,20 +89,16 @@ const HomeFoodTimerDate = styled.h1`
     font-size: 24px;
     font-weight: 300;
     z-index:2;
-    position: relative;
-    left: 1.66rem;
-
 `;
 
 const HomeFoodTimerDarkBar= styled.div`
     display: flex;
-    // justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    
     background-color:${props=>props.bgcolordark};
     height: 52px;
-    width: ${props=>props.darkWidth};
-    border-radius: 10px 10px 10px 10px;
+    width: 126px;
+    border-radius: 10px 0px 0px 10px;
     z-index: 1;
 `;
 

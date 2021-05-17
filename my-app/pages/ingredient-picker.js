@@ -17,6 +17,10 @@ export default function IngredientPickerPage({
     image5 ="/pasta_dish.png",
     image6 ="/potatoes.png",
 
+    bgcolor1 = "#F16D6D",
+    bgcolor2 = "#FFC32E",
+    bgcolor3 = "#59A091",
+
     label1 = "CHICKEN",
     label2 = "BEEF",
     label3 = "ONION",
@@ -75,9 +79,11 @@ export default function IngredientPickerPage({
         newBoxShadowC3 = "inset 0px 0px 5px rgba(0, 0, 0, 0.6)"
     }
 
+    const router = useRouter();
+
     return <RecipeContainer>
         <HeaderContainer>
-            <Header></Header>
+            <Header onClickA={()=>router.push("/homepage2")}></Header>
         </HeaderContainer>
 
         {/*<TextContainer>
@@ -85,17 +91,18 @@ export default function IngredientPickerPage({
         </TextContainer>*/}
 
         <FoodButtonContainer>
+            {/* <h1>Recipe Generator</h1> */}
             <h2>PICK YOUR PROTEIN</h2>
 
-            <Placeholder onClickA={()=>setClickStateA1(!clickStateA1)} onClickB={()=>setClickStateB1(!clickStateB1)} onClickC={()=>setClickStateC1(!clickStateC1)} image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title="PROTEINS" boxshadow1={newBoxShadowA1} boxshadow2={newBoxShadowB1} boxshadow3={newBoxShadowC1} widthA="65px" widthB="65px" widthC="79px" height="150px"></Placeholder>
+            <Placeholder onClickA={()=>setClickStateA1(!clickStateA1)} onClickB={()=>setClickStateB1(!clickStateB1)} onClickC={()=>setClickStateC1(!clickStateC1)} subtitle="PROTEINS" bgcolor1={bgcolor1} bgcolor2={bgcolor3} bgcolor3={bgcolor3} image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} title="PROTEINS" boxshadow1={newBoxShadowA1} boxshadow2={newBoxShadowB1} boxshadow3={newBoxShadowC1} widthA="65px" widthB="65px" widthC="79px" height="150px"></Placeholder>
 
             <h2>PICK YOUR CARBOHYDRATES</h2>
 
-            <Placeholder onClickA={()=>setClickStateA2(!clickStateA2)} onClickB={()=>setClickStateB2(!clickStateB2)} onClickC={()=>setClickStateC2(!clickStateC2)} image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} title="CARBOHYDRATES" boxshadow1={newBoxShadowA2} boxshadow2={newBoxShadowB2} boxshadow3={newBoxShadowC2} widthA="65px" widthB="66px" widthC="67px" height="150px"></Placeholder>
+            <Placeholder onClickA={()=>setClickStateA2(!clickStateA2)} onClickB={()=>setClickStateB2(!clickStateB2)} onClickC={()=>setClickStateC2(!clickStateC2)} subtitle="CARBOHYDRATES" bgcolor1={bgcolor3} bgcolor2={bgcolor1} bgcolor3={bgcolor3} image1={image4} image2={image5} image3={image6} label1={label4} label2={label5} label3={label6} title="CARBOHYDRATES" boxshadow1={newBoxShadowA2} boxshadow2={newBoxShadowB2} boxshadow3={newBoxShadowC2} widthA="65px" widthB="66px" widthC="67px" height="150px"></Placeholder>
 
             <h2>PICK YOUR VEGETABLES</h2>
 
-            <Placeholder onClickA={()=>setClickStateA3(!clickStateA3)} onClickB={()=>setClickStateB3(!clickStateB3)} onClickC={()=>setClickStateC3(!clickStateC3)} boxshadow1={newBoxShadowA3} boxshadow2={newBoxShadowB3} boxshadow3={newBoxShadowC3} widthA="68px" widthB="55px" widthC="56px" height="150px"></Placeholder>
+            <Placeholder onClickA={()=>setClickStateA3(!clickStateA3)} onClickB={()=>setClickStateB3(!clickStateB3)} onClickC={()=>setClickStateC3(!clickStateC3)} boxshadow1={newBoxShadowA3} boxshadow2={newBoxShadowB3} boxshadow3={newBoxShadowC3} bgcolor1={bgcolor3} bgcolor2={bgcolor2} bgcolor3={bgcolor3} widthA="68px" widthB="55px" widthC="56px" height="150px"></Placeholder>
         </FoodButtonContainer>
 
         <GenerateContainer>
@@ -160,6 +167,17 @@ const FoodButtonContainer = styled.div`
     flex-direction: column;
     flex-grow: 4;
     color: #484848;
+    &>h1
+    {
+        font-family: 'Manrope', sans-serif;
+        font-weight: 300;
+        margin-bottom: 0;
+    }
+    &>h2
+    {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 400;
+    }
 `;
 
 const MenuContainer = styled.div`
