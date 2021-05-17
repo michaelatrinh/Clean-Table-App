@@ -97,9 +97,9 @@ const TutPageContainer = styled.div`
 
     background-color: #E7F2F0;
     width: 100vw;
-    max-width: 100vw;
+    // max-width: 100vw;
     height: 100vh;
-    max-height: 100vh;
+    // max-height: 100vh;
 `;
 
 const HeaderContainer = styled.div`
@@ -123,7 +123,7 @@ const FoodButtonContainer = styled.div`
     flex-direction: column;
     flex-grow: 3;
 
-    margin-top: -100px;
+    margin-top: -15px;
 `;
 
 const TutPageTitle = styled.h1`

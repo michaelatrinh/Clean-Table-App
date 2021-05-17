@@ -124,7 +124,7 @@ const FoodButtonContainer = styled.div`
     flex-direction: column;
     flex-grow: 3;
 
-    margin-top: -100px;
+    margin-top: -15px;
 `;
 
 const TutPageTitle = styled.h1`

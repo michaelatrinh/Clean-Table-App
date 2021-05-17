@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Router, useRouter} from 'next/router';
 //import HeaderImg from '../../public/HeaderPic.png';
 
 const HeaderContainer = styled.div`
@@ -23,11 +24,16 @@ const HeaderImage = styled.img`
     z-index: 1;
 `;
 
+
+
 const HeaderUI = ({
-    foodimage = "/HeaderPic.png"
+    foodimage = "/HeaderPic.png",
+    onClickA = ""
 }) => {
+    const router = useRouter();
+    
     return <HeaderContainer>
-        <HeaderImage src={foodimage}></HeaderImage>
+        <HeaderImage onClick={onClickA} src={foodimage}></HeaderImage>
     </HeaderContainer>
 }
 
