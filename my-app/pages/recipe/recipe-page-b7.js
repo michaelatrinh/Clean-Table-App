@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import Head from 'next/head'; 
 import styled from 'styled-components';
-import Header from '../../comps/Header/index.js';
-import Menu from '../../comps/NavBar/index.js';
-import Placeholder from '../../comps/icon-placeholder/Placeholder.js';
-import FunFactWindow from '../../comps/FunFactWindow/index.js';
-import RecipeButton from '../../comps/Recipe-Button/index.js';
+import Header from '../comps/Header/index.js';
+import Menu from '../comps/NavBar/index.js';
+import Placeholder from '../comps/icon-placeholder/Placeholder.js';
+import FunFactWindow from '../comps/FunFactWindow/index.js';
+import RecipeButton from '../comps/Recipe-Button/index.js';
 
 export default function RecipePage({
     recipeimage = "/broccoli-cheddar-baked.jpg",
@@ -27,6 +27,9 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "Having a variety of beans, jarred vegetables like artichokes, sauces, and grains will make it easier to put left-over ingredients to use at the end of the week."
+
 
     
 }) {
@@ -44,10 +47,10 @@ export default function RecipePage({
 
         <MiddleContainer>
             <Mid1>
-            <Placeholder height="150px" image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients"} widthA="60px" widthB="65px" widthC="50px"></Placeholder>
+            <Placeholder height="150px" bgcolor1 = "#59A091" bgcolor2 = "#59A091" image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients"} widthA="60px" widthB="65px" widthC="50px"></Placeholder>
             </Mid1>
             <Mid2>
-                <Placeholder height="150px" image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
+                <Placeholder height="150px" bgcolor1 = "#59A091" bgcolor2 = "#59A091" image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
             </Mid2>
             {/* <Mid3>
                 <RecipeButton Link href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
@@ -61,7 +64,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow  ptext = {"Having a variety of beans, jarred vegetables like artichokes, sauces, and grains will make it easier to put left-over ingredients to use at the end of the week."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>
@@ -69,6 +72,7 @@ export default function RecipePage({
         </MenuContainer>
     </RecipeContainer>  
 }
+
 
 const RecipeContainer = styled.div`
 display: flex;
@@ -158,68 +162,3 @@ const MenuContainer = styled.div`
 `;
 
 
-export default function RecipePage({
-    recipeimage = "/broccoli-cheddar-baked.jpg",
-    recipetitle = "Broccoli Cheddar Baked Potato ",
-
-    image1 = "/shaved_beef.png",
-    image2 = "/potatoes.png",
-    image3 = "/broccoli.png",
-
-    image4 ="/saltnpepper.png",
-    image5 ="/cheese.png",
-    image6 ="/parsley.png",
-
-    label1 = "BEEF",
-    label2 = "POTATO",
-    label3 = "BROCCOLI",
-    label4 = "SALT N PEPPER",
-    label5 = "CHEESE",
-    label6 = "PARSLEY",
-
-    subtitle = "Main Ingredients",
-    htext = "DID YOU KNOW?",
-    ptext = "Having a variety of beans, jarred vegetables like artichokes, sauces, and grains will make it easier to put left-over ingredients to use at the end of the week."
-
-
-    
-}) {
-
-
-      return <RecipeContainer>
-          <HeaderContainer>
-            <Header></Header>
-          </HeaderContainer>
-
-        <TopSection>
-            <h3>{recipetitle}</h3>
-            <img src={recipeimage}></img>
-        </TopSection>
-
-        <MiddleContainer>
-            <Mid1>
-            <Placeholder height="150px" image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients"} widthA="60px" widthB="65px" widthC="50px"></Placeholder>
-            </Mid1>
-            <Mid2>
-                <Placeholder height="150px" image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
-            </Mid2>
-            {/* <Mid3>
-                <RecipeButton Link href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
-            </Mid3> */}
-        </MiddleContainer>
-        
-            <ButtonContainer>
-                <RecipeButton onClick={()=>window.open("https://tasty.co/recipe/broccoli-cheddar-baked-potato")}></RecipeButton>
-            </ButtonContainer>
-
-        <EndSection>                
-
-
-            <FunFactWindow  ptext = {"Having a variety of beans, jarred vegetables like artichokes, sauces, and grains will make it easier to put left-over ingredients to use at the end of the week."}></FunFactWindow>
-        </EndSection>
-
-        <MenuContainer>
-            <Menu></Menu>
-        </MenuContainer>
-    </RecipeContainer>  
-}

@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import Head from 'next/head'; 
 import styled from 'styled-components';
-import Header from '../../comps/Header/index.js';
-import Menu from '../../comps/NavBar/index.js';
-import Placeholder from '../../comps/icon-placeholder/Placeholder.js';
-import FunFactWindow from '../../comps/FunFactWindow/index.js';
-import RecipeButton from '../../comps/Recipe-Button/index.js';
+import Header from '../comps/Header/index.js';
+import Menu from '../comps/NavBar/index.js';
+import Placeholder from '../comps/icon-placeholder/Placeholder.js';
+import FunFactWindow from '../comps/FunFactWindow/index.js';
+import RecipeButton from '../comps/Recipe-Button/index.js';
 
 export default function RecipePage({
     recipeimage = "/Tofu with Rice and Miso-Maple.jpg",
@@ -27,6 +27,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "If you did buy too much food for the week and you think it will go bad before you can enjoy it all, invite some friends over for dinner!"
 
     
 }) {
@@ -44,10 +46,10 @@ export default function RecipePage({
 
         <MiddleContainer>
             <Mid1>
-            <Placeholder height="150px" image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients"} widthA="60px" widthB="65px" widthC="50px"></Placeholder>
+            <Placeholder height="150px" bgcolor1 = "#59A091" bgcolor2 = "#59A091" image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients"} widthA="60px" widthB="65px" widthC="50px"></Placeholder>
             </Mid1>
             <Mid2>
-                <Placeholder height="150px" image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
+                <Placeholder height="150px" bgcolor1 = "#59A091" bgcolor2 = "#59A091" image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
             </Mid2>
             {/* <Mid3>
                 <RecipeButton Link href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
@@ -61,7 +63,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow     ptext = {"If you did buy too much food for the week and you think it will go bad before you can enjoy it all, invite some friends over for dinner!"}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>
@@ -69,6 +71,7 @@ export default function RecipePage({
         </MenuContainer>
     </RecipeContainer>  
 }
+
 
 const RecipeContainer = styled.div`
 display: flex;
@@ -158,68 +161,3 @@ const MenuContainer = styled.div`
 `;
 
 
-export default function RecipePage({
-    recipeimage = "/Tofu with Rice and Miso-Maple.jpg",
-    recipetitle = "Tofu with Rice and Miso-Maple Dressing",
-
-    image1 = "/tofu_squares.png",
-    image2 = "/rice_bowl.png",
-    image3 = "/carrot.png",
-
-    image4 ="/saltnpepper.png",
-    image5 ="/cheese.png",
-    image6 ="/parsley.png",
-
-    label1 = "TOFU",
-    label2 = "RICE",
-    label3 = "CARROT",
-    label4 = "SALT N PEPPER",
-    label5 = "CHEESE",
-    label6 = "PARSLEY",
-
-    subtitle = "Main Ingredients",
-    htext = "DID YOU KNOW?",
-    ptext = "Making large pots of soup, stew, or chili can take a lot of the guesswork out during a busy week. Pick a recipe that’s hearty and flavorful."
-
-    
-}) {
-
-
-      return <RecipeContainer>
-          <HeaderContainer>
-            <Header></Header>
-          </HeaderContainer>
-
-        <TopSection>
-            <h3>{recipetitle}</h3>
-            <img src={recipeimage}></img>
-        </TopSection>
-
-        <MiddleContainer>
-            <Mid1>
-            <Placeholder height="150px" image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients"} widthA="60px" widthB="65px" widthC="50px"></Placeholder>
-            </Mid1>
-            <Mid2>
-                <Placeholder height="150px" image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
-            </Mid2>
-            {/* <Mid3>
-                <RecipeButton Link href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
-            </Mid3> */}
-        </MiddleContainer>
-        
-            <ButtonContainer>
-                <RecipeButton onClick={()=>window.open("https://www.bonappetit.com/recipe/tofu-with-rice-and-miso-maple-dressing/")}></RecipeButton>
-
-            </ButtonContainer>
-
-        <EndSection>                
-
-
-            <FunFactWindow  ptext = {"Making large pots of soup, stew, or chili can take a lot of the guesswork out during a busy week. Pick a recipe that’s hearty and flavorful."}></FunFactWindow>
-        </EndSection>
-
-        <MenuContainer>
-            <Menu></Menu>
-        </MenuContainer>
-    </RecipeContainer>  
-}

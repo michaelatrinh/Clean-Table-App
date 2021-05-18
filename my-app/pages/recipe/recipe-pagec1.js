@@ -1,34 +1,34 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Head from 'next/head'; 
 import styled from 'styled-components';
-import Header from '../../comps/Header/index.js';
-import Menu from '../../comps/NavBar/index.js';
-import Placeholder from '../../comps/icon-placeholder/Placeholder.js';
-import FunFactWindow from '../../comps/FunFactWindow/index.js';
-import RecipeButton from '../../comps/Recipe-Button/index.js';
+import Header from '../comps/Header/index.js';
+import Menu from '../comps/NavBar/index.js';
+import Placeholder from '../comps/icon-placeholder/Placeholder.js';
+import FunFactWindow from '../comps/FunFactWindow/index.js';
+import RecipeButton from '../comps/Recipe-Button/index.js';
 
 export default function RecipePage({
-    recipeimage = "/dishimage.png",
-    recipetitle = "Chicken, Onion pasta bake",
+    recipeimage = "/chiccheesebroc.png",
+    recipetitle = "Cheesy Chicken Broccoli Rice Casserole",
 
     image1 = "/chicken_drumstick.png",
-    image2 = "/pasta_dish.png",
-    image3 = "/onion.png",
+    image2 = "/rice.png",
+    image3 = "/broccoli.png",
 
     image4 ="/saltnpepper.png",
     image5 ="/cheese.png",
     image6 ="/parsley.png",
 
     label1 = "CHICKEN",
-    label2 = "pasta",
-    label3 = "ONION",
+    label2 = "RICE",
+    label3 = "BROCCOLI",
     label4 = "SALT N PEPPER",
     label5 = "CHEESE",
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
     htext = "DID YOU KNOW?",
-    ptext = "Being more mindful of how hungry you actually are and practicing portion control are great ways to reduce food waste."
+    ptext = "Freezing food is one of the easiest ways to preserve it, and the types of food that take well to freezing are endless."
 
     
 }) {
@@ -46,22 +46,19 @@ export default function RecipePage({
 
         <MiddleContainer>
             <Mid1>
-            <Placeholder height="150px" image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients"} widthA="60px" widthB="65px" widthC="50px"></Placeholder>
+            <Placeholder height="150px" bgcolor1 = "#59A091" bgcolor2 = "#59A091" image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients"} widthA="60px" widthB="65px" widthC="50px"></Placeholder>
             </Mid1>
             <Mid2>
-                <Placeholder height="150px" image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
+                <Placeholder height="150px" bgcolor1 = "#59A091" bgcolor2 = "#59A091"  image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
             </Mid2>
-            {/* <Mid3>
-                <RecipeButton Link href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
-            </Mid3> */}
         </MiddleContainer>
-        
-            <ButtonContainer>
-                <RecipeButton onClick={()=>window.open("https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake")}></RecipeButton>
-            </ButtonContainer>
 
-        <EndSection>                
-            <FunFactWindow     ptext = {"Being more mindful of how hungry you actually are and practicing portion control are great ways to reduce food waste."}></FunFactWindow>
+        <ButtonContainer>
+                <RecipeButton onClick={()=>window.open("https://www.jocooks.com/recipes/one-pot-cheesy-chicken-broccoli-rice-casserole/")}></RecipeButton>
+        </ButtonContainer>
+
+        <EndSection>
+            <FunFactWindow   ptext = {"Freezing food is one of the easiest ways to preserve it, and the types of food that take well to freezing are endless."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>
@@ -85,7 +82,7 @@ max-height: 100vh;
 
 const HeaderContainer = styled.div`
     display: flex;
-    flex-grow: 0;
+
 `;
 
 const TopSection = styled.div`
@@ -115,20 +112,20 @@ const MiddleContainer = styled.div`
 `;
 
 const Mid1 = styled.div`
-    // margin-top: 160px;
+   // margin-top: 140px;
 `;
 
 const Mid2 = styled.div`
-    // margin-top: -70px;
+   // margin-top: -70px;
 `;
 
 const Mid3 = styled.div`
-    // margin-top: -30px;
+   // margin-top: -30px;
 `;
 
 const EndSection = styled.div`
-    // position: absolute;
-    // margin-top: 800px;
+    //position: absolute;
+    //margin-top: 800px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -144,15 +141,13 @@ const ButtonContainer = styled.div`
 `;
 
 const MenuContainer = styled.div`
-    // margin-top: 950px;
-    // height: 900px;
-    // position: absolute;
-    // overflow: hidden;
+    //margin-top: 950px;
+    //height: 900px;
+    //position: absolute;
+    //overflow: hidden;
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 0;
 `;
-
-

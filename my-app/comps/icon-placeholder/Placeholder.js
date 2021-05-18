@@ -10,7 +10,6 @@ const PlaceholderUI = ({
   label2 = "ONION",
   label3 = "CARROT",
 
-
   subtitle = "VEGETABLES",
 
   title = "VEGETABLES",
@@ -228,4 +227,4 @@ const Img = styled.img`
 
 export default Window;
 
-//export{Window}*
+//export{Window}*/

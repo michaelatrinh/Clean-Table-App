@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import Head from 'next/head'; 
 import styled from 'styled-components';
-import Header from '../../comps/Header/index.js';
-import Menu from '../../comps/NavBar/index.js';
-import Placeholder from '../../comps/icon-placeholder/Placeholder.js';
-import FunFactWindow from '../../comps/FunFactWindow/index.js';
-import RecipeButton from '../../comps/Recipe-Button/index.js';
+import Header from '../comps/Header/index.js';
+import Menu from '../comps/NavBar/index.js';
+import Placeholder from '../comps/icon-placeholder/Placeholder.js';
+import FunFactWindow from '../comps/FunFactWindow/index.js';
+import RecipeButton from '../comps/Recipe-Button/index.js';
 
 export default function RecipePage({
     recipeimage = "/Creamy Cashew.jpg",
@@ -27,6 +27,8 @@ export default function RecipePage({
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients:",
+    htext = "DID YOU KNOW?",
+    ptext = "You can pickle, can, smoke, salt, vacuum-pack, or dry out lots of fresh fruit, vegetables, and meats. Home-pickled vegetables and homemade fruit jams make wonderful gifts, too."
 
     
 }) {
@@ -44,10 +46,10 @@ export default function RecipePage({
 
         <MiddleContainer>
             <Mid1>
-            <Placeholder height="150px" image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients"} widthA="60px" widthB="65px" widthC="50px"></Placeholder>
+            <Placeholder height="150px" bgcolor1 = "#59A091" bgcolor2 = "#59A091" image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients"} widthA="60px" widthB="65px" widthC="50px"></Placeholder>
             </Mid1>
             <Mid2>
-                <Placeholder height="150px" image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
+                <Placeholder height="150px" bgcolor1 = "#59A091" bgcolor2 = "#59A091" image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
             </Mid2>
             {/* <Mid3>
                 <RecipeButton Link href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
@@ -61,7 +63,7 @@ export default function RecipePage({
         <EndSection>                
 
 
-            <FunFactWindow></FunFactWindow>
+            <FunFactWindow     ptext = {"You can pickle, can, smoke, salt, vacuum-pack, or dry out lots of fresh fruit, vegetables, and meats. Home-pickled vegetables and homemade fruit jams make wonderful gifts, too."}></FunFactWindow>
         </EndSection>
 
         <MenuContainer>
@@ -69,6 +71,7 @@ export default function RecipePage({
         </MenuContainer>
     </RecipeContainer>  
 }
+
 
 const RecipeContainer = styled.div`
 display: flex;
@@ -158,67 +161,3 @@ const MenuContainer = styled.div`
 `;
 
 
-export default function RecipePage({
-    recipeimage = "/Creamy Cashew.jpg",
-    recipetitle = "Tofu Garlic Mushroom Pasta",
-
-    image1 = "/tofu_squares.png",
-    image2 = "/pasta_dish.png",
-    image3 = "/onion.png",
-
-    image4 ="/saltnpepper.png",
-    image5 ="/cheese.png",
-    image6 ="/parsley.png",
-
-    label1 = "TOFU",
-    label2 = "PASTA",
-    label3 = "ONION",
-    label4 = "SALT N PEPPER",
-    label5 = "CHEESE",
-    label6 = "PARSLEY",
-
-    subtitle = "Main Ingredients:",
-    htext = "DID YOU KNOW?",
-    ptext = "You can pickle, can, smoke, salt, vacuum-pack, or dry out lots of fresh fruit, vegetables, and meats. Home-pickled vegetables and homemade fruit jams make wonderful gifts, too."
-
-    
-}) {
-
-
-      return <RecipeContainer>
-          <HeaderContainer>
-            <Header></Header>
-          </HeaderContainer>
-
-        <TopSection>
-            <h3>{recipetitle}</h3>
-            <img src={recipeimage}></img>
-        </TopSection>
-
-        <MiddleContainer>
-            <Mid1>
-            <Placeholder height="150px" image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients"} widthA="60px" widthB="65px" widthC="50px"></Placeholder>
-            </Mid1>
-            <Mid2>
-                <Placeholder height="150px" image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
-            </Mid2>
-            {/* <Mid3>
-                <RecipeButton Link href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
-            </Mid3> */}
-        </MiddleContainer>
-        
-            <ButtonContainer>
-                <RecipeButton onClick={()=>window.open("https://wellvegan.com/dinner/creamy-tofu-garlic-mushroom-pasta/")}></RecipeButton>
-            </ButtonContainer>
-
-        <EndSection>                
-
-
-            <FunFactWindow     ptext = {"You can pickle, can, smoke, salt, vacuum-pack, or dry out lots of fresh fruit, vegetables, and meats. Home-pickled vegetables and homemade fruit jams make wonderful gifts, too."}></FunFactWindow>
-        </EndSection>
-
-        <MenuContainer>
-            <Menu></Menu>
-        </MenuContainer>
-    </RecipeContainer>  
-}

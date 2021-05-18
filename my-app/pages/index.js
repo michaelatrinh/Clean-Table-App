@@ -5,7 +5,6 @@ import Button from '../comps/EnterButton';
 import Login from '../comps/Login';
 import Footer from '../comps/WelcomePageFooter';
  
- 
 const FirstPageContainer = styled.div`    
     display: flex;
     flex-direction: column;
