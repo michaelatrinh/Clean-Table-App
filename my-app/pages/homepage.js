@@ -6,7 +6,7 @@ import {useState} from 'react';
 import HeaderUI from '../comps/Header';
 import HomeFoodTimerUI from '../comps/HomeFoodTimer';
 import AddItem from '../comps/HomeFoodTimerAdd';
-import NavBar from '../comps/NavBar';
+import NavBar from '../comps/NavBar/index.js';
 import FunFactWindow from '../comps/FunFactWindow';
 import Congratulations from '../comps/congratulations-comp';
 import {useRouter} from 'next/router';

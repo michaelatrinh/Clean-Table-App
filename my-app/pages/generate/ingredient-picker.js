@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import Header from '../../comps/Header/index.js';
-import Menu from '../../comps/NavBar/index2.js';
+import Menu from '../../comps/NavBar/index.js';
 import Placeholder from '../../comps/icon-placeholder/Placeholder.js';
 import GenerateRecipeButton from '../../comps/GenerateRecipeButton/index.js';
 import {useRouter} from 'next/router';
