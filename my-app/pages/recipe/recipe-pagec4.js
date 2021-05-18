@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import Head from 'next/head'; 
 import styled from 'styled-components';
-import Header from '../../comps/Header/index.js';
-import Menu from '../../comps/NavBar/index.js';
-import Placeholder from '../../comps/icon-placeholder/Placeholder.js';
-import FunFactWindow from '../../comps/FunFactWindow/index.js';
-import RecipeButton from '../../comps/Recipe-Button/index.js';
+import Header from '../comps/Header/index.js';
+import Menu from '../comps/NavBar/index.js';
+import Placeholder from '../comps/icon-placeholder/Placeholder.js';
+import FunFactWindow from '../comps/FunFactWindow/index.js';
+import RecipeButton from '../comps/Recipe-Button/index.js';
 
 export default function RecipePage({
     recipeimage = "/alfredobroc.png",
@@ -20,13 +20,15 @@ export default function RecipePage({
     image6 ="/parsley.png",
 
     label1 = "CHICKEN",
-    label2 = "RICE",
-    label3 = "CARROT",
+    label2 = "PASTA",
+    label3 = "BROCCOLI",
     label4 = "SALT N PEPPER",
     label5 = "CHEESE",
     label6 = "PARSLEY",
 
     subtitle = "Main Ingredients",
+    htext = "DID YOU KNOW?",
+    ptext = "If you want to save money while avoiding potentially harmful chemicals found in some skincare products, try preparing a scrub or mask at home using avocado, honey and more."
 
     
 }) {
@@ -44,10 +46,10 @@ export default function RecipePage({
 
         <MiddleContainer>
             <Mid1>
-            <Placeholder height="150px" image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients"} widthA="60px" widthB="65px" widthC="50px"></Placeholder>
+            <Placeholder height="150px" bgcolor1 = "#59A091" bgcolor2 = "#59A091" image1={image1} image2={image2} image3={image3} label1={label1} label2={label2} label3={label3} subtitle={"Main Ingredients"} widthA="60px" widthB="65px" widthC="50px"></Placeholder>
             </Mid1>
             <Mid2>
-                <Placeholder height="150px" image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
+                <Placeholder height="150px" bgcolor1 = "#59A091" bgcolor2 = "#59A091" image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
             </Mid2>
       {/* <Mid3>
           <RecipeButton Link href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
@@ -55,11 +57,11 @@ export default function RecipePage({
   </MiddleContainer>
   
       <ButtonContainer>
-          <RecipeButton onClick={()=>window.open("https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake")}></RecipeButton>
+          <RecipeButton onClick={()=>window.open("https://damndelicious.net/2015/01/03/chicken-broccoli-alfredo/")}></RecipeButton>
       </ButtonContainer>
 
   <EndSection>                
-      <FunFactWindow></FunFactWindow>
+      <FunFactWindow     ptext = {"If you want to save money while avoiding potentially harmful chemicals found in some skincare products, try preparing a scrub or mask at home using avocado, honey and more."}></FunFactWindow>
   </EndSection>
 
   <MenuContainer>
@@ -69,17 +71,16 @@ export default function RecipePage({
 }
 
 const RecipeContainer = styled.div`
-width: 100vw;
-height: 100vh;
-    background-color: #E7F2F0;
-    // margin: 100px;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
-    box-shadow: 5px 1px 30px 5px rgba(0, 0, 0, 0.5);
+background-color: #E7F2F0;
+width: 100vw;
+max-width: 100vw;
+height: 100vh;
+max-height: 100vh;
 `;
 
 const HeaderContainer = styled.div`
