@@ -10,7 +10,6 @@ const PlaceholderUI = ({
   label2 = "ONION",
   label3 = "CARROT",
 
-
   subtitle = "VEGETABLES",
 
   title = "VEGETABLES",
@@ -28,6 +27,8 @@ const PlaceholderUI = ({
   widthC = "50px",
 
   height = "180px",
+ 
+  bgcolor = "#6FC3B2",
 
   onClickA = ()=>{},
   onClickB = ()=>{},
@@ -65,13 +66,20 @@ const PlaceholderUI = ({
                 <Img src={image3} width={widthC} height="60px" alt="image3"></Img>                
             </ImageDiv>
 
+
+            <BottomDiv>
+                <Label>{label3}</Label>  
+      
+
             <BottomDiv bgcolor={bgcolor3}>
                 <Label>{label3}</Label>                
-            </BottomDiv>
-        </FoodIcon>
-    </PMiddlerow>
 
-  </PContainer>
+            </BottomDiv>
+            </BottomDiv>
+              </FoodIcon>
+            </PMiddlerow>
+
+         </PContainer>
 }
 
 export default PlaceholderUI;
@@ -219,4 +227,4 @@ const Img = styled.img`
 
 export default Window;
 
-export{Window}*/
+//export{Window}*/

@@ -1,6 +1,21 @@
 import React from 'react';
 import styled from 'styled-components'; 
 
+const FunFactUI = ({
+  htext = "DID YOU KNOW?",
+  ptext = "Most foods can be frozen to be used at a later date to keep them from spoiling & ending up in the landfill."
+}) => {
+
+return <FunContainer>
+  <FunTopRow>{htext}</FunTopRow>
+
+  <FunMidRow>{ptext}</FunMidRow>
+</FunContainer>
+
+}
+
+export default FunFactUI;
+
 const FunContainer = styled.div`
 //   margin: 50px;
 //   padding: 20px;
@@ -55,20 +70,7 @@ const FunMidRow = styled.div`
     margin-bottom: 0.85rem;
 `;
 
-const FunFactUI = ({
-    htext = "DID YOU KNOW?",
-    ptext = "Most foods can be frozen to be used at a later date to keep them from spoiling & ending up in the landfill."
-}) => {
 
-  return <FunContainer>
-    <FunTopRow>{htext}</FunTopRow>
-
-    <FunMidRow>{ptext}</FunMidRow>
-  </FunContainer>
-
-}
-
-export default FunFactUI;
 
 
 /*function FunFact() {
