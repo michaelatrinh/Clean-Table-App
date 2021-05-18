@@ -3,7 +3,10 @@ import styled from 'styled-components';
 import {useRouter} from 'next/router';
 
 
-const StartTutorialButton = styled.button`
+const StartTutorialButton = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
 font-size: 18px;
 color: white;
 background-color: #59A091;
@@ -19,12 +22,12 @@ border: none;
 `;
 
 
-const StartButton = styled.button`
+const StartButton = styled.div`
     div:hover {
-    transform: scale(0.8);
+    transform: scale(0.95);
     transition-duration: 0.5s;
 
-    background: none;
+    // background: none;
 }
 
 `;
