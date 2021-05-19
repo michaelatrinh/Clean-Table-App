@@ -92,7 +92,6 @@ html.body {
     animation: openMouth 2s ease infinite;
 }
 
-
 .shadowwrapper {
     position: absolute;
     top: 110px;
@@ -103,8 +102,8 @@ html.body {
     margin: 0 auto;
     position: relative;
     width: 155px;
-    left: -70px;
-    top: -95px;
+    left: -9px;
+    top: -105px;
     height: 50px;
     background: rgba(0, 0, 0, 0.15);
     border-radius: 50%;
