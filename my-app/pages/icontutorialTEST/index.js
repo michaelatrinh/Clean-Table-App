@@ -3,220 +3,7 @@ import animationStyle from '../../styles/animation.module.css';
 import HeaderUI from '../../comps/Header/index.js';
 import StartTutorialButtonUI from '../../comps/StartTutorialButton/index.js';
 import NavBar from '../../comps/NavBarCongrats';
-
 import styled from 'styled-components';
-
-
-
-const NavBarContainer = styled.div`
-display: block;
-margin-left: 45px;
-margin-right: auto;
-
-position: relative;
-bottom: 60px;
-`;
-
-const TextContain = styled.div`
-position: relative;
-bottom: 10px;
-
-text-align: center;
-`;
-
-const HeaderCont = styled.div `
-position: relative;
-top: -155px;
-`;
-
-const Downarrow1 = styled.div`
-position:relative;
-left: 85px;
-bottom: 30px;
-`;
-
-const Downarrow2 = styled.div`
-position:relative;
-left: 270px;
-bottom: 73px;
-`;
-
-const Texttop1 = styled.div`
-position:relative;
-left: 70px;
-bottom: 15px;
-
-{
-   -webkit-animation: PULSE 2.5s infinite; 
-   
-   -ms-animation: PULSE 2.5s infinite;
-   
-   animation: PULSE 2.25s infinite; 
- }
- 
-
- @-webkit-keyframes PULSE{
-    0%{color:#59A091;}	
-     110%{color: black;}
- }
- 
- @-ms-keyframes PULSE{
-   0%{color:#59A091;}	
-     110%{color: black;}
- }
- 
- @keyframes PULSE{
-   0%{color:#59A091;}	
-     110%{color: black;}
- }
- 
-
-`;
-
-const Texttop2 = styled.div`
-position:relative;
-left: 99px;
-bottom: 40px;
-
-text-align:center;
-
-{
-    -webkit-animation: PULSE 2.25s infinite; 
-    
-    -ms-animation: PULSE 2.25s infinite;
-    
-    animation: PULSE 2.5s infinite; 
-  }
-  
-
-  @-webkit-keyframes PULSE{
-     0%{color:#59A091;}	
-      110%{color: black;}
-  }
-  
-  @-ms-keyframes PULSE{
-    0%{color:#59A091;}	
-      110%{color: black;}
-  }
-  
-  @keyframes PULSE{
-    0%{color:#59A091;}	
-      110%{color: black;}
-  }
-`;
-
-const UpArrow1 = styled.div`
-position:relative;
-left:174px;
-bottom: 45px;
-
-`;
-
-const UpArrow2 = styled.div`
-position: relative;
-left:274px;
-bottom: 88px;
-`;
-
-const Textbot1 = styled.div`
-position:relative;
-left:-1px;
-bottom: 30px;
-
-text-align:center;
-
-{
-    -webkit-animation: PULSE 2.5s infinite; 
-    
-    -ms-animation: PULSE 2.5s infinite;
-    
-    animation: PULSE 2.25s infinite; 
-  }
-  
-
-  @-webkit-keyframes PULSE{
-     0%{color:#59A091;}	
-      110%{color: black;}
-  }
-  
-  @-ms-keyframes PULSE{
-    0%{color:#59A091;}	
-      110%{color: black;}
-  }
-  
-  @keyframes PULSE{
-    0%{color:#59A091;}	
-      110%{color: black;}
-  }
-`;
-
-const Textbot2 = styled.div`
-position: relative;
-left:103px;
-bottom: 122px;
-
-text-align:center;
-
-{
-    -webkit-animation: PULSE 1.2s infinite; 
-    
-    -ms-animation: PULSE 1.2s infinite;
-    
-    animation: PULSE 1.25s infinite; 
-  }
-  
-
-  @-webkit-keyframes PULSE{
-     0%{color:#59A091;}	
-      110%{color: black;}
-  }
-  
-  @-ms-keyframes PULSE{
-    0%{color:#59A091;}	
-      110%{color: black;}
-  }
-  
-  @keyframes PULSE{
-    0%{color:#59A091;}	
-      110%{color: black;}
-  }
-`;
-
-const TextandNav = styled.div`
-position: relative;
-top:10px;
-`;
-
-const MoreInfo = styled.div`
-position: relative;
-top:20px;
-
-margin-left: 40px;
-margin-right:40px
-
-`;
-
-const Start = styled.button`
-position:relative;
-left: 95px;
-top:70px;
-
-font-size:18px;
-color:white;
-background-color:#59A091;
-border:none;
-border-radius:2px;
-
-padding-left: 30px;
-padding-right: 30px;
-padding-top: 15px;
-padding-bottom: 15px;
-`;
-
-const AllContent = styled.div`
-position:relative;
-top:-60px;
-`;
 
 export default function NavBarTutPage({
     title ="ICONS YOU NEED TO KNOW",
@@ -224,7 +11,7 @@ export default function NavBarTutPage({
     
 }){
  
-    return <PageContainer>
+    return <BigBoy>
     <HeaderCont>
         <HeaderUI></HeaderUI>
     </HeaderCont>
@@ -291,27 +78,219 @@ export default function NavBarTutPage({
 
     </AllContent>
 
-        </PageContainer>
+</BigBoy>
 
-   }
-const PageContainer = styled.div`
+}
+
+const NavBarContainer = styled.div`
+display: block;
+margin-left: 45px;
+margin-right: auto;
+position: relative;
+bottom: 60px;
+`;
+
+const TextContain = styled.div`
+position: relative;
+bottom: 10px;
+text-align: center;
+`;
+
+const HeaderCont = styled.div `
+// position: relative;
+// top: -155px;
+`;
+
+const Downarrow1 = styled.div`
+position:relative;
+left: 85px;
+bottom: 30px;
+`;
+
+const Downarrow2 = styled.div`
+position:relative;
+left: 270px;
+bottom: 73px;
+`;
+
+const Texttop1 = styled.div`
+position:relative;
+left: 70px;
+bottom: 15px;
+{
+   -webkit-animation: PULSE 2.5s infinite; 
+   
+   -ms-animation: PULSE 2.5s infinite;
+   
+   animation: PULSE 2.25s infinite; 
+ }
+ 
+ @-webkit-keyframes PULSE{
+    0%{color:#59A091;}	
+     110%{color: black;}
+ }
+ 
+ @-ms-keyframes PULSE{
+   0%{color:#59A091;}	
+     110%{color: black;}
+ }
+ 
+ @keyframes PULSE{
+   0%{color:#59A091;}	
+     110%{color: black;}
+ }
+ 
+`;
+
+const Texttop2 = styled.div`
+position:relative;
+left: 99px;
+bottom: 40px;
+text-align:center;
+{
+    -webkit-animation: PULSE 2.25s infinite; 
+    
+    -ms-animation: PULSE 2.25s infinite;
+    
+    animation: PULSE 2.5s infinite; 
+  }
+  
+  @-webkit-keyframes PULSE{
+     0%{color:#59A091;}	
+      110%{color: black;}
+  }
+  
+  @-ms-keyframes PULSE{
+    0%{color:#59A091;}	
+      110%{color: black;}
+  }
+  
+  @keyframes PULSE{
+    0%{color:#59A091;}	
+      110%{color: black;}
+  }
+`;
+
+const UpArrow1 = styled.div`
+position:relative;
+left:174px;
+bottom: 45px;
+`;
+
+const UpArrow2 = styled.div`
+position: relative;
+left:274px;
+bottom: 88px;
+`;
+
+const Textbot1 = styled.div`
+position:relative;
+left:-1px;
+bottom: 30px;
+text-align:center;
+{
+    -webkit-animation: PULSE 2.5s infinite; 
+    
+    -ms-animation: PULSE 2.5s infinite;
+    
+    animation: PULSE 2.25s infinite; 
+  }
+  
+  @-webkit-keyframes PULSE{
+     0%{color:#59A091;}	
+      110%{color: black;}
+  }
+  
+  @-ms-keyframes PULSE{
+    0%{color:#59A091;}	
+      110%{color: black;}
+  }
+  
+  @keyframes PULSE{
+    0%{color:#59A091;}	
+      110%{color: black;}
+  }
+`;
+
+const Textbot2 = styled.div`
+position: relative;
+left:103px;
+bottom: 122px;
+text-align:center;
+{
+    -webkit-animation: PULSE 1.2s infinite; 
+    
+    -ms-animation: PULSE 1.2s infinite;
+    
+    animation: PULSE 1.25s infinite; 
+  }
+  
+  @-webkit-keyframes PULSE{
+     0%{color:#59A091;}	
+      110%{color: black;}
+  }
+  
+  @-ms-keyframes PULSE{
+    0%{color:#59A091;}	
+      110%{color: black;}
+  }
+  
+  @keyframes PULSE{
+    0%{color:#59A091;}	
+      110%{color: black;}
+  }
+`;
+
+const TextandNav = styled.div`
+position: relative;
+top:10px;
+`;
+
+const MoreInfo = styled.div`
+position: relative;
+top:20px;
+margin-left: 40px;
+margin-right:40px
+`;
+
+const Start = styled.button`
+position:relative;
+left: 95px;
+top:70px;
+font-size:18px;
+color:white;
+background-color:#59A091;
+border:none;
+border-radius:2px;
+padding-left: 30px;
+padding-right: 30px;
+padding-top: 15px;
+padding-bottom: 15px;
+`;
+
+const AllContent = styled.div`
+display: flex;
+flex-direction: column;
+
+
+// position:relative;
+// top:-60px;
+`;
+
+const BigBoy = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
+    // justify-content: center;
     background-color: #E7F2F0;
-    width: 375px;
-    max-width: 375px;
-    height: 1300px;
+    width: 100vw;
+    // max-width: 375px;
+    height: 100vh;
     max-height: 1300px;
 `;
 
 const HeaderContainer =styled.div`
 display: flex;
 flex-direction: column;
-
-
-
  `;
 
  const TextContainer = styled.div`
@@ -357,19 +336,14 @@ display: flex: display;
 position:relative;
 top:-10px;
 left:70px;
-
  `;
 
 
- const StartButton =styled.div`
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- position:relative;
- bottom:35px;
- `;
-
-
-
-
+const StartButton =styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+position:relative;
+bottom:35px;
+`;

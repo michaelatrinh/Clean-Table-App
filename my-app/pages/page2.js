@@ -6,8 +6,9 @@ import styled from 'styled-components';
  
 export default function Page2({
     title ="HOW TO GET STARTED",
-    description ="People want to know the best method when it comes to managing perishability.",
-    descriptiontwo=" With this app you can now know how long food can actually last beyond best before date."
+    description ="People want to know the best method when it comes to managing perishability of their foods.",
+    descriptiontwo="With this app you can now add and keep track of your groceries expiration dates.",
+    descriptionthree="Get started by following the tutorial on how you can add ingredients into your food list!"
 }){
  
     return <PageContainer>
@@ -19,6 +20,7 @@ export default function Page2({
                 <PageTitle>{title}</PageTitle>
                 <PageText>{description}</PageText>
                 <PageTextTwo>{descriptiontwo}</PageTextTwo>
+                <PageTextThree>{descriptionthree}</PageTextThree>
             </TextContainer>
     
     <StartButton>
@@ -103,7 +105,18 @@ font-family: "Quicksand", sans-serif;
     position:relative;
     top:-60px;
 `;
- 
+
+const PageTextThree = styled.h2`
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-right: 50px;
+    margin-left: 50px;
+    text-align:center;
+    position:relative;
+    top:-60px;
+`;
+
 const Animation = styled.div`
 display: flex;
 position:relative;
