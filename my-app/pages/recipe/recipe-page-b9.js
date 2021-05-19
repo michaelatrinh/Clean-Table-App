@@ -1,11 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import Head from 'next/head'; 
 import styled from 'styled-components';
-import Header from '../comps/Header/index.js';
-import Menu from '../comps/NavBar/index.js';
-import Placeholder from '../comps/icon-placeholder/Placeholder.js';
-import FunFactWindow from '../comps/FunFactWindow/index.js';
-import RecipeButton from '../comps/Recipe-Button/index.js';
+import Header from '../../comps/Header/index.js';
+import Menu from '../../comps/NavBar/index2.js';
+import Placeholder from '../../comps/icon-placeholder/Placeholder.js';
+import FunFactWindow from '../../comps/FunFactWindow/index.js';
+import RecipeButton from '../../comps/Recipe-Button/index.js';
 
 export default function RecipePage({
     recipeimage = "/potatoes-and-onion.jpg",

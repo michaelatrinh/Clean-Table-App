@@ -1,15 +1,16 @@
 // import Head from 'next/head';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
-import {useState} from 'react';
 
 import HeaderUI from '../comps/Header';
 import HomeFoodTimerUI from '../comps/HomeFoodTimer';
 import AddItem from '../comps/HomeFoodTimerAdd';
-import NavBar from '../comps/NavBar';
+import NavBar from '../comps/NavBar/index.js';
 import FunFactWindow from '../comps/FunFactWindow';
 import Congratulations from '../comps/congratulations-comp';
 import {useRouter} from 'next/router';
+
+var CongratsClicked = null;
 
 export default function Homepage() {
 // --- STATE CHANGE FOR THE CONGRATULATIONS WINDOW --------------
@@ -20,9 +21,9 @@ export default function Homepage() {
         var okaybutton = "0px"
     }
 
-    const HandleClick = () => {
-        setOkayState(!okayState)
-    }
+    // const HandleClick = () => {
+    //     setOkayState(!okayState)
+    // }
     
 // --- STATE CHANGE FOR THE ADD NEW ITEM BUTTON -----------------
     const [addNew, setAddNew] = useState(false);
@@ -42,6 +43,25 @@ export default function Homepage() {
         const routeTo = "/pantry-pick-category";
         router.push(routeTo);
     }
+
+// --- CHECK IF CONGRATULATIONS WAS PASSED ALREADY --------------
+    const HandleClickOkay = (okay) => {
+        // setOkayState(false);
+        CongratsClicked = okay;
+        sessionStorage.setItem("CongratsClicked", CongratsClicked);
+    }
+
+    // const [congrats, setCongrats] = useState(null);
+
+    useEffect(()=>{
+        if(process.browser){
+            const seen = sessionStorage.getItem("CongratsClicked");
+            
+            if(seen === "CongratsSeen"){
+                setOkayState(true);
+            }
+        }
+    })
 
 // --- PAGE -----------------------------------------------------
     return <MainCont>
@@ -105,7 +125,10 @@ export default function Homepage() {
     </Main>
 
         <Popup>
-            <Congratulations okay={HandleClick} width={okaybutton}
+            <Congratulations okay={()=>{
+                HandleClickOkay("CongratsSeen");
+                setOkayState(true);
+            }} width={okaybutton}
             /> 
         </Popup>
 

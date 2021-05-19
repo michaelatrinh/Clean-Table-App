@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 
-import ChickenRiceBroccoli from '../recipe/recipe-pagec2';
-import ChickenRiceOnion from '../recipe/recipe-pagec1';
+// --- IMPORT OF PREMADE RECIPE PAGES AS COMPONENTS -------------
+import ChickenRiceBroccoli from '../recipe/recipe-pagec1';
+import ChickenRiceOnion from '../recipe/recipe-pagec2';
 import ChickenRiceCarrot from '../recipe/recipe-pagec3';
 import ChickenPastaBroccoli from '../recipe/recipe-pagec4';
 import ChickenPastaOnion from '../recipe/recipe-pagec5';
@@ -38,9 +39,9 @@ const data = {
     ChickenPastaBroccoli: <ChickenPastaBroccoli />, 
     ChickenPastaOnion: <ChickenPastaOnion />,
     ChickenPastaCarrot: <ChickenPastaCarrot />,
-    ChickenPotatoBroccoli: <ChickenPotatoBroccoli />, 
-    ChickenPotatoOnion: <ChickenPotatoOnion />,
-    ChickenPotatoCarrot: <ChickenPotatoCarrot />,
+    ChickenPotatoesBroccoli: <ChickenPotatoBroccoli />, 
+    ChickenPotatoesOnion: <ChickenPotatoOnion />,
+    ChickenPotatoesCarrot: <ChickenPotatoCarrot />,
 
     //beef results
     BeefRiceBroccoli: <BeefRiceBroccoli/>, 
@@ -49,9 +50,9 @@ const data = {
     BeefPastaBroccoli: <BeefPastaBroccoli/>, 
     BeefPastaOnion: <BeefPastaOnion/>,
     BeefPastaCarrot: <BeefPastaCarrot/>,
-    BeefPotatoBroccoli: <BeefPotatoBroccoli/>, 
-    BeefPotatoOnion: <BeefPotatoOnion/>,
-    BeefPotatoCarrot: <BeefPotatoCarrot/>,
+    BeefPotatoesBroccoli: <BeefPotatoBroccoli/>, 
+    BeefPotatoesOnion: <BeefPotatoOnion/>,
+    BeefPotatoesCarrot: <BeefPotatoCarrot/>,
 
     //tofu results
     TofuRiceBroccoli: <TofuRiceBroccoli/>, 
@@ -60,10 +61,9 @@ const data = {
     TofuPastaBroccoli: <TofuPastaBroccoli/>, 
     TofuPastaOnion: <TofuPastaOnion/>,
     TofuPastaCarrot: <TofuPastaCarrot/>,
-    TofuPotatoBroccoli: <TofuPotatoBroccoli/>, 
-    TofuPotatoOnion: <TofuPotatoOnion/>,
-    TofuPotatoCarrot: <TofuPotatoCarrot/>,
-
+    TofuPotatoesBroccoli: <TofuPotatoBroccoli/>, 
+    TofuPotatoesOnion: <TofuPotatoOnion/>,
+    TofuPotatoesCarrot: <TofuPotatoCarrot/>,
 }
 
 export default function RecipePage() {

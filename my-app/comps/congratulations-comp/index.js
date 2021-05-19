@@ -101,7 +101,7 @@ const Congrats = ({
               <Img src={image} width="120px" height="110px" alt="broccoli"></Img>
 
               <p>
-      You’ve just You’ve just successfully went through the tutorial pages! Entered in your grocery list and start to keep track of the food in your household. <br></br><br></br>
+      You’ve successfully entered in your grocery list and completed the tutorial! Now you can keep track of the food in your home. <br></br><br></br>
       The “Home” page will show you the items that are about to expire. <br></br><br></br>
       Use our “Recipe Generator” feature to create delicious meals before they expire!<br></br><br></br>
       Happy Saving!

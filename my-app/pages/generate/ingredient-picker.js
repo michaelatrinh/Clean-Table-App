@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import Header from '../../comps/Header/index.js';
-import Menu from '../../comps/NavBar/index2.js';
+import Menu from '../../comps/NavBar/index.js';
 import Placeholder from '../../comps/icon-placeholder/Placeholder.js';
 import GenerateRecipeButton from '../../comps/GenerateRecipeButton/index.js';
 import {useRouter} from 'next/router';
@@ -67,16 +67,31 @@ export default function IngredientPickerPage({
     const HandleClickProtein = (foodP) => {
         options.protein = foodP;
         // sessionStorage.setItem("Protein", options.protein);
+
+        // --- CHECKS TO SEE IF ALL OPTIONS ARE CLICKED BEFORE REVEALING GENERATE BUTTON
+        if(options.protein !== null && options.carb !== null && options.vege !== null){
+            setGenerateButton(true);
+        }
     }
 
     const HandleClickCarb = (foodC) => {
         options.carb = foodC;
         // sessionStorage.setItem("Carb", options.carb);
+
+        // --- CHECKS TO SEE IF ALL OPTIONS ARE CLICKED BEFORE REVEALING GENERATE BUTTON
+        if(options.protein !== null && options.carb !== null && options.vege !== null){
+            setGenerateButton(true);
+        }
     }
 
     const HandleClickVege = (foodV) => {
         options.vege = foodV;
         // sessionStorage.setItem("Vege", options.vege)
+
+        // --- CHECKS TO SEE IF ALL OPTIONS ARE CLICKED BEFORE REVEALING GENERATE BUTTON
+        if(options.protein !== null && options.carb !== null && options.vege !== null){
+            setGenerateButton(true);
+        }
     }
 
     const HandleClickGenerate = () => {
@@ -135,6 +150,9 @@ export default function IngredientPickerPage({
     }
 
     const router = useRouter();
+
+// ---
+    const [generateButton, setGenerateButton] = useState(false);
 
     return <RecipeContainer>
         <HeaderContainer>
@@ -206,7 +224,7 @@ export default function IngredientPickerPage({
         </FoodButtonContainer>
 
         <GenerateContainer>
-            <GenerateRecipeButton onClickGenerate={HandleClickGenerate} text={recipebutton}></GenerateRecipeButton>
+            {generateButton === true && <GenerateRecipeButton onClickGenerate={HandleClickGenerate} text={recipebutton}></GenerateRecipeButton>}
         </GenerateContainer>
 
         <NavBarContainer>
@@ -296,6 +314,7 @@ const GenerateContainer = styled.div`
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+    height: 233px;
 `;
 
 const NavBarContainer = styled.div`
