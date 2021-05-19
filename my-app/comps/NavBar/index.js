@@ -51,7 +51,7 @@ const NavBarUI = ({
         <Image src={image2} onClick={()=>router.push("/homepage")}></Image>
         <Image src={image1} onClick={()=>router.push("/generate/ingredient-picker")}></Image>
         {/* <Image src={image3} onClick={()=>router.push("/pantry")}></Image> */}
-        <Image src={image4} onClick={()=>router.push()}></Image>
+        <Image src={image4} onClick={()=>window.open("https://michaelbcit.github.io/")}></Image>
     </NavBar>
 }
 {/* <Img><img src={image1} width="50.2px" height="52px" alt="recipe book icon"/></Img>
