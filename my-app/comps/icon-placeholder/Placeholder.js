@@ -67,14 +67,14 @@ const PlaceholderUI = ({
             </ImageDiv>
 
 
-            <BottomDiv>
-                <Label>{label3}</Label>  
+            {/* <BottomDiv>
+                <Label>{label3}</Label>   */}
       
 
             <BottomDiv bgcolor={bgcolor3}>
                 <Label>{label3}</Label>                
 
-            </BottomDiv>
+            {/* </BottomDiv> */}
             </BottomDiv>
               </FoodIcon>
             </PMiddlerow>
