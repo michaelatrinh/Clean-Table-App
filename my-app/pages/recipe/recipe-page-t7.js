@@ -51,9 +51,7 @@ export default function RecipePage({
             <Mid2>
                 <Placeholder height="150px" bgcolor1 = "#59A091" bgcolor2 = "#59A091" image1={image4} image2={image5} image3={image6} subtitle={"Optionals"} label1={label4} label2={label5} label3={label6}></Placeholder>
             </Mid2>
-            {/* <Mid3>
-                <RecipeButton Link href="https://tasty.co/recipe/one-pan-garlic-parmesan-chicken-and-vegetable-bake"></RecipeButton>
-            </Mid3> */}
+           
         </MiddleContainer>
         
             <ButtonContainer>
