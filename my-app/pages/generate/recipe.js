@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 
 // --- IMPORT OF PREMADE RECIPE PAGES AS COMPONENTS -------------
-import ChickenRiceBroccoli from '../recipe/recipe-pagec2';
-import ChickenRiceOnion from '../recipe/recipe-pagec1';
+import ChickenRiceBroccoli from '../recipe/recipe-pagec1';
+import ChickenRiceOnion from '../recipe/recipe-pagec2';
 import ChickenRiceCarrot from '../recipe/recipe-pagec3';
 import ChickenPastaBroccoli from '../recipe/recipe-pagec4';
 import ChickenPastaOnion from '../recipe/recipe-pagec5';
